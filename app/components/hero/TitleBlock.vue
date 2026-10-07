@@ -1,21 +1,21 @@
 <template>
-  <div class="heroTextBlock">
-    <div class="heroTextBlock__container">
-      <span class="heroTextBlock__letter heroTextBlock__letter_m">M</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_a">a</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_v">v</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_s">S</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_t">t</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_u">u</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_d">d</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_i">i</span>
-      <span class="heroTextBlock__letter heroTextBlock__letter_o">o</span>
+  <div class="heroTitleBlock">
+    <div class="heroTitleBlock__container">
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_m">M</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_a">a</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_v">v</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_s">S</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_t">t</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_u">u</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_d">d</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_i">i</span>
+      <span class="heroTitleBlock__letter heroTitleBlock__letter_o">o</span>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.heroTextBlock {
+.heroTitleBlock {
   position: absolute;
   bottom: -80px;
   left: 50%;
@@ -27,6 +27,15 @@
 
   // border: 1px solid red;
 
+  @media (max-width: 767px) {
+    bottom: -24px;
+  }
+
+  @media (max-width: 390px) {
+    bottom: -36px;
+    // height: 170px;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
@@ -34,6 +43,14 @@
     height: 160px;
 
     // border: 1px solid green;
+
+    @media (max-width: 767px) {
+      height: 96px;
+    }
+
+    @media (max-width: 390px) {
+      height: 74px;
+    }
   }
 
   &__letter {
@@ -43,6 +60,14 @@
     letter-spacing: -6%;
     color: $white-mask-two;
     text-shadow: 1px 1px $blue-one;
+
+    @media (max-width: 767px) {
+      font-size: 110px;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 84px;
+    }
 
     &_m {
       animation: pop-up 3.5s;
@@ -90,7 +115,6 @@
     color: $white-mask-two;
   }
   30% {
-    // opacity: 0;
     transform: translateY(100%);
     color: $white-mask-two;
   }
@@ -100,12 +124,10 @@
     color: $white-mask-two;
   }
   60% {
-    // opacity: 1;
     transform: translateY(30%);
     color: $white-mask-two;
   }
   65% {
-    // opacity: 1;
     transform: translateY(-15%);
     color: $white-mask-two;
   }
@@ -113,14 +135,10 @@
     color: $orange-one;
   }
   80% {
-    // opacity: 1;
     transform: translateY(15%);
-    color: $orange-one;
   }
   100% {
-    // opacity: 1;
     transform: translateY(0);
-    color: $orange-one;
   }
 }
 
@@ -130,7 +148,6 @@
     transform: translateY(100%);
   }
   40% {
-    // opacity: 0;
     transform: translateY(100%);
   }
   60% {
@@ -138,11 +155,9 @@
     transform: translateY(-100%);
   }
   70% {
-    // opacity: 1;
     transform: translateY(10%);
   }
   100% {
-    // opacity: 1;
     transform: translateY(0);
   }
 }

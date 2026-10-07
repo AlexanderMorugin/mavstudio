@@ -1,8 +1,8 @@
 <template>
   <section class="heroBlock">
-    <!-- <div></div> -->
     <HeroLogoBlock />
-    <HeroTextBlock />
+    <HeroTitleBlock />
+    <HeroSubtitleBlock />
   </section>
 </template>
 
@@ -12,10 +12,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
-
+  gap: 100px;
   height: 600px;
   background: $gradient-page-dark-two;
-  // border: 1px solid red;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    height: 500px;
+  }
+
+  @media (max-width: 390px) {
+    gap: 60px;
+    height: 400px;
+  }
 }
 </style>

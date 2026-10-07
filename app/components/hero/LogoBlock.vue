@@ -21,10 +21,21 @@
   height: 300px;
   margin-top: 100px;
 
+  @media (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+  }
+
+  @media (max-width: 390px) {
+    width: 150px;
+    height: 150px;
+    margin-top: 60px;
+  }
+
   // border: 1px solid red;
 
   &__circle {
-    // position: relative;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -39,6 +50,14 @@
     transform: translate(-50%, -50%);
     width: 100px;
     animation: pencil 2.5s;
+
+    @media (max-width: 767px) {
+      width: 70px;
+    }
+
+    @media (max-width: 390px) {
+      width: 50px;
+    }
   }
 
   &__arrow {
@@ -47,6 +66,17 @@
     width: 90px;
     height: 90px;
     fill: $orange-one;
+
+    @media (max-width: 767px) {
+      top: 43%;
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 390px) {
+      width: 45px;
+      height: 45px;
+    }
 
     &_prev {
       left: 10%;
