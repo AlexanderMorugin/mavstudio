@@ -21,7 +21,7 @@
     height: 500px;
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 389px) {
     gap: 60px;
     height: 400px;
   }

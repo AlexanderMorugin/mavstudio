@@ -28,12 +28,15 @@
   // border: 1px solid red;
 
   @media (max-width: 767px) {
-    bottom: -24px;
+    bottom: -20px;
   }
 
-  @media (max-width: 390px) {
-    bottom: -36px;
-    // height: 170px;
+  @media (max-width: 576px) {
+    bottom: -16px;
+  }
+
+  @media (max-width: 389px) {
+    bottom: -44px;
   }
 
   &__container {
@@ -48,7 +51,11 @@
       height: 96px;
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 576px) {
+      height: 90px;
+    }
+
+    @media (max-width: 389px) {
       height: 74px;
     }
   }
@@ -65,7 +72,11 @@
       font-size: 110px;
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 576px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 389px) {
       font-size: 84px;
     }
 

@@ -27,10 +27,10 @@
     margin-top: 80px;
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 389px) {
     width: 150px;
     height: 150px;
-    margin-top: 60px;
+    margin-top: 70px;
   }
 
   // border: 1px solid red;
@@ -55,7 +55,7 @@
       width: 70px;
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 389px) {
       width: 50px;
     }
   }
@@ -73,7 +73,7 @@
       height: 60px;
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 389px) {
       width: 45px;
       height: 45px;
     }
@@ -115,7 +115,6 @@
     transform: translate(100px, 0px) rotate(47deg);
   }
   85% {
-    opacity: 1;
     transform: translate(100px, -300px) rotate(37deg);
   }
   100% {

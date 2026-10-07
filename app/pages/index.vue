@@ -1,6 +1,6 @@
 <template>
-  <h1>MavStudio</h1>
-  <NuxtLink to="/project">project</NuxtLink>
+  <!-- <h1>MavStudio</h1>
+  <NuxtLink to="/project">project</NuxtLink> -->
   <HeroBlock />
 </template>
 

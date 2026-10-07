@@ -28,7 +28,7 @@
     letter-spacing: 1px;
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 389px) {
     gap: 10px;
     font-size: 13px;
     letter-spacing: 0;
