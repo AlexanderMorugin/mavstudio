@@ -1,0 +1,59 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  background: none;
+  border: none;
+  list-style: none;
+}
+
+a {
+  color: $white-one;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Geist-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  // line-height: 1.7;
+
+  color: $white-one;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  background: $black-one;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(300px);
+}
+.list-leave-active {
+  position: absolute;
+}
+.top-enter-active,
+.top-leave-active {
+  transition: all 0.3s ease;
+}
+.top-enter-from,
+.top-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}
