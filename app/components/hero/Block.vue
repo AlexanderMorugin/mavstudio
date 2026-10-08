@@ -18,11 +18,15 @@
   overflow: hidden;
 
   @media (max-width: 767px) {
+    gap: 60px;
     height: 500px;
   }
 
+  @media (max-width: 576px) {
+    gap: 40px;
+  }
+
   @media (max-width: 389px) {
-    gap: 60px;
     height: 400px;
   }
 }

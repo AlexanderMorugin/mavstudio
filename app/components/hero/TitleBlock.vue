@@ -25,14 +25,12 @@
   align-items: flex-end;
   overflow: hidden;
 
-  // border: 1px solid red;
-
   @media (max-width: 767px) {
-    bottom: -20px;
+    bottom: -30px;
   }
 
   @media (max-width: 576px) {
-    bottom: -16px;
+    bottom: -26px;
   }
 
   @media (max-width: 389px) {
@@ -44,8 +42,6 @@
     justify-content: center;
     width: 700px;
     height: 160px;
-
-    // border: 1px solid green;
 
     @media (max-width: 767px) {
       height: 96px;

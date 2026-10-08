@@ -24,7 +24,6 @@
   @media (max-width: 767px) {
     width: 200px;
     height: 200px;
-    margin-top: 80px;
   }
 
   @media (max-width: 389px) {
@@ -32,8 +31,6 @@
     height: 150px;
     margin-top: 70px;
   }
-
-  // border: 1px solid red;
 
   &__circle {
     width: 100%;
@@ -52,11 +49,16 @@
     animation: pencil 2.5s;
 
     @media (max-width: 767px) {
-      width: 70px;
+      width: 60px;
+    }
+
+    @media (max-width: 576px) {
+      top: 55%;
+      width: 50px;
     }
 
     @media (max-width: 389px) {
-      width: 50px;
+      width: 40px;
     }
   }
 
@@ -73,20 +75,42 @@
       height: 60px;
     }
 
-    @media (max-width: 389px) {
+    @media (max-width: 576px) {
+      top: 50%;
       width: 45px;
       height: 45px;
+    }
+
+    @media (max-width: 389px) {
+      width: 35px;
+      height: 35px;
     }
 
     &_prev {
       left: 10%;
       transform: rotate(180deg);
       animation: from-left 2.7s;
+
+      @media (max-width: 576px) {
+        left: 20%;
+      }
+
+      @media (max-width: 389px) {
+        left: 18%;
+      }
     }
 
     &_next {
       right: 14%;
       animation: from-right 2.9s;
+
+      @media (max-width: 576px) {
+        right: 22%;
+      }
+
+      @media (max-width: 389px) {
+        right: 21%;
+      }
     }
   }
 }
@@ -95,9 +119,14 @@
   0% {
     opacity: 0;
     transform: scale(0);
+    background: $orange-one;
+  }
+  50% {
+    opacity: 1;
+    background: $orange-one;
   }
   100% {
-    opacity: 1;
+    background: $white-one;
   }
 }
 

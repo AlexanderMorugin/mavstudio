@@ -3,7 +3,13 @@
     <div class="logo__circle">
       <img src="/img/logo/logo.png" alt="Лого" class="logo__icon" />
     </div>
-    <div class="logo__text">{{ COMPANY_NAME }}</div>
+    <div class="logo__text">
+      <span>Mav</span>
+      <span class="logo__textAccent">S</span>
+      <span>tudio</span>
+
+      <!-- {{ COMPANY_NAME }} -->
+    </div>
   </NuxtLink>
 </template>
 
@@ -43,13 +49,20 @@ import { COMPANY_NAME } from "~/mock/info";
   }
 
   &__text {
-    font-family: "Geist-Bold", sans-serif;
-    font-size: 22px;
-    letter-spacing: 1px;
+    font-family: "Oswald-Medium", sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -4%;
+    // color: $white-mask-two;
+    // text-shadow: 1px 1px $blue-one;
 
     @media (max-width: 576px) {
       font-size: 18px;
     }
+  }
+
+  &__textAccent {
+    color: $orange-one;
   }
 }
 </style>

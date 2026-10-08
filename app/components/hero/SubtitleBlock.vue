@@ -20,8 +20,6 @@
   letter-spacing: 6px;
   text-transform: uppercase;
 
-  // border: 1px solid red;
-
   @media (max-width: 767px) {
     gap: 10px;
     font-size: 15px;
