@@ -19,7 +19,9 @@ a {
 }
 
 body {
-  font-family: "Geist-Regular", sans-serif;
+  font-family: "Montserrat-Regular", sans-serif;
+  // font-family: "Geist-Regular", sans-serif;
+  // font-family: "Oswald-Regular", sans-serif;
   font-size: 16px;
   line-height: 1;
   // line-height: 1.7;
@@ -57,3 +59,21 @@ button {
   opacity: 0;
   transform: translateY(100%);
 }
+// .left-enter-active,
+// .left-leave-active {
+//   transition: all 0.3s ease;
+// }
+// .left-enter-from,
+// .left-leave-to {
+//   opacity: 0;
+//   transform: translateX(-100%);
+// }
+// .right-enter-active,
+// .right-leave-active {
+//   transition: all 0.3s ease;
+// }
+// .right-enter-from,
+// .right-leave-to {
+//   opacity: 0;
+//   transform: translateX(100%);
+// }
