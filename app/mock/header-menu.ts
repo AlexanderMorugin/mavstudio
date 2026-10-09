@@ -11,28 +11,28 @@ export const headerMenu = [
   },
   {
     id: 3,
-    title: "Скидки",
-    route: "/promo",
-  },
-  {
-    id: 4,
-    title: "Блоки",
-    route: "/block",
-  },
-  {
-    id: 5,
     title: "Цены",
     route: "/price",
   },
   {
-    id: 6,
+    id: 4,
     title: "Этапы работы",
     route: "/workplan",
   },
   {
-    id: 7,
+    id: 5,
+    title: "Скидки",
+    route: "/promo",
+  },
+  {
+    id: 6,
     title: "Преимущества",
     route: "/advantage",
+  },
+  {
+    id: 7,
+    title: "Блоки",
+    route: "/block",
   },
   {
     id: 8,

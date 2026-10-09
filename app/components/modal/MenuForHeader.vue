@@ -10,22 +10,12 @@
       <span class="modalMenuForHeader__linkText">{{ item.title }}</span>
       <IconArrowIos class="modalMenuForHeader__linkIcon" />
     </NuxtLink>
-
-    <!-- <Logo
-      v-if="props.place === 'mobile'"
-      class="headerNav__logo"
-      @click="emits('closeModal')"
-    /> -->
   </nav>
 </template>
 
 <script setup lang="ts">
 import { headerMenu } from "~/mock/header-menu";
 const route = useRoute();
-
-// const props = defineProps<{
-//   place: string;
-// }>();
 
 const emits = defineEmits(["closeModal"]);
 </script>
@@ -48,7 +38,7 @@ const emits = defineEmits(["closeModal"]);
     border-radius: $br-xs;
     border: 1px solid $white-mask-four;
     padding: 20px;
-    transition: 0.2s ease;
+    transition: 0.05s ease;
 
     // @media (max-width: 767px) {
     //   padding: 10px;

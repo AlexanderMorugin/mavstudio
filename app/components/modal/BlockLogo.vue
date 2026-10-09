@@ -21,10 +21,14 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 80% 1fr;
+    grid-template-columns: 85% 1fr;
     height: 100%;
     background: $black-mask-three;
     animation: from-left 1.2s;
+
+    @media (max-width: 1279px) {
+      grid-template-columns: 80% 1fr;
+    }
   }
 
   &__iconBlock {
@@ -78,15 +82,12 @@
 }
 @keyframes fall-text {
   0% {
-    // opacity: 0;
     transform: translateY(-100%) rotate(270deg);
   }
   50% {
-    // opacity: 0;
     transform: translateY(-100%) rotate(270deg);
   }
   100% {
-    // opacity: 1;
     transform: translateY(0) rotate(270deg);
   }
 }

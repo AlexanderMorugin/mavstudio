@@ -16,6 +16,7 @@
           @closeModal="$emit('closeModal')"
         />
         <ModalBlockLogo v-if="!isScreenMobile" />
+        <LogoForFooter v-else />
       </div>
 
       <!-- <ModalChat v-if="name === 'chat'" @closeModal="$emit('closeModal')" /> -->
@@ -83,6 +84,7 @@ const emit = defineEmits(["closeModal"]);
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
+      padding-bottom: 40px;
     }
   }
 }
