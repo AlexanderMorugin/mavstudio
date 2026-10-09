@@ -34,7 +34,7 @@ $mask-trasparent: rgba(0, 0, 0, 0);
 // $gradient-page-primary: linear-gradient(135deg, $orange-one 0%, $black-one 20%, $blue-one 100%);
 $gradient-page-dark: linear-gradient(135deg, $blue-one 0%, $black-one 40%);
 $gradient-page-dark-two: linear-gradient(135deg, $blue-two 0%, $blue-one 40%, $blue-one 60%, $blue-three 100%);
-// $gradient-page-light: linear-gradient(135deg, $blue-one 0%, $white-one 40%);
+$gradient-page-light: linear-gradient(to bottom, $white-one 0%, $orange-one 100%);
 
 $shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
 

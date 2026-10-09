@@ -37,6 +37,7 @@ const emit = defineEmits(["closeModal"]);
   left: 0;
   backdrop-filter: blur(15px) grayscale(50%);
   background: $black-mask-three;
+  // overscroll-behavior: contain;
   overflow-y: auto;
   z-index: 10;
 
@@ -53,12 +54,15 @@ const emit = defineEmits(["closeModal"]);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // padding-left: 20px;
+    // padding-right: 20px;
   }
 
   &__topTitle {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 12px;
+    color: $white-one;
 
     @media (max-width: 767px) {
       font-size: 18px;

@@ -1,11 +1,10 @@
 <template>
   <div class="layout">
-    <div class="layout__overlay" />
-    <Header theme="dark" />
+    <Header theme="white" />
     <main class="layout__content">
       <slot />
     </main>
-    <Footer theme="dark" />
+    <Footer />
   </div>
 </template>
 
@@ -16,18 +15,9 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  color: $white-one;
-  background: $black-one;
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $gradient-page-dark;
-    filter: blur(100px);
-  }
+  color: $black-one;
+  background: $white-one;
 
   &__content {
     position: relative;

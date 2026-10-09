@@ -50,9 +50,9 @@ const emits = defineEmits(["closeModal"]);
     padding: 20px;
     transition: 0.2s ease;
 
-    @media (max-width: 767px) {
-      padding: 10px;
-    }
+    // @media (max-width: 767px) {
+    //   padding: 10px;
+    // }
 
     &:hover {
       background: $white-mask-three;

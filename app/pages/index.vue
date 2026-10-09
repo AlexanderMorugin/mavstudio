@@ -2,6 +2,23 @@
   <!-- <h1>MavStudio</h1>
   <NuxtLink to="/project">project</NuxtLink> -->
   <HeroBlock />
+  <div class="theme">
+    <h1>Dark Theme</h1>
+    <NuxtLink to="/project" class="link">GO TO WHITE</NuxtLink>
+    <p>
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -34,3 +51,24 @@ useSeoMeta({
   ogLocale: "ru_RU",
 });
 </script>
+
+<style lang="scss" scoped>
+.theme {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  padding-top: 50px;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $orange-one;
+  width: 150px;
+  height: 50px;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  color: $orange-one;
+  text-align: center;
+}
+</style>

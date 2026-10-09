@@ -19,6 +19,7 @@
   line-height: 1;
   letter-spacing: 6px;
   text-transform: uppercase;
+  color: $white-one;
 
   @media (max-width: 767px) {
     gap: 10px;

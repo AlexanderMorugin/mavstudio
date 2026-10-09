@@ -29,10 +29,10 @@ const props = defineProps<{
     padding-left: 20px;
     padding-right: 20px;
 
-    @media (max-width: 576px) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+    // @media (max-width: 576px) {
+    //   padding-left: 10px;
+    //   padding-right: 10px;
+    // }
   }
 
   &_mobilePadding {

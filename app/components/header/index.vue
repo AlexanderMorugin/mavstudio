@@ -1,13 +1,16 @@
 <template>
   <header class="header">
+    <div v-if="props.theme === 'white'" class="header__overlay" />
     <ContainerPage desktopPadding class="header__container">
       <ButtonWithIcon
+        :theme="props.theme"
         name="menu"
         title="Меню"
         @handleClick="isMenuModalOpen = true"
       />
       <LogoForHeader />
       <ButtonWithIcon
+        :theme="props.theme"
         name="chat"
         title="Связаться"
         @handleClick="isChatModalOpen = true"
@@ -43,6 +46,9 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps<{
+  theme: string;
+}>();
 const isMenuModalOpen = ref(false);
 const isChatModalOpen = ref(false);
 </script>
@@ -55,6 +61,17 @@ const isChatModalOpen = ref(false);
   backdrop-filter: blur(15px) brightness(80%);
   border-bottom: 1px solid $white-mask-three;
   z-index: 3;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $white-one;
+    filter: blur(100px);
+    backdrop-filter: blur(15px);
+  }
 
   &__container {
     display: flex;
