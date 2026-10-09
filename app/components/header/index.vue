@@ -49,6 +49,7 @@
 const props = defineProps<{
   theme: string;
 }>();
+
 const isMenuModalOpen = ref(false);
 const isChatModalOpen = ref(false);
 </script>

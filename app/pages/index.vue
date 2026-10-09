@@ -3,7 +3,7 @@
   <NuxtLink to="/project">project</NuxtLink> -->
   <HeroBlock />
   <div class="theme">
-    <h1>Dark Theme</h1>
+    <h2>Dark Theme</h2>
     <NuxtLink to="/project" class="link">GO TO WHITE</NuxtLink>
     <p>
       bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -56,9 +56,9 @@ useSeoMeta({
 .theme {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .link {
   display: flex;
@@ -66,7 +66,7 @@ useSeoMeta({
   align-items: center;
   border: 2px solid $orange-one;
   width: 150px;
-  height: 50px;
+  height: 30px;
   font-family: "Montserrat-SemiBold", sans-serif;
   color: $orange-one;
   text-align: center;

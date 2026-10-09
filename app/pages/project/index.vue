@@ -1,7 +1,7 @@
 <template>
   <HeroBlock />
   <div class="theme">
-    <h1>White Theme</h1>
+    <h2>White Theme</h2>
     <NuxtLink to="/" class="link">GO TO DARK</NuxtLink>
     <p>
       bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -30,9 +30,9 @@ const route = useRoute();
 .theme {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .link {
   display: flex;
@@ -40,7 +40,7 @@ const route = useRoute();
   align-items: center;
   border: 2px solid $orange-one;
   width: 150px;
-  height: 50px;
+  height: 30px;
   font-family: "Montserrat-SemiBold", sans-serif;
   color: $orange-one;
   text-align: center;

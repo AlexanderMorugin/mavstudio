@@ -2,41 +2,41 @@ export const headerMenu = [
   {
     id: 1,
     title: "Каталог",
-    route: "/catalog",
+    route: "/",
   },
   {
     id: 2,
     title: "Услуги",
-    route: "/service",
+    route: "/",
   },
   {
     id: 3,
     title: "Скидки",
-    route: "/promo",
+    route: "/",
   },
   {
     id: 4,
     title: "Заказчику",
-    route: "/customer",
+    route: "/",
   },
   {
     id: 5,
     title: "Мастерская",
-    route: "/company",
+    route: "/",
   },
   {
     id: 6,
     title: "Портфолио",
-    route: "/portfolio",
+    route: "/",
   },
   {
     id: 7,
     title: "Отзывы",
-    route: "/review",
+    route: "/",
   },
   {
     id: 8,
     title: "Контакты",
-    route: "/contact",
+    route: "/",
   },
 ];

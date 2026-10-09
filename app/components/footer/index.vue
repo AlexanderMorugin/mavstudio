@@ -1,9 +1,20 @@
 <template>
   <footer class="footer">
     <div class="footer__bottomLogoBlock">
-      <div class="footer__bottomLogo">
+      <div
+        :class="[
+          'footer__bottomLogo',
+          { footer__bottomLogo_white: props.theme === 'white' },
+        ]"
+      >
         <span>Mav</span>
-        <span class="footer__bottomLogoAccent">S</span>
+        <span
+          :class="[
+            'footer__bottomLogoAccent',
+            { footer__bottomLogoAccent_white: props.theme === 'white' },
+          ]"
+          >S</span
+        >
         <span>tudio</span>
       </div>
     </div>
@@ -16,7 +27,9 @@
 </template>
 
 <script setup lang="ts">
-import { COMPANY_NAME } from "~/mock/info";
+const props = defineProps<{
+  theme: string;
+}>();
 </script>
 
 <style lang="scss" scoped>
@@ -27,6 +40,7 @@ import { COMPANY_NAME } from "~/mock/info";
   gap: 40px;
   height: 200px;
   overflow: hidden;
+  margin-top: 60px;
 
   // border: 1px solid red;
 
@@ -35,13 +49,14 @@ import { COMPANY_NAME } from "~/mock/info";
     justify-content: center;
     height: 125px;
     overflow: hidden;
+    // border: 1px solid red;
 
-    @media (max-width: 1600px) {
-      height: 78px;
+    @media (max-width: 767px) {
+      height: 90px;
     }
 
     @media (max-width: 576px) {
-      height: 54px;
+      height: 73px;
     }
   }
 
@@ -52,17 +67,25 @@ import { COMPANY_NAME } from "~/mock/info";
     letter-spacing: -6%;
     color: $white-mask-five;
 
-    @media (max-width: 1600px) {
+    @media (max-width: 767px) {
       font-size: 100px;
     }
 
     @media (max-width: 576px) {
-      font-size: 70px;
+      font-size: 80px;
+    }
+
+    &_white {
+      color: $black-mask-two;
     }
   }
 
   &__bottomLogoAccent {
     color: $orange-mask-five;
+
+    &_white {
+      color: $orange-one;
+    }
   }
 }
 </style>

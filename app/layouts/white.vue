@@ -4,7 +4,7 @@
     <main class="layout__content">
       <slot />
     </main>
-    <Footer />
+    <Footer theme="white" />
   </div>
 </template>
 
