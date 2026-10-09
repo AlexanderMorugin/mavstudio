@@ -10,10 +10,13 @@
         />
       </div>
 
-      <ModalMenuForHeader
-        v-if="name === 'menu'"
-        @closeModal="$emit('closeModal')"
-      />
+      <div class="modalBlockForHeader__grid">
+        <ModalMenuForHeader
+          v-if="name === 'menu'"
+          @closeModal="$emit('closeModal')"
+        />
+        <ModalBlockLogo v-if="!isScreenMobile" />
+      </div>
 
       <!-- <ModalChat v-if="name === 'chat'" @closeModal="$emit('closeModal')" /> -->
     </ContainerPage>
@@ -25,6 +28,9 @@ const props = defineProps<{
   title: string;
   name: string;
 }>();
+
+const { isScreenMobile } = useResizeMobile();
+
 const emit = defineEmits(["closeModal"]);
 </script>
 
@@ -37,7 +43,6 @@ const emit = defineEmits(["closeModal"]);
   left: 0;
   backdrop-filter: blur(15px) grayscale(50%);
   background: $black-mask-three;
-  // overscroll-behavior: contain;
   overflow-y: auto;
   z-index: 10;
 
@@ -54,8 +59,6 @@ const emit = defineEmits(["closeModal"]);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding-left: 20px;
-    // padding-right: 20px;
   }
 
   &__topTitle {
@@ -66,6 +69,20 @@ const emit = defineEmits(["closeModal"]);
 
     @media (max-width: 767px) {
       font-size: 18px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr 60%;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
     }
   }
 }

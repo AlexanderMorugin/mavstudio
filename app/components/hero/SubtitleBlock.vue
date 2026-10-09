@@ -1,10 +1,16 @@
 <template>
-  <div class="heroSubtitleBlock">
+  <div :class="['heroSubtitleBlock', { heroSubtitleBlock_modal: props.modal }]">
     <span class="heroSubtitleBlock__one">Мастерская</span>
     <span class="heroSubtitleBlock__two">Авторских</span>
     <span class="heroSubtitleBlock__three">Веб-сайтов</span>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  modal?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .heroSubtitleBlock {
@@ -31,6 +37,10 @@
     gap: 10px;
     font-size: 13px;
     letter-spacing: 0;
+  }
+
+  &_modal {
+    flex-direction: column;
   }
 
   &__one {

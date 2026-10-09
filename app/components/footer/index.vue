@@ -42,14 +42,11 @@ const props = defineProps<{
   overflow: hidden;
   margin-top: 60px;
 
-  // border: 1px solid red;
-
   &__bottomLogoBlock {
     display: flex;
     justify-content: center;
     height: 125px;
     overflow: hidden;
-    // border: 1px solid red;
 
     @media (max-width: 767px) {
       height: 90px;
@@ -63,9 +60,9 @@ const props = defineProps<{
   &__bottomLogo {
     font-family: "Oswald-SemiBold", sans-serif;
     font-size: 140px;
-    line-height: 1;
+    // line-height: 1;
     letter-spacing: -6%;
-    color: $white-mask-five;
+    color: $white-mask-three;
 
     @media (max-width: 767px) {
       font-size: 100px;
@@ -81,7 +78,7 @@ const props = defineProps<{
   }
 
   &__bottomLogoAccent {
-    color: $orange-mask-five;
+    color: $orange-mask-one;
 
     &_white {
       color: $orange-one;

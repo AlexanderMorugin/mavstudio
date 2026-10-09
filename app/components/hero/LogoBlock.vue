@@ -1,6 +1,11 @@
 <template>
   <div class="heroLogoBlock">
-    <div class="heroLogoBlock__circle" />
+    <div
+      :class="[
+        'heroLogoBlock__circle',
+        { heroLogoBlock__circle_modal: props.modal },
+      ]"
+    />
     <img
       src="/img/logo/logo-pencil.svg"
       alt="pencil"
@@ -10,6 +15,12 @@
     <IconArrowIos class="heroLogoBlock__arrow heroLogoBlock__arrow_next" />
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  modal?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .heroLogoBlock {
@@ -38,6 +49,11 @@
     border-radius: 50%;
     background: $white-one;
     animation: circle 1.5s;
+
+    &_modal {
+      background: $white-mask-three;
+      animation: circle-modal 1.5s;
+    }
   }
 
   &__pencil {
@@ -114,7 +130,15 @@
     }
   }
 }
-
+@keyframes circle-modal {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes circle {
   0% {
     opacity: 0;
