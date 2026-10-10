@@ -64,24 +64,3 @@ useSeoMeta({
   ogLocale: "ru_RU",
 });
 </script>
-
-<style lang="scss" scoped>
-.theme {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  padding-top: 20px;
-}
-.link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid $orange-one;
-  width: 150px;
-  height: 30px;
-  font-family: "Montserrat-SemiBold", sans-serif;
-  color: $orange-one;
-  text-align: center;
-}
-</style>

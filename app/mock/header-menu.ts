@@ -21,13 +21,13 @@ export const headerMenu = [
   },
   {
     id: 5,
-    title: "Скидки",
-    route: "/promo",
+    title: "Преимущества",
+    route: "/advantage",
   },
   {
     id: 6,
-    title: "Преимущества",
-    route: "/advantage",
+    title: "Скидки",
+    route: "/promo",
   },
   {
     id: 7,

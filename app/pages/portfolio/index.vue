@@ -1,7 +1,7 @@
 <template>
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Услуги" />
+    <TitlePage title="Портфолио" />
   </ContainerPage>
 </template>
 
@@ -13,8 +13,8 @@ const route = useRoute();
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },
   {
-    name: "Услуги",
-    path: "/service",
+    name: "Портфолио",
+    path: "/portfolio",
     content: "last",
   },
 ];
