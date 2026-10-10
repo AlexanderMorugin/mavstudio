@@ -1,16 +1,14 @@
 <template>
   <header class="header">
-    <div v-if="props.theme === 'white'" class="header__overlay" />
+    <div class="header__overlay" />
     <ContainerPage desktopPadding class="header__container">
       <ButtonWithIcon
-        :theme="props.theme"
         name="menu"
         title="Меню"
         @handleClick="isMenuModalOpen = true"
       />
       <LogoForHeader />
       <ButtonWithIcon
-        :theme="props.theme"
         name="chat"
         title="Связаться"
         @handleClick="isChatModalOpen = true"
@@ -46,12 +44,16 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  theme: string;
-}>();
-
 const isMenuModalOpen = ref(false);
 const isChatModalOpen = ref(false);
+
+watch([isMenuModalOpen, isChatModalOpen], (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+});
 </script>
 
 <style lang="scss" scoped>

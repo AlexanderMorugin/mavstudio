@@ -2,7 +2,20 @@
   <!-- <h1>MavStudio</h1>
   <NuxtLink to="/project">project</NuxtLink> -->
   <HeroBlock />
-  <div class="theme">
+  <p>
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    bla bla bla bla bla
+  </p>
+  <!-- <div class="theme">
     <h2>Dark Theme</h2>
     <NuxtLink to="/project" class="link">GO TO WHITE</NuxtLink>
     <p>
@@ -18,7 +31,7 @@
       bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
       bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
     </p>
-  </div>
+  </div> -->
 </template>
 
 <script setup lang="ts">

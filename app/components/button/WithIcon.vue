@@ -1,34 +1,18 @@
 <template>
   <button
-    :class="[
-      'buttonWithIcon',
-      { buttonWithIcon_white: props.theme === 'white' },
-    ]"
+    class="buttonWithIcon"
     :title="props.title"
     @click="emit('handleClick')"
   >
     <div class="buttonWithIcon__spin" />
     <IconClose v-if="props.name === 'close'" class="buttonWithIcon__icon" />
-    <IconMenu
-      v-if="props.name === 'menu'"
-      :class="[
-        'buttonWithIcon__icon',
-        { buttonWithIcon__icon_white: props.theme === 'white' },
-      ]"
-    />
-    <IconChat
-      v-if="props.name === 'chat'"
-      :class="[
-        'buttonWithIcon__icon',
-        { buttonWithIcon__icon_white: props.theme === 'white' },
-      ]"
-    />
+    <IconMenu v-if="props.name === 'menu'" class="buttonWithIcon__icon" />
+    <IconChat v-if="props.name === 'chat'" class="buttonWithIcon__icon" />
   </button>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  theme?: string;
   name: string;
   title: string;
 }>();
@@ -42,14 +26,10 @@ const emit = defineEmits(["handleClick"]);
   align-items: center;
   width: 40px;
   height: 40px;
+  background: $white-one;
   border-radius: 50%;
   border: 1px solid $white-mask-three;
   transition: 0.2s ease;
-
-  &_white {
-    background: $white-one;
-    // border: 1px solid $black-mask-three;
-  }
 
   @media (max-width: 767px) {
     width: 32px;
@@ -74,17 +54,13 @@ const emit = defineEmits(["handleClick"]);
   &__icon {
     width: 32px;
     height: 32px;
-    fill: $white-one;
+    fill: $black-one;
     opacity: 0.9;
     transition: 0.2s ease;
 
     @media (max-width: 767px) {
       width: 24px;
       height: 24px;
-    }
-
-    &_white {
-      fill: $black-one;
     }
   }
 }

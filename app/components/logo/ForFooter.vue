@@ -1,19 +1,8 @@
 <template>
   <div class="logoForFooter">
-    <div
-      :class="[
-        'logoForFooter__bottomLogo',
-        { logoForFooter__bottomLogo_white: props.theme === 'white' },
-      ]"
-    >
+    <div class="logoForFooter__bottomLogo">
       <span>Mav</span>
-      <span
-        :class="[
-          'logoForFooter__bottomLogoAccent',
-          { logoForFooter__bottomLogoAccent_white: props.theme === 'white' },
-        ]"
-        >S</span
-      >
+      <span class="logoForFooter__bottomLogoAccent">S</span>
       <span>tudio</span>
     </div>
   </div>
@@ -44,7 +33,7 @@ const props = defineProps<{
     font-family: "Oswald-SemiBold", sans-serif;
     font-size: 140px;
     letter-spacing: -6%;
-    color: $white-mask-three;
+    color: $black-mask-two;
 
     @media (max-width: 767px) {
       font-size: 100px;
@@ -53,18 +42,10 @@ const props = defineProps<{
     @media (max-width: 576px) {
       font-size: 80px;
     }
-
-    &_white {
-      color: $black-mask-two;
-    }
   }
 
   &__bottomLogoAccent {
-    color: $orange-mask-one;
-
-    &_white {
-      color: $orange-one;
-    }
+    color: $orange-one;
   }
 }
 </style>

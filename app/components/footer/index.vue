@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <LogoForFooter :theme="props.theme" />
+    <LogoForFooter />
 
     <div>
       bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -10,11 +10,7 @@
   </footer>
 </template>
 
-<script setup lang="ts">
-const props = defineProps<{
-  theme: string;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 .footer {

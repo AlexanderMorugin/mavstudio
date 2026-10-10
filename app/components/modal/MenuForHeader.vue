@@ -26,48 +26,48 @@ const emits = defineEmits(["closeModal"]);
   flex-direction: column;
   gap: 10px;
 
-  // border: 1px solid red;
-
   &__link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // width: 100%;
     max-width: 390px;
-    background: $black-mask-one;
+    // background: $white-one;
+    background: $gradient-page-light-two;
+
     border-radius: $br-xs;
-    border: 1px solid $white-mask-four;
+    border: 1px solid $white-one;
     padding: 20px;
     transition: 0.05s ease;
 
-    // @media (max-width: 767px) {
-    //   padding: 10px;
-    // }
+    @media (max-width: 767px) {
+      padding: 12px 20px;
+    }
 
     &:hover {
-      background: $white-mask-three;
+      // background: $white-mask-one;
+      box-shadow: rgba(255, 255, 255, 0.6) 2px 2px 15px;
     }
   }
 
   &__linkText {
     font-size: 18px;
     letter-spacing: 1px;
+    color: $blue-one;
   }
 
   &__linkIcon {
     width: 20px;
     height: 20px;
-    fill: $white-mask-two;
+    // fill: $blue-mask-two;
+    fill: $white-mask-one;
     transition: 0.2s ease;
   }
-
-  // &__logo {
-  //   padding-top: 1rem;
-  //   padding-bottom: 2rem;
-  // }
 }
 
 .modalMenuForHeader__link:hover .modalMenuForHeader__linkIcon {
   fill: $orange-one;
 }
+// .modalMenuForHeader__link:hover .modalMenuForHeader__linkText {
+//   color: $orange-one;
+// }
 </style>
