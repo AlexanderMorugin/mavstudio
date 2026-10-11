@@ -5,15 +5,17 @@
         <div class="reviewCard__userIcon">{{ props.review.firstLetter }}</div>
         <div class="reviewCard__userBlock">
           <span class="reviewCard__userName">{{ props.review.user }}</span>
-          <span class="reviewCard__userStatus">{{
-            props.review.userStatus
-          }}</span>
+          <ParagraphSmall>{{ props.review.userStatus }}</ParagraphSmall>
         </div>
       </div>
-      <span>{{ props.review.textOne }}</span>
-      <span>{{ props.review.textTwo }}</span>
+      <ParagraphNormal v-if="props.review.textOne">{{
+        props.review.textOne
+      }}</ParagraphNormal>
+      <ParagraphNormal v-if="props.review.textTwo">{{
+        props.review.textTwo
+      }}</ParagraphNormal>
     </div>
-    <span class="reviewCard__date">{{ props.review.date }}</span>
+    <ParagraphSmall>{{ props.review.date }}</ParagraphSmall>
   </div>
 </template>
 
@@ -65,7 +67,6 @@ const props = defineProps<{
     height: 50px;
     border-radius: 50%;
     background: $gradient-blue-two;
-    // font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 24px;
     color: $white-one;
   }
@@ -81,7 +82,7 @@ const props = defineProps<{
   }
 
   &__date {
-    font-size: 14px;
+    font-size: 12px;
     color: $grey-four;
   }
 }
