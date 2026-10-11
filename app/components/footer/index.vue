@@ -17,7 +17,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  // height: 200px;
   overflow: hidden;
   margin-top: 60px;
 

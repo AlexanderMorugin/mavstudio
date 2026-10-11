@@ -28,7 +28,7 @@ const props = defineProps<{
 
   @media (max-width: 767px) {
     gap: 10px;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
   }
 

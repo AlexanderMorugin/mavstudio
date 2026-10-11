@@ -1,4 +1,5 @@
 <template>
+  <HeroBlock />
   <div>
     Судьба Ефремова с ранних лет была непростой. Во время Гражданской войны он
     прибился к красноармейской автороте, был контужен. После демобилизации в
@@ -30,3 +31,34 @@
     штурмана каботажных судов.
   </div>
 </template>
+
+<script setup lang="ts">
+import {
+  MAIN_DESCRIPTION,
+  MAIN_IMAGE,
+  MAIN_TITLE,
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+} from "~/mock/meta";
+
+const route = useRoute();
+
+useHead({
+  link: [{ rel: "canonical", href: `${SITE}` }],
+});
+
+useSeoMeta({
+  title: `${MAIN_TITLE}`,
+  description: `${MAIN_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${MAIN_TITLE}`,
+  ogDescription: `${MAIN_DESCRIPTION}`,
+  ogImage: `${MAIN_IMAGE}`,
+  ogUrl: `${SITE}/`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
+</script>
