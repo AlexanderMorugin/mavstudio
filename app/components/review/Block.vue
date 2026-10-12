@@ -1,7 +1,7 @@
 <template>
   <section class="reviewBlock">
     <CardWithStripe v-for="item in props.reviews" :key="item.id" orange>
-      <ReviewCard :review="item" />
+      <ReviewListCard :review="item" />
     </CardWithStripe>
   </section>
 </template>

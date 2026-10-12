@@ -6,8 +6,8 @@ export const headerMenu = [
   },
   {
     id: 2,
-    title: "Услуги",
-    route: "/service",
+    title: "Сайты",
+    route: "/site",
   },
   {
     id: 3,
@@ -31,26 +31,36 @@ export const headerMenu = [
   },
   {
     id: 7,
+    title: "Структура",
+    route: "/structure",
+  },
+  {
+    id: 8,
     title: "Блоки",
     route: "/block",
   },
   {
-    id: 8,
+    id: 9,
+    title: "Услуги",
+    route: "/service",
+  },
+  {
+    id: 10,
     title: "Информация",
     route: "/info",
   },
   {
-    id: 9,
+    id: 11,
     title: "Портфолио",
     route: "/portfolio",
   },
   {
-    id: 10,
+    id: 12,
     title: "Отзывы",
     route: "/review",
   },
   {
-    id: 11,
+    id: 13,
     title: "Контакты",
     route: "/contact",
   },

@@ -1,8 +1,14 @@
 <template>
-  <p class="paragraphSmall">
+  <p :class="['paragraphSmall', { paragraphSmall_center: props.center }]">
     <slot />
   </p>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps<{
+  center?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .paragraphSmall {
@@ -12,6 +18,10 @@
 
   @media (max-width: 767px) {
     font-size: 12px;
+  }
+
+  &_center {
+    text-align: center;
   }
 }
 </style>

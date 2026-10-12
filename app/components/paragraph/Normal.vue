@@ -1,8 +1,21 @@
 <template>
-  <p class="paragraphNormal">
+  <p
+    :class="[
+      'paragraphNormal',
+      { paragraphNormal_center: props.center },
+      { paragraphNormal_uppercase: props.uppercase },
+    ]"
+  >
     <slot />
   </p>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps<{
+  center?: boolean;
+  uppercase?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .paragraphNormal {
@@ -11,6 +24,14 @@
 
   @media (max-width: 389px) {
     font-size: 14px;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
   }
 }
 </style>

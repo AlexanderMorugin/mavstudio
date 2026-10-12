@@ -1,10 +1,12 @@
 <template>
-  <div class="reviewCard">
-    <div class="reviewCard__textBlock">
-      <div class="reviewCard__user">
-        <div class="reviewCard__userIcon">{{ props.review.firstLetter }}</div>
+  <div class="reviewListCard">
+    <div class="reviewListCard__textBlock">
+      <div class="reviewListCard__user">
+        <div class="reviewListCard__userIcon">
+          {{ props.review.firstLetter }}
+        </div>
         <div>
-          <span class="reviewCard__userName">{{ props.review.user }}</span>
+          <span class="reviewListCard__userName">{{ props.review.user }}</span>
           <ParagraphSmall>{{ props.review.userStatus }}</ParagraphSmall>
         </div>
       </div>
@@ -15,6 +17,7 @@
         props.review.textTwo
       }}</ParagraphNormal>
     </div>
+
     <ParagraphSmall>{{ props.review.date }}</ParagraphSmall>
   </div>
 </template>
@@ -28,7 +31,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.reviewCard {
+.reviewListCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
