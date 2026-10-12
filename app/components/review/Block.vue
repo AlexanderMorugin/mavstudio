@@ -1,6 +1,8 @@
 <template>
   <section class="reviewBlock">
-    <ReviewCard v-for="item in props.reviews" :key="item.id" :review="item" />
+    <CardWithStripe v-for="item in props.reviews" :key="item.id" orange>
+      <ReviewCard :review="item" />
+    </CardWithStripe>
   </section>
 </template>
 

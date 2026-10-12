@@ -3,7 +3,7 @@
     <div class="reviewCard__textBlock">
       <div class="reviewCard__user">
         <div class="reviewCard__userIcon">{{ props.review.firstLetter }}</div>
-        <div class="reviewCard__userBlock">
+        <div>
           <span class="reviewCard__userName">{{ props.review.user }}</span>
           <ParagraphSmall>{{ props.review.userStatus }}</ParagraphSmall>
         </div>
@@ -33,11 +33,7 @@ const props = defineProps<{
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
-  border: 1px solid $black-mask-four;
-  border-left: 10px solid $orange-one;
-  padding: 10px;
-  user-select: none;
-  cursor: grab;
+  height: 100%;
 
   &__textBlock {
     display: flex;
@@ -45,18 +41,13 @@ const props = defineProps<{
     gap: 20px;
   }
 
-  &__userBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
   &__user {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50px 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid $black-mask-three;
+    border-bottom: 1px solid $black-mask-four;
   }
 
   &__userIcon {
@@ -73,17 +64,8 @@ const props = defineProps<{
 
   &__userName {
     font-family: "Montserrat-SemiBold", sans-serif;
+    line-height: 1.5;
     letter-spacing: 1px;
-  }
-
-  &__userStatus {
-    font-size: 12px;
-    color: $grey-four;
-  }
-
-  &__date {
-    font-size: 12px;
-    color: $grey-four;
   }
 }
 </style>

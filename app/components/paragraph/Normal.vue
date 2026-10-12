@@ -9,7 +9,7 @@
   font-size: 16px;
   line-height: 1.5;
 
-  @media (max-width: 767px) {
+  @media (max-width: 389px) {
     font-size: 14px;
   }
 }
