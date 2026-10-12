@@ -48,6 +48,12 @@ $gradient-blue-one: linear-gradient(to right, $blue-one 0%, $mask-trasparent 100
 $gradient-blue-two: linear-gradient(to right, $blue-one 0%, $blue-three 100%);
 
 // $shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
+$shadow-card-one:
+  0 0 10px rgba(38, 39, 39, 0.1),
+  0 0 15px rgba(38, 39, 39, 0.2);
+$shadow-card-two:
+  0 5px 10px rgba(38, 39, 39, 0.1),
+  0 10px 15px rgba(38, 39, 39, 0.2);
 
 // $br-xxs: 4px;
 $br-xs: 6px;

@@ -1,8 +1,12 @@
 <template>
   <section class="siteBlock">
-    <CardWithImage v-for="item in props.catalog" :key="item.id" :item="item">
+    <CardLinkWithImage
+      v-for="item in props.catalog"
+      :key="item.id"
+      :item="item"
+    >
       <SiteListCard :item="item" />
-    </CardWithImage>
+    </CardLinkWithImage>
   </section>
 </template>
 
@@ -20,6 +24,7 @@ const props = defineProps<{
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 40px;
+  padding-bottom: 30px;
 
   // border: 1px solid red;
 

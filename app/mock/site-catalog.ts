@@ -5,7 +5,7 @@ export const siteCatalog = [
     subtitle: "Рекламный, промо страничка",
     description: "Рекламный, промо страничка",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/landing",
+    route: "/site/landing",
     price: "от 10 000 руб",
   },
   {
@@ -14,7 +14,7 @@ export const siteCatalog = [
     subtitle: "Информационный, для компании, организации",
     description: "Информационный, для компании, организации",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/business-card",
+    route: "/site/businesscard",
     price: "от 30 000 руб",
   },
   {
@@ -23,7 +23,7 @@ export const siteCatalog = [
     subtitle: "С каталогом товаров или услуг, статический или динамический",
     description: "С каталогом товаров или услуг, статический или динамический",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/multi‑page",
+    route: "/site/multipage",
     price: "от 60 000 руб",
   },
   {
@@ -32,7 +32,7 @@ export const siteCatalog = [
     subtitle: "Ознакомительный",
     description: "Ознакомительный",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/info",
+    route: "/site/info",
     price: "от 50 000 руб",
   },
   {
@@ -43,7 +43,7 @@ export const siteCatalog = [
     description:
       "Представляющий каталог товаров или услуг с ценами, но без онлайн оплаты",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/commerce",
+    route: "/site/commerce",
     price: "от 70 000 руб",
   },
   {
@@ -52,7 +52,7 @@ export const siteCatalog = [
     subtitle: "Продающий, с каталогом товаров",
     description: "Продающий, с каталогом товаров",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/internet-shop",
+    route: "/site/internetshop",
     price: "от 100 000 руб",
   },
   {
@@ -61,7 +61,7 @@ export const siteCatalog = [
     subtitle: "Админка или CMS-панель",
     description: "Админка или CMS-панель",
     image: "/img/meta/meta-main-1200-630.jpg",
-    route: "/cms",
+    route: "/site/cms",
     price: "от 150 000 руб",
   },
 ];
