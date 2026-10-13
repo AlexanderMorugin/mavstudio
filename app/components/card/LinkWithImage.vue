@@ -1,12 +1,29 @@
 <template>
   <NuxtLink :to="props.item.route" class="cardLinkWithImage">
-    <div class="cardLinkWithImage__pictureBlock">
-      <img
-        :src="props.item.image"
-        :alt="props.item.title"
-        :title="props.item.title"
-        class="cardLinkWithImage__picture"
-      />
+    <div class="cardLinkWithImage__container">
+      <div class="cardLinkWithImage__pictureBlock">
+        <img
+          v-if="props.item.title === 'Сайт-визитка'"
+          src="/img/cards/business.svg"
+          class="cardLinkWithImage__image"
+        />
+
+        <img
+          v-if="props.item.title === 'Лендинг'"
+          src="/img/cards/landing.svg"
+          class="cardLinkWithImage__image"
+        />
+      </div>
+
+      <div class="cardLinkWithImage__logoBox">
+        <img
+          src="/img/logo/logo.png"
+          alt="logo"
+          class="cardLinkWithImage__logo"
+        />
+      </div>
+
+      <h2 class="cardLinkWithImage__title">{{ props.item.title }}</h2>
     </div>
     <slot />
   </NuxtLink>
@@ -35,20 +52,81 @@ const props = defineProps<{
     transform: translateY(-1%);
   }
 
-  &__pictureBlock {
-    display: block;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    background: $gradient-blue-three;
     border-top-left-radius: $br-xs;
     border-top-right-radius: $br-xs;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding: 20px;
   }
 
-  &__picture {
-    width: 100%;
+  &__logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: $br-xs;
+    border: 1px solid $white-mask-three;
+    background: $white-mask-four;
+    padding: 5px;
+  }
+
+  &__logo {
+    width: 40px;
     transition: 0.2s ease;
   }
+
+  &__pictureBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+    background-clip: text;
+    background-image: linear-gradient(90deg, $white-one 40%, $blue-three 60%);
+    animation: shine 5s linear infinite;
+    text-shadow: $shadow-text-one;
+
+    @media (max-width: 1023px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 389px) {
+      font-size: 20px;
+    }
+  }
+
+  &__image {
+    width: 70%;
+  }
 }
-.cardLinkWithImage:hover .cardLinkWithImage__picture {
-  box-shadow: $shadow-card-two;
+@keyframes shine {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: $white-one;
+    text-shadow: none;
+  }
+  100% {
+    color: transparent;
+  }
 }
 </style>

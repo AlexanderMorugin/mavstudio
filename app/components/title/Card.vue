@@ -1,8 +1,8 @@
 <template>
   <div class="titleCard">
-    <h2 v-if="props.title" class="titleCard__title">
+    <!-- <h2 v-if="props.title" class="titleCard__title">
       {{ props.title }}
-    </h2>
+    </h2> -->
     <ParagraphNormal v-if="props.subtitle" center uppercase>{{
       props.subtitle
     }}</ParagraphNormal>
