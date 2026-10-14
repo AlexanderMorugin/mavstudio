@@ -1,12 +1,22 @@
 <template>
-  <CardBlockContainer>Commerce</CardBlockContainer>
+  <CardBlockContainer>
+    <CardBlockUiHeader />
+    <div>
+      <CardBlockUiCard large commerce />
+    </div>
+    <div class="cardBlockCommerce">
+      <CardBlockUiCard normal payment />
+      <CardBlockUiCard normal payment />
+      <CardBlockUiCard normal payment />
+    </div>
+    <CardBlockUiFooter />
+  </CardBlockContainer>
 </template>
 
 <style lang="scss" scoped>
 .cardBlockCommerce {
-  // width: 90%;
-  // height: 100%;
-  // background: yellowgreen;
-  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 </style>

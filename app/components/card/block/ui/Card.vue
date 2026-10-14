@@ -11,6 +11,10 @@
           v-if="props.infoTwo"
           class="cardBlockUiCard__iconBigTwo"
         />
+        <IconPaymentFill
+          v-if="props.payment"
+          class="cardBlockUiCard__iconBigTwo"
+        />
       </div>
 
       <div class="cardBlockUiCard__textBlock">
@@ -46,6 +50,10 @@
           v-if="props.landing"
           class="cardBlockUiCard__icon cardBlockUiCard__icon_green"
         />
+        <IconHeartFill
+          v-if="props.commerce"
+          class="cardBlockUiCard__icon cardBlockUiCard__icon_orange"
+        />
 
         <CardBlockUiLine animate-one />
         <CardBlockUiLine animate-three />
@@ -56,6 +64,10 @@
           v-if="props.landing"
           class="cardBlockUiCard__icon cardBlockUiCard__icon_orange"
         />
+        <IconStarKidFill
+          v-if="props.commerce"
+          class="cardBlockUiCard__icon cardBlockUiCard__icon_orange"
+        />
         <CardBlockUiLine animate-three />
         <CardBlockUiLine animate-two />
         <CardBlockUiLine animate-one />
@@ -64,6 +76,10 @@
         <IconPlantFill
           v-if="props.landing"
           class="cardBlockUiCard__icon cardBlockUiCard__icon_green"
+        />
+        <IconHeartFill
+          v-if="props.commerce"
+          class="cardBlockUiCard__icon cardBlockUiCard__icon_orange"
         />
         <CardBlockUiLine animate-two />
         <CardBlockUiLine animate-three />
@@ -89,6 +105,8 @@ const props = defineProps<{
   shop?: boolean;
   cart?: boolean;
   delivery?: boolean;
+  commerce?: boolean;
+  payment?: boolean;
 }>();
 </script>
 
@@ -150,15 +168,15 @@ const props = defineProps<{
     height: 20px;
 
     &_white {
-      fill: $white-mask-three;
+      fill: $white-one;
     }
 
     &_green {
-      fill: $green-mask-one;
+      fill: $green-one;
     }
 
     &_orange {
-      fill: $orange-mask-one;
+      fill: $orange-one;
     }
   }
 
@@ -180,7 +198,6 @@ const props = defineProps<{
     fill: transparent;
   }
   50% {
-    // color: $white-one;
     box-shadow: none;
   }
   100% {
