@@ -1,12 +1,22 @@
 <template>
-  <CardBlockContainer>INFO</CardBlockContainer>
+  <CardBlockContainer>
+    <CardBlockUiHeader />
+    <div class="cardBlockInfo">
+      <CardBlockUiCard normal info />
+      <CardBlockUiCard normal info />
+    </div>
+    <div class="cardBlockInfo">
+      <CardBlockUiCard normal info-two />
+      <CardBlockUiCard normal info-two />
+    </div>
+    <CardBlockUiFooter />
+  </CardBlockContainer>
 </template>
 
 <style lang="scss" scoped>
 .cardBlockInfo {
-  // width: 90%;
-  // height: 100%;
-  // background: brown;
-  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 </style>

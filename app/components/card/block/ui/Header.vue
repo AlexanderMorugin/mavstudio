@@ -2,12 +2,12 @@
   <div class="cardBlockUiHeader">
     <IconStarKidFill class="cardBlockUiHeader__icon" />
     <div class="cardBlockUiHeader__textBlock">
-      <div class="cardBlockUiHeader__line" />
-      <div class="cardBlockUiHeader__line" />
+      <CardBlockUiLine />
+      <CardBlockUiLine />
     </div>
     <div class="cardBlockUiHeader__textBlock">
-      <div class="cardBlockUiHeader__line" />
-      <div class="cardBlockUiHeader__line" />
+      <CardBlockUiLine />
+      <CardBlockUiLine />
     </div>
   </div>
 </template>
@@ -19,8 +19,22 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  background: $black-mask-three;
+  background-image: linear-gradient(
+    to right,
+    $black-mask-three,
+    $black-mask-three,
+    $white-mask-five,
+    $black-mask-three,
+    $black-mask-three
+  );
+  border-radius: $br-xxs;
   padding: 8px 10px 8px 30px;
+  overflow: hidden;
+
+  animation: background-fade 20s linear infinite;
+  background-size: 800%;
+  -webkit-animation: background-fade 20s linear infinite;
+  -moz-animation: background-fade 20s linear infinite;
 
   &__textBlock {
     display: flex;
@@ -29,16 +43,22 @@
     width: 100%;
   }
 
-  &__line {
-    width: 100%;
-    height: 2px;
-    background: $white-one;
-  }
-
   &__icon {
     width: 24px;
     height: 24px;
-    fill: $white-one;
+    fill: $white-mask-three;
+  }
+}
+
+@keyframes background-fade {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
   }
 }
 </style>

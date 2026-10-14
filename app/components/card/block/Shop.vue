@@ -1,12 +1,24 @@
 <template>
-  <CardBlockContainer>Shop</CardBlockContainer>
+  <CardBlockContainer>
+    <CardBlockUiHeader />
+    <div class="cardBlockShop">
+      <CardBlockUiCard shop cart />
+      <CardBlockUiCard shop cart />
+      <CardBlockUiCard shop cart />
+    </div>
+    <div class="cardBlockShop">
+      <CardBlockUiCard shop delivery />
+      <CardBlockUiCard shop delivery />
+      <CardBlockUiCard shop delivery />
+    </div>
+    <CardBlockUiFooter />
+  </CardBlockContainer>
 </template>
 
 <style lang="scss" scoped>
 .cardBlockShop {
-  // width: 90%;
-  // height: 100%;
-  // background: wheat;
-  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 </style>
