@@ -1,7 +1,6 @@
 <template>
   <div class="siteListCard">
-    <TitleCard
-      :title="props.item.title"
+    <TitleCardSubtitle
       :subtitle="props.item.subtitle"
       :description="props.item.description"
     />
@@ -18,7 +17,6 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .siteListCard {
-  // border: 1px solid red;
   padding: 10px;
 }
 </style>
