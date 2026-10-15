@@ -9,7 +9,7 @@
       <CardBlockUiLine animateFooter />
     </div>
 
-    <IconStar class="cardBlockUiFooter__icon" />
+    <IconStarKidFill class="cardBlockUiFooter__icon" />
   </div>
 </template>
 
@@ -35,7 +35,7 @@
   &__icon {
     width: 24px;
     height: 24px;
-    fill: $orange-mask-one;
+    fill: $white-mask-three;
   }
 }
 </style>

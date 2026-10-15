@@ -1,24 +1,26 @@
 <template>
   <CardBlockContainer>
     <CardBlockUiHeader />
-    <div class="cardBlockShop">
-      <CardBlockUiCard shop cart />
-      <CardBlockUiCard shop cart />
-      <CardBlockUiCard shop cart />
-    </div>
-    <div class="cardBlockShop">
-      <CardBlockUiCard shop delivery />
-      <CardBlockUiCard shop delivery />
-      <CardBlockUiCard shop delivery />
-    </div>
+    <CardBlockUiSectionGrid
+      threeGrid
+      imgOne="cartImage"
+      imgOneFill="orange"
+      imgTwo="cartImage"
+      imgTwoFill="orange"
+      imgThree="cartImage"
+      imgThreeFill="orange"
+    />
+    <CardBlockUiSectionGrid
+      threeGrid
+      imgOne="deliveryImage"
+      imgOneFill="white"
+      imgTwo="sailingImage"
+      imgTwoFill="white"
+      imgThree="flightImage"
+      imgThreeFill="white"
+      textOrange
+    />
+
     <CardBlockUiFooter />
   </CardBlockContainer>
 </template>
-
-<style lang="scss" scoped>
-.cardBlockShop {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
-</style>

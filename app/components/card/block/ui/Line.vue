@@ -6,6 +6,7 @@
       { cardBlockUiLine_animateTwo: props.animateTwo },
       { cardBlockUiLine_animateThree: props.animateThree },
       { cardBlockUiLine_animateFooter: props.animateFooter },
+      { cardBlockUiLine_orange: props.textOrange },
     ]"
   />
 </template>
@@ -16,13 +17,18 @@ const props = defineProps<{
   animateTwo?: boolean;
   animateThree?: boolean;
   animateFooter?: boolean;
+  textOrange?: boolean;
 }>();
 </script>
 
 <style lang="scss" scoped>
 .cardBlockUiLine {
   height: 2px;
-  background: $white-mask-three;
+  background: $white-mask-two;
+
+  &_orange {
+    background: $orange-mask-one;
+  }
 
   &_animateOne {
     animation: move 5s ease-in-out infinite;
