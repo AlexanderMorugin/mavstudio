@@ -1,5 +1,9 @@
 <template>
-  <NuxtLink :to="props.item.route" class="cardWithContent">
+  <NuxtLink
+    :to="props.item.route"
+    :title="props.item.title"
+    class="cardWithContent"
+  >
     <div class="cardWithContent__container">
       <div class="cardWithContent__block">
         <CardBlockLanding v-if="props.item.name === 'landing'" />
@@ -10,9 +14,7 @@
         <CardBlockShop v-if="props.item.name === 'shop'" />
         <CardBlockCms v-if="props.item.name === 'cms'" />
       </div>
-
       <LogoForCard />
-      <!-- <TitleCard :title="props.item.title" /> -->
     </div>
     <slot />
   </NuxtLink>
@@ -33,7 +35,6 @@ const props = defineProps<{
   border-radius: $br-m;
   border: 1px solid $black-mask-four;
   box-shadow: $shadow-card-one;
-  // padding: 3px 3px 10px 3px;
   padding: 3px;
   transition: 0.2s ease;
 

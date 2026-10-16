@@ -11,7 +11,8 @@
 .cardBlockUiCmsContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  column-gap: 6px;
+  row-gap: 10px;
   background: $black-mask-two;
   padding: 10px;
 }

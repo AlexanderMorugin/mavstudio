@@ -1,7 +1,11 @@
 <template>
   <section class="siteBlock">
     <CardWithContent v-for="item in props.catalog" :key="item.id" :item="item">
-      <SiteListCard :item="item" />
+      <TitleBlockForSiteCard
+        :title="item.title"
+        :subtitle="item.subtitle"
+        :description="item.description"
+      />
     </CardWithContent>
   </section>
 </template>

@@ -79,15 +79,14 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .cardBlockUiSectionGrid {
   display: grid;
+  gap: 6px;
 
   &_two {
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
   }
 
   &_three {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
   }
 
   &__box {

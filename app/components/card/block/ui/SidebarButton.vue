@@ -33,6 +33,7 @@ const props = defineProps<{
   &_multipage {
     width: 90%;
     margin-top: 20px;
+    background: $blue-two;
   }
 
   &__icon {
