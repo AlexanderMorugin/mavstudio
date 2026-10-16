@@ -4,7 +4,6 @@ export interface ISiteCatalog {
   title: string;
   subtitle: string;
   description: string;
-  // image: string;
   route: string;
-  price: string;
+  price: number;
 }

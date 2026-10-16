@@ -4,7 +4,20 @@
     :title="props.item.title"
     class="cardWithContent"
   >
-    <div class="cardWithContent__container">
+    <div
+      :class="[
+        'cardWithContent__container',
+        { cardWithContent__container_landing: props.item.name === 'landing' },
+        { cardWithContent__container_business: props.item.name === 'business' },
+        {
+          cardWithContent__container_multipage: props.item.name === 'multipage',
+        },
+        { cardWithContent__container_info: props.item.name === 'info' },
+        { cardWithContent__container_commerce: props.item.name === 'commerce' },
+        { cardWithContent__container_shop: props.item.name === 'shop' },
+        { cardWithContent__container_cms: props.item.name === 'cms' },
+      ]"
+    >
       <div class="cardWithContent__block">
         <CardBlockLanding v-if="props.item.name === 'landing'" />
         <CardBlockBusiness v-if="props.item.name === 'business'" />
@@ -49,11 +62,33 @@ const props = defineProps<{
     flex-direction: column;
     justify-content: space-between;
     height: 300px;
-    background: $gradient-blue-three;
+    // background: $gradient-blue-three;
     border-top-left-radius: $br-xs;
     border-top-right-radius: $br-xs;
     overflow: hidden;
     padding: 10px;
+
+    &_landing {
+      background: $gradient-landing-one;
+    }
+    &_business {
+      background: $gradient-business-one;
+    }
+    &_multipage {
+      background: $gradient-multipage-one;
+    }
+    &_info {
+      background: $gradient-info-one;
+    }
+    &_commerce {
+      background: $gradient-commerce-one;
+    }
+    &_shop {
+      background: $gradient-shop-one;
+    }
+    &_cms {
+      background: $gradient-cms-one;
+    }
   }
 
   &__block {
