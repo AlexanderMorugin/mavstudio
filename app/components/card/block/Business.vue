@@ -1,7 +1,7 @@
 <template>
   <CardBlockContainer>
     <CardBlockUiHeader />
-    <CardBlockUiSectionLarge business />
+    <CardBlockUiSectionLarge business textGreen />
     <CardBlockUiSectionLarge building textOrange />
     <CardBlockUiFooter />
   </CardBlockContainer>

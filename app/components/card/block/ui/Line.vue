@@ -7,6 +7,7 @@
       { cardBlockUiLine_animateThree: props.animateThree },
       { cardBlockUiLine_animateFooter: props.animateFooter },
       { cardBlockUiLine_orange: props.textOrange },
+      { cardBlockUiLine_green: props.textGreen },
     ]"
   />
 </template>
@@ -18,6 +19,7 @@ const props = defineProps<{
   animateThree?: boolean;
   animateFooter?: boolean;
   textOrange?: boolean;
+  textGreen?: boolean;
 }>();
 </script>
 
@@ -28,6 +30,10 @@ const props = defineProps<{
 
   &_orange {
     background: $orange-mask-one;
+  }
+
+  &_green {
+    background: $green-mask-one;
   }
 
   &_animateOne {

@@ -1,6 +1,10 @@
 <template>
   <div class="cardBlockUiHeader">
-    <IconStarKidFill class="cardBlockUiHeader__icon" />
+    <IconConstruction
+      v-if="props.cms"
+      class="cardBlockUiHeader__icon cardBlockUiHeader__icon_cms"
+    />
+    <IconStarKidFill v-if="!props.cms" class="cardBlockUiHeader__icon" />
     <div class="cardBlockUiHeader__textBlock">
       <CardBlockUiLine />
       <CardBlockUiLine />
@@ -11,6 +15,12 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  cms?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .cardBlockUiHeader {
@@ -47,6 +57,10 @@
     width: 24px;
     height: 24px;
     fill: $white-mask-three;
+
+    &_cms {
+      fill: $white-one;
+    }
   }
 }
 

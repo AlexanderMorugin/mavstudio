@@ -1,12 +1,18 @@
 <template>
-  <CardBlockContainer>CMS</CardBlockContainer>
+  <CardBlockContainer>
+    <CardBlockUiHeader cms />
+    <div class="cardBlockCms">
+      <CardBlockUiSidebar />
+      <CardBlockUiCmsContent />
+    </div>
+  </CardBlockContainer>
 </template>
 
 <style lang="scss" scoped>
 .cardBlockCms {
-  // width: 90%;
-  // height: 100%;
-  // background: goldenrod;
-  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  height: 100%;
+  margin-top: 8px;
 }
 </style>

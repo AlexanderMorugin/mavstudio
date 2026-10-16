@@ -13,13 +13,13 @@
         v-if="props.business"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <IconCastleFill
+      <IconHiking
         v-if="props.building"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <CardBlockUiLine animate-one />
+      <CardBlockUiLine animate-one :textGreen="props.textGreen" />
       <CardBlockUiLine animate-three :textOrange="props.textOrange" />
-      <CardBlockUiLine animate-two />
+      <CardBlockUiLine animate-two :textGreen="props.textGreen" />
     </div>
     <div class="cardBlockUiSectionLarge__box">
       <IconRocketFill
@@ -34,7 +34,7 @@
         v-if="props.business"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <IconChurchFill
+      <IconScuba
         v-if="props.building"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
@@ -55,13 +55,13 @@
         v-if="props.business"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <IconMuslimFill
+      <IconSnowboard
         v-if="props.building"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <CardBlockUiLine animate-two />
+      <CardBlockUiLine animate-two :textGreen="props.textGreen" />
       <CardBlockUiLine animate-three :textOrange="props.textOrange" />
-      <CardBlockUiLine animate-one />
+      <CardBlockUiLine animate-one :textGreen="props.textGreen" />
     </div>
   </div>
 </template>
@@ -73,6 +73,7 @@ const props = defineProps<{
   business?: boolean;
   building?: boolean;
   textOrange?: boolean;
+  textGreen?: boolean;
 }>();
 </script>
 
