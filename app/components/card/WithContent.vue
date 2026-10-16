@@ -69,25 +69,25 @@ const props = defineProps<{
     padding: 10px;
 
     &_landing {
-      background: $gradient-landing-one;
+      background: $gradient-green-one;
     }
     &_business {
-      background: $gradient-business-one;
+      background: $gradient-orange-one;
     }
     &_multipage {
-      background: $gradient-multipage-one;
+      background: $gradient-grey-one;
     }
     &_info {
-      background: $gradient-info-one;
+      background: $gradient-green-two;
     }
     &_commerce {
-      background: $gradient-commerce-one;
+      background: $gradient-blue-three;
     }
     &_shop {
-      background: $gradient-shop-one;
+      background: $gradient-green-one;
     }
     &_cms {
-      background: $gradient-cms-one;
+      background: $gradient-grey-one;
     }
   }
 

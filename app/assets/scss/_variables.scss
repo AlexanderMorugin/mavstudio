@@ -64,13 +64,10 @@ $gradient-hero-one: linear-gradient(135deg, $blue-two 0%, $blue-one 40%, $blue-o
 $gradient-blue-one: linear-gradient(to right, $blue-one 0%, $mask-trasparent 100%);
 $gradient-blue-two: linear-gradient(to right, $blue-one 0%, $blue-three 100%);
 $gradient-blue-three: linear-gradient(135deg, $blue-two 30%, $blue-one 60%);
-$gradient-landing-one: linear-gradient(135deg, $green-mask-five 30%, $green-mask-four 60%);
-$gradient-business-one: linear-gradient(135deg, $orange-mask-five 30%, $orange-mask-four 60%);
-$gradient-multipage-one: linear-gradient(135deg, $blue-two 30%, $blue-mask-three 60%);
-$gradient-info-one: linear-gradient(135deg, $orange-mask-five 30%, $green-mask-four 60%);
-$gradient-commerce-one: linear-gradient(135deg, $blue-two 30%, $blue-one 60%);
-$gradient-shop-one: linear-gradient(135deg, $blue-one 0%, $green-one 100%);
-$gradient-cms-one: linear-gradient(135deg, $grey-mask-two 30%, $grey-mask-three 60%);
+$gradient-green-one: linear-gradient(135deg, $green-mask-five 30%, $green-mask-four 60%);
+$gradient-green-two: linear-gradient($orange-mask-five 0%, $green-mask-four 100%);
+$gradient-orange-one: linear-gradient(135deg, $orange-mask-five 30%, $orange-mask-four 60%);
+$gradient-grey-one: linear-gradient($grey-mask-two 0%, $grey-mask-four 100%);
 
 // $shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
 $shadow-card-one:
@@ -82,9 +79,6 @@ $shadow-card-two:
 $shadow-text-one:
   0 0 10px rgba(255, 255, 255, 0.1),
   0 0 10px rgba(255, 255, 255, 0.5);
-// $shadow-text-two:
-//   0 0 10px rgba(255, 255, 255, 0.5),
-//   0 0 15px rgba(255, 255, 255, 0.8);
 
 $br-xxs: 4px;
 $br-xs: 6px;
