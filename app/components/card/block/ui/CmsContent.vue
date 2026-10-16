@@ -1,9 +1,9 @@
 <template>
   <div class="cardBlockUiCmsContent">
-    <CardBlockUiCmsContentButton image="landingImage" imageFill="white" />
+    <CardBlockUiCmsContentButton image="personImage" imageFill="white" />
     <CardBlockUiCmsContentButton image="paymentImage" imageFill="white" />
-    <CardBlockUiCmsContentButton image="bookImage" imageFill="white" />
-    <CardBlockUiCmsContentButton image="cartImage" imageFill="white" />
+    <CardBlockUiCmsContentButton image="rubleImage" imageFill="white" />
+    <CardBlockUiCmsContentButton image="settingsImage" imageFill="white" />
   </div>
 </template>
 

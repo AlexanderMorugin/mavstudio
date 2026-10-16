@@ -12,7 +12,7 @@
       </div>
 
       <LogoForCard />
-      <TitleCard :title="props.item.title" />
+      <!-- <TitleCard :title="props.item.title" /> -->
     </div>
     <slot />
   </NuxtLink>
@@ -33,7 +33,8 @@ const props = defineProps<{
   border-radius: $br-m;
   border: 1px solid $black-mask-four;
   box-shadow: $shadow-card-one;
-  padding: 3px 3px 10px 3px;
+  // padding: 3px 3px 10px 3px;
+  padding: 3px;
   transition: 0.2s ease;
 
   &:hover {
@@ -56,7 +57,7 @@ const props = defineProps<{
 
   &__block {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 0;
     width: 100%;
     height: 80%;

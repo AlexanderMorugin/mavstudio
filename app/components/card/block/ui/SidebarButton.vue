@@ -1,5 +1,10 @@
 <template>
-  <div class="cardBlockUiSidebarButton">
+  <div
+    :class="[
+      'cardBlockUiSidebarButton',
+      { cardBlockUiSidebarButton_multipage: props.multipage },
+    ]"
+  >
     <div class="cardBlockUiSidebarButton__textBlock">
       <CardBlockUiLine animateFooter />
       <CardBlockUiLine animateFooter />
@@ -8,6 +13,12 @@
     <IconArrowDouble class="cardBlockUiSidebarButton__icon" />
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  multipage?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .cardBlockUiSidebarButton {
@@ -18,6 +29,11 @@
   background: $black-mask-two;
   border-radius: $br-xxs;
   padding: 8px;
+
+  &_multipage {
+    width: 90%;
+    margin-top: 20px;
+  }
 
   &__icon {
     width: 24px;

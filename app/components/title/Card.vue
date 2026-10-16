@@ -16,9 +16,9 @@ const props = defineProps<{
   letter-spacing: 1px;
   text-align: center;
   background-clip: text;
-  background-image: linear-gradient(90deg, $white-one 40%, $blue-three 60%);
-  animation: shine 5s linear infinite;
-  text-shadow: $shadow-text-one;
+  background-image: linear-gradient(90deg, $blue-one 40%, $blue-two 60%);
+  // animation: shine 5s linear infinite;
+  // text-shadow: $shadow-text-one;
 
   @media (max-width: 1023px) {
     font-size: 24px;
@@ -28,16 +28,16 @@ const props = defineProps<{
     font-size: 20px;
   }
 }
-@keyframes shine {
-  0% {
-    color: transparent;
-  }
-  50% {
-    color: $white-one;
-    text-shadow: none;
-  }
-  100% {
-    color: transparent;
-  }
-}
+// @keyframes shine {
+//   0% {
+//     color: transparent;
+//   }
+//   50% {
+//     color: $blue-one;
+//     text-shadow: none;
+//   }
+//   100% {
+//     color: transparent;
+//   }
+// }
 </style>

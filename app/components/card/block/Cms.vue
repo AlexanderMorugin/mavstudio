@@ -13,6 +13,6 @@
   display: grid;
   grid-template-columns: 30% 1fr;
   height: 100%;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 </style>

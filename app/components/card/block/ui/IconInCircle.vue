@@ -72,6 +72,39 @@
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
       ]"
     />
+    <IconSettingsFill
+      v-if="props.image === 'settingsImage'"
+      :class="[
+        'cardBlockUiIconInCircle__image',
+        { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
+        { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+      ]"
+    />
+    <IconPersonFill
+      v-if="props.image === 'personImage'"
+      :class="[
+        'cardBlockUiIconInCircle__image',
+        { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
+        { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+      ]"
+    />
+    <span
+      v-if="props.image === 'numberImage'"
+      :class="[
+        'cardBlockUiIconInCircle__number',
+        {
+          cardBlockUiIconInCircle__number_orange:
+            props.numberColor === 'orange',
+        },
+        {
+          cardBlockUiIconInCircle__number_white: props.numberColor === 'white',
+        },
+        {
+          cardBlockUiIconInCircle__number_green: props.numberColor === 'green',
+        },
+      ]"
+      >{{ props.number }}</span
+    >
   </div>
 </template>
 
@@ -79,6 +112,8 @@
 const props = defineProps<{
   image?: string;
   imageFill?: string;
+  number?: string;
+  numberColor?: string;
 }>();
 </script>
 
@@ -107,6 +142,21 @@ const props = defineProps<{
 
     &_white {
       fill: $white-one;
+    }
+  }
+
+  &__number {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 24px;
+
+    &_orange {
+      color: $orange-one;
+    }
+    &_white {
+      color: $white-one;
+    }
+    &_green {
+      color: $green-one;
     }
   }
 }

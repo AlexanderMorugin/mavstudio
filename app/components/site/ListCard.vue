@@ -1,6 +1,7 @@
 <template>
   <div class="siteListCard">
     <TitleCardSubtitle
+      :title="props.item.title"
       :subtitle="props.item.subtitle"
       :description="props.item.description"
     />

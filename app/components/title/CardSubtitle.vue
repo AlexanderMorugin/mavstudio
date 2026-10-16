@@ -1,5 +1,6 @@
 <template>
   <div class="titleCardSubtitle">
+    <TitleCard :title="props.title" />
     <ParagraphNormal v-if="props.subtitle" center uppercase>{{
       props.subtitle
     }}</ParagraphNormal>
@@ -11,6 +12,7 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
+  title: string;
   subtitle?: string;
   description?: string;
 }>();
