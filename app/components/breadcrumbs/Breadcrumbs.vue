@@ -51,7 +51,7 @@ const props = defineProps<{
     height: 17px;
     text-transform: lowercase;
     font-size: 13px;
-    color: $grey-four;
+    color: $grey-two;
 
     letter-spacing: 0.8px;
 
@@ -60,24 +60,24 @@ const props = defineProps<{
       letter-spacing: 0;
       gap: 2px;
     }
-    @media (max-width: 390px) {
+    @media (max-width: 389px) {
       font-size: 10px;
     }
   }
 
   &__link {
-    color: $blue-link;
+    color: $grey-two;
     transition: 0.1s ease;
 
     &:hover {
-      color: $blue-one;
+      color: $orange-one;
     }
   }
 
   &__arrow {
     width: 8px;
     height: 8px;
-    fill: $grey-four;
+    fill: $grey-two;
     vertical-align: middle;
     padding-left: 4px;
 

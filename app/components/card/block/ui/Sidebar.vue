@@ -1,9 +1,9 @@
 <template>
   <div class="cardBlockUiSidebar">
-    <CardBlockUiSidebarButton />
-    <CardBlockUiSidebarButton />
-    <CardBlockUiSidebarButton />
-    <CardBlockUiSidebarButton />
+    <CardBlockUiSidebarButton sidebar />
+    <CardBlockUiSidebarButton sidebar />
+    <CardBlockUiSidebarButton sidebar />
+    <CardBlockUiSidebarButton sidebar />
   </div>
 </template>
 
@@ -12,7 +12,6 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  background: $white-mask-four;
-  padding: 10px;
+  padding: 6px;
 }
 </style>

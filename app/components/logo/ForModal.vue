@@ -15,7 +15,7 @@
 
 <style lang="scss" scoped>
 .logoForModal {
-  border-left: 2px solid $white-mask-four;
+  border-left: 2px solid $grey-one;
   overflow: hidden;
   animation: fall 0.8s;
 
@@ -23,7 +23,7 @@
     display: grid;
     grid-template-columns: 85% 1fr;
     height: 100%;
-    background: $black-mask-three;
+    background: $white-mask-five;
     animation: from-left 1.2s;
 
     @media (max-width: 1279px) {

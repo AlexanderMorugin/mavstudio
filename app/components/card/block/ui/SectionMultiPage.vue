@@ -67,13 +67,13 @@
     padding: 10px;
 
     &_orange {
-      background: $orange-mask-two;
+      background: $orange-one;
     }
     &_green {
-      background: $green-mask-two;
+      background: $green-one;
     }
     &_white {
-      background: $white-mask-two;
+      background: $grey-two;
     }
   }
 

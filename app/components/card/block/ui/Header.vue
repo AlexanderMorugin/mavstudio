@@ -31,11 +31,11 @@ const props = defineProps<{
   gap: 40px;
   background-image: linear-gradient(
     to right,
-    $black-mask-three,
-    $black-mask-three,
-    $white-mask-five,
-    $black-mask-three,
-    $black-mask-three
+    $grey-mask-three,
+    $grey-mask-three,
+    $white-mask-one,
+    $grey-mask-three,
+    $grey-mask-three
   );
   border-radius: $br-xxs;
   padding: 8px 10px 8px 30px;
@@ -56,7 +56,7 @@ const props = defineProps<{
   &__icon {
     width: 24px;
     height: 24px;
-    fill: $white-mask-three;
+    fill: $red-mask-one;
 
     &_cms {
       fill: $white-one;

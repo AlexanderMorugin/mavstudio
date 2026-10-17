@@ -5,24 +5,21 @@ $white-mask-three: rgba(255, 255, 255, 0.4);
 $white-mask-four: rgba(255, 255, 255, 0.2);
 $white-mask-five: rgba(255, 255, 255, 0.1);
 
-// $black-one: #262727;
-// $black-one: #0d0d0d;
-// // $black-one: #000000;
-$black-one: rgb(51, 51, 51);
-// $black-mask-one: rgba(38, 39, 39, 0.8);
-// $black-mask-two: rgba(51, 51, 51, 0.6);
-$black-mask-two: rgba(38, 39, 39, 0.6);
-$black-mask-three: rgba(38, 39, 39, 0.4);
-$black-mask-four: rgba(38, 39, 39, 0.2);
-$black-mask-five: rgba(38, 39, 39, 0.1);
+$black-one: rgb(8, 12, 20);
+$black-mask-one: rgba(8, 12, 20, 0.8);
+$black-mask-two: rgba(8, 12, 20, 0.6);
+$black-mask-three: rgba(8, 12, 20, 0.4);
+$black-mask-four: rgba(8, 12, 20, 0.2);
+$black-mask-five: rgba(8, 12, 20, 0.1);
 
-$grey-one: rgb(140, 140, 140);
+$grey-one: #8c8c8c;
 $grey-mask-one: rgba(140, 140, 140, 0.8);
 $grey-mask-two: rgba(140, 140, 140, 0.6);
 $grey-mask-three: rgba(140, 140, 140, 0.4);
 $grey-mask-four: rgba(140, 140, 140, 0.2);
 $grey-mask-five: rgba(140, 140, 140, 0.1);
-// $grey-two: #737373;
+$grey-two: #f8fafc;
+
 $grey-three: #595959;
 $grey-four: #404040;
 
@@ -33,20 +30,26 @@ $orange-mask-three: rgba(255, 147, 0, 0.4);
 $orange-mask-four: rgba(255, 147, 0, 0.2);
 $orange-mask-five: rgba(255, 147, 0, 0.1);
 
-$blue-one: rgb(37, 70, 102);
-$blue-two: #32608a;
-$blue-three: #15a7eb;
+$red-one: #f63c00;
+$red-mask-one: rgba(246, 60, 0, 0.8);
+$red-mask-two: rgba(246, 60, 0, 0.6);
+$red-mask-three: rgba(246, 60, 0, 0.4);
+$red-mask-four: rgba(246, 60, 0, 0.2);
+$red-mask-five: rgba(246, 60, 0, 0.1);
+
+$blue-one: #21294e;
+$blue-mask-one: rgba(33, 41, 78, 0.8);
+$blue-mask-two: rgba(33, 41, 78, 0.6);
+$blue-mask-three: rgba(33, 41, 78, 0.4);
+$blue-mask-four: rgba(33, 41, 78, 0.2);
+$blue-mask-five: rgba(33, 41, 78, 0.1);
+
+$blue-two: #254666;
+$blue-three: #32608a;
+$blue-four: #42aaff;
+
+// $blue-three: #15a7eb;
 $blue-link: #000080;
-// $blue-mask-one: rgba(37, 70, 102, 0.8);
-// $blue-mask-two: rgba(37, 70, 102, 0.6);
-$blue-mask-three: rgba(37, 70, 102, 0.4);
-// $blue-mask-four: rgba(37, 70, 102, 0.2);
-// $blue-mask-five: rgba(37, 70, 102, 0.1);
-
-// $blue-deep-one: #21294e;
-// $blue-deep-two: #232e5c;
-
-$mask-trasparent: rgba(0, 0, 0, 0);
 
 $green-one: #44bb58;
 $green-mask-one: rgba(68, 187, 88, 0.8);
@@ -54,28 +57,30 @@ $green-mask-two: rgba(68, 187, 88, 0.6);
 $green-mask-three: rgba(68, 187, 88, 0.4);
 $green-mask-four: rgba(68, 187, 88, 0.2);
 $green-mask-five: rgba(68, 187, 88, 0.1);
-// $green-two: #b3e3bb;
-// daf2de
 
-// $gradient-page-primary: linear-gradient(135deg, $orange-one 0%, $black-one 20%, $blue-one 100%);
-// $gradient-page-dark: linear-gradient(135deg, $blue-one 0%, $black-one 40%);
-$gradient-hero-one: linear-gradient(135deg, $blue-two 0%, $blue-one 40%, $blue-one 60%, $blue-three 100%);
-// $gradient-page-light: linear-gradient(to bottom, $white-one 0%, $orange-one 100%);
-$gradient-blue-one: linear-gradient(to right, $blue-one 0%, $mask-trasparent 100%);
-$gradient-blue-two: linear-gradient(to right, $blue-one 0%, $blue-three 100%);
+// $blue-deep-one: #21294e;
+// $blue-deep-two: #232e5c;
+
+$mask-trasparent: rgba(0, 0, 0, 0);
+
+$gradient-page-primary: linear-gradient(135deg, $orange-one 0%, $black-one 20%, $blue-two 100%);
+
+$gradient-hero-one: linear-gradient(135deg, $blue-three 0%, $black-one 50%, $blue-three 100%);
+$gradient-blue-one: linear-gradient(to right, $blue-two 0%, $mask-trasparent 100%);
+$gradient-blue-two: linear-gradient(to right, $blue-three 0%, $blue-two 100%);
+
 $gradient-blue-three: linear-gradient(135deg, $blue-two 30%, $blue-one 60%);
 $gradient-green-one: linear-gradient(135deg, $green-mask-five 30%, $green-mask-four 60%);
 $gradient-green-two: linear-gradient($orange-mask-five 0%, $green-mask-four 100%);
 $gradient-orange-one: linear-gradient(135deg, $orange-mask-five 30%, $orange-mask-four 60%);
 $gradient-grey-one: linear-gradient($grey-mask-two 0%, $grey-mask-four 100%);
 
-// $shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
 $shadow-card-one:
-  0 0 10px rgba(38, 39, 39, 0.1),
-  0 0 15px rgba(38, 39, 39, 0.2);
+  0 0 10px rgba(255, 255, 255, 0.3),
+  0 0 15px rgba(255, 255, 255, 0.5);
 $shadow-card-two:
-  0 5px 10px rgba(38, 39, 39, 0.1),
-  0 10px 15px rgba(38, 39, 39, 0.2);
+  0 5px 10px rgba(255, 255, 255, 0.3),
+  0 10px 15px rgba(255, 255, 255, 0.5);
 $shadow-text-one:
   0 0 10px rgba(255, 255, 255, 0.1),
   0 0 10px rgba(255, 255, 255, 0.5);

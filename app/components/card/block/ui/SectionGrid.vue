@@ -93,7 +93,7 @@ const props = defineProps<{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: $black-mask-two;
+    background: $grey-mask-three;
     border-radius: $br-xxs;
     padding: 10px;
     overflow: hidden;

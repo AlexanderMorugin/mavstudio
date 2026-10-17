@@ -26,14 +26,23 @@ const emit = defineEmits(["handleClick"]);
   align-items: center;
   width: 40px;
   height: 40px;
-  background: $white-one;
   border-radius: 50%;
-  border: 1px solid $grey-one;
+  // border: 2px solid $grey-one;
+  background: $grey-mask-two;
   transition: 0.2s ease;
+
+  // &:hover {
+  //   border: 2px solid $grey-two;
+  // }
 
   @media (max-width: 767px) {
     width: 32px;
     height: 32px;
+    // border: 1px solid $grey-one;
+
+    // &:hover {
+    //   border: 1px solid $grey-two;
+    // }
   }
 
   &__spin {
@@ -41,9 +50,6 @@ const emit = defineEmits(["handleClick"]);
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border-bottom: 1px solid $white-mask-three;
-    box-shadow: 2px 2px 20px $white-mask-five;
-    animation: spin 2s linear infinite;
 
     @media (max-width: 767px) {
       width: 36px;
@@ -54,7 +60,7 @@ const emit = defineEmits(["handleClick"]);
   &__icon {
     width: 32px;
     height: 32px;
-    fill: $black-one;
+    fill: $white-one;
     opacity: 0.9;
     transition: 0.2s ease;
 
@@ -69,15 +75,6 @@ const emit = defineEmits(["handleClick"]);
   fill: $orange-one;
   opacity: 1;
   animation: scale 0.25s ease-in-out;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes scale {

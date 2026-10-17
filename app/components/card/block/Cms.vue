@@ -12,7 +12,5 @@
 .cardBlockCms {
   display: grid;
   grid-template-columns: 30% 1fr;
-  height: 100%;
-  margin-top: 6px;
 }
 </style>

@@ -90,19 +90,7 @@
     />
     <span
       v-if="props.image === 'numberImage'"
-      :class="[
-        'cardBlockUiIconInCircle__number',
-        {
-          cardBlockUiIconInCircle__number_orange:
-            props.numberColor === 'orange',
-        },
-        {
-          cardBlockUiIconInCircle__number_white: props.numberColor === 'white',
-        },
-        {
-          cardBlockUiIconInCircle__number_green: props.numberColor === 'green',
-        },
-      ]"
+      class="cardBlockUiIconInCircle__number"
       >{{ props.number }}</span
     >
   </div>
@@ -125,7 +113,6 @@ const props = defineProps<{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: $blue-one;
 
   &_shadow {
     box-shadow: $shadow-text-one;
@@ -148,16 +135,7 @@ const props = defineProps<{
   &__number {
     font-family: "Montserrat-Bold", sans-serif;
     font-size: 24px;
-
-    &_orange {
-      color: $orange-one;
-    }
-    &_white {
-      color: $white-one;
-    }
-    &_green {
-      color: $green-one;
-    }
+    color: $black-one;
   }
 }
 @keyframes shine {

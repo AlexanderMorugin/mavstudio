@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  background: $black-mask-three;
+  background: $grey-mask-three;
   border-radius: $br-xxs;
   padding: 8px 10px 8px 20px;
   overflow: hidden;
@@ -35,7 +35,7 @@
   &__icon {
     width: 24px;
     height: 24px;
-    fill: $white-mask-three;
+    fill: $red-mask-one;
   }
 }
 </style>

@@ -4,20 +4,7 @@
     :title="props.item.title"
     class="cardWithContent"
   >
-    <div
-      :class="[
-        'cardWithContent__container',
-        { cardWithContent__container_landing: props.item.name === 'landing' },
-        { cardWithContent__container_business: props.item.name === 'business' },
-        {
-          cardWithContent__container_multipage: props.item.name === 'multipage',
-        },
-        { cardWithContent__container_info: props.item.name === 'info' },
-        { cardWithContent__container_commerce: props.item.name === 'commerce' },
-        { cardWithContent__container_shop: props.item.name === 'shop' },
-        { cardWithContent__container_cms: props.item.name === 'cms' },
-      ]"
-    >
+    <div class="cardWithContent__container">
       <div class="cardWithContent__block">
         <CardBlockLanding v-if="props.item.name === 'landing'" />
         <CardBlockBusiness v-if="props.item.name === 'business'" />
@@ -30,6 +17,7 @@
       <LogoForCard />
     </div>
     <slot />
+    <CardBlockUiPrice :price="props.item.price" />
   </NuxtLink>
 </template>
 
@@ -46,7 +34,7 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   border-radius: $br-m;
-  border: 1px solid $black-mask-four;
+  background: $white-one;
   box-shadow: $shadow-card-one;
   padding: 3px;
   transition: 0.2s ease;
@@ -62,33 +50,11 @@ const props = defineProps<{
     flex-direction: column;
     justify-content: space-between;
     height: 300px;
-    // background: $gradient-blue-three;
+    background: $gradient-hero-one;
     border-top-left-radius: $br-xs;
     border-top-right-radius: $br-xs;
     overflow: hidden;
     padding: 10px;
-
-    &_landing {
-      background: $gradient-green-one;
-    }
-    &_business {
-      background: $gradient-orange-one;
-    }
-    &_multipage {
-      background: $gradient-grey-one;
-    }
-    &_info {
-      background: $gradient-green-two;
-    }
-    &_commerce {
-      background: $gradient-blue-three;
-    }
-    &_shop {
-      background: $gradient-green-one;
-    }
-    &_cms {
-      background: $gradient-grey-one;
-    }
   }
 
   &__block {

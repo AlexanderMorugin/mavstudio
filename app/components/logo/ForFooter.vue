@@ -38,7 +38,7 @@ const props = defineProps<{
     font-family: "Oswald-SemiBold", sans-serif;
     font-size: 140px;
     letter-spacing: -6%;
-    color: $black-mask-two;
+    color: $white-mask-two;
 
     @media (max-width: 767px) {
       font-size: 100px;

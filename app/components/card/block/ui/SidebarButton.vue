@@ -3,6 +3,7 @@
     :class="[
       'cardBlockUiSidebarButton',
       { cardBlockUiSidebarButton_multipage: props.multipage },
+      { cardBlockUiSidebarButton_sidebar: props.sidebar },
     ]"
   >
     <div class="cardBlockUiSidebarButton__textBlock">
@@ -17,6 +18,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   multipage?: boolean;
+  sidebar?: boolean;
 }>();
 </script>
 
@@ -26,7 +28,6 @@ const props = defineProps<{
   grid-template-columns: 1fr 20px;
   align-items: center;
   gap: 6px;
-  background: $black-mask-two;
   border-radius: $br-xxs;
   padding: 8px;
 
@@ -34,6 +35,10 @@ const props = defineProps<{
     width: 90%;
     margin-top: 20px;
     background: $blue-two;
+  }
+
+  &_sidebar {
+    background: $grey-mask-three;
   }
 
   &__icon {

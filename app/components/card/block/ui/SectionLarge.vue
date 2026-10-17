@@ -85,7 +85,7 @@ const props = defineProps<{
   align-items: center;
   gap: 20px;
   min-height: 60px;
-  background: $black-mask-two;
+  background: $grey-mask-three;
   border-radius: $br-xxs;
   padding: 10px;
   overflow: hidden;

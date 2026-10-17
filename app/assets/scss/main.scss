@@ -14,7 +14,7 @@ ul {
 }
 
 a {
-  color: $black-one;
+  color: $white-one;
   text-decoration: none;
 }
 
@@ -22,10 +22,10 @@ body {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 16px;
   line-height: 1;
-  color: $black-one;
+  color: $white-one;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
-  background: $white-one;
+  background: $black-one;
 }
 
 button {

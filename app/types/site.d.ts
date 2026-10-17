@@ -5,5 +5,5 @@ export interface ISiteCatalog {
   subtitle: string;
   description: string;
   route: string;
-  price: number;
+  price: string;
 }

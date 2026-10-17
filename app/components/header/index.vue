@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <!-- <div class="header__overlay" /> -->
     <ContainerPage desktopPadding class="header__container">
       <ButtonWithIcon
         name="menu"
@@ -61,20 +60,9 @@ watch(isMenuModalOpen, (newValue) => {
   position: sticky;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(15px) brightness(80%);
+  backdrop-filter: blur(15px);
   border-bottom: 1px solid $white-mask-three;
   z-index: 3;
-
-  // &__overlay {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: $white-one;
-  //   filter: blur(100px);
-  //   backdrop-filter: blur(15px);
-  // }
 
   &__container {
     display: flex;

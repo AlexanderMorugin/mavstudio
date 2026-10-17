@@ -52,7 +52,7 @@
     font-size: 32px;
     line-height: 1;
     letter-spacing: -4%;
-    color: $grey-one;
+    color: $white-mask-one;
 
     @media (max-width: 767px) {
       font-size: 28px;

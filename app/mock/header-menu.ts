@@ -29,16 +29,16 @@ export const headerMenu = [
     title: "Скидки",
     route: "/promo",
   },
-  {
-    id: 7,
-    title: "Структура",
-    route: "/structure",
-  },
-  {
-    id: 8,
-    title: "Блоки",
-    route: "/block",
-  },
+  // {
+  //   id: 7,
+  //   title: "Структура",
+  //   route: "/structure",
+  // },
+  // {
+  //   id: 8,
+  //   title: "Блоки",
+  //   route: "/block",
+  // },
   {
     id: 9,
     title: "Услуги",

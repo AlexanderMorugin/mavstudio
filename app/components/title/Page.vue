@@ -46,7 +46,11 @@ const props = defineProps<{
     text-align: center;
     opacity: 0.9;
     background-clip: text;
-    background-image: linear-gradient(90deg, $blue-one 44.5%, $blue-two 66.35%);
+    background-image: linear-gradient(
+      90deg,
+      $white-one 40%,
+      $white-mask-two 67%
+    );
     color: transparent;
 
     @media (max-width: 1600px) {

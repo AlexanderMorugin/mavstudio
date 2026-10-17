@@ -4,6 +4,7 @@
       'paragraphNormal',
       { paragraphNormal_center: props.center },
       { paragraphNormal_uppercase: props.uppercase },
+      { paragraphNormal_black: props.black },
     ]"
   >
     <slot />
@@ -14,6 +15,7 @@
 const props = defineProps<{
   center?: boolean;
   uppercase?: boolean;
+  black?: boolean;
 }>();
 </script>
 
@@ -21,6 +23,10 @@ const props = defineProps<{
 .paragraphNormal {
   font-size: 16px;
   line-height: 1.5;
+
+  &_black {
+    color: $black-one;
+  }
 
   @media (max-width: 389px) {
     font-size: 14px;

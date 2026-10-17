@@ -6,7 +6,7 @@ export const siteCatalog = [
     subtitle: "Одностраничный",
     description: "Реклама, промо, рассылка",
     route: "/site/landing",
-    price: 10000,
+    price: "10 000",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const siteCatalog = [
     subtitle: "Статусный",
     description: "Для компаний, организаций, персональный",
     route: "/site/business",
-    price: 30000,
+    price: "30 000",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const siteCatalog = [
     subtitle: "Контентный",
     description: "Наиболее индексируемый поисковыми системами",
     route: "/site/multipage",
-    price: 60000,
+    price: "60 000",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const siteCatalog = [
     subtitle: "Ознакомительный",
     description: "Представляющий интересные темы, истории, факты",
     route: "/site/info",
-    price: 50000,
+    price: "50 000",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const siteCatalog = [
     subtitle: "Каталог",
     description: "Демонстрация товаров, услуг с ценами, без онлайн оплаты",
     route: "/site/commerce",
-    price: 70000,
+    price: "70 000",
   },
   {
     id: 6,
@@ -51,15 +51,15 @@ export const siteCatalog = [
     subtitle: "Продающий",
     description: "Каталог товаров с ценами, доставкой и онлайн оплатой",
     route: "/site/shop",
-    price: 100000,
+    price: "100 000",
   },
   {
     id: 7,
     name: "cms",
     title: "Панель управления",
     subtitle: "Админка или CMS",
-    description: "Управление динамически меняющимся контентом",
+    description: "Редактирование динамически меняющегося контента",
     route: "/site/cms",
-    price: 150000,
+    price: "150 000",
   },
 ];
