@@ -2,6 +2,7 @@
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Сайт-визитка" />
+    <SiteCard />
   </ContainerPage>
 </template>
 

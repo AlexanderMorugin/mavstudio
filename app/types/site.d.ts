@@ -7,3 +7,9 @@ export interface ISiteCatalog {
   route: string;
   price: string;
 }
+
+export interface ISite {
+  titleOne: string;
+  titleTwo: string;
+  titleThree: string;
+}

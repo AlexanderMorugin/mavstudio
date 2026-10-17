@@ -2,11 +2,13 @@
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Лендинг" />
+    <SiteCard :siteData="siteLanding" />
   </ContainerPage>
 </template>
 
 <script setup lang="ts">
 import { SITE } from "~/mock/meta";
+import { siteLanding } from "~/mock/site/site-landing";
 
 const route = useRoute();
 

@@ -26,9 +26,13 @@ const props = defineProps<{
     display: flex;
     justify-content: center;
     width: 70%;
-    background: $red-one;
+    background: $gradient-hero-one;
     border-radius: $br-xxs;
     padding: 10px;
+
+    @media (max-width: 767px) {
+      width: 80%;
+    }
   }
 
   &__number {

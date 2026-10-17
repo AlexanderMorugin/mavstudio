@@ -44,7 +44,6 @@ const props = defineProps<{
     line-height: 1.2;
     letter-spacing: 4px;
     text-align: center;
-    opacity: 0.9;
     background-clip: text;
     background-image: linear-gradient(
       90deg,

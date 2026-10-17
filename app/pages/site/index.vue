@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { SITE } from "~/mock/meta";
-import { siteCatalog } from "~/mock/site-catalog";
+import { siteCatalog } from "~/mock/site/site-catalog";
 
 const route = useRoute();
 
