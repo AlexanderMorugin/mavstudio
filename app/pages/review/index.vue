@@ -1,7 +1,7 @@
 <template>
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Отзывы" />
+    <TitlePage title="Отзывы" subtitle="студия разработки веб-сайтов" />
     <ReviewBlock :reviews="reviews.reverse()" />
   </ContainerPage>
 </template>

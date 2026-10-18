@@ -10,10 +10,10 @@
           <ParagraphSmall>{{ props.review.userStatus }}</ParagraphSmall>
         </div>
       </div>
-      <ParagraphNormal v-if="props.review.textOne">{{
+      <ParagraphNormal v-if="props.review.textOne" black>{{
         props.review.textOne
       }}</ParagraphNormal>
-      <ParagraphNormal v-if="props.review.textTwo">{{
+      <ParagraphNormal v-if="props.review.textTwo" black>{{
         props.review.textTwo
       }}</ParagraphNormal>
     </div>
@@ -69,6 +69,7 @@ const props = defineProps<{
     font-family: "Montserrat-SemiBold", sans-serif;
     line-height: 1.5;
     letter-spacing: 1px;
+    color: $black-one;
   }
 }
 </style>

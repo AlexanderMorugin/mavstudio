@@ -6,6 +6,7 @@ export interface ISiteCatalog {
   description: string;
   route: string;
   price: string;
+  buttonColor: string;
 }
 
 export interface ISite {

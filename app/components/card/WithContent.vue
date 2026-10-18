@@ -17,7 +17,7 @@
       <LogoForCard />
     </div>
     <slot />
-    <CardBlockUiPrice :price="props.item.price" />
+    <CardBlockUiPrice :item="props.item" />
   </NuxtLink>
 </template>
 
@@ -33,10 +33,10 @@ const props = defineProps<{
 .cardWithContent {
   display: flex;
   flex-direction: column;
-  border-radius: $br-m;
+  border-radius: 10px;
   background: $white-one;
   box-shadow: $shadow-card-one;
-  padding: 3px;
+  padding: 2px;
   transition: 0.2s ease;
 
   &:hover {
@@ -51,8 +51,8 @@ const props = defineProps<{
     justify-content: space-between;
     height: 300px;
     background: $gradient-hero-one;
-    border-top-left-radius: $br-xs;
-    border-top-right-radius: $br-xs;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     overflow: hidden;
     padding: 10px;
   }

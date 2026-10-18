@@ -1,14 +1,16 @@
 <template>
   <div class="cardWithStripe">
-    <div
-      v-if="props.orange"
-      class="cardWithStripe__stripe cardWithStripe__stripe_orange"
-    />
-    <div
-      v-if="props.blue"
-      class="cardWithStripe__stripe cardWithStripe__stripe_blue"
-    />
-    <slot />
+    <div class="cardWithStripe__container">
+      <div
+        v-if="props.orange"
+        class="cardWithStripe__stripe cardWithStripe__stripe_orange"
+      />
+      <div
+        v-if="props.blue"
+        class="cardWithStripe__stripe cardWithStripe__stripe_blue"
+      />
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -21,15 +23,24 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .cardWithStripe {
-  position: relative;
-  border: 1px solid $black-mask-four;
-  padding: 10px 10px 10px 20px;
+  height: fit-content;
+  border-radius: 10px;
+  border: 1px solid $white-mask-three;
+  padding: 3px;
+
+  &__container {
+    position: relative;
+    background: $white-one;
+    border-radius: 6px;
+    padding: 10px 10px 10px 25px;
+    overflow: hidden;
+  }
 
   &__stripe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 10px;
+    width: 15px;
     height: 100%;
 
     &_orange {

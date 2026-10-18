@@ -86,6 +86,8 @@ $gradient-green-two: linear-gradient($orange-mask-five 0%, $green-mask-four 100%
 $gradient-orange-one: linear-gradient(135deg, $orange-mask-five 30%, $orange-mask-four 60%);
 $gradient-grey-one: linear-gradient($grey-mask-two 0%, $grey-mask-four 100%);
 
+$gradient-red-one: linear-gradient(90deg, $red-mask-two 0%, $red-one 30%, $red-one 70%, $red-mask-two 100%);
+
 $shadow-card-one:
   0 0 10px rgba(255, 255, 255, 0.3),
   0 0 15px rgba(255, 255, 255, 0.5);
