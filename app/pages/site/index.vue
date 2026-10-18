@@ -1,7 +1,7 @@
 <template>
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Сайты" subtitle="студия разработки веб-сайтов" />
+    <TitlePage title="Сайты" subtitle="мастерская авторских веб-сайтов" />
     <SiteBlock :catalog="siteCatalog" />
   </ContainerPage>
 </template>

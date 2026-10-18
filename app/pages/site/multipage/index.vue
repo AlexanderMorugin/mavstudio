@@ -1,13 +1,17 @@
 <template>
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Многостраничный сайт" />
-    <SiteCard />
+    <TitlePage
+      title="Многостраничный"
+      subtitle="мастерская авторских веб-сайтов"
+    />
+    <SiteCard :siteData="siteMultipage" />
   </ContainerPage>
 </template>
 
 <script setup lang="ts">
 import { SITE } from "~/mock/meta";
+import { siteMultipage } from "~/mock/site/site-multipage";
 
 const route = useRoute();
 

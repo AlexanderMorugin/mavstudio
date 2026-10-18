@@ -12,7 +12,7 @@ export const siteCatalog = [
   {
     id: 2,
     name: "business",
-    title: "Сайт-визитка",
+    title: "Визитка",
     subtitle: "Статусный",
     description: "Для компаний, организаций, персональный",
     route: "/site/business",

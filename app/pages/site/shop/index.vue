@@ -1,13 +1,17 @@
 <template>
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Интернет магазин" />
-    <SiteCard />
+    <TitlePage
+      title="Интернет-магазин"
+      subtitle="мастерская авторских веб-сайтов"
+    />
+    <SiteCard :siteData="siteShop" />
   </ContainerPage>
 </template>
 
 <script setup lang="ts">
 import { SITE } from "~/mock/meta";
+import { siteShop } from "~/mock/site/site-shop";
 
 const route = useRoute();
 
