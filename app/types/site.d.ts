@@ -10,6 +10,12 @@ export interface ISiteCatalog {
 
 export interface ISite {
   titleOne: string;
+  titleOneBack: string;
+
   titleTwo: string;
+  titleTwoBack: string;
+  titleTwoDoubleBack: string;
+
   titleThree: string;
+  titleThreeBack: string;
 }

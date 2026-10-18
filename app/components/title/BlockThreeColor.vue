@@ -1,10 +1,10 @@
 <template>
-  <div class="titleBlockThreeColor">
-    <h2 class="titleBlockThreeColor__title">
+  <div>
+    <h2 class="titleBlockThreeColor">
       <span v-if="props.siteData.titleOne">{{ props.siteData.titleOne }}</span>
       <span
         v-if="props.siteData.titleTwo"
-        class="titleBlockThreeColor__accent"
+        class="titleBlockThreeColor_accent"
         >{{ props.siteData.titleTwo }}</span
       >
       <span v-if="props.siteData.titleThree">{{
@@ -24,23 +24,23 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .titleBlockThreeColor {
-  &__title {
-    font-family: "Montserrat-Bold", sans-serif;
-    font-size: 44px;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: $white-mask-one;
+  position: relative;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: $white-mask-three;
 
-    @media (max-width: 1023px) {
-      font-size: 32px;
-    }
-
-    @media (max-width: 389px) {
-      font-size: 24px;
-    }
+  @media (max-width: 1023px) {
+    font-size: 32px;
   }
 
-  &__accent {
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
+
+  &_accent {
+    font-family: "Montserrat-Bold", sans-serif;
     background-clip: text;
     background-image: linear-gradient(
       90deg,

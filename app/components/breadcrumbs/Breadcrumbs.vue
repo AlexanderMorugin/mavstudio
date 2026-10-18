@@ -52,7 +52,6 @@ const props = defineProps<{
     text-transform: lowercase;
     font-size: 13px;
     color: $grey-two;
-
     letter-spacing: 0.8px;
 
     @media (max-width: 576px) {

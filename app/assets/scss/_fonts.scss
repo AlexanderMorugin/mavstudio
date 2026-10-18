@@ -9,16 +9,16 @@
   font-display: swap;
 }
 
-// @font-face {
-//   src:
-//     local("Montserrat-Medium"),
-//     url("/fonts/Montserrat-Medium.woff2") format("woff2"),
-//     url("/fonts/Montserrat-Medium.woff") format("woff");
-//   font-family: "Montserrat-Medium";
-//   font-weight: normal;
-//   font-style: normal;
-//   font-display: swap;
-// }
+@font-face {
+  src:
+    local("Montserrat-Medium"),
+    url("/fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("/fonts/Montserrat-Medium.woff") format("woff");
+  font-family: "Montserrat-Medium";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   src:

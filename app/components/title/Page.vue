@@ -1,14 +1,6 @@
 <template>
   <div class="titlePage">
-    <h1
-      v-if="props.title"
-      class="titlePage__title"
-      :class="
-        props.isImportant === 'noImportant'
-          ? 'titlePage__title_noImportant'
-          : ''
-      "
-    >
+    <h1 v-if="props.title" class="titlePage__title">
       {{ props.title }}
     </h1>
     <span v-if="props.subtitle" class="titlePage__subtitle">{{
@@ -21,7 +13,6 @@
 const props = defineProps<{
   title: string;
   subtitle?: string;
-  isImportant?: string;
 }>();
 </script>
 
@@ -30,7 +21,7 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   width: 100%;
-  animation: fall-down 1s ease-in-out;
+
   padding-top: 20px;
   padding-bottom: 40px;
 
@@ -51,8 +42,9 @@ const props = defineProps<{
       $white-mask-two 67%
     );
     color: transparent;
+    animation: fall-down 1s ease-in-out;
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1023px) {
       font-size: 40px;
     }
 
@@ -60,25 +52,19 @@ const props = defineProps<{
       font-size: 28px;
       letter-spacing: 2px;
     }
-
-    &_noImportant {
-      background-image: none;
-      color: $white-one;
-
-      @media (max-width: 576px) {
-        font-size: 20px;
-      }
-    }
   }
 
   &__subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    font-size: 13px;
     text-align: center;
+    color: $white-mask-two;
+    animation: appear 1s ease-in-out;
 
     @media (max-width: 576px) {
-      font-size: 12px;
+      font-size: 11px;
+    }
+    @media (max-width: 389px) {
+      font-size: 10px;
     }
   }
 }
@@ -110,6 +96,16 @@ const props = defineProps<{
   }
   100% {
     opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }

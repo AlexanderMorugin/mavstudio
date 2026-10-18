@@ -1,7 +1,7 @@
 <template>
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Лендинг" />
+    <TitlePage title="Лендинг" subtitle="студия разработки веб-сайтов" />
     <SiteCard :siteData="siteLanding" />
   </ContainerPage>
 </template>

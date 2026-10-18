@@ -21,7 +21,7 @@ const props = defineProps<{
 .containerPage {
   max-width: $screen-xxl;
   margin: 0 auto;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__desktopPadding {
     padding-left: 20px;

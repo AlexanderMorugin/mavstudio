@@ -1,5 +1,11 @@
 export const siteLanding = {
   titleOne: "Разрабатываем одностраничные ",
-  titleTwo: "сайты Лендинги",
-  titleThree: " по вашему заказу.",
+  titleOneBack: "Разрабатываем",
+
+  titleTwo: "сайты Лендинги ",
+  titleTwoBack: "сайты",
+  titleTwoDoubleBack: "Лендинги",
+
+  titleThree: "по вашему заказу.",
+  titleThreeBack: "заказу",
 };

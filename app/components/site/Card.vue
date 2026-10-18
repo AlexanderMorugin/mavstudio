@@ -1,7 +1,7 @@
 <template>
   <div class="siteCard">
-    <SiteCardSectionText :siteData="props.siteData" />
-    <SiteCardSectionImage />
+    <SiteCardSectionTitleBlock :siteData="props.siteData" />
+    <!-- <SiteCardSectionImage /> -->
   </div>
 </template>
 
@@ -20,6 +20,10 @@ const props = defineProps<{
   column-gap: 20px;
   row-gap: 100px;
   padding-bottom: 30px;
+  // max-width: $screen-xxl;
+  // margin: 0 auto;
+  // padding-left: 20px;
+  // padding-right: 20px;
 
   // border: 1px solid red;
 
