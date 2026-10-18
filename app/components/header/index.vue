@@ -62,7 +62,7 @@ watch(isMenuModalOpen, (newValue) => {
   width: 100%;
   backdrop-filter: blur(15px);
   border-bottom: 1px solid $white-mask-three;
-  z-index: 3;
+  z-index: 10;
 
   &__container {
     display: flex;

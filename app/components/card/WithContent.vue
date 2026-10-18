@@ -22,10 +22,10 @@
 </template>
 
 <script setup lang="ts">
-import type { ISiteCatalog } from "~/types/site";
+import type { ISite, ISiteCatalog } from "~/types/site";
 
 const props = defineProps<{
-  item: ISiteCatalog;
+  item: ISiteCatalog | any;
 }>();
 </script>
 

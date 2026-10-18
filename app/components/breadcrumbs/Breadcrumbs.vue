@@ -41,8 +41,10 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .breadcrumbs {
+  position: relative;
   padding-top: 10px;
   animation: appear 1s ease-in-out;
+  z-index: 9;
 
   &__list {
     display: flex;

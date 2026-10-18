@@ -8,4 +8,14 @@ export const siteCms = {
 
   titleThree: "для ваших сайтов.",
   titleThreeBack: "сайтов",
+
+  imageBlock: {
+    name: "cms",
+    title: "Панель управления",
+    subtitle: "Админка или CMS",
+    description: "Редактирование динамически меняющегося контента",
+    route: "/site/cms",
+    price: "150 000",
+    buttonColor: "blue",
+  },
 };
