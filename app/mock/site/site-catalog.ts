@@ -7,7 +7,7 @@ export const siteCatalog = [
     description: "Реклама, промо, рассылка",
     route: "/site/landing",
     price: "10 000",
-    buttonColor: "blue",
+    // buttonColor: "blue",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const siteCatalog = [
     description: "Для компаний, организаций, персональный",
     route: "/site/business",
     price: "30 000",
-    buttonColor: "red",
+    // buttonColor: "red",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const siteCatalog = [
     description: "Наиболее индексируемый поисковыми системами",
     route: "/site/multipage",
     price: "60 000",
-    buttonColor: "blue",
+    // buttonColor: "blue",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const siteCatalog = [
     description: "Представляющий интересные темы, истории, факты",
     route: "/site/info",
     price: "50 000",
-    buttonColor: "red",
+    // buttonColor: "red",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const siteCatalog = [
     description: "Демонстрация товаров, услуг с ценами, без онлайн оплаты",
     route: "/site/commerce",
     price: "70 000",
-    buttonColor: "blue",
+    // buttonColor: "blue",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const siteCatalog = [
     description: "Каталог товаров с ценами, доставкой и онлайн оплатой",
     route: "/site/shop",
     price: "100 000",
-    buttonColor: "red",
+    // buttonColor: "red",
   },
   {
     id: 7,
@@ -67,6 +67,6 @@ export const siteCatalog = [
     description: "Редактирование динамически меняющегося контента",
     route: "/site/cms",
     price: "150 000",
-    buttonColor: "blue",
+    // buttonColor: "blue",
   },
 ];

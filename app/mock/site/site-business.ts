@@ -1,4 +1,6 @@
 export const siteBusiness = {
+  name: "business",
+
   titleOne: "Разрабатываем  ",
   titleOneBack: "Разрабатываем",
 
@@ -9,13 +11,13 @@ export const siteBusiness = {
   titleThree: "под ваш дизайн.",
   titleThreeBack: "дизайн",
 
-  imageBlock: {
-    name: "business",
-    title: "Визитка",
-    subtitle: "Статусный",
-    description: "Для компаний, организаций, персональный",
-    route: "/site/business",
-    price: "30 000",
-    buttonColor: "red",
-  },
+  // imageBlock: {
+  //   name: "business",
+  //   title: "Визитка",
+  //   subtitle: "Статусный",
+  //   description: "Для компаний, организаций, персональный",
+  //   route: "/site/business",
+  //   price: "30 000",
+  //   // buttonColor: "red",
+  // },
 };

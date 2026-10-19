@@ -54,15 +54,15 @@ const props = defineProps<{
   &_one {
     top: -17%;
     left: 10%;
-    color: $green-mask-four;
-    text-shadow: 0 0 15px $green-mask-two;
+    color: $green-mask-five;
+    text-shadow: 0 0 15px $green-mask-three;
     animation: pulse 10s infinite;
   }
   &_two {
     top: 0;
     right: 0;
-    color: $orange-mask-four;
-    text-shadow: 0 0 12px $orange-mask-two;
+    color: $orange-mask-five;
+    text-shadow: 0 0 12px $orange-mask-three;
     animation: pulse 8s infinite;
   }
 
@@ -70,15 +70,16 @@ const props = defineProps<{
     bottom: 20%;
     left: 5%;
     color: $white-mask-five;
-    text-shadow: 0 0 15px $white-mask-two;
+    text-shadow: 0 0 15px $white-mask-three;
     animation: pulse 15s infinite;
   }
 
   &_four {
     bottom: 40%;
     right: 15%;
-    color: $green-mask-four;
-    text-shadow: 0 0 15px $green-mask-two;
+    color: $green-mask-five;
+    text-shadow: 0 0 15px $green-mask-three;
+    // text-shadow: 0 0 15px $white-mask-five;
     animation: pulse 11s infinite;
   }
 }
@@ -90,6 +91,7 @@ const props = defineProps<{
   }
   50% {
     opacity: 1;
+    // color: $white-mask-five;
   }
   100% {
     opacity: 0;

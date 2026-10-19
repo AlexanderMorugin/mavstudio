@@ -1,4 +1,6 @@
 export const siteCommerce = {
+  name: "commerce",
+
   titleOne: "Разрабатываем многостраничные ",
   titleOneBack: "Разрабатываем",
 
@@ -9,13 +11,13 @@ export const siteCommerce = {
   titleThree: "под вашу продукцию.",
   titleThreeBack: "продукцию",
 
-  imageBlock: {
-    name: "commerce",
-    title: "Коммерческий",
-    subtitle: "Каталог",
-    description: "Демонстрация товаров, услуг с ценами, без онлайн оплаты",
-    route: "/site/commerce",
-    price: "70 000",
-    buttonColor: "blue",
-  },
+  // imageBlock: {
+  //   name: "commerce",
+  //   title: "Коммерческий",
+  //   subtitle: "Каталог",
+  //   description: "Демонстрация товаров, услуг с ценами, без онлайн оплаты",
+  //   route: "/site/commerce",
+  //   price: "70 000",
+  //   // buttonColor: "blue",
+  // },
 };

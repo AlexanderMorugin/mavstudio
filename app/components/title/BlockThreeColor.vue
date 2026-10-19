@@ -29,7 +29,7 @@ const props = defineProps<{
   font-size: 44px;
   line-height: 1.2;
   letter-spacing: 1px;
-  color: $white-mask-three;
+  color: $white-mask-two;
 
   @media (max-width: 1023px) {
     font-size: 32px;

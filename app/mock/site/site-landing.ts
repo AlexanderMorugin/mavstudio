@@ -1,4 +1,6 @@
 export const siteLanding = {
+  name: "landing",
+
   titleOne: "Разрабатываем одностраничные ",
   titleOneBack: "Разрабатываем",
 
@@ -9,13 +11,13 @@ export const siteLanding = {
   titleThree: "по вашему заказу.",
   titleThreeBack: "заказу",
 
-  imageBlock: {
-    name: "landing",
-    title: "Лендинг",
-    subtitle: "Одностраничный",
-    description: "Реклама, промо, рассылка",
-    route: "/site/landing",
-    price: "10 000",
-    buttonColor: "blue",
-  },
+  // imageBlock: {
+  //   name: "landing",
+  //   title: "Лендинг",
+  //   subtitle: "Одностраничный",
+  //   description: "Реклама, промо, рассылка",
+  //   route: "/site/landing",
+  //   price: "10 000",
+  //   // buttonColor: "blue",
+  // },
 };

@@ -6,10 +6,12 @@ export interface ISiteCatalog {
   description: string;
   route: string;
   price: string;
-  buttonColor: string;
+  // buttonColor: string;
 }
 
 export interface ISite {
+  name: string;
+
   titleOne: string;
   titleOneBack: string;
 
@@ -20,13 +22,13 @@ export interface ISite {
   titleThree: string;
   titleThreeBack: string;
 
-  imageBlock: {
-    name: string;
-    title: string;
-    subtitle: string;
-    description: string;
-    route: string;
-    price: string;
-    buttonColor: string;
-  };
+  // imageBlock: {
+  //   name: string;
+  //   title: string;
+  //   subtitle: string;
+  //   description: string;
+  //   route: string;
+  //   price: string;
+  //   buttonColor: string;
+  // };
 }

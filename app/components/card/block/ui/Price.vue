@@ -1,15 +1,9 @@
 <template>
   <div class="cardBlockUiPrice">
-    <div
-      :class="[
-        'cardBlockUiPrice__container',
-        { cardBlockUiPrice__container_blue: props.item.buttonColor === 'blue' },
-        { cardBlockUiPrice__container_red: props.item.buttonColor === 'red' },
-      ]"
-    >
+    <div class="cardBlockUiPrice__container">
       <span>от</span>
       <span class="cardBlockUiPrice__number"
-        >&nbsp;{{ props.item.price }}&nbsp;</span
+        >&nbsp;{{ props.price }}&nbsp;</span
       >
       <span>руб</span>
     </div>
@@ -17,9 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import type { ISiteCatalog } from "~/types/site";
 const props = defineProps<{
-  item: ISiteCatalog;
+  price: string;
 }>();
 </script>
 
@@ -34,6 +27,7 @@ const props = defineProps<{
     justify-content: center;
     width: 70%;
     // background: $gradient-hero-one;
+    background: $gradient-red-one;
     border-radius: $br-xxs;
     padding: 10px;
 
@@ -41,13 +35,13 @@ const props = defineProps<{
       width: 80%;
     }
 
-    &_blue {
-      background: $gradient-hero-one;
-    }
+    // &_blue {
+    //   background: $gradient-hero-one;
+    // }
 
-    &_red {
-      background: $gradient-red-one;
-    }
+    // &_red {
+    //   background: $gradient-red-one;
+    // }
   }
 
   &__number {

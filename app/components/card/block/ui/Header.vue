@@ -1,24 +1,30 @@
 <template>
-  <div class="cardBlockUiHeader">
+  <div :class="['cardBlockUiHeader', { cardBlockUiHeader_page: props.isPage }]">
     <IconConstruction
       v-if="props.cms"
       class="cardBlockUiHeader__icon cardBlockUiHeader__icon_cms"
     />
     <IconStarKidFill v-if="!props.cms" class="cardBlockUiHeader__icon" />
-    <div class="cardBlockUiHeader__textBlock">
+    <div v-if="!props.isPage" class="cardBlockUiHeader__textBlock">
       <CardBlockUiLine />
       <CardBlockUiLine />
     </div>
-    <div class="cardBlockUiHeader__textBlock">
+    <div v-if="!props.isPage" class="cardBlockUiHeader__textBlock">
       <CardBlockUiLine />
       <CardBlockUiLine />
     </div>
+
+    <span v-if="props.isPage" class="cardBlockUiHeader__text">шапка сайта</span>
+    <span v-if="props.isPage" class="cardBlockUiHeader__text"
+      >слова навигации</span
+    >
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
   cms?: boolean;
+  isPage?: boolean;
 }>();
 </script>
 
@@ -40,17 +46,40 @@ const props = defineProps<{
   border-radius: $br-xxs;
   padding: 8px 10px 8px 30px;
   overflow: hidden;
-
   animation: background-fade 20s linear infinite;
   background-size: 800%;
   -webkit-animation: background-fade 20s linear infinite;
   -moz-animation: background-fade 20s linear infinite;
+
+  &_page {
+    display: flex;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      transparent,
+      $white-mask-three,
+      transparent,
+      transparent
+    );
+    border-radius: 0;
+    border-bottom: 1px solid $white-mask-three;
+    padding: 10px;
+  }
 
   &__textBlock {
     display: flex;
     flex-direction: column;
     gap: 6px;
     width: 100%;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $white-mask-one;
+
+    @media (max-width: 389px) {
+      font-size: 10px;
+    }
   }
 
   &__icon {

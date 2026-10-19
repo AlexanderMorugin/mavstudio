@@ -1,6 +1,6 @@
 <template>
-  <CardBlockContainer>
-    <CardBlockUiHeader />
+  <CardBlockContainer :isPage="props.isPage">
+    <CardBlockUiHeader :isPage="props.isPage" />
     <CardBlockUiSectionGrid
       twoGrid
       imgOne="landingImage"
@@ -9,6 +9,12 @@
       imgTwoFill="orange"
     />
     <CardBlockUiSectionLarge landing />
-    <CardBlockUiFooter />
+    <CardBlockUiFooter :isPage="props.isPage" />
   </CardBlockContainer>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isPage?: boolean;
+}>();
+</script>

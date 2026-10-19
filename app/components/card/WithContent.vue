@@ -17,7 +17,7 @@
       <LogoForCard />
     </div>
     <slot />
-    <CardBlockUiPrice :item="props.item" />
+    <CardBlockUiPrice :price="props.item.price" />
   </NuxtLink>
 </template>
 
@@ -25,7 +25,8 @@
 import type { ISite, ISiteCatalog } from "~/types/site";
 
 const props = defineProps<{
-  item: ISiteCatalog | any;
+  // item: ISiteCatalog | any;
+  item: ISiteCatalog;
 }>();
 </script>
 
