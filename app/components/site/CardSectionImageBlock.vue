@@ -10,7 +10,7 @@
     <CardBlockCms v-if="props.siteName === 'cms'" isPage />
 
     <CardIndicatorForHeader />
-    <CardIndicatorForFooter />
+    <CardIndicatorForFooter v-if="props.siteName !== 'cms'" />
   </section>
 </template>
 

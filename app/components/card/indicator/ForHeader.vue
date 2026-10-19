@@ -3,7 +3,6 @@
     <div class="cardIndicatorForHeader__trapezoid">
       <span class="cardIndicatorForHeader__text">шапка сайта</span>
       <CardIndicatorPoint isHeader />
-      <!-- <div class="cardIndicatorForHeader__point" /> -->
     </div>
   </div>
 </template>
@@ -11,8 +10,8 @@
 <style lang="scss" scoped>
 .cardIndicatorForHeader {
   position: absolute;
-  top: 6px;
-  left: 20%;
+  top: 8px;
+  left: 26%;
   width: 100%;
   height: 130px;
   display: flex;
@@ -34,17 +33,5 @@
     left: 10px;
     transform: skew(20deg);
   }
-
-  // &__point {
-  //   position: absolute;
-  //   bottom: -10px;
-  //   left: -10px;
-  //   display: flex;
-  //   transform: skew(20deg);
-  //   width: 20px;
-  //   height: 20px;
-  //   border-radius: 50%;
-  //   background: $orange-one;
-  // }
 }
 </style>

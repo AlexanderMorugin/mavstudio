@@ -11,7 +11,7 @@
 .cardIndicatorForFooter {
   position: absolute;
   top: 365px;
-  left: 40%;
+  left: 51%;
   width: 100%;
   height: 420px;
   display: flex;
@@ -33,17 +33,5 @@
     left: 12px;
     transform: skew(-20deg);
   }
-
-  // &__point {
-  //   position: absolute;
-  //   top: -10px;
-  //   left: -10px;
-  //   display: flex;
-  //   transform: skew(-20deg);
-  //   width: 20px;
-  //   height: 20px;
-  //   border-radius: 50%;
-  //   background: $orange-one;
-  // }
 }
 </style>
