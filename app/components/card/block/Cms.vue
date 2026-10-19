@@ -18,21 +18,10 @@ const props = defineProps<{
 .cardBlockCms {
   display: grid;
   grid-template-columns: 30% 1fr;
-}
-</style>
-
-<script setup lang="ts">
-const props = defineProps<{
-  isPage?: boolean;
-}>();
-</script>
-
-<style lang="scss" scoped>
-.cardBlockCms {
-  padding-left: 6px;
-  padding-right: 6px;
 
   &_page {
+    padding-left: 6px;
+    padding-right: 6px;
     padding-bottom: 10px;
   }
 }

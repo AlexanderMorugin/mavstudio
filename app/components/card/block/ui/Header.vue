@@ -14,10 +14,12 @@
       <CardBlockUiLine />
     </div>
 
-    <span v-if="props.isPage" class="cardBlockUiHeader__text"
-      >слова навигации</span
-    >
-    <span v-if="props.isPage" class="cardBlockUiHeader__text">контакты</span>
+    <span v-if="props.isPage" class="cardBlockUiHeader__text">{{
+      props.cms ? "управление" : "слова навигации"
+    }}</span>
+    <span v-if="props.isPage" class="cardBlockUiHeader__text">{{
+      props.cms ? "" : "контакты"
+    }}</span>
   </div>
 </template>
 

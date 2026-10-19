@@ -26,6 +26,7 @@ const props = defineProps<{
 
   &_page {
     width: 100%;
+    height: 300px;
     gap: 10px;
     border: 1px solid $grey-one;
     border-radius: $br-xs;
