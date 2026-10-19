@@ -1,13 +1,18 @@
 <template>
   <div :class="['cardBlockUiFooter', { cardBlockUiFooter_page: props.isPage }]">
-    <div class="cardBlockUiFooter__textBlock">
+    <div v-if="!props.isPage" class="cardBlockUiFooter__textBlock">
       <CardBlockUiLine animateFooter />
       <CardBlockUiLine animateFooter />
     </div>
-    <div class="cardBlockUiFooter__textBlock">
+    <div v-if="!props.isPage" class="cardBlockUiFooter__textBlock">
       <CardBlockUiLine animateFooter />
       <CardBlockUiLine animateFooter />
     </div>
+
+    <span v-if="props.isPage" class="cardBlockUiFooter__text"
+      >слова навигации</span
+    >
+    <span v-if="props.isPage" class="cardBlockUiFooter__text">контакты</span>
 
     <IconStarKidFill class="cardBlockUiFooter__icon" />
   </div>
@@ -32,10 +37,10 @@ const props = defineProps<{
   overflow: hidden;
 
   &_page {
-    // display: flex;
-    background: $grey-mask-three;
+    display: flex;
+    background: transparent;
     border-radius: 0;
-    border-top: 1px solid $white-mask-three;
+    border-top: 1px solid $grey-one;
     padding: 10px;
   }
 
@@ -44,6 +49,15 @@ const props = defineProps<{
     flex-direction: column;
     gap: 6px;
     width: 100%;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $white-mask-one;
+
+    @media (max-width: 389px) {
+      font-size: 10px;
+    }
   }
 
   &__icon {

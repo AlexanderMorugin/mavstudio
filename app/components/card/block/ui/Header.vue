@@ -14,10 +14,10 @@
       <CardBlockUiLine />
     </div>
 
-    <span v-if="props.isPage" class="cardBlockUiHeader__text">шапка сайта</span>
     <span v-if="props.isPage" class="cardBlockUiHeader__text"
       >слова навигации</span
     >
+    <span v-if="props.isPage" class="cardBlockUiHeader__text">контакты</span>
   </div>
 </template>
 
@@ -53,17 +53,13 @@ const props = defineProps<{
 
   &_page {
     display: flex;
-    background-image: linear-gradient(
-      to right,
-      transparent,
-      transparent,
-      $white-mask-three,
-      transparent,
-      transparent
-    );
+    background: transparent;
     border-radius: 0;
-    border-bottom: 1px solid $white-mask-three;
+    border-bottom: 1px solid $grey-one;
     padding: 10px;
+    animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
   }
 
   &__textBlock {

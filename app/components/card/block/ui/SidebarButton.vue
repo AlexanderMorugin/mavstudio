@@ -6,10 +6,14 @@
       { cardBlockUiSidebarButton_sidebar: props.sidebar },
     ]"
   >
-    <div class="cardBlockUiSidebarButton__textBlock">
+    <div v-if="!props.isPage" class="cardBlockUiSidebarButton__textBlock">
       <CardBlockUiLine animateFooter />
       <CardBlockUiLine animateFooter />
     </div>
+
+    <span v-if="props.isPage" class="cardBlockUiSidebarButton__text"
+      >перейти</span
+    >
 
     <IconArrowDouble class="cardBlockUiSidebarButton__icon" />
   </div>
@@ -19,6 +23,7 @@
 const props = defineProps<{
   multipage?: boolean;
   sidebar?: boolean;
+  isPage?: boolean;
 }>();
 </script>
 
@@ -45,6 +50,11 @@ const props = defineProps<{
     width: 24px;
     height: 24px;
     fill: $white-one;
+
+    @media (max-width: 576px) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__textBlock {
@@ -52,8 +62,18 @@ const props = defineProps<{
     flex-direction: column;
     gap: 6px;
     width: 100%;
+  }
 
-    // overflow: hidden;
+  &__text {
+    font-size: 12px;
+    color: $white-mask-one;
+
+    @media (max-width: 576px) {
+      font-size: 10px;
+    }
+    @media (max-width: 389px) {
+      font-size: 4px;
+    }
   }
 }
 </style>

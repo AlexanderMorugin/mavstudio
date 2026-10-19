@@ -14,3 +14,16 @@
     <CardBlockUiFooter />
   </CardBlockContainer>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isPage?: boolean;
+}>();
+</script>
+
+<style lang="scss" scoped>
+.cardBlockPage {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+</style>

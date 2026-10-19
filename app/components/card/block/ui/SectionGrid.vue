@@ -6,26 +6,50 @@
       { cardBlockUiSectionGrid_three: props.threeGrid },
     ]"
   >
-    <div class="cardBlockUiSectionGrid__box">
+    <div
+      :class="[
+        'cardBlockUiSectionGrid__box',
+        { cardBlockUiSectionGrid__box_page: props.isPage },
+      ]"
+    >
       <div class="cardBlockUiSectionGrid__top">
         <CardBlockUiIconInCircle
           :image="props.imgOne"
           :imageFill="props.imgOneFill"
         />
         <div class="cardBlockUiSectionGrid__text">
-          <CardBlockUiLine animate-one :textOrange="props.textOrange" />
-          <CardBlockUiLine animate-two :textOrange="props.textOrange" />
+          <CardBlockUiLine
+            v-if="!props.isPage"
+            animate-one
+            :textOrange="props.textOrange"
+          />
+          <CardBlockUiLine
+            v-if="!props.isPage"
+            animate-two
+            :textOrange="props.textOrange"
+          />
+
+          <span v-if="props.isPage" class="cardBlockUiSectionGrid__word"
+            >текст</span
+          >
         </div>
       </div>
       <div class="cardBlockUiSectionGrid__text">
-        <CardBlockUiLine animateFooter />
-        <CardBlockUiLine animateFooter />
+        <CardBlockUiLine v-if="!props.isPage" animateFooter />
+        <CardBlockUiLine v-if="!props.isPage" animateFooter />
+
+        <span v-if="props.isPage" class="cardBlockUiSectionGrid__word"
+          >описание блока</span
+        >
       </div>
     </div>
 
     <div
       v-if="props.twoGrid || props.threeGrid"
-      class="cardBlockUiSectionGrid__box"
+      :class="[
+        'cardBlockUiSectionGrid__box',
+        { cardBlockUiSectionGrid__box_page: props.isPage },
+      ]"
     >
       <div class="cardBlockUiSectionGrid__top">
         <CardBlockUiIconInCircle
@@ -33,17 +57,39 @@
           :imageFill="props.imgTwoFill"
         />
         <div class="cardBlockUiSectionGrid__text">
-          <CardBlockUiLine animate-one :textOrange="props.textOrange" />
-          <CardBlockUiLine animate-two :textOrange="props.textOrange" />
+          <CardBlockUiLine
+            v-if="!props.isPage"
+            animate-one
+            :textOrange="props.textOrange"
+          />
+          <CardBlockUiLine
+            v-if="!props.isPage"
+            animate-two
+            :textOrange="props.textOrange"
+          />
+
+          <span v-if="props.isPage" class="cardBlockUiSectionGrid__word"
+            >текст</span
+          >
         </div>
       </div>
       <div class="cardBlockUiSectionGrid__text">
-        <CardBlockUiLine animateFooter />
-        <CardBlockUiLine animateFooter />
+        <CardBlockUiLine v-if="!props.isPage" animateFooter />
+        <CardBlockUiLine v-if="!props.isPage" animateFooter />
+
+        <span v-if="props.isPage" class="cardBlockUiSectionGrid__word"
+          >описание блока</span
+        >
       </div>
     </div>
 
-    <div v-if="props.threeGrid" class="cardBlockUiSectionGrid__box">
+    <div
+      v-if="props.threeGrid"
+      :class="[
+        'cardBlockUiSectionGrid__box',
+        { cardBlockUiSectionGrid__box_page: props.isPage },
+      ]"
+    >
       <div class="cardBlockUiSectionGrid__top">
         <CardBlockUiIconInCircle
           :image="props.imgThree"
@@ -73,6 +119,7 @@ const props = defineProps<{
   imgThree?: string;
   imgThreeFill?: string;
   textOrange?: boolean;
+  isPage?: boolean;
 }>();
 </script>
 
@@ -97,6 +144,11 @@ const props = defineProps<{
     border-radius: $br-xxs;
     padding: 10px;
     overflow: hidden;
+
+    &_page {
+      background: none;
+      border: 1px solid $green-two;
+    }
   }
 
   &__top {
@@ -111,6 +163,16 @@ const props = defineProps<{
     flex-direction: column;
     gap: 6px;
     width: 100%;
+  }
+
+  &__word {
+    font-size: 14px;
+    color: $white-mask-one;
+    text-align: center;
+
+    @media (max-width: 389px) {
+      font-size: 10px;
+    }
   }
 }
 </style>

@@ -1,22 +1,41 @@
 <template>
-  <CardBlockContainer>
-    <CardBlockUiHeader />
-    <CardBlockUiSectionGrid
-      twoGrid
-      imgOne="bookImage"
-      imgOneFill="white"
-      imgTwo="bookImage"
-      imgTwoFill="white"
-      textOrange
-    />
-    <CardBlockUiSectionGrid
-      twoGrid
-      imgOne="megafonImage"
-      imgOneFill="white"
-      imgTwo="megafonImage"
-      imgTwoFill="white"
-      textOrange
-    />
-    <CardBlockUiFooter />
+  <CardBlockContainer :isPage="props.isPage">
+    <CardBlockUiHeader :isPage="props.isPage" />
+    <div :class="props.isPage ? 'cardBlockPage' : ''">
+      <CardBlockUiSectionGrid
+        twoGrid
+        imgOne="bookImage"
+        imgOneFill="white"
+        imgTwo="bookImage"
+        imgTwoFill="white"
+        textOrange
+        :isPage="props.isPage"
+      />
+    </div>
+    <div :class="props.isPage ? 'cardBlockPage' : ''">
+      <CardBlockUiSectionGrid
+        twoGrid
+        imgOne="megafonImage"
+        imgOneFill="white"
+        imgTwo="megafonImage"
+        imgTwoFill="white"
+        textOrange
+        :isPage="props.isPage"
+      />
+    </div>
+    <CardBlockUiFooter :isPage="props.isPage" />
   </CardBlockContainer>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isPage?: boolean;
+}>();
+</script>
+
+<style lang="scss" scoped>
+.cardBlockPage {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+</style>

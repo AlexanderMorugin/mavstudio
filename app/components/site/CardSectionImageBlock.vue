@@ -1,6 +1,6 @@
 <template>
   <section class="siteCardSectionImageBlock">
-    <h2 class="siteCardSectionImageBlock__title">Примерная структура сайта</h2>
+    <h2 class="siteCardSectionImageBlock__title">структура сайта</h2>
     <CardBlockLanding v-if="props.siteName === 'landing'" isPage />
     <CardBlockBusiness v-if="props.siteName === 'business'" isPage />
     <CardBlockMultipage v-if="props.siteName === 'multipage'" isPage />

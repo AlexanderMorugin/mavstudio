@@ -27,7 +27,7 @@ const props = defineProps<{
   &_page {
     width: 100%;
     gap: 10px;
-    border: 1px solid $white-mask-three;
+    border: 1px solid $grey-one;
     border-radius: $br-xs;
     overflow: hidden;
   }

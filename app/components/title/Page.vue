@@ -52,6 +52,11 @@ const props = defineProps<{
       font-size: 28px;
       letter-spacing: 2px;
     }
+
+    @media (max-width: 389px) {
+      font-size: 24px;
+      letter-spacing: 0;
+    }
   }
 
   &__subtitle {

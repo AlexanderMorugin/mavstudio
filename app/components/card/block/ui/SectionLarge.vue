@@ -1,5 +1,10 @@
 <template>
-  <div class="cardBlockUiSectionLarge">
+  <div
+    :class="[
+      'cardBlockUiSectionLarge',
+      { cardBlockUiSectionLarge_page: props.isPage },
+    ]"
+  >
     <div class="cardBlockUiSectionLarge__box">
       <IconLeafFill
         v-if="props.landing"
@@ -17,9 +22,26 @@
         v-if="props.building"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <CardBlockUiLine animate-one :textGreen="props.textGreen" />
-      <CardBlockUiLine animate-three :textOrange="props.textOrange" />
-      <CardBlockUiLine animate-two :textGreen="props.textGreen" />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-one
+        :textGreen="props.textGreen"
+      />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-three
+        :textOrange="props.textOrange"
+      />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-two
+        :textGreen="props.textGreen"
+      />
+
+      <div v-if="props.isPage" class="cardBlockUiSectionLarge__textBox">
+        <span class="cardBlockUiSectionLarge__text">текст</span>
+        <span class="cardBlockUiSectionLarge__text">описание</span>
+      </div>
     </div>
     <div class="cardBlockUiSectionLarge__box">
       <IconRocketFill
@@ -38,9 +60,18 @@
         v-if="props.building"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <CardBlockUiLine animate-three />
-      <CardBlockUiLine animate-two :textOrange="props.textOrange" />
-      <CardBlockUiLine animate-one />
+      <CardBlockUiLine v-if="!props.isPage" animate-three />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-two
+        :textOrange="props.textOrange"
+      />
+      <CardBlockUiLine v-if="!props.isPage" animate-one />
+
+      <div v-if="props.isPage" class="cardBlockUiSectionLarge__textBox">
+        <span class="cardBlockUiSectionLarge__text">текст</span>
+        <span class="cardBlockUiSectionLarge__text">описание</span>
+      </div>
     </div>
     <div class="cardBlockUiSectionLarge__box">
       <IconPlantFill
@@ -59,9 +90,26 @@
         v-if="props.building"
         class="cardBlockUiSectionLarge__icon cardBlockUiSectionLarge__icon_white"
       />
-      <CardBlockUiLine animate-two :textGreen="props.textGreen" />
-      <CardBlockUiLine animate-three :textOrange="props.textOrange" />
-      <CardBlockUiLine animate-one :textGreen="props.textGreen" />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-two
+        :textGreen="props.textGreen"
+      />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-three
+        :textOrange="props.textOrange"
+      />
+      <CardBlockUiLine
+        v-if="!props.isPage"
+        animate-one
+        :textGreen="props.textGreen"
+      />
+
+      <div v-if="props.isPage" class="cardBlockUiSectionLarge__textBox">
+        <span class="cardBlockUiSectionLarge__text">текст</span>
+        <span class="cardBlockUiSectionLarge__text">описание</span>
+      </div>
     </div>
   </div>
 </template>
@@ -74,6 +122,7 @@ const props = defineProps<{
   building?: boolean;
   textOrange?: boolean;
   textGreen?: boolean;
+  isPage?: boolean;
 }>();
 </script>
 
@@ -89,6 +138,11 @@ const props = defineProps<{
   border-radius: $br-xxs;
   padding: 10px;
   overflow: hidden;
+
+  &_page {
+    background: none;
+    border: 1px solid $orange-two;
+  }
 
   &__box {
     display: flex;
@@ -112,6 +166,21 @@ const props = defineProps<{
 
     &_white {
       fill: $white-one;
+    }
+  }
+
+  &__textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $white-mask-one;
+
+    @media (max-width: 389px) {
+      font-size: 10px;
     }
   }
 }

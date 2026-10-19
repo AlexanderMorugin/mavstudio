@@ -9,12 +9,19 @@
         numberColor="orange"
       />
       <div class="cardBlockUiSectionMultiPage__text">
-        <CardBlockUiLine animate-one textBlue />
-        <CardBlockUiLine animate-two textBlue />
-        <CardBlockUiLine animate-three textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-one textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-two textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-three textBlue />
+
+        <span v-if="props.isPage" class="cardBlockUiSectionMultiPage__word"
+          >страница</span
+        >
+        <span v-if="props.isPage" class="cardBlockUiSectionMultiPage__word"
+          >с блоками</span
+        >
       </div>
 
-      <CardBlockUiSidebarButton multipage />
+      <CardBlockUiSidebarButton multipage :isPage="props.isPage" />
     </div>
     <div
       class="cardBlockUiSectionMultiPage__box cardBlockUiSectionMultiPage__box_white"
@@ -25,11 +32,18 @@
         numberColor="white"
       />
       <div class="cardBlockUiSectionMultiPage__text">
-        <CardBlockUiLine animate-one textBlue />
-        <CardBlockUiLine animate-two textBlue />
-        <CardBlockUiLine animate-three textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-one textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-two textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-three textBlue />
+
+        <span v-if="props.isPage" class="cardBlockUiSectionMultiPage__word"
+          >страница</span
+        >
+        <span v-if="props.isPage" class="cardBlockUiSectionMultiPage__word"
+          >с блоками</span
+        >
       </div>
-      <CardBlockUiSidebarButton multipage />
+      <CardBlockUiSidebarButton multipage :isPage="props.isPage" />
     </div>
     <div
       class="cardBlockUiSectionMultiPage__box cardBlockUiSectionMultiPage__box_green"
@@ -40,14 +54,27 @@
         numberColor="green"
       />
       <div class="cardBlockUiSectionMultiPage__text">
-        <CardBlockUiLine animate-one textBlue />
-        <CardBlockUiLine animate-two textBlue />
-        <CardBlockUiLine animate-three textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-one textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-two textBlue />
+        <CardBlockUiLine v-if="!props.isPage" animate-three textBlue />
+
+        <span v-if="props.isPage" class="cardBlockUiSectionMultiPage__word"
+          >страница</span
+        >
+        <span v-if="props.isPage" class="cardBlockUiSectionMultiPage__word"
+          >с блоками</span
+        >
       </div>
-      <CardBlockUiSidebarButton multipage />
+      <CardBlockUiSidebarButton multipage :isPage="props.isPage" />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isPage?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .cardBlockUiSectionMultiPage {
@@ -89,6 +116,16 @@
     flex-direction: column;
     gap: 6px;
     width: 100%;
+  }
+
+  &__word {
+    font-size: 14px;
+    color: $black-one;
+    text-align: center;
+
+    @media (max-width: 389px) {
+      font-size: 10px;
+    }
   }
 }
 </style>
