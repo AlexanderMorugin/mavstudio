@@ -1,17 +1,22 @@
 <template>
-  <CardBlockContainer>
-    <CardBlockUiHeader />
-    <CardBlockUiSectionLarge commerce />
-    <CardBlockUiSectionGrid
-      threeGrid
-      imgOne="paymentImage"
-      imgOneFill="white"
-      imgTwo="rubleImage"
-      imgTwoFill="white"
-      imgThree="paymentImage"
-      imgThreeFill="white"
-    />
-    <CardBlockUiFooter />
+  <CardBlockContainer :isPage="props.isPage">
+    <CardBlockUiHeader :isPage="props.isPage" />
+    <div :class="props.isPage ? 'cardBlockPage' : ''">
+      <CardBlockUiSectionLarge commerce :isPage="props.isPage" />
+    </div>
+    <div :class="props.isPage ? 'cardBlockPage' : ''">
+      <CardBlockUiSectionGrid
+        threeGrid
+        imgOne="paymentImage"
+        imgOneFill="white"
+        imgTwo="rubleImage"
+        imgTwoFill="white"
+        imgThree="paymentImage"
+        imgThreeFill="white"
+        :isPage="props.isPage"
+      />
+    </div>
+    <CardBlockUiFooter :isPage="props.isPage" />
   </CardBlockContainer>
 </template>
 

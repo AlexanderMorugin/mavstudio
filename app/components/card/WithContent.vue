@@ -45,6 +45,13 @@ const props = defineProps<{
     transform: translateY(-1%);
   }
 
+  @media (max-width: 576px) {
+    &:hover {
+      box-shadow: $shadow-card-one;
+      transform: none;
+    }
+  }
+
   &__container {
     position: relative;
     display: flex;

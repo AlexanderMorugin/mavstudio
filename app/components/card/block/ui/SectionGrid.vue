@@ -96,13 +96,29 @@
           :imageFill="props.imgThreeFill"
         />
         <div class="cardBlockUiSectionGrid__text">
-          <CardBlockUiLine animate-one :textOrange="props.textOrange" />
-          <CardBlockUiLine animate-two :textOrange="props.textOrange" />
+          <CardBlockUiLine
+            v-if="!props.isPage"
+            animate-one
+            :textOrange="props.textOrange"
+          />
+          <CardBlockUiLine
+            v-if="!props.isPage"
+            animate-two
+            :textOrange="props.textOrange"
+          />
+
+          <span v-if="props.isPage" class="cardBlockUiSectionGrid__word"
+            >текст</span
+          >
         </div>
       </div>
       <div class="cardBlockUiSectionGrid__text">
-        <CardBlockUiLine animateFooter />
-        <CardBlockUiLine animateFooter />
+        <CardBlockUiLine v-if="!props.isPage" animateFooter />
+        <CardBlockUiLine v-if="!props.isPage" animateFooter />
+
+        <span v-if="props.isPage" class="cardBlockUiSectionGrid__word"
+          >описание блока</span
+        >
       </div>
     </div>
   </div>

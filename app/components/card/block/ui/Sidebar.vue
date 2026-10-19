@@ -1,11 +1,17 @@
 <template>
   <div class="cardBlockUiSidebar">
-    <CardBlockUiSidebarButton sidebar />
-    <CardBlockUiSidebarButton sidebar />
-    <CardBlockUiSidebarButton sidebar />
-    <CardBlockUiSidebarButton sidebar />
+    <CardBlockUiSidebarButton sidebar :isPage="props.isPage" />
+    <CardBlockUiSidebarButton sidebar :isPage="props.isPage" />
+    <CardBlockUiSidebarButton sidebar :isPage="props.isPage" />
+    <CardBlockUiSidebarButton sidebar :isPage="props.isPage" />
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isPage?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .cardBlockUiSidebar {

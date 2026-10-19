@@ -1,11 +1,33 @@
 <template>
   <div class="cardBlockUiCmsContent">
-    <CardBlockUiCmsContentButton image="personImage" imageFill="white" />
-    <CardBlockUiCmsContentButton image="paymentImage" imageFill="white" />
-    <CardBlockUiCmsContentButton image="rubleImage" imageFill="white" />
-    <CardBlockUiCmsContentButton image="settingsImage" imageFill="white" />
+    <CardBlockUiCmsContentButton
+      image="personImage"
+      imageFill="white"
+      :isPage="props.isPage"
+    />
+    <CardBlockUiCmsContentButton
+      image="paymentImage"
+      imageFill="white"
+      :isPage="props.isPage"
+    />
+    <CardBlockUiCmsContentButton
+      image="rubleImage"
+      imageFill="white"
+      :isPage="props.isPage"
+    />
+    <CardBlockUiCmsContentButton
+      image="settingsImage"
+      imageFill="white"
+      :isPage="props.isPage"
+    />
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isPage?: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .cardBlockUiCmsContent {
