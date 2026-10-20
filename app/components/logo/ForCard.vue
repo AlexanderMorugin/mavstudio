@@ -1,8 +1,21 @@
 <template>
-  <div class="logoForCard">
-    <img src="/img/logo/logo.png" alt="MavStudio" class="logoForCard__icon" />
+  <div :class="['logoForCard', { logoForCard_example: props.isExample }]">
+    <img
+      src="/img/logo/logo.png"
+      alt="MavStudio"
+      :class="[
+        'logoForCard__icon',
+        { logoForCard__icon_example: props.isExample },
+      ]"
+    />
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  isExample: boolean;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .logoForCard {
@@ -27,6 +40,16 @@
     height: 30px;
   }
 
+  &_example {
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   &__icon {
     width: 40px;
     transition: 0.2s ease;
@@ -37,6 +60,14 @@
 
     @media (max-width: 389px) {
       width: 28px;
+    }
+
+    &_example {
+      width: 28px;
+
+      @media (max-width: 767px) {
+        width: 20px;
+      }
     }
   }
 }

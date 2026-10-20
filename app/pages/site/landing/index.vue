@@ -1,9 +1,12 @@
 <template>
-  <ContainerPage desktopPadding>
-    <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Лендинг" subtitle="мастерская авторских веб-сайтов" />
-    <SiteCard :siteData="siteLanding" />
-  </ContainerPage>
+  <div>
+    <ContainerPage desktopPadding>
+      <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
+      <TitlePage title="Лендинг" subtitle="мастерская авторских веб-сайтов" />
+      <SiteCard :siteData="siteLanding" />
+    </ContainerPage>
+    <SiteExampleCard />
+  </div>
 </template>
 
 <script setup lang="ts">

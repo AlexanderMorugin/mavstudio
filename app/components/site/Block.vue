@@ -22,7 +22,7 @@ const props = defineProps<{
 .siteBlock {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
+  column-gap: 100px;
   row-gap: 100px;
   padding-bottom: 30px;
 
