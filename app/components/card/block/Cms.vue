@@ -20,9 +20,15 @@ const props = defineProps<{
   grid-template-columns: 30% 1fr;
 
   &_page {
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-bottom: 10px;
+    // padding-left: 6px;
+    // padding-right: 6px;
+    // padding-bottom: 10px;
+
+    // display: flex;
+    // flex-direction: column;
+    // gap: 10px;
+    padding: 10px;
+    border: 1px solid $orange-four;
   }
 }
 </style>

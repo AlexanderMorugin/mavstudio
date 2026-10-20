@@ -1,7 +1,7 @@
 <template>
   <CardBlockContainer :isPage="props.isPage">
     <CardBlockUiHeader :isPage="props.isPage" />
-    <div :class="props.isPage ? 'cardBlockPage' : ''">
+    <div :class="props.isPage ? 'cardBlockPage' : 'cardBlockList'">
       <CardBlockUiSectionGrid
         twoGrid
         imgOne="bookImage"
@@ -11,8 +11,6 @@
         textOrange
         :isPage="props.isPage"
       />
-    </div>
-    <div :class="props.isPage ? 'cardBlockPage' : ''">
       <CardBlockUiSectionGrid
         twoGrid
         imgOne="megafonImage"
@@ -35,7 +33,15 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .cardBlockPage {
-  padding-left: 6px;
-  padding-right: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid $orange-four;
+}
+.cardBlockList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 </style>

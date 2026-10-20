@@ -39,8 +39,14 @@ const props = defineProps<{
   &_page {
     display: flex;
     background: transparent;
-    border-radius: 0;
-    border-top: 1px solid $grey-one;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: $br-xs;
+    border-bottom-right-radius: $br-xs;
+    // border-bottom: 1px solid $blue-four;
+    // border-left: 1px solid $blue-four;
+    // border-right: 1px solid $blue-four;
+    border: 1px solid $blue-four;
     padding: 10px;
   }
 

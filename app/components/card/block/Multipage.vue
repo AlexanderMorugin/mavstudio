@@ -16,7 +16,7 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .cardBlockPage {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 6px 10px;
+  border: 1px solid $orange-four;
 }
 </style>
