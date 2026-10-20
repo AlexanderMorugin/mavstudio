@@ -10,6 +10,7 @@
     <CardBlockCms v-if="props.siteName === 'cms'" isPage />
 
     <CardIndicatorForHeader />
+    <CardIndicatorForContent />
     <CardIndicatorForFooter v-if="props.siteName !== 'cms'" />
   </section>
 </template>
@@ -30,7 +31,10 @@ const props = defineProps<{
   padding-top: 60px;
 
   &__title {
+    width: 100%;
     font-size: 16px;
+    text-align: right;
+    letter-spacing: 0.8px;
   }
 }
 </style>

@@ -12,15 +12,15 @@
   position: absolute;
   top: 8px;
   left: 26%;
-  width: 100%;
-  height: 130px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // width: 100%;
+  // height: 130px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 
   &__trapezoid {
     position: relative;
-    width: 130px;
+    width: 110px;
     height: 100px;
     transform: skew(-20deg);
     border-top: 1px solid $orange-one;
@@ -30,8 +30,10 @@
   &__text {
     position: absolute;
     top: -20px;
-    left: 10px;
+    right: 12px;
     transform: skew(20deg);
+    font-size: 14px;
+    color: $grey-two;
   }
 }
 </style>
