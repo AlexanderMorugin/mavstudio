@@ -2,13 +2,7 @@
   <div class="siteExampleMainBlock">
     <ContainerPage desktopPadding class="siteExampleMainBlock__grid">
       <SiteExampleMainCard
-        backgroundColor="orange"
-        borderRadius="14"
-        cardImage="landingImage"
-        cardImageFill="orange"
-      />
-      <SiteExampleMainCard
-        backgroundColor="blue"
+        backgroundColor="green"
         borderRadius="14"
         cardImage="landingImage"
         cardImageFill="orange"
@@ -20,7 +14,13 @@
         cardImageFill="orange"
       />
       <SiteExampleMainCard
-        backgroundColor="red"
+        backgroundColor="green"
+        borderRadius="14"
+        cardImage="landingImage"
+        cardImageFill="orange"
+      />
+      <SiteExampleMainCard
+        backgroundColor="green"
         borderRadius="14"
         cardImage="landingImage"
         cardImageFill="orange"

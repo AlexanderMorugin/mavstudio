@@ -139,8 +139,10 @@ const props = defineProps<{
   &_isExample {
     width: 150px;
     height: 150px;
-    backdrop-filter: brightness(80%);
+    backdrop-filter: brightness(10%);
     border-radius: 10px;
+    border: 1px solid $grey-one;
+    box-shadow: none;
     animation: none;
 
     @media (max-width: 1023px) {

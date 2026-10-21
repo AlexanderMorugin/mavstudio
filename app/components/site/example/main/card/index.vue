@@ -25,6 +25,10 @@
         subtitle="Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь."
       />
     </div>
+    <SiteExampleMainCardText
+      textOne="Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь."
+      textTwo="Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь."
+    />
   </div>
 </template>
 
@@ -41,18 +45,19 @@ const props = defineProps<{
 .siteExampleMainCard {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   border: 1px solid $grey-one;
-  backdrop-filter: brightness(50%);
+  backdrop-filter: brightness(30%);
   box-shadow: $shadow-card-black-one;
   padding: 20px;
 
   @media (max-width: 1023px) {
     padding: 10px;
+    gap: 10px;
   }
 
   @media (max-width: 767px) {
-    padding: 5px;
+    padding: 5px 5px 10px 5px;
   }
 
   &_backgroundOrange {
