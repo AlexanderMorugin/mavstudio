@@ -7,11 +7,19 @@
     <div class="siteExampleCard__container">
       <SiteExampleHeader />
       <SiteExampleBackground />
-      <SiteExampleMainBlock />
+      <SiteExampleMainBlock :siteData="props.siteData" />
       <SiteExampleFooter />
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import type { ISite } from "~/types/site";
+
+const props = defineProps<{
+  siteData: ISite;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .siteExampleCard {

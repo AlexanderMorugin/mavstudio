@@ -6,28 +6,44 @@
         borderRadius="14"
         cardImage="landingImage"
         cardImageFill="orange"
+        :textOne="props.siteData.textOne"
+        :textTwo="props.siteData.textTwo"
       />
       <SiteExampleMainCard
         backgroundColor="green"
         borderRadius="14"
         cardImage="landingImage"
         cardImageFill="orange"
+        :textOne="props.siteData.textOne"
+        :textTwo="props.siteData.textTwo"
       />
       <SiteExampleMainCard
         backgroundColor="green"
         borderRadius="14"
         cardImage="landingImage"
         cardImageFill="orange"
+        :textOne="props.siteData.textOne"
+        :textTwo="props.siteData.textTwo"
       />
       <SiteExampleMainCard
         backgroundColor="green"
         borderRadius="14"
         cardImage="landingImage"
         cardImageFill="orange"
+        :textOne="props.siteData.textOne"
+        :textTwo="props.siteData.textTwo"
       />
     </ContainerPage>
   </div>
 </template>
+
+<script setup lang="ts">
+import type { ISite } from "~/types/site";
+
+const props = defineProps<{
+  siteData: ISite;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .siteExampleMainBlock {

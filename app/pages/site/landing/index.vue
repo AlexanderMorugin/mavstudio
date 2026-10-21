@@ -5,7 +5,7 @@
       <TitlePage title="Лендинг" subtitle="мастерская авторских веб-сайтов" />
       <SiteCard :siteData="siteLanding" />
     </ContainerPage>
-    <SiteExampleCard />
+    <SiteExampleCard :siteData="siteLanding" />
   </div>
 </template>
 
