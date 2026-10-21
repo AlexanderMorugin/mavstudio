@@ -1,7 +1,9 @@
 <template>
   <div class="siteExampleHeader">
     <ContainerPage desktopPadding class="siteExampleHeader__container">
-      <LogoForCard isExample />
+      <LogoForCard isExample icon="menu" title="Меню" />
+      <LogoForHeaderExample title="Логотип компании" />
+      <LogoForCard isExample icon="chat" title="Контакты" />
     </ContainerPage>
   </div>
 </template>

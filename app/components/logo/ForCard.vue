@@ -1,6 +1,14 @@
 <template>
-  <div :class="['logoForCard', { logoForCard_example: props.isExample }]">
+  <div
+    :title="props.title"
+    :class="[
+      'logoForCard',
+      { logoForCard_example: props.isExample },
+      { logoForCard_button: props.icon === 'menu' || props.icon === 'chat' },
+    ]"
+  >
     <img
+      v-if="props.icon === 'mavLogo'"
       src="/img/logo/logo.png"
       alt="MavStudio"
       :class="[
@@ -8,12 +16,20 @@
         { logoForCard__icon_example: props.isExample },
       ]"
     />
+
+    <IconBookFill
+      v-if="props.icon === 'menu'"
+      class="logoForCard__iconButton"
+    />
+    <IconChat v-if="props.icon === 'chat'" class="logoForCard__iconButton" />
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  isExample: boolean;
+  isExample?: boolean;
+  icon: string;
+  title?: string;
 }>();
 </script>
 
@@ -50,9 +66,12 @@ const props = defineProps<{
     }
   }
 
+  &_button {
+    border-radius: 50%;
+  }
+
   &__icon {
     width: 40px;
-    transition: 0.2s ease;
 
     @media (max-width: 1023px) {
       width: 34px;
@@ -68,6 +87,19 @@ const props = defineProps<{
       @media (max-width: 767px) {
         width: 20px;
       }
+    }
+  }
+
+  &__iconButton {
+    width: 40px;
+    fill: $white-one;
+
+    @media (max-width: 1023px) {
+      width: 34px;
+    }
+
+    @media (max-width: 767px) {
+      width: 16px;
     }
   }
 }

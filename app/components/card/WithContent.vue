@@ -14,7 +14,7 @@
         <CardBlockShop v-if="props.item.name === 'shop'" />
         <CardBlockCms v-if="props.item.name === 'cms'" />
       </div>
-      <LogoForCard />
+      <LogoForCard icon="mavLogo" />
     </div>
     <slot />
     <CardBlockUiPrice :price="props.item.price" />

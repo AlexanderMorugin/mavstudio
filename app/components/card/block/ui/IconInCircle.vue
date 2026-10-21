@@ -1,11 +1,17 @@
 <template>
-  <div class="cardBlockUiIconInCircle cardBlockUiIconInCircle_shadow">
+  <div
+    :class="[
+      'cardBlockUiIconInCircle cardBlockUiIconInCircle_shadow',
+      { cardBlockUiIconInCircle_isExample: props.isExample },
+    ]"
+  >
     <IconLandScapeFill
       v-if="props.image === 'landingImage'"
       :class="[
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconBookFill
@@ -14,6 +20,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconMegafonFill
@@ -22,6 +29,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconPaymentFill
@@ -30,6 +38,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconRuble
@@ -38,6 +47,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconCartFill
@@ -46,6 +56,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconDeliveryFill
@@ -54,6 +65,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconSailingFill
@@ -62,6 +74,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconFlightFill
@@ -70,6 +83,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconSettingsFill
@@ -78,6 +92,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <IconPersonFill
@@ -86,6 +101,7 @@
         'cardBlockUiIconInCircle__image',
         { cardBlockUiIconInCircle__image_orange: props.imageFill === 'orange' },
         { cardBlockUiIconInCircle__image_white: props.imageFill === 'white' },
+        { cardBlockUiIconInCircle__image_isExample: props.isExample },
       ]"
     />
     <span
@@ -102,6 +118,7 @@ const props = defineProps<{
   imageFill?: string;
   number?: string;
   numberColor?: string;
+  isExample?: boolean;
 }>();
 </script>
 
@@ -119,6 +136,23 @@ const props = defineProps<{
     animation: shine 5s linear infinite;
   }
 
+  &_isExample {
+    width: 150px;
+    height: 150px;
+    backdrop-filter: brightness(80%);
+    border-radius: 10px;
+    animation: none;
+
+    @media (max-width: 1023px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
   &__image {
     width: 28px;
     height: 28px;
@@ -129,6 +163,16 @@ const props = defineProps<{
 
     &_white {
       fill: $white-one;
+    }
+
+    &_isExample {
+      width: 100px;
+      height: 100px;
+
+      @media (max-width: 1023px) {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 
