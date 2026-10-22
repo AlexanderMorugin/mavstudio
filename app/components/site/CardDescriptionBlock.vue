@@ -9,7 +9,7 @@
         Описание Описание Описание Описание Описание Описание Описание
       </ParagraphNormal>
     </div>
-    <div class="siteCardDescriptionBlock__textBox">
+    <!-- <div class="siteCardDescriptionBlock__textBox">
       <span class="siteCardDescriptionBlock__title">Описание</span>
       <div>
         <div class="siteCardDescriptionBlock__line" />
@@ -17,7 +17,7 @@
       <ParagraphNormal>
         Описание Описание Описание Описание Описание Описание Описание
       </ParagraphNormal>
-    </div>
+    </div> -->
   </div>
 </template>
 

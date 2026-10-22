@@ -1,19 +1,19 @@
 <template>
   <section class="siteCardTextBlock">
-    <div class="siteCardDescriptionBlock__textBox">
-      <span class="siteCardDescriptionBlock__title">Описание</span>
-      <div>
-        <div class="siteCardDescriptionBlock__line" />
-      </div>
+    <div class="siteCardTextBlock__textBox">
+      <span class="siteCardTextBlock__title">Описание</span>
+      <!-- <div> -->
+      <div class="siteCardTextBlock__line" />
+      <!-- </div> -->
       <ParagraphNormal>
         Описание Описание Описание Описание Описание Описание Описание
       </ParagraphNormal>
     </div>
-    <div class="siteCardDescriptionBlock__textBox">
-      <span class="siteCardDescriptionBlock__title">Описание</span>
-      <div>
-        <div class="siteCardDescriptionBlock__line" />
-      </div>
+    <div class="siteCardTextBlock__textBox">
+      <span class="siteCardTextBlock__title">Описание</span>
+      <!-- <div> -->
+      <div class="siteCardTextBlock__line" />
+      <!-- </div> -->
       <ParagraphNormal>
         Описание Описание Описание Описание Описание Описание Описание
       </ParagraphNormal>
