@@ -5,6 +5,10 @@
       <TitlePage title="Лендинг" subtitle="мастерская авторских веб-сайтов" />
       <SiteCard :siteData="siteLanding" />
     </ContainerPage>
+    <SiteCardAdvantageBlock :siteData="siteLanding" />
+    <ContainerPage desktopPadding>
+      <SiteCardTextBlock :siteData="siteLanding" />
+    </ContainerPage>
     <SiteExampleCard :siteData="siteLanding" />
   </div>
 </template>

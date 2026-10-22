@@ -1,7 +1,10 @@
 <template>
   <section class="siteCardSectionTitleBlock">
-    <TitleBlockThreeColor :siteData="props.siteData" />
-    <TitleBlockThreeColorAnimation :siteData="props.siteData" />
+    <div class="siteCardSectionTitleBlock__container">
+      <TitleBlockThreeColor :siteData="props.siteData" />
+      <TitleBlockThreeColorAnimation :siteData="props.siteData" />
+    </div>
+    <SiteCardDescriptionBlock :siteData="props.siteData" />
   </section>
 </template>
 
@@ -15,20 +18,26 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .siteCardSectionTitleBlock {
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  height: fit-content;
-  padding-bottom: 50px;
-  // border: 1px solid red;
+  // gap: 40px;
 
-  @media (max-width: 1023px) {
-    padding-bottom: 30px;
-  }
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: fit-content;
+    padding-bottom: 50px;
+    // border: 1px solid red;
 
-  @media (max-width: 576px) {
-    padding-bottom: 0;
+    @media (max-width: 1023px) {
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: 576px) {
+      padding-bottom: 0;
+    }
   }
 }
 </style>

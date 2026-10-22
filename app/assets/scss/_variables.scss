@@ -45,14 +45,14 @@ $red-three: #ff855c;
 $red-four: #ffab8f;
 
 $blue-one: #21294e;
-$blue-mask-one: rgba(33, 41, 78, 0.8);
-$blue-mask-two: rgba(33, 41, 78, 0.6);
-$blue-mask-three: rgba(33, 41, 78, 0.4);
-$blue-mask-four: rgba(33, 41, 78, 0.2);
-$blue-mask-five: rgba(33, 41, 78, 0.1);
+$blue-two: rgb(37, 70, 102);
+$blue-mask-one: rgba(37, 70, 102, 0.8);
+$blue-mask-two: rgba(37, 70, 102, 0.6);
+$blue-mask-three: rgba(37, 70, 102, 0.4);
+$blue-mask-four: rgba(37, 70, 102, 0.2);
+$blue-mask-five: rgba(37, 70, 102, 0.1);
 
-$blue-two: #254666;
-$blue-three: #32608a;
+$blue-three: rgb(50, 96, 138);
 $blue-four: #42aaff;
 
 // $blue-three: #15a7eb;
@@ -74,12 +74,11 @@ $green-four: #b3e3bc;
 $mask-trasparent: rgba(0, 0, 0, 0);
 
 $gradient-page-primary: linear-gradient(135deg, $orange-one 0%, $black-one 20%, $blue-two 100%);
-
 $gradient-hero-one: linear-gradient(135deg, $blue-three 0%, $black-one 50%, $blue-three 100%);
+$gradient-white-one: linear-gradient($mask-trasparent 0%, $white-one 100%);
+
 $gradient-blue-one: linear-gradient(to right, $blue-two 0%, $mask-trasparent 100%);
 $gradient-blue-two: linear-gradient(to right, $blue-three 0%, $blue-two 100%);
-
-$gradient-blue-three: linear-gradient(135deg, $blue-two 30%, $blue-one 60%);
 $gradient-green-one: linear-gradient(135deg, $green-mask-five 30%, $green-mask-four 60%);
 $gradient-green-two: linear-gradient($orange-mask-five 0%, $green-mask-four 100%);
 $gradient-orange-one: linear-gradient(135deg, $orange-mask-five 30%, $orange-mask-four 60%);

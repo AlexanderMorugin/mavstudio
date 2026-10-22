@@ -10,13 +10,13 @@
 <style lang="scss" scoped>
 .cardIndicatorForHeader {
   position: absolute;
-  top: 8px;
+  top: 38px;
   left: 26%;
 
   &__trapezoid {
     position: relative;
     width: 110px;
-    height: 100px;
+    height: 70px;
     transform: skew(-20deg);
     border-top: 1px solid $green-four;
     border-left: 1px solid $green-four;

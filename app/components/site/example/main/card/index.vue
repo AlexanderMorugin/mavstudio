@@ -57,7 +57,6 @@ const props = defineProps<{
   }
 
   @media (max-width: 767px) {
-    // padding: 5px 5px 10px 5px;
     padding: 5px;
   }
 
