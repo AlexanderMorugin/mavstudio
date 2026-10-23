@@ -1,6 +1,6 @@
 <template>
-  <section class="siteCardSectionImageBlock">
-    <h2 class="siteCardSectionImageBlock__title">структура сайта</h2>
+  <section class="siteCardSectionImage">
+    <h2 class="siteCardSectionImage__title">структура сайта</h2>
     <CardBlockLanding v-if="props.siteName === 'landing'" isPage />
     <CardBlockBusiness v-if="props.siteName === 'business'" isPage />
     <CardBlockMultipage v-if="props.siteName === 'multipage'" isPage />
@@ -22,7 +22,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteCardSectionImageBlock {
+.siteCardSectionImage {
   position: relative;
   display: flex;
   flex-direction: column;

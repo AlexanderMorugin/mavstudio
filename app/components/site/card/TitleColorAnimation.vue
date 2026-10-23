@@ -1,24 +1,24 @@
 <template>
   <div>
     <span
-      v-if="props.siteData.titleOneBack"
-      class="siteBlockThreeColorAnimationText siteBlockThreeColorAnimationText_one"
-      >{{ props.siteData.titleOneBack }}</span
+      v-if="props.siteData.cardTitle.titleOneBack"
+      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_one"
+      >{{ props.siteData.cardTitle.titleOneBack }}</span
     >
     <span
-      v-if="props.siteData.titleTwoBack"
-      class="siteBlockThreeColorAnimationText siteBlockThreeColorAnimationText_two"
-      >{{ props.siteData.titleTwoBack }}</span
+      v-if="props.siteData.cardTitle.titleTwoBack"
+      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_two"
+      >{{ props.siteData.cardTitle.titleTwoBack }}</span
     >
     <span
-      v-if="props.siteData.titleTwoDoubleBack"
-      class="siteBlockThreeColorAnimationText siteBlockThreeColorAnimationText_three"
-      >{{ props.siteData.titleTwoDoubleBack }}</span
+      v-if="props.siteData.cardTitle.titleTwoDoubleBack"
+      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_three"
+      >{{ props.siteData.cardTitle.titleTwoDoubleBack }}</span
     >
     <span
-      v-if="props.siteData.titleThreeBack"
-      class="siteBlockThreeColorAnimationText siteBlockThreeColorAnimationText_four"
-      >{{ props.siteData.titleThreeBack }}</span
+      v-if="props.siteData.cardTitle.titleThreeBack"
+      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_four"
+      >{{ props.siteData.cardTitle.titleThreeBack }}</span
     >
   </div>
 </template>
@@ -32,7 +32,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteBlockThreeColorAnimationText {
+.siteCardTitleColorAnimation {
   position: absolute;
   display: block;
   font-family: "Oswald-Bold", sans-serif;
@@ -79,7 +79,6 @@ const props = defineProps<{
     right: 15%;
     color: $green-mask-five;
     text-shadow: 0 0 15px $green-mask-three;
-    // text-shadow: 0 0 15px $white-mask-five;
     animation: pulse 11s infinite;
   }
 }
@@ -91,7 +90,6 @@ const props = defineProps<{
   }
   50% {
     opacity: 1;
-    // color: $white-mask-five;
   }
   100% {
     opacity: 0;

@@ -1,10 +1,10 @@
 <template>
-  <section class="siteCardSectionTitleBlock">
-    <div class="siteCardSectionTitleBlock__container">
-      <TitleBlockThreeColor :siteData="props.siteData" />
-      <TitleBlockThreeColorAnimation :siteData="props.siteData" />
+  <section class="siteCardSectionTitle">
+    <div class="siteCardSectionTitle__container">
+      <SiteCardTitleColor :siteData="props.siteData" />
+      <SiteCardTitleColorAnimation :siteData="props.siteData" />
     </div>
-    <SiteCardDescriptionBlock :siteData="props.siteData" />
+    <SiteCardSubtitle :siteData="props.siteData" />
   </section>
 </template>
 
@@ -17,10 +17,9 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteCardSectionTitleBlock {
+.siteCardSectionTitle {
   display: flex;
   flex-direction: column;
-  // gap: 40px;
 
   &__container {
     position: relative;
@@ -29,7 +28,6 @@ const props = defineProps<{
     gap: 40px;
     height: fit-content;
     padding-bottom: 50px;
-    // border: 1px solid red;
 
     @media (max-width: 1023px) {
       padding-bottom: 30px;

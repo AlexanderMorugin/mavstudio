@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h2 class="titleBlockThreeColor">
-      <span v-if="props.siteData.titleOne">{{ props.siteData.titleOne }}</span>
+    <h2 class="siteCardTitleColor">
+      <span v-if="props.siteData.cardTitle.titleOne">{{
+        props.siteData.cardTitle.titleOne
+      }}</span>
       <span
-        v-if="props.siteData.titleTwo"
-        class="titleBlockThreeColor_accent"
-        >{{ props.siteData.titleTwo }}</span
+        v-if="props.siteData.cardTitle.titleTwo"
+        class="siteCardTitleColor_accent"
+        >{{ props.siteData.cardTitle.titleTwo }}</span
       >
-      <span v-if="props.siteData.titleThree">{{
-        props.siteData.titleThree
+      <span v-if="props.siteData.cardTitle.titleThree">{{
+        props.siteData.cardTitle.titleThree
       }}</span>
     </h2>
   </div>
@@ -23,7 +25,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.titleBlockThreeColor {
+.siteCardTitleColor {
   position: relative;
   font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 44px;

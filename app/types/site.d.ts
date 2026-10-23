@@ -8,9 +8,7 @@ export interface ISiteCatalog {
   price: string;
 }
 
-export interface ISite {
-  name: string;
-
+export interface ISiteCardTitle {
   titleOne: string;
   titleOneBack: string;
 
@@ -20,7 +18,25 @@ export interface ISite {
 
   titleThree: string;
   titleThreeBack: string;
+}
 
-  textOne: string;
-  textTwo: string;
+export interface ISitePrice {
+  min: number;
+  normal: number;
+  full: number;
+}
+
+export interface ISiteAdvantage {
+  id: number;
+  name: string;
+  title: string;
+  text: string;
+}
+
+export interface ISite {
+  name: string;
+  cardTitle: ISiteCardTitle;
+  cardSubtitle: string;
+  price: ISitePrice;
+  advantage: ISiteAdvantage[];
 }

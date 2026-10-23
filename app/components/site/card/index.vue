@@ -1,7 +1,7 @@
 <template>
   <div class="siteCard">
-    <SiteCardSectionTitleBlock :siteData="props.siteData" />
-    <SiteCardSectionImageBlock :siteName="props.siteData.name" />
+    <SiteCardSectionTitle :siteData="props.siteData" />
+    <SiteCardSectionImage :siteName="props.siteData.name" />
   </div>
 </template>
 
