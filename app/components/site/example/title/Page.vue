@@ -22,16 +22,17 @@ const props = defineProps<{
   flex-direction: column;
   padding-bottom: 40px;
 
-  @media (max-width: 767px) {
-    padding-bottom: 20px;
-  }
+  // @media (max-width: 767px) {
+  //   padding-bottom: 20px;
+  // }
 
   &__title {
     font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 40px;
     line-height: 1.5;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     text-align: center;
+    color: $black-mask-one;
 
     @media (max-width: 767px) {
       font-size: 28px;
@@ -47,7 +48,7 @@ const props = defineProps<{
   &__subtitle {
     text-align: center;
     line-height: 1.5;
-    color: $white-mask-two;
+    color: $black-mask-one;
 
     @media (max-width: 576px) {
       font-size: 14px;

@@ -3,6 +3,7 @@
     <div class="siteCardSectionTitle__container">
       <SiteCardTitleColor :siteData="props.siteData" />
       <SiteCardTitleColorAnimation :siteData="props.siteData" />
+      <SiteCardPrice />
     </div>
     <SiteCardSubtitle :siteData="props.siteData" />
   </section>
@@ -20,6 +21,7 @@ const props = defineProps<{
 .siteCardSectionTitle {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 
   &__container {
     position: relative;
@@ -28,6 +30,8 @@ const props = defineProps<{
     gap: 40px;
     height: fit-content;
     padding-bottom: 50px;
+
+    // border: 1px solid red;
 
     @media (max-width: 1023px) {
       padding-bottom: 30px;

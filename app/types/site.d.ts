@@ -40,6 +40,12 @@ export interface ISiteDescription {
   textTwo: string;
 }
 
+export interface ISiteExample {
+  name: string;
+  title: string;
+  subtitle: string;
+}
+
 export interface ISite {
   name: string;
   cardTitle: ISiteCardTitle;

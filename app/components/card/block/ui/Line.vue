@@ -27,7 +27,7 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .cardBlockUiLine {
-  height: 2px;
+  height: 1px;
   background: $white-mask-two;
 
   &_orange {

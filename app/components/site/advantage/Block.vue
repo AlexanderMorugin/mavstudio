@@ -117,7 +117,7 @@ const props = defineProps<{
 
     &_one {
       right: -15px;
-      animation: opacity-up 5s linear infinite;
+      animation: opacity-up 10s linear infinite;
       animation-delay: 0.5s;
 
       @media (max-width: 767px) {
@@ -127,7 +127,7 @@ const props = defineProps<{
 
     &_two {
       right: 15px;
-      animation: opacity-up 5s linear infinite;
+      animation: opacity-up 10s linear infinite;
       animation-delay: 0.4s;
 
       @media (max-width: 767px) {
@@ -137,7 +137,7 @@ const props = defineProps<{
 
     &_three {
       right: 45px;
-      animation: opacity-up 5s linear infinite;
+      animation: opacity-up 10s linear infinite;
       animation-delay: 0.3s;
 
       @media (max-width: 767px) {
@@ -147,7 +147,7 @@ const props = defineProps<{
 
     &_four {
       right: 75px;
-      animation: opacity-up 5s linear infinite;
+      animation: opacity-up 10s linear infinite;
       animation-delay: 0.2s;
 
       @media (max-width: 767px) {
@@ -157,7 +157,7 @@ const props = defineProps<{
 
     &_five {
       right: 105px;
-      animation: opacity-up 5s linear infinite;
+      animation: opacity-up 10s linear infinite;
       animation-delay: 0.1s;
 
       @media (max-width: 767px) {
@@ -211,10 +211,18 @@ const props = defineProps<{
     opacity: 1;
   }
   80% {
+    fill: $red-one;
     opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    fill: $white-one;
+    opacity: 0;
+    transform: translateY(100%) rotate(-180deg);
   }
   100% {
     opacity: 0;
+    transform: translateY(0);
   }
 }
 @keyframes skew {

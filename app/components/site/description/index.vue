@@ -1,19 +1,23 @@
 <template>
-  <section class="siteCardSectionDescription">
+  <section class="siteDescription">
     <div
       v-for="item in props.description"
       :key="item.id"
-      class="siteCardSectionDescription__textBox"
+      class="siteDescription__textBox"
     >
-      <span class="siteCardSectionDescription__title">{{ item.title }}</span>
-      <div class="siteCardSectionDescription__line" />
+      <span class="siteDescription__title">{{ item.title }}</span>
+      <div
+        v-if="item.id === 1"
+        class="siteDescription__line siteDescription__line_one"
+      />
+      <div
+        v-if="item.id === 2"
+        class="siteDescription__line siteDescription__line_two"
+      />
       <ParagraphNormal v-if="item.textOne">
         {{ item.textOne }}
       </ParagraphNormal>
-      <ParagraphNormal
-        v-if="item.textTwo"
-        class="siteCardSectionDescription__text"
-      >
+      <ParagraphNormal v-if="item.textTwo" class="siteDescription__text">
         {{ item.textTwo }}
       </ParagraphNormal>
     </div>
@@ -29,11 +33,12 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteCardSectionDescription {
+.siteDescription {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding-top: 100px;
+  padding-bottom: 100px;
 
   &__textBox {
     display: flex;
@@ -53,10 +58,41 @@ const props = defineProps<{
     width: 90%;
     height: 1px;
     background: $white-mask-three;
+    animation: move 7s ease-in-out infinite;
+
+    &_one {
+      animation-delay: 1s;
+    }
+
+    &_two {
+      animation-delay: 2s;
+    }
   }
 
   &__text {
     padding-top: 30px;
+  }
+}
+@keyframes move {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+  20% {
+    width: 100%;
+    opacity: 1;
+  }
+  80% {
+    width: 100%;
+    opacity: 1;
+  }
+  90% {
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    width: 0%;
+    opacity: 0;
   }
 }
 </style>
