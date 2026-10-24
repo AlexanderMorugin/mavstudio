@@ -2,7 +2,7 @@
   <ContainerPage desktopPadding>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Сайты" subtitle="мастерская авторских веб-сайтов" />
-    <SiteBlock :catalog="siteCatalog" />
+    <SiteList :catalog="siteCatalog" />
   </ContainerPage>
 </template>
 

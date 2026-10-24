@@ -1,7 +1,7 @@
 <template>
-  <div class="titleBlockForSiteCard">
-    <h2 class="titleBlockForSiteCard__title">{{ props.title }}</h2>
-    <span v-if="props.subtitle" class="titleBlockForSiteCard__subtitle">{{
+  <div class="siteListCardTitle">
+    <h2 class="siteListCardTitle__title">{{ props.title }}</h2>
+    <span v-if="props.subtitle" class="siteListCardTitle__subtitle">{{
       props.subtitle
     }}</span>
     <ParagraphNormal v-if="props.description" center black>{{
@@ -19,7 +19,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.titleBlockForSiteCard {
+.siteListCardTitle {
   display: flex;
   flex-direction: column;
   gap: 6px;

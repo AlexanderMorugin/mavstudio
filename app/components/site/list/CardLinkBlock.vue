@@ -2,10 +2,10 @@
   <NuxtLink
     :to="props.item.route"
     :title="props.item.title"
-    class="cardWithContent"
+    class="siteListCardLinkBlock"
   >
-    <div class="cardWithContent__container">
-      <div class="cardWithContent__block">
+    <div class="siteListCardLinkBlock__container">
+      <div class="siteListCardLinkBlock__block">
         <CardBlockLanding v-if="props.item.name === 'landing'" />
         <CardBlockBusiness v-if="props.item.name === 'business'" />
         <CardBlockMultipage v-if="props.item.name === 'multipage'" />
@@ -17,21 +17,20 @@
       <LogoForCard icon="mavLogo" />
     </div>
     <slot />
-    <CardBlockUiPrice :price="props.item.price" />
+    <SiteListCardPrice :price="props.item.price" />
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import type { ISite, ISiteCatalog } from "~/types/site";
+import type { ISiteCatalog } from "~/types/site";
 
 const props = defineProps<{
-  // item: ISiteCatalog | any;
   item: ISiteCatalog;
 }>();
 </script>
 
 <style lang="scss" scoped>
-.cardWithContent {
+.siteListCardLinkBlock {
   display: flex;
   flex-direction: column;
   border-radius: 10px;

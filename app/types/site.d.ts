@@ -33,6 +33,13 @@ export interface ISiteAdvantage {
   text: string;
 }
 
+export interface ISiteDescription {
+  id: number;
+  title: string;
+  textOne: string;
+  textTwo: string;
+}
+
 export interface ISite {
   name: string;
   cardTitle: ISiteCardTitle;

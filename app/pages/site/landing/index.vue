@@ -6,9 +6,9 @@
       <SiteCard :siteData="siteLanding" />
     </ContainerPage>
     <SiteAdvantage :advantage="siteLanding.advantage" />
-    <!-- <ContainerPage desktopPadding>
-      <SiteCardTextBlock :siteData="siteLanding" />
-    </ContainerPage> -->
+    <ContainerPage desktopPadding>
+      <SiteCardSectionDescription :description="siteLanding.description" />
+    </ContainerPage>
     <!-- <SiteExampleCard :siteData="siteLanding" /> -->
   </div>
 </template>

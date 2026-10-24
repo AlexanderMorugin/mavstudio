@@ -1,8 +1,8 @@
 <template>
-  <div class="cardBlockUiPrice">
-    <div class="cardBlockUiPrice__container">
+  <div class="siteListCardPrice">
+    <div class="siteListCardPrice__container">
       <span>от</span>
-      <span class="cardBlockUiPrice__number"
+      <span class="siteListCardPrice__number"
         >&nbsp;{{ props.price }}&nbsp;</span
       >
       <span>руб</span>
@@ -17,7 +17,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.cardBlockUiPrice {
+.siteListCardPrice {
   display: flex;
   justify-content: center;
   padding: 0 6px 6px 6px;
@@ -26,7 +26,6 @@ const props = defineProps<{
     display: flex;
     justify-content: center;
     width: 70%;
-    // background: $gradient-hero-one;
     background: $gradient-red-one;
     border-radius: $br-xxs;
     padding: 10px;
@@ -34,14 +33,6 @@ const props = defineProps<{
     @media (max-width: 767px) {
       width: 80%;
     }
-
-    // &_blue {
-    //   background: $gradient-hero-one;
-    // }
-
-    // &_red {
-    //   background: $gradient-red-one;
-    // }
   }
 
   &__number {

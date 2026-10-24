@@ -22,7 +22,6 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .cardIndicatorForPoint {
   position: absolute;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +35,7 @@ const props = defineProps<{
     transform: skew(20deg);
     bottom: -10px;
     left: -10px;
+    animation: pulse 2.5s linear infinite;
   }
 
   &_footer {
@@ -43,6 +43,8 @@ const props = defineProps<{
     transform: skew(20deg);
     top: -10px;
     right: -10px;
+    animation: pulse 2.5s linear infinite;
+    animation-delay: 1s;
   }
 
   &_content {
@@ -50,6 +52,8 @@ const props = defineProps<{
     transform: skew(-20deg);
     top: -10px;
     left: -10px;
+    animation: pulse-two 2.5s linear infinite;
+    animation-delay: 1.5s;
   }
 
   &__circle {
@@ -57,6 +61,28 @@ const props = defineProps<{
     height: 8px;
     border-radius: 50%;
     background: $white-one;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1) skew(20deg);
+  }
+  20% {
+    transform: scale(1.2) skew(20deg);
+  }
+  100% {
+    transform: scale(1) skew(20deg);
+  }
+}
+@keyframes pulse-two {
+  0% {
+    transform: scale(1) skew(-20deg);
+  }
+  20% {
+    transform: scale(1.2) skew(-20deg);
+  }
+  100% {
+    transform: scale(1) skew(-20deg);
   }
 }
 </style>

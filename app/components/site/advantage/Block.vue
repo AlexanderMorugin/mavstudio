@@ -1,7 +1,7 @@
 <template>
   <div class="siteAdvantageBlock">
     <div class="siteAdvantageBlock__titleBox">
-      <h3
+      <h2
         :class="[
           'siteAdvantageBlock__title',
           { siteAdvantageBlock__title_one: props.data.name === 'isBad' },
@@ -9,7 +9,7 @@
         ]"
       >
         {{ props.data.title }}
-      </h3>
+      </h2>
       <IconSmartBoyFill
         v-if="props.data.name === 'isBad'"
         class="siteAdvantageBlock__icon siteAdvantageBlock__icon_one siteAdvantageBlock__icon_bad"
@@ -37,6 +37,7 @@
     </div>
     <ParagraphNormal
       v-if="props.data.name === 'isBad'"
+      black
       class="siteAdvantageBlock__text"
       >{{ props.data.text }}</ParagraphNormal
     >
@@ -64,16 +65,20 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding-top: 40px;
+  padding-top: 100px;
 
   @media (max-width: 767px) {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
   &__titleBox {
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
+
+    @media (max-width: 767px) {
+      top: 0;
+    }
   }
 
   &__title {
@@ -103,7 +108,6 @@ const props = defineProps<{
     width: 40px;
     height: 40px;
     fill: $red-one;
-    opacity: 0.7;
 
     @media (max-width: 767px) {
       top: -15px;
@@ -113,6 +117,8 @@ const props = defineProps<{
 
     &_one {
       right: -15px;
+      animation: opacity-up 5s linear infinite;
+      animation-delay: 0.5s;
 
       @media (max-width: 767px) {
         right: -20px;
@@ -121,6 +127,8 @@ const props = defineProps<{
 
     &_two {
       right: 15px;
+      animation: opacity-up 5s linear infinite;
+      animation-delay: 0.4s;
 
       @media (max-width: 767px) {
         right: 10px;
@@ -129,6 +137,8 @@ const props = defineProps<{
 
     &_three {
       right: 45px;
+      animation: opacity-up 5s linear infinite;
+      animation-delay: 0.3s;
 
       @media (max-width: 767px) {
         right: 40px;
@@ -137,6 +147,8 @@ const props = defineProps<{
 
     &_four {
       right: 75px;
+      animation: opacity-up 5s linear infinite;
+      animation-delay: 0.2s;
 
       @media (max-width: 767px) {
         right: 70px;
@@ -145,6 +157,8 @@ const props = defineProps<{
 
     &_five {
       right: 105px;
+      animation: opacity-up 5s linear infinite;
+      animation-delay: 0.1s;
 
       @media (max-width: 767px) {
         right: 100px;
@@ -153,6 +167,7 @@ const props = defineProps<{
 
     &_bad {
       fill: $grey-mask-two;
+      animation: skew 3s linear infinite;
     }
   }
 
@@ -163,6 +178,63 @@ const props = defineProps<{
     @media (max-width: 767px) {
       padding-left: 30px;
     }
+  }
+}
+@keyframes opacity-up {
+  7% {
+    opacity: 0;
+  }
+  10% {
+    fill: $white-one;
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  13% {
+    fill: $red-one;
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    fill: $white-one;
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0;
+  }
+  30% {
+    fill: $red-one;
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes skew {
+  80% {
+    transform: skew(0);
+  }
+  90% {
+    transform: skew(20deg);
+  }
+  93% {
+    transform: skew(-20deg);
+  }
+  96% {
+    transform: skew(20deg);
+  }
+  99% {
+    transform: skew(-20deg);
+  }
+  100% {
+    transform: skew(0);
   }
 }
 </style>

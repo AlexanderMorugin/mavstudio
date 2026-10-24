@@ -29,9 +29,13 @@ const props = defineProps<{
   }
 
   &__container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>

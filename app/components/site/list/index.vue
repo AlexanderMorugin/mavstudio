@@ -1,12 +1,16 @@
 <template>
-  <section class="siteBlock">
-    <CardWithContent v-for="item in props.catalog" :key="item.id" :item="item">
-      <TitleBlockForSiteCard
+  <section class="siteList">
+    <SiteListCardLinkBlock
+      v-for="item in props.catalog"
+      :key="item.id"
+      :item="item"
+    >
+      <SiteListCardTitle
         :title="item.title"
         :subtitle="item.subtitle"
         :description="item.description"
       />
-    </CardWithContent>
+    </SiteListCardLinkBlock>
   </section>
 </template>
 
@@ -19,7 +23,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteBlock {
+.siteList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 100px;
