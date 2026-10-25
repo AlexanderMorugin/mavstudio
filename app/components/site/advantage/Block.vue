@@ -65,10 +65,18 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding-top: 100px;
+  padding-top: 80px;
+
+  @media (max-width: 1023px) {
+    padding-top: 75px;
+  }
 
   @media (max-width: 767px) {
-    padding-top: 40px;
+    padding-top: 36px;
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 28px;
   }
 
   &__titleBox {
@@ -84,17 +92,24 @@ const props = defineProps<{
   &__title {
     position: relative;
     font-family: "Montserrat-Bold", sans-serif;
-    font-size: 44px;
-    text-shadow: 0px 5px 60px $blue-one;
-    z-index: 5;
+    font-size: 40px;
+    z-index: 2;
 
-    @media (max-width: 767px) {
-      font-size: 36px;
-      text-shadow: 0px 5px 20px $blue-mask-two;
+    @media (max-width: 1023px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 24px;
+      text-shadow: 0px 0px 20px $black-mask-two;
     }
 
     &_one {
       color: $black-mask-three;
+
+      @media (max-width: 576px) {
+        color: $grey-mask-two;
+      }
     }
 
     &_two {
@@ -109,20 +124,16 @@ const props = defineProps<{
     height: 40px;
     fill: $red-one;
 
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       top: -15px;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
 
     &_one {
       right: -15px;
       animation: opacity-up 10s linear infinite;
       animation-delay: 0.5s;
-
-      @media (max-width: 767px) {
-        right: -20px;
-      }
     }
 
     &_two {
@@ -130,8 +141,8 @@ const props = defineProps<{
       animation: opacity-up 10s linear infinite;
       animation-delay: 0.4s;
 
-      @media (max-width: 767px) {
-        right: 10px;
+      @media (max-width: 576px) {
+        right: 8px;
       }
     }
 
@@ -140,8 +151,8 @@ const props = defineProps<{
       animation: opacity-up 10s linear infinite;
       animation-delay: 0.3s;
 
-      @media (max-width: 767px) {
-        right: 40px;
+      @media (max-width: 576px) {
+        right: 31px;
       }
     }
 
@@ -150,8 +161,8 @@ const props = defineProps<{
       animation: opacity-up 10s linear infinite;
       animation-delay: 0.2s;
 
-      @media (max-width: 767px) {
-        right: 70px;
+      @media (max-width: 576px) {
+        right: 54px;
       }
     }
 
@@ -160,14 +171,18 @@ const props = defineProps<{
       animation: opacity-up 10s linear infinite;
       animation-delay: 0.1s;
 
-      @media (max-width: 767px) {
-        right: 100px;
+      @media (max-width: 576px) {
+        right: 77px;
       }
     }
 
     &_bad {
-      fill: $grey-mask-two;
+      fill: $black-mask-three;
       animation: skew 3s linear infinite;
+
+      @media (max-width: 1023px) {
+        fill: $grey-mask-two;
+      }
     }
   }
 

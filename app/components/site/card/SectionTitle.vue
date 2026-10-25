@@ -3,7 +3,7 @@
     <div class="siteCardSectionTitle__container">
       <SiteCardTitleColor :siteData="props.siteData" />
       <SiteCardTitleColorAnimation :siteData="props.siteData" />
-      <SiteCardPrice />
+      <SiteCardPrice :price="props.siteData.price.min" />
     </div>
     <SiteCardSubtitle :siteData="props.siteData" />
   </section>

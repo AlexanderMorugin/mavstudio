@@ -27,7 +27,7 @@ export const siteLanding = {
   },
 
   cardSubtitle:
-    "cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle",
+    "cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle",
 
   price: priceDataLanding,
 

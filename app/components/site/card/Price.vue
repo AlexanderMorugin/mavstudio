@@ -1,15 +1,21 @@
 <template>
   <div class="siteCardPrice">
     <div>
-      <span class="siteCardPrice__text">от&nbsp;</span>
-      <span class="siteCardPrice__accent">100 000</span>
-      <span class="siteCardPrice__text">&nbsp;₽</span>
+      <span class="siteCardPrice__text">от&nbsp;&nbsp;</span>
+      <span class="siteCardPrice__accent">{{
+        currencyFormater(props.price)
+      }}</span>
     </div>
-    <!-- <div> -->
+
     <NuxtLink to="/price" class="siteCardPrice__link">цены подробнее</NuxtLink>
-    <!-- </div> -->
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  price: number;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .siteCardPrice {
@@ -19,10 +25,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  // gap: 10px;
-  // justify-content: flex-end;
-
-  // border: 1px solid red;
 
   @media (max-width: 767px) {
     right: 0;
@@ -32,8 +34,12 @@
     font-size: 24px;
     color: $red-two;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       font-size: 18px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 16px;
     }
   }
 
@@ -42,17 +48,20 @@
     font-size: 32px;
     color: $red-one;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       font-size: 24px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 20px;
     }
   }
 
   &__link {
     font-size: 14px;
     line-height: 1.5;
-    color: $red-four;
-    // text-align: right;
-    border-bottom: 1px dashed $red-four;
+    color: $grey-one;
+    border-bottom: 1px dashed $grey-one;
     transition: 0.2s ease;
 
     @media (max-width: 767px) {

@@ -21,11 +21,15 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .siteCardAdvantage {
   background: $gradient-white-one;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
 
+  @media (max-width: 1023px) {
+    padding-top: 40px;
+  }
+
   @media (max-width: 767px) {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   &__container {
