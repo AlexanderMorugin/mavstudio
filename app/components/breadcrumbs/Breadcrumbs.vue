@@ -1,6 +1,6 @@
 <template>
-  <div class="breadcrumbs">
-    <ul
+  <nav class="breadcrumbs">
+    <ol
       itemscope
       itemtype="https://schema.org/BreadcrumbList"
       class="breadcrumbs__list"
@@ -26,8 +26,8 @@
           <meta itemprop="position" :content="String(index + 1)" />
         </div>
       </li>
-    </ul>
-  </div>
+    </ol>
+  </nav>
 </template>
 
 <script lang="ts" setup>

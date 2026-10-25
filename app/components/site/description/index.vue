@@ -5,7 +5,7 @@
       :key="item.id"
       class="siteDescription__textBox"
     >
-      <span class="siteDescription__title">{{ item.title }}</span>
+      <h2 class="siteDescription__title">{{ item.title }}</h2>
       <div
         v-if="item.id === 1"
         class="siteDescription__line siteDescription__line_one"
@@ -48,6 +48,7 @@ const props = defineProps<{
 
   &__title {
     font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 18px;
     letter-spacing: 2px;
     color: $orange-three;
   }
@@ -70,7 +71,7 @@ const props = defineProps<{
   }
 
   &__text {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 @keyframes move {
