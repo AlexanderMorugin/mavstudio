@@ -1,7 +1,7 @@
 <template>
   <ContainerPage desktopPadding>
-    <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Портфолио" />
+    <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE_URL + route.path" />
+    <TitlePage title="Портфолио" :subtitle="COMPANY_SUBTITLE" />
     <div>
       Судьба Ефремова с ранних лет была непростой. Во время Гражданской войны он
       прибился к красноармейской автороте, был контужен. После демобилизации в
@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import { SITE } from "~/mock/meta";
+import { SITE_URL, COMPANY_SUBTITLE } from "~/mock/meta";
 
 const route = useRoute();
 

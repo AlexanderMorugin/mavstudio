@@ -1,6 +1,6 @@
 <template>
   <HeroBlock />
-  <ParagraphLarge>
+  <!-- <ParagraphLarge>
     Судьба Ефремова с ранних лет была непростой. Во время Гражданской войны он
     прибился к красноармейской автороте, был контужен. После демобилизации в
     1921 году уехал в Петроград, где экстерном окончил школу, а затем учился на
@@ -29,7 +29,7 @@
     прибился к красноармейской автороте, был контужен. После демобилизации в
     1921 году уехал в Петроград, где экстерном окончил школу, а затем учился на
     штурмана каботажных судов.
-  </div>
+  </div> -->
 </template>
 
 <script setup lang="ts">
@@ -37,7 +37,7 @@ import {
   MAIN_DESCRIPTION,
   MAIN_IMAGE,
   MAIN_TITLE,
-  SITE,
+  SITE_URL,
   SITE_AUTHOR,
   SITE_NAME,
 } from "~/mock/meta";
@@ -45,7 +45,7 @@ import {
 const route = useRoute();
 
 useHead({
-  link: [{ rel: "canonical", href: `${SITE}` }],
+  link: [{ rel: "canonical", href: `${SITE_URL}` }],
 });
 
 useSeoMeta({
@@ -56,7 +56,7 @@ useSeoMeta({
   ogTitle: `${MAIN_TITLE}`,
   ogDescription: `${MAIN_DESCRIPTION}`,
   ogImage: `${MAIN_IMAGE}`,
-  ogUrl: `${SITE}/`,
+  ogUrl: `${SITE_URL}/`,
   ogSiteName: `${SITE_NAME}`,
   ogType: "website",
   ogLocale: "ru_RU",

@@ -1,18 +1,33 @@
-export const priceDataLanding = {
+import { COMPANY_NAME } from "../meta";
+
+const siteName = "landing";
+const siteTitle = "Лендинг";
+
+const priceData = {
   min: 10000,
   normal: 50000,
   full: 100000,
 };
 
-// export const listCardDataLanding = {
-//   title: "Лендинг",
-//   subtitle: "Одностраничный",
-//   description: "Реклама, промо, рассылка",
-//   price: priceDataLanding.min,
-// };
+const siteMeta = {
+  siteMetaTitle: `Лендинг ${COMPANY_NAME}`,
+  siteMetaDescription: `Лендинг ${COMPANY_NAME}`,
+  siteMetaImage: "https://mavstudio.ru/img/meta/meta-site-landing-1200-630.jpg",
+};
 
 export const siteLanding = {
-  name: "landing",
+  name: siteName,
+  pageTitle: siteTitle,
+  siteMeta: siteMeta,
+
+  listCard: {
+    name: siteName,
+    title: siteTitle,
+    subtitle: "Одностраничный",
+    description: "Реклама, промо, рассылка",
+    route: `/site/${siteName}`,
+    price: priceData.min,
+  },
 
   cardTitle: {
     titleOne: "Разрабатываем одностраничные ",
@@ -29,7 +44,7 @@ export const siteLanding = {
   cardSubtitle:
     "cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle cardSubtitle",
 
-  price: priceDataLanding,
+  price: priceData,
 
   advantage: [
     {
@@ -66,7 +81,7 @@ export const siteLanding = {
   ],
 
   example: {
-    name: "landing",
+    name: siteName,
     title: "Образец лендинга",
     subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
     textOne:

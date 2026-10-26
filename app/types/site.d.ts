@@ -1,11 +1,10 @@
-export interface ISiteCatalog {
-  id: number;
+export interface ISiteListCard {
   name: string;
   title: string;
   subtitle: string;
   description: string;
   route: string;
-  price: string;
+  price: number;
 }
 
 export interface ISiteCardTitle {
@@ -46,10 +45,25 @@ export interface ISiteExample {
   subtitle: string;
 }
 
+export interface ISiteMeta {
+  siteMetaTitle: string;
+  siteMetaDescription: string;
+  siteMetaImage: string;
+}
+
 export interface ISite {
   name: string;
+  pageTitle: string;
+  siteMeta?: ISiteMeta;
+  listCard: ISiteListCard;
   cardTitle: ISiteCardTitle;
   cardSubtitle: string;
   price: ISitePrice;
   advantage: ISiteAdvantage[];
+  description: ISiteDescription[];
+}
+
+export interface ISiteCatalog {
+  id: number;
+  siteData: ISite;
 }

@@ -1,5 +1,5 @@
 export interface IBreadcrumbs {
-  name: string;
+  name?: string;
   path: string;
   content: string;
 }

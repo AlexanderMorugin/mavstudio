@@ -1,13 +1,13 @@
 <template>
   <ContainerPage desktopPadding>
-    <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Отзывы" subtitle="мастерская авторских веб-сайтов" />
+    <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE_URL + route.path" />
+    <TitlePage title="Отзывы" :subtitle="COMPANY_SUBTITLE" />
     <ReviewBlock :reviews="reviews.reverse()" />
   </ContainerPage>
 </template>
 
 <script setup lang="ts">
-import { SITE } from "~/mock/meta";
+import { SITE_URL, COMPANY_SUBTITLE } from "~/mock/meta";
 import { reviews } from "~/mock/review";
 
 const route = useRoute();

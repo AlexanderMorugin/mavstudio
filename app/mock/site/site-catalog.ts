@@ -1,72 +1,38 @@
+import { siteBusiness } from "./site-business";
+import { siteCms } from "./site-cms";
+import { siteCommerce } from "./site-commerce";
+import { siteInfo } from "./site-info";
+import { siteLanding } from "./site-landing";
+import { siteMultipage } from "./site-multipage";
+import { siteShop } from "./site-shop";
+
 export const siteCatalog = [
   {
     id: 1,
-    name: "landing",
-    title: "Лендинг",
-    subtitle: "Одностраничный",
-    description: "Реклама, промо, рассылка",
-    route: "/site/landing",
-    price: "10 000",
-    // buttonColor: "blue",
+    siteData: siteLanding,
   },
   {
     id: 2,
-    name: "business",
-    title: "Визитка",
-    subtitle: "Статусный",
-    description: "Для компаний, организаций, персональный",
-    route: "/site/business",
-    price: "30 000",
-    // buttonColor: "red",
+    siteData: siteBusiness,
   },
   {
     id: 3,
-    name: "multipage",
-    title: "Многостраничный",
-    subtitle: "Контентный",
-    description: "Наиболее индексируемый поисковыми системами",
-    route: "/site/multipage",
-    price: "60 000",
-    // buttonColor: "blue",
+    siteData: siteMultipage,
   },
   {
     id: 4,
-    name: "info",
-    title: "Информационый",
-    subtitle: "Ознакомительный",
-    description: "Представляющий интересные темы, истории, факты",
-    route: "/site/info",
-    price: "50 000",
-    // buttonColor: "red",
+    siteData: siteInfo,
   },
   {
     id: 5,
-    name: "commerce",
-    title: "Коммерческий",
-    subtitle: "Каталог",
-    description: "Демонстрация товаров, услуг с ценами, без онлайн оплаты",
-    route: "/site/commerce",
-    price: "70 000",
-    // buttonColor: "blue",
+    siteData: siteCommerce,
   },
   {
     id: 6,
-    name: "shop",
-    title: "Интернет-магазин",
-    subtitle: "Продающий",
-    description: "Каталог товаров с ценами, доставкой и онлайн оплатой",
-    route: "/site/shop",
-    price: "100 000",
-    // buttonColor: "red",
+    siteData: siteShop,
   },
   {
     id: 7,
-    name: "cms",
-    title: "Панель управления",
-    subtitle: "Админка или CMS",
-    description: "Редактирование динамически меняющегося контента",
-    route: "/site/cms",
-    price: "150 000",
-    // buttonColor: "blue",
+    siteData: siteCms,
   },
 ];

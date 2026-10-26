@@ -1,23 +1,31 @@
 <template>
   <NuxtLink
-    :to="props.item.route"
-    :title="props.item.title"
+    :to="props.item.siteData.listCard.route"
+    :title="props.item.siteData.listCard.title"
     class="siteListCardLinkBlock"
   >
     <div class="siteListCardLinkBlock__container">
       <div class="siteListCardLinkBlock__block">
-        <CardBlockLanding v-if="props.item.name === 'landing'" />
-        <CardBlockBusiness v-if="props.item.name === 'business'" />
-        <CardBlockMultipage v-if="props.item.name === 'multipage'" />
-        <CardBlockInfo v-if="props.item.name === 'info'" />
-        <CardBlockCommerce v-if="props.item.name === 'commerce'" />
-        <CardBlockShop v-if="props.item.name === 'shop'" />
-        <CardBlockCms v-if="props.item.name === 'cms'" />
+        <CardBlockLanding
+          v-if="props.item.siteData.listCard.name === 'landing'"
+        />
+        <CardBlockBusiness
+          v-if="props.item.siteData.listCard.name === 'business'"
+        />
+        <CardBlockMultipage
+          v-if="props.item.siteData.listCard.name === 'multipage'"
+        />
+        <CardBlockInfo v-if="props.item.siteData.listCard.name === 'info'" />
+        <CardBlockCommerce
+          v-if="props.item.siteData.listCard.name === 'commerce'"
+        />
+        <CardBlockShop v-if="props.item.siteData.listCard.name === 'shop'" />
+        <CardBlockCms v-if="props.item.siteData.listCard.name === 'cms'" />
       </div>
       <LogoForCard icon="mavLogo" />
     </div>
     <slot />
-    <SiteListCardPrice :price="props.item.price" />
+    <SiteListCardPrice :price="props.item.siteData.listCard.price" />
   </NuxtLink>
 </template>
 

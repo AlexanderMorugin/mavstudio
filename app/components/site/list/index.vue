@@ -6,9 +6,9 @@
       :item="item"
     >
       <SiteListCardTitle
-        :title="item.title"
-        :subtitle="item.subtitle"
-        :description="item.description"
+        :title="item.siteData.listCard.title"
+        :subtitle="item.siteData.listCard.subtitle"
+        :description="item.siteData.listCard.description"
       />
     </SiteListCardLinkBlock>
   </section>

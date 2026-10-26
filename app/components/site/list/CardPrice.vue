@@ -3,16 +3,15 @@
     <div class="siteListCardPrice__container">
       <span>от</span>
       <span class="siteListCardPrice__number"
-        >&nbsp;{{ props.price }}&nbsp;</span
+        >&nbsp;&nbsp;{{ currencyFormater(props.price) }}</span
       >
-      <span>руб</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  price: string;
+  price: number;
 }>();
 </script>
 

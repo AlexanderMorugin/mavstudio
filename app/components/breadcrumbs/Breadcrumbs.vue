@@ -34,8 +34,8 @@
 import type { IBreadcrumbs } from "~/types/breadcrumbs";
 
 const props = defineProps<{
-  breadcrumbs: IBreadcrumbs[];
-  route: string;
+  breadcrumbs?: IBreadcrumbs[];
+  route?: string;
 }>();
 </script>
 
