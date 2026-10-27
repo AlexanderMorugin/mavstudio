@@ -1,37 +1,60 @@
 <template>
-  <section class="siteExample">
-    <SiteExampleTitlePage
-      :title="props.example.title"
-      :subtitle="props.example.subtitle"
-    />
-    <div class="siteExample__container">
+  <SiteExampleLanding
+    v-if="props.siteData.name === 'landing'"
+    :siteData="props.siteData"
+  />
+  <SiteExampleBusiness
+    v-if="props.siteData.name === 'business'"
+    :siteData="props.siteData"
+  />
+  <SiteExampleMultipage
+    v-if="props.siteData.name === 'multipage'"
+    :siteData="props.siteData"
+  />
+  <SiteExampleInfo
+    v-if="props.siteData.name === 'info'"
+    :siteData="props.siteData"
+  />
+  <SiteExampleCommerce
+    v-if="props.siteData.name === 'commerce'"
+    :siteData="props.siteData"
+  />
+  <SiteExampleShop
+    v-if="props.siteData.name === 'shop'"
+    :siteData="props.siteData"
+  />
+  <SiteExampleCms
+    v-if="props.siteData.name === 'cms'"
+    :siteData="props.siteData"
+  />
+
+  <!-- <div class="siteExample__container">
       <SiteExampleHeader />
-      <SiteExampleBackground />
-      <!-- <SiteExampleMainBlock :siteData="props.siteData" /> -->
-      <SiteExampleFooter />
-    </div>
-  </section>
+      <SiteExampleBackground /> -->
+  <!-- <SiteExampleMainBlock :siteData="props.siteData" /> -->
+  <!-- <SiteExampleFooter />
+    </div> -->
 </template>
 
 <script setup lang="ts">
-import type { ISiteExample } from "~/types/site";
+import type { ISite } from "~/types/site";
 
 const props = defineProps<{
-  example: ISiteExample;
+  siteData: ISite;
 }>();
 </script>
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
 .siteExample {
-  background: $white-one;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  // background: $white-one;
+  // padding-top: 40px;
+  // padding-bottom: 40px;
 
-  &__container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  // &__container {
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  // }
 }
-</style>
+</style> -->

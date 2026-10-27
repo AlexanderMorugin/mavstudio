@@ -39,10 +39,23 @@ export interface ISiteDescription {
   textTwo: string;
 }
 
-export interface ISiteExample {
-  name: string;
+export interface ISiteExampleCard {
+  id: number;
   title: string;
   subtitle: string;
+  image: string;
+  textOne: string;
+  textTwo: string;
+}
+
+export interface ISiteExample {
+  title: string;
+  subtitle: string;
+  hero: {
+    title: string;
+    subtitle: string;
+  };
+  cards: ISiteExampleCard[];
 }
 
 export interface ISiteMeta {
@@ -61,6 +74,7 @@ export interface ISite {
   price: ISitePrice;
   advantage: ISiteAdvantage[];
   description: ISiteDescription[];
+  example: ISiteExample;
 }
 
 export interface ISiteCatalog {

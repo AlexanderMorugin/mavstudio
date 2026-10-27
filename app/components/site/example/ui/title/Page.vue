@@ -1,9 +1,9 @@
 <template>
-  <ContainerPage desktopPadding class="siteExampleTitlePage">
-    <h2 v-if="props.title" class="siteExampleTitlePage__title">
+  <ContainerPage desktopPadding class="siteExampleUiTitlePage">
+    <h2 v-if="props.title" class="siteExampleUiTitlePage__title">
       {{ props.title }}
     </h2>
-    <span v-if="props.subtitle" class="siteExampleTitlePage__subtitle">{{
+    <span v-if="props.subtitle" class="siteExampleUiTitlePage__subtitle">{{
       props.subtitle
     }}</span>
   </ContainerPage>
@@ -12,42 +12,35 @@
 <script lang="ts" setup>
 const props = defineProps<{
   title: string;
-  subtitle?: string;
+  subtitle: string;
 }>();
 </script>
 
 <style lang="scss" scoped>
-.siteExampleTitlePage {
+.siteExampleUiTitlePage {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   padding-bottom: 40px;
-
-  // @media (max-width: 767px) {
-  //   padding-bottom: 20px;
-  // }
 
   &__title {
     font-family: "Montserrat-SemiBold", sans-serif;
-    font-size: 40px;
-    line-height: 1.5;
-    letter-spacing: 1px;
+    font-size: 44px;
     text-align: center;
     color: $black-mask-one;
 
-    @media (max-width: 767px) {
-      font-size: 28px;
-      letter-spacing: 2px;
+    @media (max-width: 1023px) {
+      font-size: 32px;
     }
 
-    @media (max-width: 389px) {
+    @media (max-width: 576px) {
       font-size: 24px;
-      letter-spacing: 0;
     }
   }
 
   &__subtitle {
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.2;
     color: $black-mask-one;
 
     @media (max-width: 576px) {

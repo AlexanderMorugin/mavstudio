@@ -14,14 +14,21 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .logoForFooterExample {
-  font-family: "Oswald-SemiBold", sans-serif;
+  font-family: "Montserrat-Bold", sans-serif;
   font-size: 60px;
   letter-spacing: -6%;
   color: $white-mask-two;
   text-align: center;
 
-  @media (max-width: 767px) {
+  // @media (max-width: 767px) {
+  //   font-size: 40px;
+  // }
+  @media (max-width: 1023px) {
     font-size: 40px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 32px;
   }
 
   &__accent {

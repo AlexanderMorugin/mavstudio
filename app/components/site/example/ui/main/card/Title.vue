@@ -1,11 +1,14 @@
 <template>
-  <div class="siteExampleMainCardTitle">
-    <div v-if="props.title" class="siteExampleMainCardTitle__text">
+  <div class="siteExampleUiMainCardTitle">
+    <h3 v-if="props.title" class="siteExampleUiMainCardTitle__text">
       {{ props.title }}
-    </div>
-    <div v-if="props.subtitle" class="siteExampleMainCardTitle__subtitle">
+    </h3>
+    <ParagraphNormal
+      v-if="props.subtitle"
+      class="siteExampleUiMainCardTitle__subtitle"
+    >
       {{ props.subtitle }}
-    </div>
+    </ParagraphNormal>
   </div>
 </template>
 
@@ -17,14 +20,15 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteExampleMainCardTitle {
+.siteExampleUiMainCardTitle {
   padding-left: 10px;
   padding-right: 10px;
 
   &__text {
     font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 2.5;
+    border-bottom: 1px solid $white-mask-three;
 
     @media (max-width: 767px) {
       font-size: 20px;
@@ -32,10 +36,11 @@ const props = defineProps<{
   }
 
   &__subtitle {
-    font-size: 14px;
-    line-height: 1.3;
+    // font-size: 14px;
+    // line-height: 1.5;
+    padding-top: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }

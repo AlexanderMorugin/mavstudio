@@ -1,7 +1,7 @@
 <template>
-  <div class="siteExampleMainCardText">
-    <span>{{ props.textOne }}</span>
-    <span>{{ props.textTwo }}</span>
+  <div class="siteExampleUiMainCardText">
+    <ParagraphNormal>{{ props.textOne }}</ParagraphNormal>
+    <ParagraphNormal>{{ props.textTwo }}</ParagraphNormal>
   </div>
 </template>
 
@@ -13,14 +13,15 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.siteExampleMainCardText {
+.siteExampleUiMainCardText {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: $white-one;
-  color: $black-one;
-  line-height: 1.3;
-  font-size: 14px;
+  // background: $white-one;
+  // color: $black-one;
+  // color: $white-one;
+  // line-height: 1.5;
+  // font-size: 14px;
   // border-top-left-radius: 4px;
   // border-top-right-radius: 4px;
   // border-bottom-left-radius: 6px;

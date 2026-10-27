@@ -1,6 +1,6 @@
 <template>
-  <div class="siteExampleHeader">
-    <ContainerPage desktopPadding class="siteExampleHeader__container">
+  <div class="siteExampleUiHeader">
+    <ContainerPage desktopPadding class="siteExampleUiHeader__container">
       <LogoForCard isExample icon="menu" title="Меню" />
       <LogoForHeaderExample title="Логотип компании" />
       <LogoForCard isExample icon="chat" title="Контакты" />
@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss" scoped>
-.siteExampleHeader {
+.siteExampleUiHeader {
   position: relative;
   backdrop-filter: blur(15px) brightness(80%);
   border-bottom: 1px solid $white-mask-three;

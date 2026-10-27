@@ -1,13 +1,14 @@
 <template>
-  <div class="siteExampleFooter">
-    <LogoForFooterExample title="Логотип компании" />
+  <div class="siteExampleUiContainerBody">
+    <slot />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.siteExampleFooter {
+.siteExampleUiContainerBody {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 </style>

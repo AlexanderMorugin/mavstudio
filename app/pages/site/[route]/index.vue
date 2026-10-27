@@ -11,7 +11,7 @@
   <ContainerPage desktopPadding>
     <SiteDescription :description="siteDataFetch!.siteData.description" />
   </ContainerPage>
-  <!-- <SiteExample :example="siteLanding.example" /> -->
+  <SiteExample :siteData="siteDataFetch!.siteData" />
 </template>
 
 <script setup lang="ts">
@@ -42,8 +42,6 @@ const breadcrumbs = ref([
 useHead({
   link: [{ rel: "canonical", href: `${SITE_URL}${route.path}` }],
 });
-
-// console.log(siteDataFetch.value?.siteData.siteMeta.siteMetaTitle);
 
 useSeoMeta({
   title: siteDataFetch.value?.siteData.siteMeta.siteMetaTitle,
