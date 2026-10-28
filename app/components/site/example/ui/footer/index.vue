@@ -1,7 +1,7 @@
 <template>
-  <div class="siteExampleUiFooter">
+  <section class="siteExampleUiFooter">
     <LogoForFooterExample title="Логотип компании" />
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

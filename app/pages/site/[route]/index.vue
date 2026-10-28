@@ -11,7 +11,10 @@
   <ContainerPage desktopPadding>
     <SiteDescription :description="siteDataFetch!.siteData.description" />
   </ContainerPage>
-  <SiteExample :siteData="siteDataFetch!.siteData" />
+  <SiteExampleLanding
+    v-if="siteDataFetch!.siteData.name === 'landing'"
+    :siteData="siteDataFetch!.siteData"
+  />
 </template>
 
 <script setup lang="ts">

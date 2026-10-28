@@ -11,28 +11,28 @@ export const siteCatalog = [
     id: 1,
     siteData: siteLanding,
   },
-  {
-    id: 2,
-    siteData: siteBusiness,
-  },
-  {
-    id: 3,
-    siteData: siteMultipage,
-  },
-  {
-    id: 4,
-    siteData: siteInfo,
-  },
-  {
-    id: 5,
-    siteData: siteCommerce,
-  },
-  {
-    id: 6,
-    siteData: siteShop,
-  },
-  {
-    id: 7,
-    siteData: siteCms,
-  },
+  // {
+  //   id: 2,
+  //   siteData: siteBusiness,
+  // },
+  // {
+  //   id: 3,
+  //   siteData: siteMultipage,
+  // },
+  // {
+  //   id: 4,
+  //   siteData: siteInfo,
+  // },
+  // {
+  //   id: 5,
+  //   siteData: siteCommerce,
+  // },
+  // {
+  //   id: 6,
+  //   siteData: siteShop,
+  // },
+  // {
+  //   id: 7,
+  //   siteData: siteCms,
+  // },
 ];

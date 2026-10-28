@@ -1,11 +1,11 @@
 <template>
-  <div class="siteExampleUiHeader">
+  <section class="siteExampleUiHeader">
     <ContainerPage desktopPadding class="siteExampleUiHeader__container">
       <LogoForCard isExample icon="menu" title="Меню" />
       <LogoForHeaderExample title="Логотип компании" />
       <LogoForCard isExample icon="chat" title="Контакты" />
     </ContainerPage>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

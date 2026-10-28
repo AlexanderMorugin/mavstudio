@@ -1,26 +1,26 @@
 <template>
-  <div>
-    <span
-      v-if="props.siteData.cardTitle.titleOneBack"
-      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_one"
-      >{{ props.siteData.cardTitle.titleOneBack }}</span
-    >
-    <span
-      v-if="props.siteData.cardTitle.titleTwoBack"
-      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_two"
-      >{{ props.siteData.cardTitle.titleTwoBack }}</span
-    >
-    <span
-      v-if="props.siteData.cardTitle.titleTwoDoubleBack"
-      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_three"
-      >{{ props.siteData.cardTitle.titleTwoDoubleBack }}</span
-    >
-    <span
-      v-if="props.siteData.cardTitle.titleThreeBack"
-      class="siteCardTitleColorAnimation siteCardTitleColorAnimation_four"
-      >{{ props.siteData.cardTitle.titleThreeBack }}</span
-    >
-  </div>
+  <!-- <div> -->
+  <span
+    v-if="props.siteData.cardTitle.titleOneBack"
+    class="siteCardTitleColorAnimation siteCardTitleColorAnimation_one"
+    >{{ props.siteData.cardTitle.titleOneBack }}</span
+  >
+  <span
+    v-if="props.siteData.cardTitle.titleTwoBack"
+    class="siteCardTitleColorAnimation siteCardTitleColorAnimation_two"
+    >{{ props.siteData.cardTitle.titleTwoBack }}</span
+  >
+  <span
+    v-if="props.siteData.cardTitle.titleTwoDoubleBack"
+    class="siteCardTitleColorAnimation siteCardTitleColorAnimation_three"
+    >{{ props.siteData.cardTitle.titleTwoDoubleBack }}</span
+  >
+  <span
+    v-if="props.siteData.cardTitle.titleThreeBack"
+    class="siteCardTitleColorAnimation siteCardTitleColorAnimation_four"
+    >{{ props.siteData.cardTitle.titleThreeBack }}</span
+  >
+  <!-- </div> -->
 </template>
 
 <script setup lang="ts">

@@ -48,13 +48,15 @@ export interface ISiteExampleCard {
   textTwo: string;
 }
 
+export interface ISiteExampleHero {
+  title: string;
+  subtitle: string;
+}
+
 export interface ISiteExample {
   title: string;
   subtitle: string;
-  hero: {
-    title: string;
-    subtitle: string;
-  };
+  hero: ISiteExampleHero;
   cards: ISiteExampleCard[];
 }
 
@@ -67,7 +69,7 @@ export interface ISiteMeta {
 export interface ISite {
   name: string;
   pageTitle: string;
-  siteMeta?: ISiteMeta;
+  siteMeta: ISiteMeta;
   listCard: ISiteListCard;
   cardTitle: ISiteCardTitle;
   cardSubtitle: string;

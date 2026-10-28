@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <SiteExampleUiContainerSection>
     <SiteExampleUiTitlePage
       :title="props.siteData.example.title"
@@ -13,4 +13,4 @@ import type { ISite } from "~/types/site";
 const props = defineProps<{
   siteData: ISite;
 }>();
-</script>
+</script> -->

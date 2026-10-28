@@ -6,7 +6,6 @@
     />
     <SiteExampleUiContainerBody>
       <SiteExampleUiBackgroundLanding />
-
       <SiteExampleUiHeader />
       <SiteExampleUiMain :siteData="props.siteData" />
       <SiteExampleUiFooter />
