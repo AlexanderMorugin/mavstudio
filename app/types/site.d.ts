@@ -48,6 +48,12 @@ export interface ISiteExampleCard {
   textTwo: string;
 }
 
+export interface ISiteExampleBlock {
+  title: string;
+  subtitle: string;
+  cards: ISiteExampleCard[];
+}
+
 export interface ISiteExampleHero {
   title: string;
   subtitle: string;
@@ -58,6 +64,7 @@ export interface ISiteExample {
   subtitle: string;
   hero: ISiteExampleHero;
   cards: ISiteExampleCard[];
+  block: ISiteExampleBlock;
 }
 
 export interface ISiteMeta {

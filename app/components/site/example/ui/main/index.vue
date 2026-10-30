@@ -8,6 +8,7 @@
         :item="item"
       />
     </ContainerPage>
+    <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
   </div>
 </template>
 
@@ -17,6 +18,8 @@ import type { ISite } from "~/types/site";
 const props = defineProps<{
   siteData: ISite;
 }>();
+
+// console.log(props.siteData.example.block);
 </script>
 
 <style lang="scss" scoped>

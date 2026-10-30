@@ -75,6 +75,8 @@ $mask-trasparent: rgba(0, 0, 0, 0);
 
 $gradient-page-primary: linear-gradient(135deg, $orange-one 0%, $black-one 20%, $blue-two 100%);
 $gradient-hero-one: linear-gradient(135deg, $blue-three 0%, $black-one 50%, $blue-three 100%);
+$gradient-example-one: linear-gradient(135deg, $mask-trasparent 0%, $orange-mask-two 50%, $blue-two 90%);
+
 $gradient-white-one: linear-gradient($mask-trasparent 0%, $white-one 100%);
 
 $gradient-blue-one: linear-gradient(to right, $blue-two 0%, $mask-trasparent 100%);

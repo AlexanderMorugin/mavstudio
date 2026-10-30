@@ -9,8 +9,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 300px;
   backdrop-filter: blur(15px) brightness(80%);
   border-top: 1px solid $white-mask-three;
-  // background: $grey-one;
+  margin-top: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 </style>
