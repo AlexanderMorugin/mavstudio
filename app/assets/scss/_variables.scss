@@ -79,6 +79,7 @@ $gradient-white-one: linear-gradient($mask-trasparent 0%, $white-one 100%);
 
 $gradient-blue-one: linear-gradient(to right, $blue-two 0%, $mask-trasparent 100%);
 $gradient-blue-two: linear-gradient(to right, $blue-three 0%, $blue-two 100%);
+$gradient-blue-three: linear-gradient(to left, $mask-trasparent 30%, $blue-mask-two 100%);
 $gradient-green-one: linear-gradient(135deg, $green-mask-five 30%, $green-mask-four 60%);
 $gradient-green-two: linear-gradient($orange-mask-five 0%, $green-mask-four 100%);
 $gradient-orange-one: linear-gradient(135deg, $orange-mask-five 30%, $orange-mask-four 60%);

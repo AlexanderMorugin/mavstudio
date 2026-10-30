@@ -26,12 +26,17 @@ const props = defineProps<{
 
   // border: 1px solid red;
 
-  @media (max-width: 767px) {
-    height: 500px;
+  @media (max-width: 1023px) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  @media (max-width: 389px) {
+  @media (max-width: 576px) {
     height: 400px;
   }
+
+  // @media (max-width: 389px) {
+  //   height: 400px;
+  // }
 }
 </style>

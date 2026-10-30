@@ -17,17 +17,22 @@
 
 <style lang="scss" scoped>
 .siteExampleUiMainHeroLogo {
-  // position: relative;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
-  // border: 1px solid red;
+  @media (max-width: 576px) {
+    top: 43%;
+  }
+
+  @media (max-width: 389px) {
+    top: 25%;
+  }
 
   @media (max-width: 389px) {
     width: 150px;
@@ -39,12 +44,8 @@
     width: 200px;
     height: 200px;
     border-radius: 14px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: brightness(90%) blur(1px);
     padding: 5px;
-    // width: 100%;
-    // height: 100%;
-    // border-radius: 50%;
-    // background: $white-one;
     animation: spin 7s linear infinite;
 
     @media (max-width: 576px) {
@@ -60,18 +61,10 @@
     transform: translate(-50%, -50%);
     width: 50px;
 
-    // @media (max-width: 767px) {
-    //   width: 60px;
-    // }
-
     @media (max-width: 576px) {
       top: 55%;
       width: 35px;
     }
-
-    // @media (max-width: 389px) {
-    //   width: 40px;
-    // }
   }
 
   &__arrow {
@@ -81,22 +74,15 @@
     height: 40px;
     fill: $orange-one;
 
-    // @media (max-width: 767px) {
-    //   top: 43%;
-    //   width: 60px;
-    //   height: 60px;
-    // }
-
     @media (max-width: 576px) {
       top: 50%;
       width: 25px;
       height: 25px;
     }
 
-    // @media (max-width: 389px) {
-    //   width: 35px;
-    //   height: 35px;
-    // }
+    @media (max-width: 389px) {
+      top: 53%;
+    }
 
     &_prev {
       left: 20%;
@@ -107,13 +93,13 @@
         left: 15%;
       }
 
-      // @media (max-width: 389px) {
-      //   left: 18%;
-      // }
+      @media (max-width: 389px) {
+        left: 25%;
+      }
     }
 
     &_next {
-      right: 24%;
+      right: 26%;
       animation: arrow-right 3s linear infinite;
       animation-delay: 0.8s;
 
@@ -121,9 +107,9 @@
         right: 19%;
       }
 
-      // @media (max-width: 389px) {
-      //   right: 21%;
-      // }
+      @media (max-width: 389px) {
+        right: 27%;
+      }
     }
   }
 }
