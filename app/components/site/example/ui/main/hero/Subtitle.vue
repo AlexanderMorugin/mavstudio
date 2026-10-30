@@ -19,13 +19,12 @@ const props = defineProps<{
   height: 200px;
   background: $gradient-blue-three;
   border-left: 2px solid $blue-mask-two;
-  // padding-top: 20px;
-  // padding-bottom: 20px;
   overflow: hidden;
   animation: fall 15s linear infinite;
 
   @media (max-width: 1023px) {
     border-left: none;
+    animation: fall-two 15s linear infinite;
   }
 
   @media (max-width: 576px) {
@@ -105,7 +104,32 @@ const props = defineProps<{
     opacity: 0;
   }
 }
-
+@keyframes fall-two {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  3% {
+    opacity: 1;
+    width: 0;
+  }
+  10% {
+    width: 100%;
+  }
+  80% {
+    width: 100%;
+  }
+  85% {
+    opacity: 1;
+    width: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes text {
   0% {
     transform: translateX(-200%);

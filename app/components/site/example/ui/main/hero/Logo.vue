@@ -72,7 +72,8 @@
     top: 50%;
     width: 40px;
     height: 40px;
-    fill: $orange-one;
+    // fill: $orange-one;
+    fill: $white-one;
 
     @media (max-width: 576px) {
       top: 50%;
@@ -118,8 +119,14 @@
     transform: rotate(0);
     border: 1px solid $white-mask-one;
   }
-  50% {
+  40% {
     border: 1px solid $orange-mask-two;
+  }
+  50% {
+    border: 1px solid $blue-mask-three;
+  }
+  60% {
+    border: 1px solid $green-mask-three;
   }
   100% {
     transform: rotate(180deg);
