@@ -29,13 +29,9 @@ const props = defineProps<{
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    @media (max-width: 1600px) {
-      gap: 60px;
-    }
+    gap: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     @media (max-width: 1279px) {
       gap: 40px;

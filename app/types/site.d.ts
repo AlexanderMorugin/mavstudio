@@ -42,10 +42,10 @@ export interface ISiteDescription {
 export interface ISiteExampleCard {
   id: number;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   image: string;
   textOne: string;
-  textTwo: string;
+  textTwo?: string;
 }
 
 export interface ISiteExampleBlock {
