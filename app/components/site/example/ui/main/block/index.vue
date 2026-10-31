@@ -28,7 +28,7 @@ const props = defineProps<{
 .siteExampleMainBlock {
   max-width: $screen-xxl;
   margin: 0 auto;
-  // margin-top: 40px;
+  padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
 

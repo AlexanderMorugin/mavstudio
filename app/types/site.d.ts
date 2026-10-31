@@ -59,12 +59,19 @@ export interface ISiteExampleHero {
   subtitle: string;
 }
 
+export interface ISiteExampleCarousel {
+  id: number;
+  image: string;
+  title: string;
+}
+
 export interface ISiteExample {
   title: string;
   subtitle: string;
   hero: ISiteExampleHero;
   cards: ISiteExampleCard[];
   block: ISiteExampleBlock;
+  carousel: ISiteExampleCarousel[];
 }
 
 export interface ISiteMeta {

@@ -9,6 +9,9 @@
       />
     </ContainerPage>
     <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
+    <SiteExampleUiMainCarousel
+      :siteDataCarousel="props.siteData.example.carousel"
+    />
   </div>
 </template>
 
@@ -31,7 +34,6 @@ const props = defineProps<{
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     padding-top: 60px;
-    padding-bottom: 60px;
 
     @media (max-width: 1279px) {
       gap: 40px;

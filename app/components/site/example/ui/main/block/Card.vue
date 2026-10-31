@@ -4,6 +4,7 @@
       <img
         :src="props.item.image"
         :alt="props.item.title"
+        :title="props.item.title"
         class="siteExampleMainBlockCard__image"
       />
     </div>
