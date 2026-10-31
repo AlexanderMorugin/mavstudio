@@ -146,27 +146,27 @@ export const siteLanding = {
 
     carousel: [
       {
-        id: 1,
+        id: 0,
         image: "/img/bg/site-background-3840-2160.webp",
         title: "Slide One",
       },
       {
-        id: 2,
+        id: 1,
         image: "/img/bg/site-background-3840-2160.webp",
         title: "Slide Two",
       },
       {
-        id: 3,
+        id: 2,
         image: "/img/bg/site-background-3840-2160.webp",
         title: "Slide Three",
       },
       {
-        id: 4,
+        id: 3,
         image: "/img/bg/site-background-3840-2160.webp",
         title: "Slide Four",
       },
       {
-        id: 5,
+        id: 4,
         image: "/img/bg/site-background-3840-2160.webp",
         title: "Slide Five",
       },
