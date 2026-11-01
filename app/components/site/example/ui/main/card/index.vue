@@ -1,5 +1,5 @@
 <template>
-  <section class="siteExampleMainCard">
+  <section :id="props.item.anchor" class="siteExampleMainCard">
     <div class="siteExampleMainCard__top">
       <SiteExampleUiMainCardImage
         :image="props.item.image"
@@ -34,6 +34,7 @@ const props = defineProps<{
   border-radius: 14px;
   backdrop-filter: brightness(40%);
   box-shadow: $shadow-card-black-one;
+  // margin-top: 100px;
   padding: 20px;
 
   @media (max-width: 1023px) {

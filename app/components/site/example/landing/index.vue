@@ -6,9 +6,9 @@
     />
     <SiteExampleUiContainerBody>
       <SiteExampleUiBackgroundLanding />
-      <SiteExampleUiHeader />
+      <SiteExampleUiHeader :navData="props.siteData.example.nav" />
       <SiteExampleUiMain :siteData="props.siteData" />
-      <SiteExampleUiFooter />
+      <SiteExampleUiFooter :navData="props.siteData.example.nav" />
     </SiteExampleUiContainerBody>
   </SiteExampleUiContainerSection>
 </template>

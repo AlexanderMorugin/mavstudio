@@ -1,5 +1,5 @@
 <template>
-  <div class="siteExampleMainBlockCard">
+  <div :id="props.item.anchor" class="siteExampleMainBlockCard">
     <div class="siteExampleMainBlockCard__imageBox">
       <img
         :src="props.item.image"

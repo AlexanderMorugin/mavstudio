@@ -30,7 +30,8 @@ const props = defineProps<{
 
   &__text {
     font-family: "Montserrat-SemiBold", sans-serif;
-    font-size: 32px;
+    // font-size: 32px;
+    font-size: 28px;
     line-height: 1;
     letter-spacing: -4%;
     color: $white-mask-one;
@@ -39,9 +40,9 @@ const props = defineProps<{
     //   font-size: 28px;
     // }
 
-    @media (max-width: 1023px) {
-      font-size: 28px;
-    }
+    // @media (max-width: 1023px) {
+    //   font-size: 28px;
+    // }
 
     @media (max-width: 576px) {
       font-size: 20px;

@@ -1,12 +1,22 @@
 <template>
   <section class="siteExampleUiHeader">
     <ContainerPage desktopPadding class="siteExampleUiHeader__container">
-      <LogoForCard isExample icon="menu" title="Меню" />
+      <!-- <LogoForCard isExample icon="menu" title="Меню" /> -->
       <LogoForHeaderExample title="Логотип компании" />
-      <LogoForCard isExample icon="chat" title="Контакты" />
+
+      <SiteExampleUiHeaderNav :navData="props.navData" />
+      <!-- <LogoForCard isExample icon="chat" title="Контакты" /> -->
     </ContainerPage>
   </section>
 </template>
+
+<script setup lang="ts">
+import type { ISiteExampleNav } from "~/types/site";
+
+const props = defineProps<{
+  navData: ISiteExampleNav[];
+}>();
+</script>
 
 <style lang="scss" scoped>
 .siteExampleUiHeader {

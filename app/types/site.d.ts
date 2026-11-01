@@ -41,6 +41,7 @@ export interface ISiteDescription {
 
 export interface ISiteExampleCard {
   id: number;
+  anchor: string;
   title: string;
   subtitle?: string;
   image: string;
@@ -65,9 +66,16 @@ export interface ISiteExampleCarousel {
   title: string;
 }
 
+export interface ISiteExampleNav {
+  id: number;
+  title: string;
+  anchor: string;
+}
+
 export interface ISiteExample {
   title: string;
   subtitle: string;
+  nav: ISiteExampleNav[];
   hero: ISiteExampleHero;
   cards: ISiteExampleCard[];
   block: ISiteExampleBlock;

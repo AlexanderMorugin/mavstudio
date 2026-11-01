@@ -1,5 +1,5 @@
 <template>
-  <div class="siteExampleUiMainCarousel">
+  <div id="Carousel" class="siteExampleUiMainCarousel">
     <EmblaButtonControl
       :canScroll="canScrollPrev"
       direction="prev"
