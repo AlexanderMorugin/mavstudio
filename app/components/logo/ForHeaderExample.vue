@@ -22,11 +22,11 @@ const props = defineProps<{
   // gap: 10px;
   gap: 5px;
 
-  @media (max-width: 389px) {
-    flex-direction: column;
-    gap: 0;
-    // gap: 5px;
-  }
+  // @media (max-width: 389px) {
+  //   flex-direction: column;
+  //   gap: 0;
+  //   // gap: 5px;
+  // }
 
   &__text {
     font-family: "Montserrat-SemiBold", sans-serif;

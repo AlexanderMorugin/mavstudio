@@ -4,7 +4,7 @@
     :class="[
       'logoForCard',
       { logoForCard_example: props.isExample },
-      { logoForCard_button: props.icon === 'menu' || props.icon === 'chat' },
+      // { logoForCard_button: props.icon === 'menu' || props.icon === 'chat' },
     ]"
   >
     <img
@@ -17,11 +17,11 @@
       ]"
     />
 
-    <IconBookFill
+    <!-- <IconBookFill
       v-if="props.icon === 'menu'"
       class="logoForCard__iconButton"
     />
-    <IconChat v-if="props.icon === 'chat'" class="logoForCard__iconButton" />
+    <IconChat v-if="props.icon === 'chat'" class="logoForCard__iconButton" /> -->
   </div>
 </template>
 
@@ -66,9 +66,9 @@ const props = defineProps<{
     }
   }
 
-  &_button {
-    border-radius: 50%;
-  }
+  // &_button {
+  //   border-radius: 50%;
+  // }
 
   &__icon {
     width: 40px;
@@ -90,17 +90,17 @@ const props = defineProps<{
     }
   }
 
-  &__iconButton {
-    width: 40px;
-    fill: $white-one;
+  // &__iconButton {
+  //   width: 40px;
+  //   fill: $white-one;
 
-    @media (max-width: 1023px) {
-      width: 34px;
-    }
+  //   @media (max-width: 1023px) {
+  //     width: 34px;
+  //   }
 
-    @media (max-width: 767px) {
-      width: 16px;
-    }
-  }
+  //   @media (max-width: 767px) {
+  //     width: 16px;
+  //   }
+  // }
 }
 </style>

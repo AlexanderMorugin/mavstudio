@@ -1,12 +1,23 @@
 <template>
   <section class="siteExampleUiHeader">
     <ContainerPage desktopPadding class="siteExampleUiHeader__container">
-      <!-- <LogoForCard isExample icon="menu" title="Меню" /> -->
       <LogoForHeaderExample title="Логотип компании" />
-
-      <SiteExampleUiHeaderNav :navData="props.navData" />
-      <!-- <LogoForCard isExample icon="chat" title="Контакты" /> -->
+      <SiteExampleUiHeaderNav v-if="!isScreenTablet" :navData="props.navData" />
+      <SiteExampleUiHeaderNavButton
+        v-if="isScreenTablet"
+        title="меню"
+        @click="isExampleHeaderNavModalOpen = true"
+      />
     </ContainerPage>
+
+    <Transition name="right">
+      <SiteExampleUiHeaderNavModal
+        v-if="isExampleHeaderNavModalOpen"
+        title="Меню"
+        name="menu"
+        @closeModal="isExampleHeaderNavModalOpen = false"
+      />
+    </Transition>
   </section>
 </template>
 
@@ -16,6 +27,10 @@ import type { ISiteExampleNav } from "~/types/site";
 const props = defineProps<{
   navData: ISiteExampleNav[];
 }>();
+
+const { isScreenTablet } = useResizeTablet();
+
+const isExampleHeaderNavModalOpen = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -24,6 +39,7 @@ const props = defineProps<{
   backdrop-filter: blur(15px) brightness(80%);
   border-bottom: 1px solid $white-mask-three;
   z-index: 2;
+  overflow: hidden;
 
   &__container {
     display: flex;
