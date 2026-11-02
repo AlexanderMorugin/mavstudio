@@ -2,7 +2,10 @@
   <section class="siteExampleUiFooter">
     <ContainerPage desktopPadding class="siteExampleUiFooter__container">
       <LogoForFooterExample title="Логотип компании" />
-      <SiteExampleUiFooterNav :navData="props.navData" />
+      <div class="siteExampleUiFooter__block">
+        <SiteExampleUiFooterNav :navData="props.navData" />
+        <SiteExampleUiFooterAddress />
+      </div>
     </ContainerPage>
   </section>
 </template>
@@ -17,17 +20,27 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .siteExampleUiFooter {
-  // height: 300px;
   backdrop-filter: blur(15px) brightness(80%);
   border-top: 1px solid $white-mask-three;
-  margin-top: 100px;
+  margin-top: 60px;
 
   &__container {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
 }
 </style>

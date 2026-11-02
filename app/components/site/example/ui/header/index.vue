@@ -9,16 +9,19 @@
         @click="isExampleHeaderNavModalOpen = true"
       />
     </ContainerPage>
+  </section>
 
-    <Transition name="right">
+  <ClientOnly>
+    <Transition name="list">
       <SiteExampleUiHeaderNavModal
         v-if="isExampleHeaderNavModalOpen"
         title="Меню"
         name="menu"
+        :navData="props.navData"
         @closeModal="isExampleHeaderNavModalOpen = false"
       />
     </Transition>
-  </section>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
@@ -47,7 +50,6 @@ const isExampleHeaderNavModalOpen = ref(false);
     align-items: center;
     gap: 20px;
     height: 70px;
-    // border: 1px solid red;
 
     @media (max-width: 767px) {
       height: 60px;

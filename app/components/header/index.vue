@@ -16,16 +16,18 @@
   </header>
 
   <!-- Модалка Меню -->
-  <Teleport to="#teleports">
-    <Transition name="top">
-      <ModalBlockForHeader
-        v-if="isMenuModalOpen"
-        title="Меню"
-        name="menu"
-        @closeModal="isMenuModalOpen = false"
-      />
-    </Transition>
-  </Teleport>
+  <ClientOnly>
+    <Teleport to="#teleports">
+      <Transition name="top">
+        <ModalBlockForHeader
+          v-if="isMenuModalOpen"
+          title="Меню"
+          name="menu"
+          @closeModal="isMenuModalOpen = false"
+        />
+      </Transition>
+    </Teleport>
+  </ClientOnly>
 
   <!-- Модалка Чата -->
   <!-- <Teleport to="#teleports">

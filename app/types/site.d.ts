@@ -99,6 +99,7 @@ export interface ISite {
   advantage: ISiteAdvantage[];
   description: ISiteDescription[];
   example: ISiteExample;
+  descriptionAfterExample: ISiteDescription[];
 }
 
 export interface ISiteCatalog {

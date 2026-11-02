@@ -5,6 +5,7 @@
       :key="item.id"
       :to="`#${item.anchor}`"
       class="siteExampleUiHeaderNav__link siteExampleUiHeaderNav__link_line"
+      @click="$emit('closeModal')"
       >{{ item.title }}</NuxtLink
     >
   </div>
@@ -16,6 +17,8 @@ import type { ISiteExampleNav } from "~/types/site";
 const props = defineProps<{
   navData: ISiteExampleNav[];
 }>();
+
+const emit = defineEmits(["closeModal"]);
 </script>
 
 <style lang="scss" scoped>
@@ -25,11 +28,16 @@ const props = defineProps<{
   align-items: center;
   gap: 10px;
 
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__link {
     position: relative;
     display: inline-block;
     line-height: 1.5;
-    // font-size: 16px;
 
     &:after {
       content: "";

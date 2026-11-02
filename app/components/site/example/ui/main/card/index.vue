@@ -34,7 +34,7 @@ const props = defineProps<{
   border-radius: 14px;
   backdrop-filter: brightness(40%);
   box-shadow: $shadow-card-black-one;
-  // margin-top: 100px;
+  margin-top: 60px;
   padding: 20px;
 
   @media (max-width: 1023px) {

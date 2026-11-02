@@ -10,6 +10,7 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .siteExampleUiHeaderNavButton {
+  font-size: 16px;
   line-height: 1.5;
   color: $white-one;
   border-radius: $br-xxs;

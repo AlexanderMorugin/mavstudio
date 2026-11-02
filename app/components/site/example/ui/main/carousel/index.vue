@@ -1,5 +1,5 @@
 <template>
-  <div id="Carousel" class="siteExampleUiMainCarousel">
+  <section id="carousel" class="siteExampleUiMainCarousel">
     <EmblaButtonControl
       :canScroll="canScrollPrev"
       direction="prev"
@@ -34,7 +34,7 @@
       :activeThumb="activeThumb"
       @goToSlide="goToSlide"
     />
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -103,11 +103,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .siteExampleUiMainCarousel {
   position: relative;
-  margin-top: 60px;
-
-  @media (max-width: 576px) {
-    margin-top: 100px;
-  }
+  margin-top: 80px;
 }
 .embla {
   width: 100%;

@@ -20,13 +20,20 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .siteExampleUiFooterNav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+  height: fit-content;
   padding-top: 20px;
+
+  @media (max-width: 767px) {
+    place-items: center;
+  }
 
   &__link {
     width: fit-content;
+
     line-height: 1.5;
     transition: 0.1s ease;
 

@@ -11,14 +11,21 @@
           @click="$emit('closeModal')"
         />
       </div>
+      <SiteExampleUiHeaderNav
+        :navData="props.navData"
+        @click="$emit('closeModal')"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import type { ISiteExampleNav } from "~/types/site";
+
 const props = defineProps<{
   title: string;
   name: string;
+  navData: ISiteExampleNav[];
 }>();
 
 const emit = defineEmits(["closeModal"]);
@@ -29,35 +36,18 @@ const emit = defineEmits(["closeModal"]);
   position: absolute;
   top: 0;
   left: 0;
-  // right: 0;
-  display: flex;
-  // flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  // height: 300px;
-  background: $blue-two;
-  padding: 20px;
-  z-index: 20;
+  backdrop-filter: blur(10px) brightness(60%);
+  z-index: 4;
 
   &__container {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    width: 80%;
-    height: 300px;
-    // background: $blue-two;
-    // padding: 20px;
-    border: 1px solid red;
+    padding: 20px;
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // width: 100%;
-    border: 1px solid red;
   }
 
   &__topTitle {

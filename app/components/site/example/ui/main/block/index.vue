@@ -18,6 +18,8 @@
         class="siteExampleMainBlock__line siteExampleMainBlock__line_three"
       />
       <div class="siteExampleMainBlock__line siteExampleMainBlock__line_four" />
+      <div class="siteExampleMainBlock__line siteExampleMainBlock__line_five" />
+      <div class="siteExampleMainBlock__line siteExampleMainBlock__line_six" />
     </div>
   </section>
 </template>
@@ -34,17 +36,13 @@ const props = defineProps<{
 .siteExampleMainBlock {
   max-width: $screen-xxl;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px;
 
   @media (max-width: 1023px) {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  @media (max-width: 576px) {
-    padding-top: 100px;
   }
 
   &__container {
@@ -110,6 +108,19 @@ const props = defineProps<{
       right: 15%;
       animation: rotate 12s reverse linear infinite;
       animation-delay: 1s;
+    }
+
+    &_five {
+      top: 35%;
+      right: -25%;
+      animation: rotate 8s reverse linear infinite;
+      animation-delay: 0.5s;
+    }
+
+    &_six {
+      top: 60%;
+      right: 15%;
+      animation: rotate 7s reverse linear infinite;
     }
   }
 }

@@ -30,6 +30,10 @@ body {
   background: $black-one;
 }
 
+html {
+  scroll-padding-top: 100px;
+}
+
 button {
   background: transparent;
   border: none;
@@ -57,21 +61,12 @@ button {
   opacity: 0;
   transform: translateY(100%);
 }
-// .bottom-enter-active,
-// .bottom-leave-active {
+// .right-enter-active,
+// .right-leave-active {
 //   transition: all 0.5s ease;
 // }
-// .bottom-enter-from,
-// .bottom-leave-to {
+// .right-enter-from,
+// .right-leave-to {
 //   opacity: 0;
-//   transform: translateY(-100%);
+//   transform: translateX(100%);
 // }
-.right-enter-active,
-.right-leave-active {
-  transition: all 0.5s ease;
-}
-.right-enter-from,
-.right-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
-}
