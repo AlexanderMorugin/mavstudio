@@ -20,6 +20,9 @@
       :description="siteDataFetch!.siteData.descriptionAfterExample"
     />
   </ContainerPage>
+  <ContainerPage mobilePadding>
+    <SiteListCarousel :catalog="siteCatalog" />
+  </ContainerPage>
 </template>
 
 <script setup lang="ts">

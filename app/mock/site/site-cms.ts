@@ -22,8 +22,8 @@ export const siteCms = {
 
   listCard: {
     name: siteName,
-    title: siteTitle,
-    subtitle: "Админка или CMS",
+    title: "CMS",
+    subtitle: siteTitle,
     description: "Редактирование динамически меняющегося контента",
     route: `/site/${siteName}`,
     price: priceData.min,

@@ -20,6 +20,8 @@ const props = defineProps<{
 .siteExampleUiMainCarouselCard {
   position: relative;
   height: 700px;
+  user-select: none;
+  cursor: grab;
 
   @media (max-width: 1023px) {
     height: 500px;

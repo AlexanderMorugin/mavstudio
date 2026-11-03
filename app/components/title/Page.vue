@@ -21,7 +21,6 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   width: 100%;
-
   padding-top: 20px;
   padding-bottom: 40px;
 

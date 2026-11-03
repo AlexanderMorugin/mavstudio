@@ -5,6 +5,7 @@
       { emblaButtonControl_prev: props.direction === 'prev' },
       { emblaButtonControl_next: props.direction === 'next' },
       { emblaButtonControl_disabled: !props.canScroll },
+      { emblaButtonControl_listCarousel: props.isListCarousel },
     ]"
     @click="emits('scroll')"
     :disabled="!props.canScroll"
@@ -24,6 +25,7 @@
 const props = defineProps<{
   canScroll: boolean;
   direction: string;
+  isListCarousel?: boolean;
 }>();
 
 const emits = defineEmits(["scroll"]);
@@ -54,9 +56,10 @@ const emits = defineEmits(["scroll"]);
     height: 30px;
   }
 
-  // &:hover {
-  //   backdrop-filter: blur(15px) grayscale(50%);
-  // }
+  &_listCarousel {
+    width: 30px;
+    height: 30px;
+  }
 
   &_prev {
     left: 10px;

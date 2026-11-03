@@ -2,7 +2,10 @@
   <NuxtLink
     :to="props.item.siteData.listCard.route"
     :title="props.item.siteData.listCard.title"
-    class="siteListCardLinkBlock"
+    :class="[
+      'siteListCardLinkBlock',
+      { siteListCardLinkBlock_listCarousel: props.isListCarousel },
+    ]"
   >
     <div class="siteListCardLinkBlock__container">
       <div class="siteListCardLinkBlock__block">
@@ -34,6 +37,7 @@ import type { ISiteCatalog } from "~/types/site";
 
 const props = defineProps<{
   item: ISiteCatalog;
+  isListCarousel?: boolean;
 }>();
 </script>
 
@@ -55,6 +59,18 @@ const props = defineProps<{
   @media (max-width: 576px) {
     &:hover {
       box-shadow: $shadow-card-one;
+      transform: none;
+    }
+  }
+
+  &_listCarousel {
+    // height: 488px;
+    box-shadow: none;
+    cursor: grab;
+    user-select: none;
+
+    &:hover {
+      box-shadow: none;
       transform: none;
     }
   }

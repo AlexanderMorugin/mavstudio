@@ -7,6 +7,6 @@
 <style lang="scss" scoped>
 .siteExampleUiContainerSection {
   background: $white-one;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 </style>

@@ -24,7 +24,7 @@ export const siteLanding = {
     name: siteName,
     title: siteTitle,
     subtitle: "Одностраничный",
-    description: "Реклама, промо, рассылка",
+    description: "Рекламный, рассылочный, для промо-акций",
     route: `/site/${siteName}`,
     price: priceData.min,
   },
