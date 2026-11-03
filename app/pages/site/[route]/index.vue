@@ -20,9 +20,15 @@
       :description="siteDataFetch!.siteData.descriptionAfterExample"
     />
   </ContainerPage>
-  <ContainerPage mobilePadding>
-    <SiteListCarousel :catalog="siteCatalog" />
-  </ContainerPage>
+
+  <section>
+    <ContainerPage desktopPadding>
+      <TitleLink title="все сайты" route="/site" />
+    </ContainerPage>
+    <ContainerPage mobilePadding>
+      <SiteListCarousel :catalog="siteCatalog" />
+    </ContainerPage>
+  </section>
 </template>
 
 <script setup lang="ts">

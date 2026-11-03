@@ -1,5 +1,5 @@
 <template>
-  <section class="siteListCarousel">
+  <div class="siteListCarousel">
     <EmblaButtonControl
       isListCarousel
       :canScroll="canScrollPrev"
@@ -21,19 +21,12 @@
             :key="item.id"
             class="embla__slide"
           >
-            <SiteListCardLinkBlock :item="item" isListCarousel>
-              <SiteListCardTitle
-                isListCarousel
-                :title="item.siteData.listCard.title"
-                :subtitle="item.siteData.listCard.subtitle"
-                :description="item.siteData.listCard.description"
-              />
-            </SiteListCardLinkBlock>
+            <SiteListCarouselCard :item="item.siteData.listCard" />
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -48,6 +41,7 @@ const props = defineProps<{
 const [emblaRef, emblaApi] = useEmblaCarousel({
   loop: true,
   align: "start",
+  // align: "center",
 });
 
 const canScrollPrev = ref(false);
@@ -78,33 +72,43 @@ onMounted(() => {
   // border: 1px solid red;
 
   @media (max-width: 576px) {
-    padding-left: 20px;
+    padding-left: 0;
     padding-right: 0;
+
+    // padding-left: 20px;
+    // padding-right: 20px;
   }
 }
 .embla {
   width: 100%;
   // margin: auto;
-  --slide-size: 340px;
-  --slide-size-m: 265px;
+  --slide-size: 335px;
+  // --slide-size-m: 265px;
+  --slide-size-m: 100%;
   // --slide-spacing: 1rem;
   --slide-spacing: 40px;
+  --slide-spacing-m: 20px;
+  // border: 1px solid red;
 }
 .embla__viewport {
   overflow: hidden;
 }
 .embla__container {
   display: flex;
+
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
+
+  // justify-content: center;
 }
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
 
-  @media (max-width: 389px) {
+  @media (max-width: 576px) {
     flex: 0 0 var(--slide-size-m);
+    padding-left: var(--slide-spacing-m);
   }
 }
 </style>

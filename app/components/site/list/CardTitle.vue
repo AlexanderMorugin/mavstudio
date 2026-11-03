@@ -1,28 +1,14 @@
 <template>
   <div class="siteListCardTitle">
-    <h2
-      :class="[
-        'siteListCardTitle__title',
-        { siteListCardTitle__title_listCarousel: props.isListCarousel },
-      ]"
-    >
+    <h2 class="siteListCardTitle__title">
       {{ props.title }}
     </h2>
-    <span
-      v-if="props.subtitle"
-      :class="[
-        'siteListCardTitle__subtitle',
-        { siteListCardTitle__subtitle_listCarousel: props.isListCarousel },
-      ]"
-      >{{ props.subtitle }}</span
-    >
-    <ParagraphNormal v-if="!props.isListCarousel" center black>{{
+    <span v-if="props.subtitle" class="siteListCardTitle__subtitle">{{
+      props.subtitle
+    }}</span>
+    <ParagraphNormal v-if="props.description" center black>{{
       props.description
     }}</ParagraphNormal>
-
-    <ParagraphSmall v-if="props.isListCarousel" center black>{{
-      props.description
-    }}</ParagraphSmall>
   </div>
 </template>
 
@@ -31,7 +17,6 @@ const props = defineProps<{
   title: string;
   subtitle?: string;
   description?: string;
-  isListCarousel?: boolean;
 }>();
 </script>
 
@@ -56,10 +41,6 @@ const props = defineProps<{
     @media (max-width: 389px) {
       font-size: 20px;
     }
-
-    &_listCarousel {
-      font-size: 20px;
-    }
   }
 
   &__subtitle {
@@ -68,10 +49,6 @@ const props = defineProps<{
     text-align: center;
     text-transform: uppercase;
     color: $black-one;
-
-    &_listCarousel {
-      font-size: 12px;
-    }
   }
 }
 </style>
