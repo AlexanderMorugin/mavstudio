@@ -44,7 +44,7 @@
     width: 200px;
     height: 200px;
     border-radius: 14px;
-    backdrop-filter: brightness(90%) blur(1px);
+    backdrop-filter: brightness(0.9) blur(1px);
     padding: 5px;
     animation: spin 7s linear infinite;
 

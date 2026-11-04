@@ -1,33 +1,25 @@
 <template>
   <picture>
-    <source
-      media="(max-width: 767px)"
-      srcSet="/img/bg/site-background-768-1365.webp"
-    />
-    <!-- <source
-      media="(max-width: 1023px)"
-      srcSet="/img/bg/site-background-1080-1920.webp"
-    /> -->
-    <source
-      media="(max-width: 1279px)"
-      srcSet="/img/bg/site-background-1280-720.webp"
-    />
-    <source
-      media="(max-width: 1919px)"
-      srcSet="/img/bg/site-background-1920-1080.webp"
-    />
-    <source
-      media="(max-width: 3840px)"
-      srcSet="/img/bg/site-background-3840-2160.webp"
-    />
+    <source media="(max-width: 767px)" :srcset="props.background.image768" />
+    <source media="(max-width: 1279px)" :srcset="props.background.image1280" />
+    <source media="(max-width: 1919px)" :srcset="props.background.image1920" />
+    <source media="(max-width: 3840px)" :srcset="props.background.image3840" />
 
     <img
-      src="/img/bg/site-background-768-1365.webp"
-      alt="site-bg"
+      :src="props.background.image768"
+      :alt="props.background.title"
       class="bg-picture"
     />
   </picture>
 </template>
+
+<script lang="ts" setup>
+import type { ISiteExampleBackground } from "~/types/site";
+
+const props = defineProps<{
+  background: ISiteExampleBackground;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .bg-picture {
@@ -37,5 +29,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 </style>

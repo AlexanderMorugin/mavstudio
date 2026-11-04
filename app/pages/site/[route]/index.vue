@@ -15,6 +15,30 @@
     v-if="siteDataFetch!.siteData.name === 'landing'"
     :siteData="siteDataFetch!.siteData"
   />
+  <SiteExampleBusiness
+    v-if="siteDataFetch!.siteData.name === 'business'"
+    :siteData="siteDataFetch!.siteData"
+  />
+  <SiteExampleMultipage
+    v-if="siteDataFetch!.siteData.name === 'multipage'"
+    :siteData="siteDataFetch!.siteData"
+  />
+  <SiteExampleInfo
+    v-if="siteDataFetch!.siteData.name === 'info'"
+    :siteData="siteDataFetch!.siteData"
+  />
+  <SiteExampleCommerce
+    v-if="siteDataFetch!.siteData.name === 'commerce'"
+    :siteData="siteDataFetch!.siteData"
+  />
+  <SiteExampleShop
+    v-if="siteDataFetch!.siteData.name === 'shop'"
+    :siteData="siteDataFetch!.siteData"
+  />
+  <SiteExampleCms
+    v-if="siteDataFetch!.siteData.name === 'cms'"
+    :siteData="siteDataFetch!.siteData"
+  />
   <ContainerPage desktopPadding>
     <SiteDescription
       :description="siteDataFetch!.siteData.descriptionAfterExample"

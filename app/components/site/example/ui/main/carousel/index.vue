@@ -20,7 +20,11 @@
             class="embla__slide"
           >
             <SiteExampleUiMainCarouselCard
-              :image="item.image"
+              :image3840="item.image3840"
+              :image1920="item.image1920"
+              :image1280="item.image1280"
+              :image1024="item.image1024"
+              :image768="item.image768"
               :title="item.title"
             />
           </div>
@@ -103,7 +107,8 @@ onMounted(() => {
 <style lang="scss" scoped>
 .siteExampleUiMainCarousel {
   position: relative;
-  margin-top: 80px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .embla {
   width: 100%;

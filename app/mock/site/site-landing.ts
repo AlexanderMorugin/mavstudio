@@ -84,6 +84,14 @@ export const siteLanding = {
     title: "Образец лендинга",
     subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
 
+    background: {
+      image3840: "/img/landing/landing-bg-3840-2000.webp",
+      image1920: "/img/landing/landing-bg-1920-1600.webp",
+      image1280: "/img/landing/landing-bg-1280-1600.webp",
+      image768: "/img/landing/landing-bg-768-2500.webp",
+      title: "Slide One",
+    },
+
     nav: [
       {
         id: 0,
@@ -129,7 +137,8 @@ export const siteLanding = {
         title: "Card One Title",
         subtitle:
           "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-        image: "/img/bg/site-background-768-1365.webp",
+        image768: "/img/landing/landing-card-768-300.webp",
+        image300: "/img/landing/landing-card-300-300.webp",
         textOne:
           "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         textTwo:
@@ -141,7 +150,8 @@ export const siteLanding = {
         title: "Card Two Title",
         subtitle:
           "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-        image: "/img/bg/site-background-768-1365.webp",
+        image768: "/img/landing/landing-card-768-300.webp",
+        image300: "/img/landing/landing-card-300-300.webp",
         textOne:
           "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         textTwo:
@@ -152,27 +162,47 @@ export const siteLanding = {
     carousel: [
       {
         id: 0,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide One",
       },
       {
         id: 1,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Two",
       },
       {
         id: 2,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Three",
       },
       {
         id: 3,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Four",
       },
       {
         id: 4,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Five",
       },
     ],
@@ -187,7 +217,8 @@ export const siteLanding = {
           id: 0,
           anchor: "BlockCard-One",
           title: "Card One Title",
-          image: "/img/bg/site-background-768-1365.webp",
+          image768: "/img/landing/landing-card-768-300.webp",
+          image300: "/img/landing/landing-card-300-300.webp",
           textOne:
             "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         },
@@ -195,7 +226,8 @@ export const siteLanding = {
           id: 1,
           anchor: "BlockCard-Two",
           title: "Card Two Title",
-          image: "/img/bg/site-background-768-1365.webp",
+          image768: "/img/landing/landing-card-768-300.webp",
+          image300: "/img/landing/landing-card-300-300.webp",
           textOne:
             "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         },
@@ -203,7 +235,8 @@ export const siteLanding = {
           id: 2,
           anchor: "BlockCard-Three",
           title: "Card Three Title",
-          image: "/img/bg/site-background-768-1365.webp",
+          image768: "/img/landing/landing-card-768-300.webp",
+          image300: "/img/landing/landing-card-300-300.webp",
           textOne:
             "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         },

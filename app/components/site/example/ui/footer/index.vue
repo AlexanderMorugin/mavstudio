@@ -20,7 +20,7 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .siteExampleUiFooter {
-  backdrop-filter: blur(15px) brightness(80%);
+  backdrop-filter: blur(15px) brightness(0.8);
   border-top: 1px solid $white-mask-three;
   margin-top: 60px;
 

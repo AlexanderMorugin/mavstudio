@@ -5,10 +5,10 @@
       :subtitle="props.siteData.example.subtitle"
     />
     <SiteExampleUiContainerBody>
-      <SiteExampleUiBackgroundLanding />
-      <SiteExampleUiHeader :navData="props.siteData.example.nav" />
+      <!-- <SiteExampleUiBackgroundLanding /> -->
+      <!-- <SiteExampleUiHeader :navData="props.siteData.example.nav" /> -->
       <SiteExampleUiMain :siteData="props.siteData" />
-      <SiteExampleUiFooter :navData="props.siteData.example.nav" />
+      <!-- <SiteExampleUiFooter :navData="props.siteData.example.nav" /> -->
     </SiteExampleUiContainerBody>
   </SiteExampleUiContainerSection>
 </template>

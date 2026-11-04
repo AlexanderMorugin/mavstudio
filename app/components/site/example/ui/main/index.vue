@@ -1,5 +1,11 @@
 <template>
-  <div class="siteExampleUiMain">
+  <!-- <div> -->
+  <div class="siteExampleUiMain siteExampleUiMain_top">
+    <SiteExampleUiHeader :navData="props.siteData.example.nav" />
+    <SiteExampleUiBackgroundLanding
+      :background="props.siteData.example.background"
+    />
+
     <SiteExampleUiMainHero :siteDataExampleHero="props.siteData.example.hero" />
     <ContainerPage desktopPadding class="siteExampleUiMain__container">
       <SiteExampleUiMainCard
@@ -8,10 +14,18 @@
         :item="item"
       />
     </ContainerPage>
-    <SiteExampleUiMainCarousel
-      :siteDataCarousel="props.siteData.example.carousel"
+  </div>
+
+  <SiteExampleUiMainCarousel
+    :siteDataCarousel="props.siteData.example.carousel"
+  />
+
+  <div class="siteExampleUiMain">
+    <SiteExampleUiBackgroundLanding
+      :background="props.siteData.example.background"
     />
     <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
+    <SiteExampleUiFooter :navData="props.siteData.example.nav" />
   </div>
 </template>
 
@@ -26,6 +40,18 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .siteExampleUiMain {
   position: relative;
+
+  &_top {
+    // position: relative;
+    padding-bottom: 80px;
+    // margin-bottom: 40px;
+  }
+
+  // &_bottom {
+  //   // position: relative;
+  //   // margin-top: 20px;
+  //   // padding-bottom: 0;
+  // }
 
   &__container {
     display: grid;

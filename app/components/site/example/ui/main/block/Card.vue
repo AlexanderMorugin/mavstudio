@@ -2,7 +2,7 @@
   <div :id="props.item.anchor" class="siteExampleMainBlockCard">
     <div class="siteExampleMainBlockCard__imageBox">
       <img
-        :src="props.item.image"
+        :src="props.item.image768"
         :alt="props.item.title"
         :title="props.item.title"
         class="siteExampleMainBlockCard__image"
@@ -35,6 +35,7 @@ const props = defineProps<{
   grid-template-areas: "image" "text";
   border-radius: 10px;
   border: 1px solid $white-mask-three;
+  background: $black-mask-three;
   padding: 3px;
 
   @media (max-width: 1023px) {
@@ -66,6 +67,7 @@ const props = defineProps<{
 
   &__image {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 

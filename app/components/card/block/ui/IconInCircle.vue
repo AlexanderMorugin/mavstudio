@@ -139,7 +139,7 @@ const props = defineProps<{
   &_isExample {
     width: 150px;
     height: 150px;
-    backdrop-filter: brightness(10%);
+    backdrop-filter: brightness(0.1);
     border-radius: 10px;
     border: 1px solid $grey-one;
     box-shadow: none;

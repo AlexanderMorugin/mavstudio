@@ -44,7 +44,8 @@ export interface ISiteExampleCard {
   anchor: string;
   title: string;
   subtitle?: string;
-  image: string;
+  image768: string;
+  image300: string;
   textOne: string;
   textTwo?: string;
 }
@@ -62,7 +63,11 @@ export interface ISiteExampleHero {
 
 export interface ISiteExampleCarousel {
   id: number;
-  image: string;
+  image3840: string;
+  image1920: string;
+  image1280: string;
+  image1024: string;
+  image768: string;
   title: string;
 }
 
@@ -72,9 +77,18 @@ export interface ISiteExampleNav {
   anchor: string;
 }
 
+export interface ISiteExampleBackground {
+  image3840: string;
+  image1920: string;
+  image1280: string;
+  image768: string;
+  title: string;
+}
+
 export interface ISiteExample {
   title: string;
   subtitle: string;
+  background: ISiteExampleBackground;
   nav: ISiteExampleNav[];
   hero: ISiteExampleHero;
   cards: ISiteExampleCard[];

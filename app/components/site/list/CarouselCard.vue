@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="props.item.route" class="siteListCarouselCard">
+  <div class="siteListCarouselCard">
     <div class="siteListCarouselCard__text">
       <span class="siteListCarouselCard__title">
         {{ props.item.title }}
@@ -14,8 +14,10 @@
         >{{ props.item.description }}</ParagraphNormal
       >
     </div>
-    <SiteListCardPrice :price="props.item.price" />
-  </NuxtLink>
+    <NuxtLink :to="props.item.route">
+      <SiteListCardPrice :price="props.item.price" />
+    </NuxtLink>
+  </div>
 </template>
 
 <script setup lang="ts">

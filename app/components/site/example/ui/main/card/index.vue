@@ -2,7 +2,8 @@
   <section :id="props.item.anchor" class="siteExampleMainCard">
     <div class="siteExampleMainCard__top">
       <SiteExampleUiMainCardImage
-        :image="props.item.image"
+        :image768="props.item.image768"
+        :image300="props.item.image300"
         :title="props.item.title"
       />
 
@@ -32,7 +33,7 @@ const props = defineProps<{
   flex-direction: column;
   gap: 20px;
   border-radius: 14px;
-  backdrop-filter: brightness(40%);
+  backdrop-filter: brightness(0.4);
   box-shadow: $shadow-card-black-one;
   margin-top: 60px;
   padding: 20px;

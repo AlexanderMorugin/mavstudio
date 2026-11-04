@@ -44,7 +44,7 @@ const emits = defineEmits(["scroll"]);
   height: 50px;
   border-radius: 50%;
   border: 1px solid $white-one;
-  backdrop-filter: blur(5px) brightness(80%);
+  backdrop-filter: blur(5px) brightness(0.8);
   box-shadow:
     0 3.27px 19.64px rgba(0, 0, 0, 0.12),
     0 0.82px 2.45px rgba(0, 0, 0, 0.05);

@@ -30,6 +30,10 @@ const props = defineProps<{
     right: 0;
   }
 
+  @media (max-width: 576px) {
+    bottom: -50px;
+  }
+
   &__text {
     font-size: 24px;
     color: $red-two;

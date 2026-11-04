@@ -39,7 +39,7 @@ const isExampleHeaderNavModalOpen = ref(false);
 <style lang="scss" scoped>
 .siteExampleUiHeader {
   position: relative;
-  backdrop-filter: blur(15px) brightness(80%);
+  backdrop-filter: blur(15px) brightness(0.7);
   border-bottom: 1px solid $white-mask-three;
   z-index: 2;
   overflow: hidden;

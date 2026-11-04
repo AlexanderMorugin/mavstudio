@@ -53,7 +53,7 @@ const props = defineProps<{
     height: 100%;
     padding: 20px;
     border-radius: 14px;
-    backdrop-filter: brightness(70%);
+    backdrop-filter: blur(2px) brightness(0.5);
     box-shadow: $shadow-card-black-one;
     overflow: hidden;
 

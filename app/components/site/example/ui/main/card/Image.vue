@@ -1,19 +1,24 @@
 <template>
   <div class="siteExampleMainCardImage">
     <div class="siteExampleMainCardImage__container">
-      <img
-        :src="props.image"
-        :alt="props.title"
-        :title="props.title"
-        class="siteExampleMainCardImage__picture"
-      />
+      <picture>
+        <source media="(max-width: 767px)" :srcset="props.image768" />
+        <source media="(max-width: 3840px)" :srcset="props.image300" />
+
+        <img
+          :src="props.image768"
+          :alt="props.title"
+          class="siteExampleMainCardImage__picture"
+        />
+      </picture>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  image: string;
+  image768: string;
+  image300: string;
   title: string;
 }>();
 </script>
@@ -50,11 +55,8 @@ const props = defineProps<{
 
   &__picture {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-
-    // @media (max-width: 767px) {
-    //   width: 90%;
-    // }
   }
 }
 </style>
