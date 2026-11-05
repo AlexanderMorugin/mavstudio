@@ -127,7 +127,6 @@ onMounted(() => {
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
-  // font-size: 120px;
   padding-left: var(--slide-spacing);
 }
 </style>

@@ -126,6 +126,7 @@ export const siteLanding = {
     ],
 
     hero: {
+      name: siteName,
       title: "Hero Title лендинга",
       subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
     },

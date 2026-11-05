@@ -11,10 +11,10 @@ export const siteCatalog = [
     id: 1,
     siteData: siteLanding,
   },
-  // {
-  //   id: 2,
-  //   siteData: siteBusiness,
-  // },
+  {
+    id: 2,
+    siteData: siteBusiness,
+  },
   // {
   //   id: 3,
   //   siteData: siteMultipage,

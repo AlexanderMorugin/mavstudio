@@ -49,13 +49,13 @@ export const siteBusiness = {
 
   advantage: [
     {
-      id: 1,
+      id: 0,
       name: "isBad",
       title: "Недостатки",
       text: "Разрабатываем Недостатки Разрабатываем Недостатки Разрабатываем Недостатки Разрабатываем Недостатки Разрабатываем Недостатки Разрабатываем Недостатки",
     },
     {
-      id: 2,
+      id: 1,
       name: "isGood",
       title: "Достоинства",
       text: "Разрабатываем Достоинства Разрабатываем Достоинства Разрабатываем Достоинства Разрабатываем Достоинства Разрабатываем Достоинства Разрабатываем Достоинства",
@@ -82,48 +82,53 @@ export const siteBusiness = {
   ],
 
   example: {
-    title: "Образец сайта визитки",
+    title: "Образец сайта-визитки",
     subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
-    textOne:
-      "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-    textTwo:
-      "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
+
+    background: {
+      image3840: "/img/landing/landing-bg-3840-2000.webp",
+      image1920: "/img/landing/landing-bg-1920-1600.webp",
+      image1280: "/img/landing/landing-bg-1280-1600.webp",
+      image768: "/img/landing/landing-bg-768-2500.webp",
+      title: "Slide One",
+    },
 
     nav: [
       {
         id: 0,
-        title: "Cards-One",
-        anchor: "Cards-One",
+        title: "главная",
+        anchor: "main-page",
       },
       {
         id: 1,
-        title: "Cards-Two",
-        anchor: "Cards-Two",
+        title: "о нас",
+        anchor: "about-page",
       },
       {
         id: 2,
-        title: "Carousel",
-        anchor: "carousel",
+        title: "предлагаем",
+        anchor: "offer-page",
       },
       {
         id: 3,
-        title: "BlockCard-One",
-        anchor: "BlockCard-One",
+        title: "наши работы",
+        anchor: "portfolio-page",
       },
       {
         id: 4,
-        title: "BlockCard-Two",
-        anchor: "BlockCard-Two",
+        title: "отзывы",
+        anchor: "review-page",
       },
       {
         id: 5,
-        title: "BlockCard-Three",
-        anchor: "BlockCard-Three",
+        title: "контакты",
+        anchor: "contact-page",
       },
     ],
 
     hero: {
-      title: "Hero Title лендинга",
+      name: siteName,
+      title: "Сайт-визитка",
       subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
     },
 
@@ -134,7 +139,8 @@ export const siteBusiness = {
         title: "Card One Title",
         subtitle:
           "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-        image: "/img/bg/site-background-768-1365.webp",
+        image768: "/img/landing/landing-card-768-300.webp",
+        image300: "/img/landing/landing-card-300-300.webp",
         textOne:
           "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         textTwo:
@@ -146,7 +152,8 @@ export const siteBusiness = {
         title: "Card Two Title",
         subtitle:
           "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-        image: "/img/bg/site-background-768-1365.webp",
+        image768: "/img/landing/landing-card-768-300.webp",
+        image300: "/img/landing/landing-card-300-300.webp",
         textOne:
           "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         textTwo:
@@ -157,27 +164,47 @@ export const siteBusiness = {
     carousel: [
       {
         id: 0,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide One",
       },
       {
         id: 1,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Two",
       },
       {
         id: 2,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Three",
       },
       {
         id: 3,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Four",
       },
       {
         id: 4,
-        image: "/img/bg/site-background-3840-2160.webp",
+        image3840: "/img/landing/landing-carousel-3840-700.webp",
+        image1920: "/img/landing/landing-carousel-1920-700.webp",
+        image1280: "/img/landing/landing-carousel-1280-500.webp",
+        image1024: "/img/landing/landing-carousel-1024-500.webp",
+        image768: "/img/landing/landing-carousel-768-500.webp",
         title: "Slide Five",
       },
     ],
@@ -192,7 +219,8 @@ export const siteBusiness = {
           id: 0,
           anchor: "BlockCard-One",
           title: "Card One Title",
-          image: "/img/bg/site-background-768-1365.webp",
+          image768: "/img/landing/landing-card-768-300.webp",
+          image300: "/img/landing/landing-card-300-300.webp",
           textOne:
             "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         },
@@ -200,7 +228,8 @@ export const siteBusiness = {
           id: 1,
           anchor: "BlockCard-Two",
           title: "Card Two Title",
-          image: "/img/bg/site-background-768-1365.webp",
+          image768: "/img/landing/landing-card-768-300.webp",
+          image300: "/img/landing/landing-card-300-300.webp",
           textOne:
             "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         },
@@ -208,7 +237,8 @@ export const siteBusiness = {
           id: 2,
           anchor: "BlockCard-Three",
           title: "Card Three Title",
-          image: "/img/bg/site-background-768-1365.webp",
+          image768: "/img/landing/landing-card-768-300.webp",
+          image300: "/img/landing/landing-card-300-300.webp",
           textOne:
             "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
         },

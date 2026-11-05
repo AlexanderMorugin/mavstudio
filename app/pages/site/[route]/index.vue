@@ -11,34 +11,36 @@
   <ContainerPage desktopPadding>
     <SiteDescription :description="siteDataFetch!.siteData.description" />
   </ContainerPage>
-  <SiteExampleLanding
+  <SiteExample :siteData="siteDataFetch!.siteData" />
+
+  <!-- <SiteExampleLanding
     v-if="siteDataFetch!.siteData.name === 'landing'"
     :siteData="siteDataFetch!.siteData"
-  />
-  <SiteExampleBusiness
+  /> -->
+  <!-- <SiteExampleBusiness
     v-if="siteDataFetch!.siteData.name === 'business'"
     :siteData="siteDataFetch!.siteData"
-  />
-  <SiteExampleMultipage
+  /> -->
+  <!-- <SiteExampleMultipage
     v-if="siteDataFetch!.siteData.name === 'multipage'"
     :siteData="siteDataFetch!.siteData"
-  />
-  <SiteExampleInfo
+  /> -->
+  <!-- <SiteExampleInfo
     v-if="siteDataFetch!.siteData.name === 'info'"
     :siteData="siteDataFetch!.siteData"
-  />
-  <SiteExampleCommerce
+  /> -->
+  <!-- <SiteExampleCommerce
     v-if="siteDataFetch!.siteData.name === 'commerce'"
     :siteData="siteDataFetch!.siteData"
-  />
-  <SiteExampleShop
+  /> -->
+  <!-- <SiteExampleShop
     v-if="siteDataFetch!.siteData.name === 'shop'"
     :siteData="siteDataFetch!.siteData"
-  />
-  <SiteExampleCms
+  /> -->
+  <!-- <SiteExampleCms
     v-if="siteDataFetch!.siteData.name === 'cms'"
     :siteData="siteDataFetch!.siteData"
-  />
+  /> -->
   <ContainerPage desktopPadding>
     <SiteDescription
       :description="siteDataFetch!.siteData.descriptionAfterExample"

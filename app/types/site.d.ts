@@ -57,8 +57,13 @@ export interface ISiteExampleBlock {
 }
 
 export interface ISiteExampleHero {
+  name: string;
   title: string;
   subtitle: string;
+  // image3840?: string;
+  // image1920?: string;
+  // image1280?: string;
+  // image768?: string;
 }
 
 export interface ISiteExampleCarousel {

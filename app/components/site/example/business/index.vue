@@ -1,16 +1,38 @@
 <template>
-  <SiteExampleUiContainerSection>
-    <SiteExampleUiTitlePage
-      :title="props.siteData.example.title"
-      :subtitle="props.siteData.example.subtitle"
-    />
-    <SiteExampleUiContainerBody>
-      <SiteExampleUiBackgroundLanding />
+  <div class="siteExampleUiBusiness">
+    <div class="siteExampleUiBusiness__top">
       <SiteExampleUiHeader :navData="props.siteData.example.nav" />
-      <SiteExampleUiMain :siteData="props.siteData" />
-      <SiteExampleUiFooter :navData="props.siteData.example.nav" />
-    </SiteExampleUiContainerBody>
-  </SiteExampleUiContainerSection>
+      <SiteExampleUiBackgroundBusiness
+        :background="props.siteData.example.background"
+      />
+
+      <SiteExampleUiMainHeroBusiness
+        :siteDataExampleHero="props.siteData.example.hero"
+      />
+    </div>
+
+    <SiteExampleUiFooter :navData="props.siteData.example.nav" />
+  </div>
+
+  <!-- <ContainerPage desktopPadding class="siteExampleUiBusiness__container">
+    <SiteExampleUiMainCard
+      v-for="item in props.siteData.example.cards"
+      :key="item.id"
+      :item="item"
+    />
+  </ContainerPage> -->
+
+  <!-- <SiteExampleUiMainCarousel
+    :siteDataCarousel="props.siteData.example.carousel"
+  /> -->
+
+  <!-- <div class="siteExampleUiBusiness">
+    <SiteExampleUiBackgroundLanding
+      :background="props.siteData.example.background"
+    />
+    <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
+    <SiteExampleUiFooter :navData="props.siteData.example.nav" />
+  </div> -->
 </template>
 
 <script setup lang="ts">
@@ -20,3 +42,41 @@ const props = defineProps<{
   siteData: ISite;
 }>();
 </script>
+
+<style lang="scss" scoped>
+.siteExampleUiBusiness {
+  &__top {
+    position: relative;
+    height: 700px;
+    background: $blue-three;
+    overflow: hidden;
+
+    @media (max-width: 1279px) {
+      height: 500px;
+    }
+
+    @media (max-width: 576px) {
+      height: 400px;
+    }
+  }
+
+  // &__container {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr;
+  //   gap: 60px;
+
+  //   @media (max-width: 1279px) {
+  //     gap: 40px;
+  //   }
+
+  //   @media (max-width: 1023px) {
+  //     gap: 20px;
+  //   }
+
+  //   @media (max-width: 767px) {
+  //     grid-template-columns: 1fr;
+  //     gap: 0;
+  //   }
+  // }
+}
+</style>

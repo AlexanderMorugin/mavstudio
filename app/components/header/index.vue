@@ -62,7 +62,7 @@ watch(isMenuModalOpen, (newValue) => {
   position: sticky;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px) brightness(0.7);
   border-bottom: 1px solid $white-mask-three;
   z-index: 10;
 
