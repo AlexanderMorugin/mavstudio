@@ -5,7 +5,7 @@
     </h3>
 
     <SiteExampleUiMainHeroSubtitle
-      :subtitle="props.siteDataExampleHero.subtitle"
+      :siteDataExampleHero="props.siteDataExampleHero"
     />
   </div>
 </template>
@@ -25,6 +25,8 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  // border: 1px solid red;
 
   &__text {
     position: relative;

@@ -18,7 +18,7 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .siteExampleUiMainHeroBusiness {
   position: relative;
-  height: 600px;
+  height: calc(100% - 70px);
   max-width: $screen-xxl;
   margin: 0 auto;
   padding-left: 20px;
@@ -29,8 +29,8 @@ const props = defineProps<{
     padding-right: 0;
   }
 
-  @media (max-width: 576px) {
-    height: 400px;
+  @media (max-width: 767px) {
+    height: calc(100% - 60px);
   }
 }
 </style>
