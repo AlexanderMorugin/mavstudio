@@ -1,5 +1,8 @@
 <template>
-  <section class="siteExampleUiMainHeroBusiness">
+  <section
+    :id="props.siteDataExampleHero.anchor"
+    class="siteExampleUiMainHeroBusiness"
+  >
     <SiteExampleUiMainHeroLogo :siteName="props.siteDataExampleHero.name" />
     <SiteExampleUiMainHeroTitle
       :siteDataExampleHero="props.siteDataExampleHero"

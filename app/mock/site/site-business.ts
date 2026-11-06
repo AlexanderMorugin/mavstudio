@@ -127,12 +127,14 @@ export const siteBusiness = {
     ],
 
     hero: {
+      anchor: "main-page",
       name: siteName,
       title: "Сайт-визитка",
       subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
     },
 
     about: {
+      anchor: "about-page",
       title: "Ваша-Фирма",
       subtitle: "Краткое описание вашей компании.",
       image: "/img/landing/landing-card-768-300.webp",

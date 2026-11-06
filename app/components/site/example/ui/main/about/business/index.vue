@@ -1,5 +1,8 @@
 <template>
-  <section class="siteExampleUiMainAboutBusiness">
+  <section
+    :id="props.siteDataExampleAbout.anchor"
+    class="siteExampleUiMainAboutBusiness"
+  >
     <SiteExampleUiMainAboutText
       :title="props.siteDataExampleAbout.title"
       :subtitle="props.siteDataExampleAbout.subtitle"

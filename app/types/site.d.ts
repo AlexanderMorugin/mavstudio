@@ -57,6 +57,7 @@ export interface ISiteExampleBlock {
 }
 
 export interface ISiteExampleHero {
+  anchor?: string;
   name: string;
   title: string;
   subtitle: string;
@@ -87,6 +88,7 @@ export interface ISiteExampleBackground {
 }
 
 export interface ISiteExampleAbout {
+  anchor: string;
   title: string;
   subtitle: string;
   image: string;
