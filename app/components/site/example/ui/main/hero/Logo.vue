@@ -111,7 +111,6 @@ const props = defineProps<{
     &_landing {
       width: 200px;
       height: 200px;
-      // animation: spin 7s linear infinite;
 
       @media (max-width: 576px) {
         width: 100px;
@@ -120,7 +119,6 @@ const props = defineProps<{
     }
 
     &_business {
-      // animation: spin-border 7s linear infinite;
       width: 90px;
       height: 90px;
       border: 1px solid $white-mask-one;
@@ -159,7 +157,6 @@ const props = defineProps<{
 
   &__arrow {
     position: absolute;
-
     fill: $white-one;
 
     &_landing {
@@ -253,20 +250,6 @@ const props = defineProps<{
     border: 1px solid $white-mask-one;
   }
 }
-// @keyframes spin-border {
-//   0% {
-//     border: 1px solid $white-mask-one;
-//   }
-//   40% {
-//     border: 1px solid $orange-mask-two;
-//   }
-//   60% {
-//     border: 1px solid $green-mask-three;
-//   }
-//   100% {
-//     border: 1px solid $white-mask-one;
-//   }
-// }
 @keyframes arrow-left {
   0% {
     transform: rotate(180deg);

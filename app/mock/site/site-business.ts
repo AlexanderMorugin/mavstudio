@@ -86,10 +86,10 @@ export const siteBusiness = {
     subtitle: "Одностраничные сайты могут быть разного дизайна и наполнения.",
 
     background: {
-      image3840: "/img/landing/landing-bg-3840-2000.webp",
-      image1920: "/img/landing/landing-bg-1920-1600.webp",
-      image1280: "/img/landing/landing-bg-1280-1600.webp",
-      image768: "/img/landing/landing-bg-768-2500.webp",
+      image3840: "/img/business/business-bg-3840-700.webp",
+      image1920: "/img/business/business-bg-1920-700.webp",
+      image1280: "/img/business/business-bg-1280-500.webp",
+      image768: "/img/business/business-bg-768-500.webp",
       title: "Slide One",
     },
 

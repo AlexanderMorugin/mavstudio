@@ -65,8 +65,10 @@ const props = defineProps<{
     }
 
     &_business {
-      color: $white-one;
-      text-shadow: 1px 1px 15px $blue-one;
+      color: $red-one;
+      text-shadow:
+        0 0 3px $white-one,
+        1px 1px 15px $white-one;
       padding-top: 130px;
     }
   }
