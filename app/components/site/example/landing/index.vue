@@ -26,7 +26,10 @@
       :background="props.siteData.example.background"
     />
     <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
-    <SiteExampleUiFooter :navData="props.siteData.example.nav" />
+    <SiteExampleUiFooter
+      :siteName="props.siteData.name"
+      :navData="props.siteData.example.nav"
+    />
   </div>
 </template>
 

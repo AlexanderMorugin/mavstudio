@@ -60,10 +60,6 @@ export interface ISiteExampleHero {
   name: string;
   title: string;
   subtitle: string;
-  // image3840?: string;
-  // image1920?: string;
-  // image1280?: string;
-  // image768?: string;
 }
 
 export interface ISiteExampleCarousel {
@@ -90,12 +86,21 @@ export interface ISiteExampleBackground {
   title: string;
 }
 
+export interface ISiteExampleAbout {
+  title: string;
+  subtitle: string;
+  image: string;
+  textOne: string;
+  textTwo?: string;
+}
+
 export interface ISiteExample {
   title: string;
   subtitle: string;
   background: ISiteExampleBackground;
   nav: ISiteExampleNav[];
   hero: ISiteExampleHero;
+  about?: ISiteExampleAbout;
   cards: ISiteExampleCard[];
   block: ISiteExampleBlock;
   carousel: ISiteExampleCarousel[];

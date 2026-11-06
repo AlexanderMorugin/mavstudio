@@ -11,7 +11,20 @@
       />
     </div>
 
-    <SiteExampleUiFooter :navData="props.siteData.example.nav" />
+    <ContainerPage desktopPadding>
+      <SiteExampleUiMainAboutBusiness
+        v-if="props.siteData.example.about"
+        :siteDataExampleAbout="props.siteData.example.about"
+      />
+    </ContainerPage>
+    <!-- <SiteExampleUiMainCarousel
+      :siteDataCarousel="props.siteData.example.carousel"
+    /> -->
+
+    <SiteExampleUiFooter
+      :siteName="props.siteData.name"
+      :navData="props.siteData.example.nav"
+    />
   </div>
 
   <!-- <ContainerPage desktopPadding class="siteExampleUiBusiness__container">
@@ -31,7 +44,7 @@
       :background="props.siteData.example.background"
     />
     <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
-    <SiteExampleUiFooter :navData="props.siteData.example.nav" />
+
   </div> -->
 </template>
 
