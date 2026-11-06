@@ -19,15 +19,7 @@ const props = defineProps<{
 .siteExampleUiMainHeroBusiness {
   position: relative;
   height: calc(100% - 70px);
-  max-width: $screen-xxl;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (max-width: 1023px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   @media (max-width: 767px) {
     height: calc(100% - 60px);

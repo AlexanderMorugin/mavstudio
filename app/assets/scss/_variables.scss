@@ -78,6 +78,8 @@ $gradient-hero-one: linear-gradient(135deg, $blue-three 0%, $black-one 50%, $blu
 $gradient-example-one: linear-gradient(135deg, $mask-trasparent 0%, $orange-mask-two 50%, $blue-two 90%);
 
 $gradient-white-one: linear-gradient($mask-trasparent 0%, $white-one 100%);
+$gradient-black-one: linear-gradient($mask-trasparent 30%, $black-mask-two 100%);
+$gradient-black-two: linear-gradient($mask-trasparent 0%, $black-mask-two 40%);
 
 $gradient-blue-one: linear-gradient(to right, $blue-two 0%, $mask-trasparent 100%);
 $gradient-blue-two: linear-gradient(to right, $blue-three 0%, $blue-two 100%);

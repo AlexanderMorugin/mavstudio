@@ -41,15 +41,11 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .siteExampleUiMainHeroSubtitle {
   display: flex;
-  align-items: center;
-  height: 200px;
   overflow: hidden;
 
-  @media (max-width: 576px) {
-    height: 160px;
-  }
-
   &_landing {
+    align-items: center;
+    height: 200px;
     background: $gradient-blue-three;
     border-left: 2px solid $blue-mask-two;
     animation: fall 15s linear infinite;
@@ -58,13 +54,20 @@ const props = defineProps<{
       border-left: none;
       animation: fall-two 15s linear infinite;
     }
+
+    @media (max-width: 576px) {
+      height: 160px;
+    }
   }
 
   &_business {
-    backdrop-filter: brightness(0.6);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    align-items: end;
+    background: $gradient-black-one;
     animation: pop-up 15s linear infinite;
+
+    @media (max-width: 576px) {
+      background: $gradient-black-two;
+    }
   }
 
   &__text {
@@ -149,20 +152,22 @@ const props = defineProps<{
     height: 0;
   }
   3% {
-    opacity: 1;
+    opacity: 0;
     height: 0;
   }
-  10% {
-    // height: 200px;
-    height: 50%;
+  8% {
+    opacity: 1;
+    height: 100%;
+    padding-bottom: 20px;
   }
   80% {
-    // height: 200px;
-    height: 50%;
+    height: 100%;
+    padding-bottom: 20px;
   }
   85% {
     opacity: 1;
     height: 0;
+    padding-bottom: 0;
   }
   100% {
     opacity: 0;
@@ -264,24 +269,21 @@ const props = defineProps<{
     transform: translateY(200%);
     background-position: 0;
   }
-  10% {
+
+  6% {
     transform: translateY(200%);
-    background-position: 0;
   }
-  15% {
+  9% {
     transform: translateY(0);
-    background-position: 0;
   }
   75% {
     background-position: -100%;
     transform: translateY(0);
   }
   80% {
-    background-position: -100%;
     transform: translateY(200%);
   }
   100% {
-    background-position: -100%;
     transform: translateY(200%);
   }
 }

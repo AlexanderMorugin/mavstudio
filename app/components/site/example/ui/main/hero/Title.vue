@@ -1,6 +1,18 @@
 <template>
   <div class="siteExampleUiMainHeroTitle">
-    <h3 class="siteExampleUiMainHeroTitle__text">
+    <h3
+      :class="[
+        'siteExampleUiMainHeroTitle__text',
+        {
+          siteExampleUiMainHeroTitle__text_landing:
+            props.siteDataExampleHero.name === 'landing',
+        },
+        {
+          siteExampleUiMainHeroTitle__text_business:
+            props.siteDataExampleHero.name === 'business',
+        },
+      ]"
+    >
       {{ props.siteDataExampleHero.title }}
     </h3>
 
@@ -26,8 +38,6 @@ const props = defineProps<{
   flex-direction: column;
   justify-content: space-between;
 
-  // border: 1px solid red;
-
   &__text {
     position: relative;
     font-family: "Montserrat-Bold", sans-serif;
@@ -35,7 +45,6 @@ const props = defineProps<{
     line-height: 1.2;
     letter-spacing: 1px;
     text-align: center;
-    padding-top: 100px;
     z-index: 3;
 
     @media (max-width: 1023px) {
@@ -44,7 +53,21 @@ const props = defineProps<{
 
     @media (max-width: 576px) {
       font-size: 28px;
-      padding-top: 40px;
+    }
+
+    &_landing {
+      color: $white-one;
+      padding-top: 100px;
+
+      @media (max-width: 576px) {
+        padding-top: 40px;
+      }
+    }
+
+    &_business {
+      color: $white-one;
+      text-shadow: 1px 1px 15px $blue-one;
+      padding-top: 130px;
     }
   }
 }

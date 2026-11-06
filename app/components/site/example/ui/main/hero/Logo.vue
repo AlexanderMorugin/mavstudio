@@ -106,11 +106,12 @@ const props = defineProps<{
     border-radius: 14px;
     backdrop-filter: brightness(0.9) blur(1px);
     padding: 5px;
+    animation: spin 7s linear infinite;
 
     &_landing {
       width: 200px;
       height: 200px;
-      animation: spin 7s linear infinite;
+      // animation: spin 7s linear infinite;
 
       @media (max-width: 576px) {
         width: 100px;
@@ -119,10 +120,15 @@ const props = defineProps<{
     }
 
     &_business {
-      animation: spin-border 7s linear infinite;
+      // animation: spin-border 7s linear infinite;
       width: 90px;
       height: 90px;
       border: 1px solid $white-mask-one;
+
+      @media (max-width: 576px) {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
 
@@ -144,6 +150,10 @@ const props = defineProps<{
     &_business {
       top: 55%;
       width: 35px;
+
+      @media (max-width: 576px) {
+        width: 26px;
+      }
     }
   }
 
@@ -171,6 +181,11 @@ const props = defineProps<{
       top: 52%;
       width: 25px;
       height: 25px;
+
+      @media (max-width: 576px) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &_prevLanding {
@@ -190,6 +205,10 @@ const props = defineProps<{
     &_prevBusiness {
       left: 13%;
       transform: rotate(180deg);
+
+      @media (max-width: 576px) {
+        left: 14%;
+      }
     }
 
     &_nextLanding {
@@ -208,6 +227,10 @@ const props = defineProps<{
 
     &_nextBusiness {
       right: 20%;
+
+      @media (max-width: 576px) {
+        right: 19%;
+      }
     }
   }
 }
@@ -230,20 +253,20 @@ const props = defineProps<{
     border: 1px solid $white-mask-one;
   }
 }
-@keyframes spin-border {
-  0% {
-    border: 1px solid $white-mask-one;
-  }
-  40% {
-    border: 1px solid $orange-mask-two;
-  }
-  60% {
-    border: 1px solid $green-mask-three;
-  }
-  100% {
-    border: 1px solid $white-mask-one;
-  }
-}
+// @keyframes spin-border {
+//   0% {
+//     border: 1px solid $white-mask-one;
+//   }
+//   40% {
+//     border: 1px solid $orange-mask-two;
+//   }
+//   60% {
+//     border: 1px solid $green-mask-three;
+//   }
+//   100% {
+//     border: 1px solid $white-mask-one;
+//   }
+// }
 @keyframes arrow-left {
   0% {
     transform: rotate(180deg);
