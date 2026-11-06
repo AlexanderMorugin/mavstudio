@@ -144,118 +144,157 @@ export const siteBusiness = {
         "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много. Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
     },
 
-    cards: [
-      {
-        id: 0,
-        anchor: "Cards-One",
-        title: "Card One Title",
-        subtitle:
-          "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-        image768: "/img/landing/landing-card-768-300.webp",
-        image300: "/img/landing/landing-card-300-300.webp",
-        textOne:
-          "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-        textTwo:
-          "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
-      },
-      {
-        id: 1,
-        anchor: "Cards-Two",
-        title: "Card Two Title",
-        subtitle:
-          "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-        image768: "/img/landing/landing-card-768-300.webp",
-        image300: "/img/landing/landing-card-300-300.webp",
-        textOne:
-          "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-        textTwo:
-          "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
-      },
-    ],
+    portfolio: {
+      anchor: "portfolio-page",
+      title: "Наши работы",
+      subtitle: "Представляем наши наиболее достойные работы.",
 
-    carousel: [
-      {
-        id: 0,
-        image3840: "/img/landing/landing-carousel-3840-700.webp",
-        image1920: "/img/landing/landing-carousel-1920-700.webp",
-        image1280: "/img/landing/landing-carousel-1280-500.webp",
-        image1024: "/img/landing/landing-carousel-1024-500.webp",
-        image768: "/img/landing/landing-carousel-768-500.webp",
-        title: "Slide One",
-      },
-      {
-        id: 1,
-        image3840: "/img/landing/landing-carousel-3840-700.webp",
-        image1920: "/img/landing/landing-carousel-1920-700.webp",
-        image1280: "/img/landing/landing-carousel-1280-500.webp",
-        image1024: "/img/landing/landing-carousel-1024-500.webp",
-        image768: "/img/landing/landing-carousel-768-500.webp",
-        title: "Slide Two",
-      },
-      {
-        id: 2,
-        image3840: "/img/landing/landing-carousel-3840-700.webp",
-        image1920: "/img/landing/landing-carousel-1920-700.webp",
-        image1280: "/img/landing/landing-carousel-1280-500.webp",
-        image1024: "/img/landing/landing-carousel-1024-500.webp",
-        image768: "/img/landing/landing-carousel-768-500.webp",
-        title: "Slide Three",
-      },
-      {
-        id: 3,
-        image3840: "/img/landing/landing-carousel-3840-700.webp",
-        image1920: "/img/landing/landing-carousel-1920-700.webp",
-        image1280: "/img/landing/landing-carousel-1280-500.webp",
-        image1024: "/img/landing/landing-carousel-1024-500.webp",
-        image768: "/img/landing/landing-carousel-768-500.webp",
-        title: "Slide Four",
-      },
-      {
-        id: 4,
-        image3840: "/img/landing/landing-carousel-3840-700.webp",
-        image1920: "/img/landing/landing-carousel-1920-700.webp",
-        image1280: "/img/landing/landing-carousel-1280-500.webp",
-        image1024: "/img/landing/landing-carousel-1024-500.webp",
-        image768: "/img/landing/landing-carousel-768-500.webp",
-        title: "Slide Five",
-      },
-    ],
-
-    block: {
-      title: "Block Landing Title",
-      subtitle:
-        "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-
-      cards: [
+      card: [
         {
           id: 0,
-          anchor: "BlockCard-One",
-          title: "Card One Title",
-          image768: "/img/landing/landing-card-768-300.webp",
-          image300: "/img/landing/landing-card-300-300.webp",
-          textOne:
-            "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+          title: "Работа 1",
+          image: "/img/landing/landing-card-768-300.webp",
         },
         {
           id: 1,
-          anchor: "BlockCard-Two",
-          title: "Card Two Title",
-          image768: "/img/landing/landing-card-768-300.webp",
-          image300: "/img/landing/landing-card-300-300.webp",
-          textOne:
-            "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+          title: "Работа 2",
+          image: "/img/landing/landing-card-768-300.webp",
         },
         {
           id: 2,
-          anchor: "BlockCard-Three",
-          title: "Card Three Title",
-          image768: "/img/landing/landing-card-768-300.webp",
-          image300: "/img/landing/landing-card-300-300.webp",
-          textOne:
-            "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+          title: "Работа 3",
+          image: "/img/landing/landing-card-768-300.webp",
+        },
+        {
+          id: 3,
+          title: "Работа 4",
+          image: "/img/landing/landing-card-768-300.webp",
+        },
+        {
+          id: 4,
+          title: "Работа 5",
+          image: "/img/landing/landing-card-768-300.webp",
+        },
+        {
+          id: 5,
+          title: "Работа 6",
+          image: "/img/landing/landing-card-768-300.webp",
         },
       ],
     },
+
+    // cards: [
+    //   {
+    //     id: 0,
+    //     anchor: "Cards-One",
+    //     title: "Card One Title",
+    //     subtitle:
+    //       "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
+    //     image768: "/img/landing/landing-card-768-300.webp",
+    //     image300: "/img/landing/landing-card-300-300.webp",
+    //     textOne:
+    //       "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+    //     textTwo:
+    //       "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
+    //   },
+    //   {
+    //     id: 1,
+    //     anchor: "Cards-Two",
+    //     title: "Card Two Title",
+    //     subtitle:
+    //       "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
+    //     image768: "/img/landing/landing-card-768-300.webp",
+    //     image300: "/img/landing/landing-card-300-300.webp",
+    //     textOne:
+    //       "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+    //     textTwo:
+    //       "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
+    //   },
+    // ],
+
+    // carousel: [
+    //   {
+    //     id: 0,
+    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
+    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
+    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
+    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
+    //     image768: "/img/landing/landing-carousel-768-500.webp",
+    //     title: "Slide One",
+    //   },
+    //   {
+    //     id: 1,
+    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
+    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
+    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
+    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
+    //     image768: "/img/landing/landing-carousel-768-500.webp",
+    //     title: "Slide Two",
+    //   },
+    //   {
+    //     id: 2,
+    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
+    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
+    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
+    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
+    //     image768: "/img/landing/landing-carousel-768-500.webp",
+    //     title: "Slide Three",
+    //   },
+    //   {
+    //     id: 3,
+    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
+    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
+    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
+    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
+    //     image768: "/img/landing/landing-carousel-768-500.webp",
+    //     title: "Slide Four",
+    //   },
+    //   {
+    //     id: 4,
+    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
+    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
+    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
+    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
+    //     image768: "/img/landing/landing-carousel-768-500.webp",
+    //     title: "Slide Five",
+    //   },
+    // ],
+
+    // block: {
+    //   title: "Block Landing Title",
+    //   subtitle:
+    //     "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
+
+    //   cards: [
+    //     {
+    //       id: 0,
+    //       anchor: "BlockCard-One",
+    //       title: "Card One Title",
+    //       image768: "/img/landing/landing-card-768-300.webp",
+    //       image300: "/img/landing/landing-card-300-300.webp",
+    //       textOne:
+    //         "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+    //     },
+    //     {
+    //       id: 1,
+    //       anchor: "BlockCard-Two",
+    //       title: "Card Two Title",
+    //       image768: "/img/landing/landing-card-768-300.webp",
+    //       image300: "/img/landing/landing-card-300-300.webp",
+    //       textOne:
+    //         "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+    //     },
+    //     {
+    //       id: 2,
+    //       anchor: "BlockCard-Three",
+    //       title: "Card Three Title",
+    //       image768: "/img/landing/landing-card-768-300.webp",
+    //       image300: "/img/landing/landing-card-300-300.webp",
+    //       textOne:
+    //         "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
+    //     },
+    //   ],
+    // },
   },
 
   descriptionAfterExample: [

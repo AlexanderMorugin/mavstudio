@@ -96,6 +96,19 @@ export interface ISiteExampleAbout {
   textTwo?: string;
 }
 
+export interface ISiteExamplePortfolio {
+  anchor: string;
+  title: string;
+  subtitle: string;
+  card: [
+    {
+      id: number;
+      title: string;
+      image: string;
+    },
+  ];
+}
+
 export interface ISiteExample {
   title: string;
   subtitle: string;
@@ -103,9 +116,10 @@ export interface ISiteExample {
   nav: ISiteExampleNav[];
   hero: ISiteExampleHero;
   about?: ISiteExampleAbout;
-  cards: ISiteExampleCard[];
-  block: ISiteExampleBlock;
-  carousel: ISiteExampleCarousel[];
+  portfolio?: ISiteExamplePortfolio;
+  cards?: ISiteExampleCard[];
+  block?: ISiteExampleBlock;
+  carousel?: ISiteExampleCarousel[];
 }
 
 export interface ISiteMeta {
