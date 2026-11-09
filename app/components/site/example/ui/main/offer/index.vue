@@ -6,9 +6,16 @@
     />
 
     <div class="siteExampleUiMainOffer__container">
-      <div v-if="currentCard" class="siteExampleUiMainOffer__product">
+      <div
+        :class="[
+          'siteExampleUiMainOffer__product',
+          {
+            siteExampleUiMainOffer__product_active: isActive,
+          },
+        ]"
+      >
         <img
-          :src="currentCard.image1280"
+          :src="currentCard?.image1280"
           class="siteExampleUiMainOffer__productImage"
         />
       </div>
@@ -47,9 +54,15 @@ const props = defineProps<{
 }>();
 
 const currentCard = ref(props.offer.card[0]);
+const isActive = ref(false);
 
 const setCard = (id: number) => {
-  currentCard.value = props.offer.card.find((item) => item.id === id);
+  isActive.value = false;
+
+  if (currentCard.value?.id !== id) {
+    currentCard.value = props.offer.card.find((item) => item.id === id);
+    setTimeout(() => (isActive.value = true), 10);
+  }
 };
 </script>
 
@@ -58,7 +71,7 @@ const setCard = (id: number) => {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 80px;
+  margin-top: 80px;
 
   &__container {
     display: grid;
@@ -78,7 +91,11 @@ const setCard = (id: number) => {
     overflow: hidden;
 
     @media (max-width: 576px) {
-      height: 400px;
+      height: 350px;
+    }
+
+    &_active {
+      animation: appear 0.8s ease;
     }
   }
 
@@ -108,6 +125,10 @@ const setCard = (id: number) => {
     overflow: hidden;
     transition: 0.2s ease;
 
+    @media (max-width: 576px) {
+      height: 60px;
+    }
+
     &_active {
       filter: blur(5px);
       cursor: default;
@@ -118,6 +139,17 @@ const setCard = (id: number) => {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@keyframes appear {
+  60% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 </style>

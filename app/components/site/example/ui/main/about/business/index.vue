@@ -28,7 +28,7 @@ const props = defineProps<{
 .siteExampleUiMainAboutBusiness {
   display: grid;
   grid-template-columns: 60% 40%;
-  padding-top: 80px;
+  margin-top: 80px;
 
   @media (max-width: 1023px) {
     grid-template-columns: 1fr;

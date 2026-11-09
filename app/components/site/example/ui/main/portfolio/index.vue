@@ -87,7 +87,7 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 80px;
+  margin-top: 80px;
 
   &__container {
     display: grid;
