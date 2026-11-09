@@ -1,12 +1,6 @@
 <template>
-  <section
-    :id="props.siteDataExamplePortfolio.anchor"
-    class="siteExampleUiMainPortfolio"
-  >
-    <SiteExampleUiMainPortfolioTitle
-      :title="props.siteDataExamplePortfolio.title"
-      :subtitle="props.siteDataExamplePortfolio.subtitle"
-    />
+  <section :id="props.anchor" class="siteExampleUiMainPortfolio">
+    <SiteExampleUiTitleBlock :title="props.title" :subtitle="props.subtitle" />
 
     <div class="siteExampleUiMainPortfolio__container">
       <div class="siteExampleUiMainPortfolio__grid">
@@ -14,9 +8,9 @@
           class="siteExampleUiMainPortfolio__element siteExampleUiMainPortfolio__element_one"
         >
           <img
-            :src="props.siteDataExamplePortfolio.card[0].image"
-            :alt="props.siteDataExamplePortfolio.card[0].title"
-            :title="props.siteDataExamplePortfolio.card[0].title"
+            :src="props.card[0]?.image"
+            :alt="props.card[0]?.title"
+            :title="props.card[0]?.title"
             class="siteExampleUiMainPortfolio__image"
           />
         </div>
@@ -24,9 +18,9 @@
           class="siteExampleUiMainPortfolio__element siteExampleUiMainPortfolio__element_two"
         >
           <img
-            :src="props.siteDataExamplePortfolio.card[1].image"
-            :alt="props.siteDataExamplePortfolio.card[1].title"
-            :title="props.siteDataExamplePortfolio.card[1].title"
+            :src="props.card[1]?.image"
+            :alt="props.card[1]?.title"
+            :title="props.card[1]?.title"
             class="siteExampleUiMainPortfolio__image"
           />
         </div>
@@ -34,9 +28,9 @@
           class="siteExampleUiMainPortfolio__element siteExampleUiMainPortfolio__element_three"
         >
           <img
-            :src="props.siteDataExamplePortfolio.card[2].image"
-            :alt="props.siteDataExamplePortfolio.card[2].title"
-            :title="props.siteDataExamplePortfolio.card[2].title"
+            :src="props.card[2]?.image"
+            :alt="props.card[2]?.title"
+            :title="props.card[2]?.title"
             class="siteExampleUiMainPortfolio__image"
           />
         </div>
@@ -46,9 +40,9 @@
           class="siteExampleUiMainPortfolio__element siteExampleUiMainPortfolio__element_four"
         >
           <img
-            :src="props.siteDataExamplePortfolio.card[3].image"
-            :alt="props.siteDataExamplePortfolio.card[3].title"
-            :title="props.siteDataExamplePortfolio.card[3].title"
+            :src="props.card[3]?.image"
+            :alt="props.card[3]?.title"
+            :title="props.card[3]?.title"
             class="siteExampleUiMainPortfolio__image"
           />
         </div>
@@ -56,9 +50,9 @@
           class="siteExampleUiMainPortfolio__element siteExampleUiMainPortfolio__element_five"
         >
           <img
-            :src="props.siteDataExamplePortfolio.card[4].image"
-            :alt="props.siteDataExamplePortfolio.card[4].title"
-            :title="props.siteDataExamplePortfolio.card[4].title"
+            :src="props.card[4]?.image"
+            :alt="props.card[4]?.title"
+            :title="props.card[4]?.title"
             class="siteExampleUiMainPortfolio__image"
           />
         </div>
@@ -66,9 +60,9 @@
           class="siteExampleUiMainPortfolio__element siteExampleUiMainPortfolio__element_six"
         >
           <img
-            :src="props.siteDataExamplePortfolio.card[5].image"
-            :alt="props.siteDataExamplePortfolio.card[5].title"
-            :title="props.siteDataExamplePortfolio.card[5].title"
+            :src="props.card[5]?.image"
+            :alt="props.card[5]?.title"
+            :title="props.card[5]?.title"
             class="siteExampleUiMainPortfolio__image"
           />
         </div>
@@ -78,13 +72,14 @@
 </template>
 
 <script setup lang="ts">
-import type { ISiteExamplePortfolio } from "~/types/site";
+import type { ISiteExamplePortfolioCard } from "~/types/site";
 
 const props = defineProps<{
-  siteDataExamplePortfolio: ISiteExamplePortfolio;
+  anchor: string;
+  title: string;
+  subtitle: string;
+  card: ISiteExamplePortfolioCard[];
 }>();
-
-console.log(props.siteDataExamplePortfolio);
 </script>
 
 <style lang="scss" scoped>
@@ -98,8 +93,6 @@ console.log(props.siteDataExamplePortfolio);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-    // margin-top: 20px;
-    // padding: 5px;
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;

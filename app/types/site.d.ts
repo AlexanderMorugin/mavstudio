@@ -96,17 +96,35 @@ export interface ISiteExampleAbout {
   textTwo?: string;
 }
 
+export interface ISiteExamplePortfolioCard {
+  id: number;
+  title: string;
+  image: string;
+}
+
 export interface ISiteExamplePortfolio {
   anchor: string;
   title: string;
   subtitle: string;
-  card: [
-    {
-      id: number;
-      title: string;
-      image: string;
-    },
-  ];
+  card: ISiteExamplePortfolioCard[];
+}
+
+export interface ISiteExampleOfferCard {
+  id: number;
+  title: string;
+  subtitle: string;
+  image3840: string;
+  image1920: string;
+  image1280: string;
+  image768: string;
+  image350: string;
+}
+
+export interface ISiteExampleOffer {
+  anchor: string;
+  title: string;
+  subtitle: string;
+  card: ISiteExampleOfferCard[];
 }
 
 export interface ISiteExample {
@@ -116,6 +134,7 @@ export interface ISiteExample {
   nav: ISiteExampleNav[];
   hero: ISiteExampleHero;
   about?: ISiteExampleAbout;
+  offer?: ISiteExampleOffer;
   portfolio?: ISiteExamplePortfolio;
   cards?: ISiteExampleCard[];
   block?: ISiteExampleBlock;

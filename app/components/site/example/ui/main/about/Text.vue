@@ -1,13 +1,18 @@
 <template>
   <div class="siteExampleUiMainAboutText">
-    <div class="siteExampleUiMainAboutText__titleBox">
+    <!-- <div class="siteExampleUiMainAboutText__titleBox">
       <h3 class="siteExampleUiMainAboutText__title">
         {{ props.title }}
       </h3>
       <ParagraphNormal black class="siteExampleUiMainAboutText__subtitle">
         {{ props.subtitle }}
       </ParagraphNormal>
-    </div>
+    </div> -->
+    <SiteExampleUiTitleBlock
+      :title="props.title"
+      :subtitle="props.subtitle"
+      isLineBottom
+    />
 
     <div class="siteExampleUiMainAboutText__textBox">
       <ParagraphNormal black>
@@ -39,30 +44,30 @@ const props = defineProps<{
     padding-right: 0;
   }
 
-  &__titleBox {
-    padding-bottom: 10px;
-    border-bottom: 1px solid $black-mask-three;
-  }
+  // &__titleBox {
+  //   padding-bottom: 10px;
+  //   border-bottom: 1px solid $black-mask-three;
+  // }
 
-  &__title {
-    font-family: "Montserrat-Bold", sans-serif;
-    font-size: 44px;
-    text-align: center;
-    color: $black-mask-two;
+  // &__title {
+  //   font-family: "Montserrat-Bold", sans-serif;
+  //   font-size: 44px;
+  //   text-align: center;
+  //   color: $black-mask-two;
 
-    @media (max-width: 1023px) {
-      font-size: 32px;
-    }
+  //   @media (max-width: 1023px) {
+  //     font-size: 32px;
+  //   }
 
-    @media (max-width: 576px) {
-      font-size: 24px;
-    }
-  }
+  //   @media (max-width: 576px) {
+  //     font-size: 24px;
+  //   }
+  // }
 
-  &__subtitle {
-    text-align: center;
-    color: $black-mask-two;
-  }
+  // &__subtitle {
+  //   text-align: center;
+  //   color: $black-mask-two;
+  // }
 
   &__textBox {
     display: flex;

@@ -1,9 +1,14 @@
 <template>
-  <div class="siteExampleUiMainPortfolioTitle">
-    <h3 class="siteExampleUiMainPortfolioTitle__text">
+  <div
+    :class="[
+      'siteExampleUiTitleBlock',
+      { siteExampleUiTitleBlock_isLineBottom: props.isLineBottom },
+    ]"
+  >
+    <h3 class="siteExampleUiTitleBlock__text">
       {{ props.title }}
     </h3>
-    <ParagraphNormal black class="siteExampleUiMainPortfolioTitle__subtitle">
+    <ParagraphNormal black class="siteExampleUiTitleBlock__subtitle">
       {{ props.subtitle }}
     </ParagraphNormal>
   </div>
@@ -13,23 +18,16 @@
 const props = defineProps<{
   title: string;
   subtitle: string;
+  isLineBottom?: boolean;
 }>();
 </script>
 
 <style lang="scss" scoped>
-.siteExampleUiMainPortfolioTitle {
-  // padding-left: 20px;
-  // padding-right: 20px;
-
-  // @media (max-width: 1023px) {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
-
-  // &__titleBox {
-  //   padding-bottom: 10px;
-  //   border-bottom: 1px solid $black-mask-three;
-  // }
+.siteExampleUiTitleBlock {
+  &_isLineBottom {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black-mask-three;
+  }
 
   &__text {
     font-family: "Montserrat-Bold", sans-serif;

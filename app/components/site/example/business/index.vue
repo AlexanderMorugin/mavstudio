@@ -16,9 +16,17 @@
         v-if="props.siteData.example.about"
         :siteDataExampleAbout="props.siteData.example.about"
       />
+      <SiteExampleUiMainOffer
+        v-if="props.siteData.example.offer"
+        :offer="props.siteData.example.offer"
+      />
+
       <SiteExampleUiMainPortfolio
         v-if="props.siteData.example.portfolio"
-        :siteDataExamplePortfolio="props.siteData.example.portfolio"
+        :anchor="props.siteData.example.portfolio.anchor"
+        :title="props.siteData.example.portfolio.title"
+        :subtitle="props.siteData.example.portfolio.subtitle"
+        :card="props.siteData.example.portfolio.card"
       />
     </ContainerPage>
     <!-- <SiteExampleUiMainCarousel
