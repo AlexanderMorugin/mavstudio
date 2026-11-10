@@ -6,7 +6,12 @@
     />
 
     <div class="siteExampleUiMainOffer__container">
-      <div
+      <SiteExampleUiMainOfferCard
+        v-if="currentCard"
+        :card="currentCard"
+        :isActive="isActive"
+      />
+      <!-- <div
         :class="[
           'siteExampleUiMainOffer__product',
           {
@@ -18,7 +23,7 @@
           :src="currentCard?.image1280"
           class="siteExampleUiMainOffer__productImage"
         />
-      </div>
+      </div> -->
 
       <div class="siteExampleUiMainOffer__gridBox">
         <div class="siteExampleUiMainOffer__grid">
@@ -60,8 +65,12 @@ const setCard = (id: number) => {
   isActive.value = false;
 
   if (currentCard.value?.id !== id) {
-    currentCard.value = props.offer.card.find((item) => item.id === id);
     setTimeout(() => (isActive.value = true), 10);
+    setTimeout(
+      () =>
+        (currentCard.value = props.offer.card.find((item) => item.id === id)),
+      100,
+    );
   }
 };
 </script>
