@@ -14,11 +14,11 @@
     <ContainerPage desktopPadding>
       <SiteExampleUiMainAboutBusiness
         v-if="props.siteData.example.about"
-        :siteDataExampleAbout="props.siteData.example.about"
+        :aboutData="props.siteData.example.about"
       />
       <SiteExampleUiMainOffer
         v-if="props.siteData.example.offer"
-        :offer="props.siteData.example.offer"
+        :offerData="props.siteData.example.offer"
       />
 
       <SiteExampleUiMainPortfolio
@@ -28,36 +28,18 @@
         :subtitle="props.siteData.example.portfolio.subtitle"
         :card="props.siteData.example.portfolio.card"
       />
+
+      <SiteExampleUiMainReview
+        v-if="props.siteData.example.review"
+        :reviewData="props.siteData.example.review"
+      />
     </ContainerPage>
-    <!-- <SiteExampleUiMainCarousel
-      :siteDataCarousel="props.siteData.example.carousel"
-    /> -->
 
     <SiteExampleUiFooter
       :siteName="props.siteData.name"
       :navData="props.siteData.example.nav"
     />
   </div>
-
-  <!-- <ContainerPage desktopPadding class="siteExampleUiBusiness__container">
-    <SiteExampleUiMainCard
-      v-for="item in props.siteData.example.cards"
-      :key="item.id"
-      :item="item"
-    />
-  </ContainerPage> -->
-
-  <!-- <SiteExampleUiMainCarousel
-    :siteDataCarousel="props.siteData.example.carousel"
-  /> -->
-
-  <!-- <div class="siteExampleUiBusiness">
-    <SiteExampleUiBackgroundLanding
-      :background="props.siteData.example.background"
-    />
-    <SiteExampleUiMainBlock :siteDataBlock="props.siteData.example.block" />
-
-  </div> -->
 </template>
 
 <script setup lang="ts">

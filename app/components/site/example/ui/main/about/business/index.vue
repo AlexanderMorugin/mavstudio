@@ -1,17 +1,14 @@
 <template>
-  <section
-    :id="props.siteDataExampleAbout.anchor"
-    class="siteExampleUiMainAboutBusiness"
-  >
+  <section :id="props.aboutData.anchor" class="siteExampleUiMainAboutBusiness">
     <SiteExampleUiMainAboutText
-      :title="props.siteDataExampleAbout.title"
-      :subtitle="props.siteDataExampleAbout.subtitle"
-      :textOne="props.siteDataExampleAbout.textOne"
-      :textTwo="props.siteDataExampleAbout.textTwo"
+      :title="props.aboutData.title"
+      :subtitle="props.aboutData.subtitle"
+      :textOne="props.aboutData.textOne"
+      :textTwo="props.aboutData.textTwo"
     />
     <SiteExampleUiMainAboutImage
-      :image="props.siteDataExampleAbout.image"
-      :title="props.siteDataExampleAbout.title"
+      :image="props.aboutData.image"
+      :title="props.aboutData.title"
     />
   </section>
 </template>
@@ -20,7 +17,7 @@
 import type { ISiteExampleAbout } from "~/types/site";
 
 const props = defineProps<{
-  siteDataExampleAbout: ISiteExampleAbout;
+  aboutData: ISiteExampleAbout;
 }>();
 </script>
 

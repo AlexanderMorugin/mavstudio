@@ -11,5 +11,3 @@ const props = defineProps<{
   card: ISiteExampleOfferCard;
 }>();
 </script>
-
-<style lang="scss" scoped></style>

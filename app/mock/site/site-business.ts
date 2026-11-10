@@ -111,7 +111,7 @@ export const siteBusiness = {
       },
       {
         id: 3,
-        title: "наши работы",
+        title: "ваши-работы",
         anchor: "portfolio-page",
       },
       {
@@ -148,6 +148,7 @@ export const siteBusiness = {
       anchor: "offer-page",
       title: "Ваши-предложения",
       subtitle: "Представляем наши наиболее достойные работы.",
+      text: "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки. Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
 
       card: [
         {
@@ -258,118 +259,77 @@ export const siteBusiness = {
       ],
     },
 
-    // cards: [
-    //   {
-    //     id: 0,
-    //     anchor: "Cards-One",
-    //     title: "Card One Title",
-    //     subtitle:
-    //       "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-    //     image768: "/img/landing/landing-card-768-300.webp",
-    //     image300: "/img/landing/landing-card-300-300.webp",
-    //     textOne:
-    //       "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-    //     textTwo:
-    //       "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
-    //   },
-    //   {
-    //     id: 1,
-    //     anchor: "Cards-Two",
-    //     title: "Card Two Title",
-    //     subtitle:
-    //       "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-    //     image768: "/img/landing/landing-card-768-300.webp",
-    //     image300: "/img/landing/landing-card-300-300.webp",
-    //     textOne:
-    //       "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-    //     textTwo:
-    //       "Конечно же возможно использование разной анимации, не мешающей восприятию информации. Примеры анимации смотрите на страницах нашего сайта. Их много.",
-    //   },
-    // ],
+    review: {
+      anchor: "review-page",
+      title: "Отзывы",
+      subtitle: "Представляем наши наиболее достойные работы.",
 
-    // carousel: [
-    //   {
-    //     id: 0,
-    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
-    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
-    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
-    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
-    //     image768: "/img/landing/landing-carousel-768-500.webp",
-    //     title: "Slide One",
-    //   },
-    //   {
-    //     id: 1,
-    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
-    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
-    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
-    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
-    //     image768: "/img/landing/landing-carousel-768-500.webp",
-    //     title: "Slide Two",
-    //   },
-    //   {
-    //     id: 2,
-    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
-    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
-    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
-    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
-    //     image768: "/img/landing/landing-carousel-768-500.webp",
-    //     title: "Slide Three",
-    //   },
-    //   {
-    //     id: 3,
-    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
-    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
-    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
-    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
-    //     image768: "/img/landing/landing-carousel-768-500.webp",
-    //     title: "Slide Four",
-    //   },
-    //   {
-    //     id: 4,
-    //     image3840: "/img/landing/landing-carousel-3840-700.webp",
-    //     image1920: "/img/landing/landing-carousel-1920-700.webp",
-    //     image1280: "/img/landing/landing-carousel-1280-500.webp",
-    //     image1024: "/img/landing/landing-carousel-1024-500.webp",
-    //     image768: "/img/landing/landing-carousel-768-500.webp",
-    //     title: "Slide Five",
-    //   },
-    // ],
-
-    // block: {
-    //   title: "Block Landing Title",
-    //   subtitle:
-    //     "Краткое описание в нескольких словах, чтобы не вчитываясь в весь блок было бы немного понятно о чём идет речь.",
-
-    //   cards: [
-    //     {
-    //       id: 0,
-    //       anchor: "BlockCard-One",
-    //       title: "Card One Title",
-    //       image768: "/img/landing/landing-card-768-300.webp",
-    //       image300: "/img/landing/landing-card-300-300.webp",
-    //       textOne:
-    //         "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-    //     },
-    //     {
-    //       id: 1,
-    //       anchor: "BlockCard-Two",
-    //       title: "Card Two Title",
-    //       image768: "/img/landing/landing-card-768-300.webp",
-    //       image300: "/img/landing/landing-card-300-300.webp",
-    //       textOne:
-    //         "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-    //     },
-    //     {
-    //       id: 2,
-    //       anchor: "BlockCard-Three",
-    //       title: "Card Three Title",
-    //       image768: "/img/landing/landing-card-768-300.webp",
-    //       image300: "/img/landing/landing-card-300-300.webp",
-    //       textOne:
-    //         "Блоки, так же как другие элементы лендинга, могут быть различного дизайна и наполнения. Фото на сайте рекомендуется использовать свои и без компьютерной обработки.",
-    //     },
-    //   ],
-    // },
+      card: [
+        {
+          id: 0,
+          userName: "Николай",
+          userCompany: "Международная организация",
+          userImage: "/img/business/offer/offer-2-768-432.webp",
+          title: "Отзыв 1",
+          textOne:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение. Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+          textTwo: "",
+        },
+        {
+          id: 1,
+          userName: "Анастасия",
+          userCompany: "Коммерческие перевозки",
+          userImage: "/img/business/offer/offer-2-768-432.webp",
+          title: "Отзыв 2",
+          textOne:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение. Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+          textTwo:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+        },
+        {
+          id: 2,
+          userName: "Валентина",
+          userCompany: "Библиотека",
+          userImage: "/img/business/offer/offer-2-768-432.webp",
+          title: "Отзыв 3",
+          textOne:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+          textTwo: "",
+        },
+        {
+          id: 3,
+          userName: "Игорь",
+          userCompany: "Охотовед",
+          userImage: "/img/business/offer/offer-2-768-432.webp",
+          title: "Отзыв 4",
+          textOne:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+          textTwo:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение. Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+        },
+        {
+          id: 4,
+          userName: "Наталия",
+          userCompany: "Общепит",
+          userImage: "/img/business/offer/offer-2-768-432.webp",
+          title: "Отзыв 5",
+          textOne:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение. Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+          textTwo: "",
+        },
+        {
+          id: 5,
+          userName: "Вячеслав",
+          userCompany: "Музей",
+          userImage: "/img/business/offer/offer-2-768-432.webp",
+          title: "Отзыв 6",
+          textOne:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение. Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+          textTwo:
+            "Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение. Ничего в этой конторе не заказывал никогда и вообще она у меня вызывает большое сомнение.",
+        },
+      ],
+    },
   },
 
   descriptionAfterExample: [

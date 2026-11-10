@@ -125,7 +125,25 @@ export interface ISiteExampleOffer {
   anchor: string;
   title: string;
   subtitle: string;
+  text: string;
   card: ISiteExampleOfferCard[];
+}
+
+export interface ISiteExampleReviewCard {
+  id: number;
+  userName: string;
+  userCompany: string;
+  userImage: string;
+  title: string;
+  textOne: string;
+  textTwo?: string;
+}
+
+export interface ISiteExampleReview {
+  anchor: string;
+  title: string;
+  subtitle: string;
+  card: ISiteExampleReviewCard[];
 }
 
 export interface ISiteExample {
@@ -137,6 +155,7 @@ export interface ISiteExample {
   about?: ISiteExampleAbout;
   offer?: ISiteExampleOffer;
   portfolio?: ISiteExamplePortfolio;
+  review?: ISiteExampleReview;
   cards?: ISiteExampleCard[];
   block?: ISiteExampleBlock;
   carousel?: ISiteExampleCarousel[];

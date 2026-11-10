@@ -1,8 +1,8 @@
 <template>
-  <section :id="props.offer.anchor" class="siteExampleUiMainOffer">
+  <section :id="props.offerData.anchor" class="siteExampleUiMainOffer">
     <SiteExampleUiTitleBlock
-      :title="props.offer.title"
-      :subtitle="props.offer.subtitle"
+      :title="props.offerData.title"
+      :subtitle="props.offerData.subtitle"
     />
 
     <div class="siteExampleUiMainOffer__container">
@@ -16,7 +16,7 @@
       <div class="siteExampleUiMainOffer__gridBox">
         <div class="siteExampleUiMainOffer__grid">
           <button
-            v-for="item in props.offer.card"
+            v-for="item in props.offerData.card"
             :key="item.id"
             :class="[
               'siteExampleUiMainOffer__gridCard',
@@ -34,6 +34,7 @@
             />
           </button>
         </div>
+        <ParagraphNormal black>{{ props.offerData.text }}</ParagraphNormal>
       </div>
     </div>
   </section>
@@ -55,10 +56,10 @@
 import type { ISiteExampleOffer } from "~/types/site";
 
 const props = defineProps<{
-  offer: ISiteExampleOffer;
+  offerData: ISiteExampleOffer;
 }>();
 
-const currentCard = ref(props.offer.card[0]);
+const currentCard = ref(props.offerData.card[0]);
 const isActive = ref(false);
 const isCardModalOpen = ref(false);
 
@@ -69,7 +70,9 @@ const setCard = (id: number) => {
     setTimeout(() => (isActive.value = true), 10);
     setTimeout(
       () =>
-        (currentCard.value = props.offer.card.find((item) => item.id === id)),
+        (currentCard.value = props.offerData.card.find(
+          (item) => item.id === id,
+        )),
       100,
     );
   }
@@ -104,8 +107,8 @@ watch(isCardModalOpen, (newValue) => {
 
   &__gridBox {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
   }
 
   &__grid {
