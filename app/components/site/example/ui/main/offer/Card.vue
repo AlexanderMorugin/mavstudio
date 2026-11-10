@@ -1,9 +1,13 @@
 <template>
   <div
+    @click="emit('openCardModal')"
     :class="[
       'siteExampleUiMainOfferCard',
       {
         siteExampleUiMainOfferCard_active: isActive,
+      },
+      {
+        siteExampleUiMainOfferCard_isModal: isModal,
       },
     ]"
   >
@@ -42,8 +46,11 @@ import type { ISiteExampleOfferCard } from "~/types/site";
 
 const props = defineProps<{
   card: ISiteExampleOfferCard;
-  isActive: boolean;
+  isActive?: boolean;
+  isModal?: boolean;
 }>();
+
+const emit = defineEmits(["openCardModal"]);
 </script>
 
 <style lang="scss" scoped>
@@ -54,6 +61,7 @@ const props = defineProps<{
   height: 500px;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
 
   @media (max-width: 576px) {
     height: 350px;
@@ -61,6 +69,13 @@ const props = defineProps<{
 
   &_active {
     animation: appear 0.8s ease;
+  }
+
+  &_isModal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    cursor: default;
   }
 
   &__image {
@@ -87,10 +102,20 @@ const props = defineProps<{
   }
 }
 @keyframes text-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  59% {
+    opacity: 0;
+    transform: translateY(0);
+  }
   60% {
+    opacity: 0;
     transform: translateY(200%);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }

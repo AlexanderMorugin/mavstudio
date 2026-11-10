@@ -10,20 +10,8 @@
         v-if="currentCard"
         :card="currentCard"
         :isActive="isActive"
+        @openCardModal="isCardModalOpen = true"
       />
-      <!-- <div
-        :class="[
-          'siteExampleUiMainOffer__product',
-          {
-            siteExampleUiMainOffer__product_active: isActive,
-          },
-        ]"
-      >
-        <img
-          :src="currentCard?.image1280"
-          class="siteExampleUiMainOffer__productImage"
-        />
-      </div> -->
 
       <div class="siteExampleUiMainOffer__gridBox">
         <div class="siteExampleUiMainOffer__grid">
@@ -49,6 +37,18 @@
       </div>
     </div>
   </section>
+
+  <ClientOnly>
+    <Teleport to="#teleports">
+      <Transition name="top">
+        <SiteExampleUiMainOfferModal
+          v-if="isCardModalOpen && currentCard"
+          :card="currentCard"
+          @closeModal="isCardModalOpen = false"
+        />
+      </Transition>
+    </Teleport>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
@@ -60,6 +60,7 @@ const props = defineProps<{
 
 const currentCard = ref(props.offer.card[0]);
 const isActive = ref(false);
+const isCardModalOpen = ref(false);
 
 const setCard = (id: number) => {
   isActive.value = false;
@@ -73,6 +74,14 @@ const setCard = (id: number) => {
     );
   }
 };
+
+watch(isCardModalOpen, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+});
 </script>
 
 <style lang="scss" scoped>
@@ -91,28 +100,6 @@ const setCard = (id: number) => {
       grid-template-columns: 1fr;
       gap: 10px;
     }
-  }
-
-  &__product {
-    display: block;
-    height: 500px;
-    border-radius: 8px;
-    overflow: hidden;
-
-    @media (max-width: 576px) {
-      height: 350px;
-    }
-
-    &_active {
-      animation: appear 0.8s ease;
-    }
-  }
-
-  &__productImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
   }
 
   &__gridBox {
