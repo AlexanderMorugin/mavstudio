@@ -11,14 +11,24 @@
       },
     ]"
   >
-    <picture>
-      <source media="(max-width: 767px)" :srcset="props.card.image768" />
+    <picture v-if="!props.isModal">
+      <source media="(max-width: 576px)" :srcset="props.card.image768" />
+      <source media="(max-width: 3840px)" :srcset="props.card.image1280" />
+      <img
+        :src="props.card.image768"
+        :alt="props.card.title"
+        :title="props.card.title"
+        class="siteExampleUiMainOfferCard__image"
+      />
+    </picture>
+
+    <picture v-if="props.isModal">
+      <source media="(max-width: 767px)" :srcset="props.card.image1080" />
       <source media="(max-width: 1279px)" :srcset="props.card.image1280" />
       <source media="(max-width: 1919px)" :srcset="props.card.image1920" />
       <source media="(max-width: 3840px)" :srcset="props.card.image3840" />
-
       <img
-        :src="props.card.image768"
+        :src="props.card.image1080"
         :alt="props.card.title"
         :title="props.card.title"
         class="siteExampleUiMainOfferCard__image"

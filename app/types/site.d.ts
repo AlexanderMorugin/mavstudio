@@ -116,8 +116,9 @@ export interface ISiteExampleOfferCard {
   image3840: string;
   image1920: string;
   image1280: string;
+  image1080: string;
   image768: string;
-  image350: string;
+  image200: string;
 }
 
 export interface ISiteExampleOffer {

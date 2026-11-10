@@ -28,7 +28,7 @@
             @click="setCard(item.id)"
           >
             <img
-              :src="item.image350"
+              :src="item.image200"
               :alt="item.title"
               class="siteExampleUiMainOffer__gridImage"
             />
