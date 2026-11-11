@@ -1,5 +1,5 @@
 <template>
-  <div class="siteListCarousel">
+  <div class="emblaListCardCarousel">
     <EmblaButtonControl
       isListCarousel
       :canScroll="canScrollPrev"
@@ -16,13 +16,24 @@
     <div class="embla">
       <div class="embla__viewport" ref="emblaRef">
         <div class="embla__container">
-          <div
-            v-for="item in props.catalog"
+          <EmblaSlideSiteCatalog
+            v-if="props.siteCatalog"
+            :siteCatalog="props.siteCatalog"
+          />
+
+          <EmblaSlideSiteExampleReview
+            v-if="props.reviewData"
+            :reviewData="props.reviewData"
+          />
+
+          <!-- <div
+            v-if="isSiteCatalog"
+            v-for="item in props.listData"
             :key="item.id"
             class="embla__slide"
           >
             <SiteListCarouselCard :item="item.siteData.listCard" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -33,10 +44,16 @@
 import useEmblaCarousel from "embla-carousel-vue";
 import type { EmblaCarouselType } from "embla-carousel";
 import type { ISiteCatalog } from "~/types/site";
+import type { IReview } from "~/types/review";
 
 const props = defineProps<{
-  catalog: ISiteCatalog[];
+  siteCatalog?: ISiteCatalog[];
+  reviewData?: IReview[];
+  // isReview?: boolean;
+  // isSiteCatalog?: boolean;
 }>();
+
+// console.log(props.listData);
 
 const [emblaRef, emblaApi] = useEmblaCarousel({
   loop: true,
@@ -64,7 +81,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.siteListCarousel {
+.emblaListCardCarousel {
   position: relative;
   padding-left: 50px;
   padding-right: 50px;
@@ -81,34 +98,29 @@ onMounted(() => {
 }
 .embla {
   width: 100%;
-  // margin: auto;
-  --slide-size: 335px;
-  // --slide-size-m: 265px;
-  --slide-size-m: 100%;
-  // --slide-spacing: 1rem;
+  // --slide-size: 335px;
+  // --slide-size-m: 100%;
   --slide-spacing: 40px;
-  --slide-spacing-m: 20px;
-  // border: 1px solid red;
+  // --slide-spacing-m: 20px;
 }
 .embla__viewport {
   overflow: hidden;
 }
 .embla__container {
   display: flex;
-
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 
   // justify-content: center;
 }
-.embla__slide {
-  flex: 0 0 var(--slide-size);
-  min-width: 0;
-  padding-left: var(--slide-spacing);
+// .embla__slide {
+//   flex: 0 0 var(--slide-size);
+//   min-width: 0;
+//   padding-left: var(--slide-spacing);
 
-  @media (max-width: 576px) {
-    flex: 0 0 var(--slide-size-m);
-    padding-left: var(--slide-spacing-m);
-  }
-}
+//   @media (max-width: 576px) {
+//     flex: 0 0 var(--slide-size-m);
+//     padding-left: var(--slide-spacing-m);
+//   }
+// }
 </style>

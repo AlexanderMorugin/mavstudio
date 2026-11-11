@@ -6,8 +6,8 @@
     />
 
     <div class="siteExampleUiMainReview__container">
-      <SiteExampleUiMainReviewCarousel />
-      <SiteExampleUiMainReviewForm />
+      <EmblaListCardCarousel :reviewData="props.reviewData.card" />
+      <!-- <SiteExampleUiMainReviewForm /> -->
     </div>
   </section>
 </template>
@@ -29,15 +29,13 @@ const props = defineProps<{
 
   &__container {
     display: grid;
-    grid-template-columns: auto 30%;
+    grid-template-columns: 70% auto;
     gap: 20px;
 
-    height: 300px;
-    background: grey;
+    // height: 300px;
 
     @media (max-width: 1023px) {
-      grid-template-columns: 1fr;
-      gap: 10px;
+      grid-template-columns: 100%;
     }
   }
 }

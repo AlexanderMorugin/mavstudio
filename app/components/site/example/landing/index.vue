@@ -17,9 +17,7 @@
     </ContainerPage>
   </div>
 
-  <SiteExampleUiMainCarousel
-    :siteDataCarousel="props.siteData.example.carousel"
-  />
+  <SiteExampleUiMainCarousel :listData="props.siteData.example.carousel" />
 
   <div class="siteExampleUiLanding">
     <SiteExampleUiBackgroundLanding

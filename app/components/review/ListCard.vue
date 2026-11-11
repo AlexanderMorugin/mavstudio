@@ -3,18 +3,17 @@
     <div class="reviewListCard__textBlock">
       <div class="reviewListCard__user">
         <div class="reviewListCard__userIcon">
-          {{ props.review.firstLetter }}
+          {{ props.review.userNameFirstLetter }}
         </div>
         <div>
-          <span class="reviewListCard__userName">{{ props.review.user }}</span>
+          <span class="reviewListCard__userName">{{
+            props.review.userName
+          }}</span>
           <ParagraphSmall>{{ props.review.userStatus }}</ParagraphSmall>
         </div>
       </div>
-      <ParagraphNormal v-if="props.review.textOne" black>{{
-        props.review.textOne
-      }}</ParagraphNormal>
-      <ParagraphNormal v-if="props.review.textTwo" black>{{
-        props.review.textTwo
+      <ParagraphNormal v-if="props.review.text" black>{{
+        props.review.text
       }}</ParagraphNormal>
     </div>
 
@@ -37,6 +36,8 @@ const props = defineProps<{
   justify-content: space-between;
   gap: 30px;
   height: 100%;
+
+  // border: 1px solid red;
 
   &__textBlock {
     display: flex;

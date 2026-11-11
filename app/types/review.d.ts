@@ -1,9 +1,9 @@
 export interface IReview {
   id: number;
-  user: string;
-  firstLetter: string;
+  userName: string;
+  userNameFirstLetter?: string;
   userStatus: string;
-  textOne: string;
-  textTwo?: string;
+  userImage?: string;
+  text: string;
   date: string;
 }

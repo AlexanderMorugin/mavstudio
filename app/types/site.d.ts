@@ -1,3 +1,5 @@
+import type { IReview } from "./review";
+
 export interface ISiteListCard {
   name: string;
   title: string;
@@ -129,21 +131,11 @@ export interface ISiteExampleOffer {
   card: ISiteExampleOfferCard[];
 }
 
-export interface ISiteExampleReviewCard {
-  id: number;
-  userName: string;
-  userCompany: string;
-  userImage: string;
-  title: string;
-  textOne: string;
-  textTwo?: string;
-}
-
 export interface ISiteExampleReview {
   anchor: string;
   title: string;
   subtitle: string;
-  card: ISiteExampleReviewCard[];
+  card: IReview[];
 }
 
 export interface ISiteExample {

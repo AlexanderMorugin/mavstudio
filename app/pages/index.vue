@@ -1,7 +1,7 @@
 <template>
   <HeroBlock />
   <ContainerPage mobilePadding class="main">
-    <SiteListCarousel :catalog="siteCatalog" />
+    <EmblaListCardCarousel :siteCatalog="siteCatalog" />
   </ContainerPage>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <section id="carousel" class="siteExampleUiMainCarousel">
+  <section id="carousel" class="emblaOneCardCarousel">
     <EmblaButtonControl
       :canScroll="canScrollPrev"
       direction="prev"
@@ -15,11 +15,11 @@
       <div class="embla__viewport" ref="emblaRef">
         <div class="embla__container">
           <div
-            v-for="item in props.siteDataCarousel"
+            v-for="item in props.listData"
             :key="item.id"
             class="embla__slide"
           >
-            <SiteExampleUiMainCarouselCard
+            <EmblaFullScreenImageCard
               :image3840="item.image3840"
               :image1920="item.image1920"
               :image1280="item.image1280"
@@ -33,8 +33,8 @@
     </div>
 
     <EmblaDots
-      v-if="props.siteDataCarousel.length > 1"
-      :itemList="props.siteDataCarousel"
+      v-if="props.listData.length > 1"
+      :itemList="props.listData"
       :activeThumb="activeThumb"
       @goToSlide="goToSlide"
     />
@@ -48,7 +48,7 @@ import type { EmblaCarouselType } from "embla-carousel";
 import type { ISiteExampleCarousel } from "~/types/site";
 
 const props = defineProps<{
-  siteDataCarousel: ISiteExampleCarousel[];
+  listData: ISiteExampleCarousel[];
 }>();
 
 const [emblaRef, emblaApi] = useEmblaCarousel(

@@ -28,12 +28,12 @@
         :subtitle="props.siteData.example.portfolio.subtitle"
         :card="props.siteData.example.portfolio.card"
       />
-
-      <SiteExampleUiMainReview
-        v-if="props.siteData.example.review"
-        :reviewData="props.siteData.example.review"
-      />
     </ContainerPage>
+
+    <SiteExampleUiMainReview
+      v-if="props.siteData.example.review"
+      :reviewData="props.siteData.example.review"
+    />
 
     <SiteExampleUiFooter
       :siteName="props.siteData.name"
