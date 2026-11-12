@@ -45,7 +45,6 @@ const props = defineProps<{
   @media (max-width: 576px) {
     border-radius: 0;
     padding-left: 0;
-    // margin-right: 40px;
     border-left: none;
     border-right: none;
   }

@@ -5,10 +5,10 @@
       :subtitle="props.reviewData.subtitle"
     />
 
-    <div class="siteExampleUiMainReview__container">
-      <EmblaListCardCarousel :reviewData="props.reviewData.card" />
-      <!-- <SiteExampleUiMainReviewForm /> -->
-    </div>
+    <!-- <div class="siteExampleUiMainReview__container"> -->
+    <EmblaListCardCarousel :reviewData="props.reviewData.card" />
+    <!-- <SiteExampleUiMainReviewForm /> -->
+    <!-- </div> -->
   </section>
 </template>
 

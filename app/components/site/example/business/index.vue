@@ -29,11 +29,12 @@
         :card="props.siteData.example.portfolio.card"
       />
     </ContainerPage>
-
-    <SiteExampleUiMainReview
-      v-if="props.siteData.example.review"
-      :reviewData="props.siteData.example.review"
-    />
+    <ContainerPage mobilePadding>
+      <SiteExampleUiMainReview
+        v-if="props.siteData.example.review"
+        :reviewData="props.siteData.example.review"
+      />
+    </ContainerPage>
 
     <SiteExampleUiFooter
       :siteName="props.siteData.name"

@@ -36,6 +36,7 @@ const props = defineProps<{
   justify-content: space-between;
   gap: 30px;
   height: 100%;
+  user-select: none;
 
   // border: 1px solid red;
 

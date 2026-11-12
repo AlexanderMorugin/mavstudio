@@ -1,6 +1,12 @@
 <template>
   <div class="cardWithStripe">
-    <div class="cardWithStripe__container">
+    <div
+      :class="[
+        'cardWithStripe__container',
+        { cardWithStripe__container_isExample: props.isExample },
+      ]"
+    >
+      <!-- <div :class="props.isExample ? 'cardWithStripe__carousel' : ''"> -->
       <div
         v-if="props.orange"
         class="cardWithStripe__stripe cardWithStripe__stripe_orange"
@@ -11,6 +17,7 @@
       />
       <slot />
     </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -18,12 +25,14 @@
 const props = defineProps<{
   orange?: boolean;
   blue?: boolean;
+  isExample?: boolean;
 }>();
 </script>
 
 <style lang="scss" scoped>
 .cardWithStripe {
   height: fit-content;
+  // height: 100%;
   border-radius: 10px;
   border: 1px solid $white-mask-three;
   padding: 3px;
@@ -34,6 +43,15 @@ const props = defineProps<{
     border-radius: 6px;
     padding: 10px 10px 10px 25px;
     overflow: hidden;
+
+    &_isExample {
+      background: $blue-mask-five;
+      cursor: grab;
+
+      @media (max-width: 576px) {
+        padding: 40px 70px;
+      }
+    }
   }
 
   &__stripe {

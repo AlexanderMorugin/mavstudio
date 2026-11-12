@@ -25,15 +25,6 @@
             v-if="props.reviewData"
             :reviewData="props.reviewData"
           />
-
-          <!-- <div
-            v-if="isSiteCatalog"
-            v-for="item in props.listData"
-            :key="item.id"
-            class="embla__slide"
-          >
-            <SiteListCarouselCard :item="item.siteData.listCard" />
-          </div> -->
         </div>
       </div>
     </div>
@@ -49,16 +40,11 @@ import type { IReview } from "~/types/review";
 const props = defineProps<{
   siteCatalog?: ISiteCatalog[];
   reviewData?: IReview[];
-  // isReview?: boolean;
-  // isSiteCatalog?: boolean;
 }>();
-
-// console.log(props.listData);
 
 const [emblaRef, emblaApi] = useEmblaCarousel({
   loop: true,
   align: "start",
-  // align: "center",
 });
 
 const canScrollPrev = ref(false);
@@ -86,22 +72,14 @@ onMounted(() => {
   padding-left: 50px;
   padding-right: 50px;
 
-  // border: 1px solid red;
-
   @media (max-width: 576px) {
     padding-left: 0;
     padding-right: 0;
-
-    // padding-left: 20px;
-    // padding-right: 20px;
   }
 }
 .embla {
   width: 100%;
-  // --slide-size: 335px;
-  // --slide-size-m: 100%;
   --slide-spacing: 40px;
-  // --slide-spacing-m: 20px;
 }
 .embla__viewport {
   overflow: hidden;
@@ -110,17 +88,5 @@ onMounted(() => {
   display: flex;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
-
-  // justify-content: center;
 }
-// .embla__slide {
-//   flex: 0 0 var(--slide-size);
-//   min-width: 0;
-//   padding-left: var(--slide-spacing);
-
-//   @media (max-width: 576px) {
-//     flex: 0 0 var(--slide-size-m);
-//     padding-left: var(--slide-spacing-m);
-//   }
-// }
 </style>
