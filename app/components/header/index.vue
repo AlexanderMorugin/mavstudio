@@ -18,8 +18,8 @@
   <!-- Модалка Меню -->
   <ClientOnly>
     <Teleport to="#teleports">
-      <Transition name="top">
-        <ModalBlockForHeader
+      <Transition name="list">
+        <ModalForHeader
           v-if="isMenuModalOpen"
           title="Меню"
           name="menu"
@@ -31,8 +31,8 @@
 
   <!-- Модалка Чата -->
   <!-- <Teleport to="#teleports">
-    <Transition name="top">
-      <ModalBlockForHeader
+    <Transition name="list">
+      <ModalForHeader
         v-if="isChatModalOpen"
         :isModalOpen="isChatModalOpen"
         title="Связь"
@@ -48,13 +48,13 @@ const isMenuModalOpen = ref(false);
 const isChatModalOpen = ref(false);
 
 // watch([isMenuModalOpen, isChatModalOpen], (newValue) => {
-watch(isMenuModalOpen, (newValue) => {
-  if (newValue) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
-});
+// watch(isMenuModalOpen, (newValue) => {
+//   if (newValue) {
+//     document.body.style.overflow = "hidden";
+//   } else {
+//     document.body.style.overflow = "auto";
+//   }
+// });
 </script>
 
 <style lang="scss" scoped>

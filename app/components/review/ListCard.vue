@@ -2,7 +2,12 @@
   <div class="reviewListCard">
     <div class="reviewListCard__textBlock">
       <div class="reviewListCard__user">
-        <div class="reviewListCard__userIcon">
+        <div
+          :class="[
+            'reviewListCard__userIcon',
+            { reviewListCard__userIcon_bg: !props.review.userImage },
+          ]"
+        >
           <img
             v-if="props.review.userImage"
             :src="props.review.userImage"
@@ -46,8 +51,6 @@ const props = defineProps<{
   height: 100%;
   user-select: none;
 
-  // border: 1px solid red;
-
   &__textBlock {
     display: flex;
     flex-direction: column;
@@ -70,10 +73,13 @@ const props = defineProps<{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: $gradient-blue-two;
     font-size: 24px;
     color: $white-one;
     overflow: hidden;
+
+    &_bg {
+      background: $gradient-blue-two;
+    }
   }
 
   &__image {

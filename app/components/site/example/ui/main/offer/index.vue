@@ -41,7 +41,7 @@
 
   <ClientOnly>
     <Teleport to="#teleports">
-      <Transition name="top">
+      <Transition name="list">
         <SiteExampleUiMainOfferModal
           v-if="isCardModalOpen && currentCard"
           :card="currentCard"
@@ -78,13 +78,13 @@ const setCard = (id: number) => {
   }
 };
 
-watch(isCardModalOpen, (newValue) => {
-  if (newValue) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
-});
+// watch(isCardModalOpen, (newValue) => {
+//   if (newValue) {
+//     document.body.style.overflow = "hidden";
+//   } else {
+//     document.body.style.overflow = "auto";
+//   }
+// });
 </script>
 
 <style lang="scss" scoped>

@@ -30,7 +30,6 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .cardWithStripe {
   height: fit-content;
-  // height: 100%;
   border-radius: 10px;
   border: 1px solid $white-mask-three;
   padding: 3px;
