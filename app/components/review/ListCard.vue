@@ -3,7 +3,15 @@
     <div class="reviewListCard__textBlock">
       <div class="reviewListCard__user">
         <div class="reviewListCard__userIcon">
-          {{ props.review.userNameFirstLetter }}
+          <img
+            v-if="props.review.userImage"
+            :src="props.review.userImage"
+            :alt="props.review.userName"
+            class="reviewListCard__image"
+          />
+          <span v-if="!props.review.userImage">{{
+            props.review.userNameFirstLetter
+          }}</span>
         </div>
         <div>
           <span class="reviewListCard__userName">{{
@@ -65,6 +73,12 @@ const props = defineProps<{
     background: $gradient-blue-two;
     font-size: 24px;
     color: $white-one;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
   }
 
   &__userName {

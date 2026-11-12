@@ -6,7 +6,6 @@
         { cardWithStripe__container_isExample: props.isExample },
       ]"
     >
-      <!-- <div :class="props.isExample ? 'cardWithStripe__carousel' : ''"> -->
       <div
         v-if="props.orange"
         class="cardWithStripe__stripe cardWithStripe__stripe_orange"
@@ -17,7 +16,6 @@
       />
       <slot />
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
