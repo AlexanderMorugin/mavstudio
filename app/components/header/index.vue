@@ -23,7 +23,7 @@
           v-if="isMenuModalOpen"
           title="Меню"
           name="menu"
-          @closeModal="isMenuModalOpen = false"
+          @closeModal="closeModal"
         />
       </Transition>
     </Teleport>
@@ -47,14 +47,40 @@
 const isMenuModalOpen = ref(false);
 const isChatModalOpen = ref(false);
 
-// watch([isMenuModalOpen, isChatModalOpen], (newValue) => {
-// watch(isMenuModalOpen, (newValue) => {
-//   if (newValue) {
-//     document.body.style.overflow = "hidden";
-//   } else {
-//     document.body.style.overflow = "auto";
-//   }
-// });
+const closeModal = () => {
+  isMenuModalOpen.value = false;
+};
+
+watch(isMenuModalOpen, (newValue) => {
+  let html = document.documentElement;
+  let marginSize = window.innerWidth - html.clientWidth;
+
+  if (newValue) {
+    document.body.style.overflow = "hidden";
+
+    if (marginSize) {
+      html.style.marginRight = marginSize + "px";
+    }
+  } else {
+    html.style.marginRight = "";
+    document.body.style.overflow = "auto";
+  }
+});
+
+const handleKeyDown = (e: any) => {
+  if (e.key === "Escape" && isMenuModalOpen) {
+    e.preventDefault();
+    closeModal();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("keydown", handleKeyDown);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", handleKeyDown);
+});
 </script>
 
 <style lang="scss" scoped>

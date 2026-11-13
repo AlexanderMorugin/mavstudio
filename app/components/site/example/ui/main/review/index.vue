@@ -17,9 +17,9 @@
     <Teleport to="#teleports">
       <Transition name="list">
         <ModalForReview
-          v-if="isReviewModalOpen"
+          v-show="isReviewModalOpen"
           title="Ваш Отзыв"
-          @closeModal="isReviewModalOpen = false"
+          @closeModal="closeModal"
         />
       </Transition>
     </Teleport>
@@ -35,13 +35,40 @@ const props = defineProps<{
 
 const isReviewModalOpen = ref(false);
 
-// watch(isReviewModalOpen, (newValue) => {
-//   if (newValue) {
-//     document.body.style.overflow = "hidden";
-//   } else {
-//     document.body.style.overflow = "auto";
-//   }
-// });
+const closeModal = () => {
+  isReviewModalOpen.value = false;
+};
+
+watch(isReviewModalOpen, (newValue) => {
+  let html = document.documentElement;
+  let marginSize = window.innerWidth - html.clientWidth;
+
+  if (newValue) {
+    document.body.style.overflow = "hidden";
+
+    if (marginSize) {
+      html.style.marginRight = marginSize + "px";
+    }
+  } else {
+    html.style.marginRight = "";
+    document.body.style.overflow = "auto";
+  }
+});
+
+const handleKeyDown = (e: any) => {
+  if (e.key === "Escape" && isReviewModalOpen) {
+    e.preventDefault();
+    closeModal();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("keydown", handleKeyDown);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", handleKeyDown);
+});
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="modalContainerWithTitle" click.stop>
+  <div class="modalContainerWithTitle" @click.stop>
     <ContainerPage desktopPadding class="modalContainerWithTitle__container">
       <div class="modalContainerWithTitle__top">
         <span class="modalContainerWithTitle__topTitle">

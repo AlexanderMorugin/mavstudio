@@ -28,6 +28,9 @@ body {
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   background: $black-one;
+
+  // height: 100vh;
+  // overflow-y: hidden;
 }
 
 html {
@@ -39,6 +42,13 @@ button {
   border: none;
   cursor: pointer;
 }
+
+// .modal-opened {
+//   // position: fixed;
+//   // right: 0;
+//   // left: 0;
+//   overflow: hidden;
+// }
 
 .list-enter-active,
 .list-leave-active {
