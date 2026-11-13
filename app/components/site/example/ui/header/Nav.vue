@@ -57,7 +57,7 @@ const emit = defineEmits(["closeModal"]);
       bottom: 0;
       height: 1px;
       width: 100%;
-      background: $blue-two;
+      background: $white-one;
       transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     }
 

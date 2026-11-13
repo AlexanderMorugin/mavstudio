@@ -3,7 +3,7 @@
     :title="props.title"
     @closeModal="$emit('closeModal')"
   >
-    <div class="modalForReview">modalForReview</div>
+    <FormReview />
   </ModalContainerWithTitle>
 </template>
 
@@ -15,7 +15,7 @@ const props = defineProps<{
 const emit = defineEmits(["closeModal"]);
 </script>
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
 .modalForReview {
 }
-</style>
+</style> -->
