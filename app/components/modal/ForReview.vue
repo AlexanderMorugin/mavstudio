@@ -14,8 +14,3 @@ const props = defineProps<{
 
 const emit = defineEmits(["closeModal"]);
 </script>
-
-<!-- <style lang="scss" scoped>
-.modalForReview {
-}
-</style> -->
