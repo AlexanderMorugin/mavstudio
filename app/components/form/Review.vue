@@ -26,6 +26,7 @@
       @clearInput="userReview = ''"
       class="formReview__three"
     />
+    <FormSubmit title="Отправить" class="formReview__four" />
 
     <div class="formReview__mark">* - обязательные для заполнения поля</div>
   </form>
@@ -49,7 +50,7 @@ const submitReview = () => {
 
 <style lang="scss" scoped>
 .formReview {
-  width: 100%;
+  // width: 100%;
   max-width: 700px;
   background: $blue-mask-three;
   border-radius: 14px;
@@ -57,6 +58,12 @@ const submitReview = () => {
   overflow: hidden;
   padding: 20px;
   animation: back 1.5s cubic-bezier(0.1, 0, 0.1, 1);
+
+  // @media (max-width: 576px) {
+  //   // background: none;
+  //   padding-left: 10px;
+  //   padding-right: 10px;
+  // }
 
   &__one {
     animation: slide 0.8s cubic-bezier(0.1, 0, 0.1, 1);
@@ -67,9 +74,13 @@ const submitReview = () => {
   &__three {
     animation: slide 2.5s cubic-bezier(0.1, 0, 0.1, 1);
   }
+  &__four {
+    animation: slide 3.5s cubic-bezier(0.1, 0, 0.1, 1);
+  }
 
   &__mark {
     font-size: 14px;
+    line-height: 1.2;
     color: $white-mask-one;
     margin-top: 40px;
   }

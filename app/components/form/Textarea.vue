@@ -37,6 +37,7 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
   display: flex;
   flex-direction: column;
   justify-items: center;
+  padding-bottom: 30px;
 
   &__label {
     font-size: 14px;

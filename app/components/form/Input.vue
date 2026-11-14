@@ -52,6 +52,11 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
     padding-right: 40px;
     transition: 0.3s cubic-bezier(0.3, 0, 0.1, 1);
 
+    @media (max-width: 576px) {
+      padding-left: 10px;
+      padding-right: 30px;
+    }
+
     &:focus {
       font-size: 16px;
       color: $black-one;

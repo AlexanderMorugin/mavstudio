@@ -40,9 +40,10 @@ const emit = defineEmits(["handleClick"]);
     border: 1px solid $orange-mask-two;
     border-radius: 8px;
     font-family: "Montserrat-SemiBold", sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 1px;
     color: $white-mask-one;
+    text-transform: uppercase;
     padding: 14px 26px;
     box-shadow: $shadow-button-black-one;
     background-image: linear-gradient(

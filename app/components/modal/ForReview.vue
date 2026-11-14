@@ -1,5 +1,6 @@
 <template>
   <ModalContainerWithTitle
+    isMobile
     :title="props.title"
     @closeModal="$emit('closeModal')"
   >

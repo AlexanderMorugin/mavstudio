@@ -11,7 +11,13 @@
           @click="$emit('closeModal')"
         />
       </div>
+    </ContainerPage>
 
+    <ContainerPage v-if="props.isMobile" mobilePadding>
+      <slot />
+    </ContainerPage>
+
+    <ContainerPage v-if="!props.isMobile" desktopPadding>
       <slot />
     </ContainerPage>
   </div>
@@ -20,6 +26,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   title: string;
+  isMobile?: boolean;
 }>();
 
 const emit = defineEmits(["closeModal"]);
