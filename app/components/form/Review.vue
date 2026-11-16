@@ -30,26 +30,31 @@
       @clearInput="userReview = ''"
       class="formReview__three"
     />
-    <FormSubmit
+    <FormAvatarChoice
+      :avatars="avatars"
+      @handleAvatarChoice="handleAvatarChoice"
+    />
+    <!-- <FormSubmit
       title="Отправить"
       :isFromEmpty="isFromEmpty"
       :isValid="isValid.length"
       class="formReview__four"
-    />
+    /> -->
 
     <div class="formReview__mark">* - обязательные для заполнения поля</div>
   </form>
 
-  <FormSuccess
+  <!-- <FormSuccess
     v-if="isFormSend"
     @closeModal="$emit('closeModal')"
     class="formReview"
-  />
+  /> -->
 </template>
 
 <script setup lang="ts">
 import { useVuelidate } from "@vuelidate/core";
 import { helpers, required, minLength } from "@vuelidate/validators";
+import { avatars } from "~/mock/avatar";
 
 const userName = ref("");
 const userStatus = ref("");
@@ -84,6 +89,10 @@ const isFromEmpty = computed(
 );
 
 const isValid = computed(() => v$.value.$errors);
+
+const handleAvatarChoice = (id: number) => {
+  console.log("handleAvatarChoice", id);
+};
 
 const submitReview = () => {
   const formData = {
