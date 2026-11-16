@@ -1,18 +1,26 @@
 <template>
   <div class="formTextarea">
-    <label class="formTextarea__label">{{ label }}</label>
+    <label :for="props.name" class="formTextarea__label">{{
+      props.label
+    }}</label>
     <textarea
-      :placeholder="placeholder"
-      :value="value"
+      :type="props.type"
+      :id="props.name"
+      :name="props.name"
+      :placeholder="props.placeholder"
+      :value="props.value"
       @input="updateValue"
       class="formTextarea__input"
     />
 
-    <!-- <TransitionGroup name="list" tag="ul">
-      <span v-for="item in error" :key="item.$uid" class="form-input-error">{{
-        item.$message
-      }}</span>
-    </TransitionGroup> -->
+    <TransitionGroup name="error" tag="ul">
+      <span
+        v-for="item in error"
+        :key="item.$uid"
+        class="formTextarea__error"
+        >{{ item.$message }}</span
+      >
+    </TransitionGroup>
 
     <FormClearButton v-if="value" @click="$emit('clearInput')" />
   </div>
@@ -21,10 +29,11 @@
 <script setup lang="ts">
 const props = defineProps<{
   label: string;
-  // type: string;
+  type: string;
   name: string;
   placeholder: string;
-  value: string;
+  value: string | any;
+  error?: any;
 }>();
 
 const emit = defineEmits(["update:value", "clearInput"]);
@@ -72,6 +81,16 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
     &:focus::placeholder {
       color: transparent;
     }
+  }
+
+  &__error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    color: $red-four;
+    text-align: right;
   }
 }
 </style>

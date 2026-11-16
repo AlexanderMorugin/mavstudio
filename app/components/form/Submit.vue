@@ -1,5 +1,9 @@
 <template>
-  <button type="submit" class="formSubmit" @click="$emit('handleClick')">
+  <button
+    type="submit"
+    @click="$emit('handleClick')"
+    :class="['formSubmit', { formSubmit_active: !isFromEmpty && !isValid }]"
+  >
     <span class="formSubmit__title">{{ title }}</span>
   </button>
 </template>
@@ -7,6 +11,8 @@
 <script setup lang="ts">
 const props = defineProps<{
   title: string;
+  isFromEmpty: boolean;
+  isValid: any;
 }>();
 
 const emit = defineEmits(["handleClick"]);

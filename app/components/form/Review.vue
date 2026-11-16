@@ -5,7 +5,8 @@
       type="text"
       :name="userName"
       placeholder="Ваше имя"
-      v-model:value="userName"
+      v-model:value="v$.userName.$model"
+      :error="v$.userName.$errors"
       @clearInput="userName = ''"
       class="formReview__one"
     />
@@ -13,29 +14,69 @@
       label="Профессия * "
       type="text"
       :name="userStatus"
-      placeholder="Ваше имя"
-      v-model:value="userStatus"
+      placeholder="Ваша профессия"
+      v-model:value="v$.userStatus.$model"
+      :error="v$.userStatus.$errors"
       @clearInput="userStatus = ''"
       class="formReview__two"
     />
-    <FormTextarea
+    <!-- <FormTextarea
       label="Отзыв * "
+      type="text"
       :name="userReview"
       placeholder="Ваш отзыв"
-      v-model:value="userReview"
+      v-model:value="v$.userReview.$model"
+      :error="v$.userReview.$errors"
       @clearInput="userReview = ''"
       class="formReview__three"
-    />
-    <FormSubmit title="Отправить" class="formReview__four" />
+    /> -->
+    <!-- <FormSubmit
+      title="Отправить"
+      :isFromEmpty="isFromEmpty"
+      :isValid="isValid.length"
+      class="formReview__four"
+    /> -->
 
-    <div class="formReview__mark">* - обязательные для заполнения поля</div>
+    <!-- <div class="formReview__mark">* - обязательные для заполнения поля</div> -->
   </form>
 </template>
 
 <script setup lang="ts">
+import { useVuelidate } from "@vuelidate/core";
+import { helpers, required, minLength } from "@vuelidate/validators";
+
 const userName = ref("");
 const userStatus = ref("");
 const userReview = ref("");
+
+const emit = defineEmits(["closeModal"]);
+
+const rules = computed(() => ({
+  userName: {
+    required: helpers.withMessage("Напишите имя", required),
+    minLength: helpers.withMessage("Не менее 2 символов", minLength(2)),
+  },
+  userStatus: {
+    required: helpers.withMessage("Напишите профессию", required),
+    minLength: helpers.withMessage("Не менее 2 символов", minLength(2)),
+  },
+  userReview: {
+    required: helpers.withMessage("Напишите отзыв", required),
+    minLength: helpers.withMessage("Не менее 2 символов", minLength(2)),
+  },
+}));
+
+const v$ = useVuelidate(rules, {
+  userName,
+  userStatus,
+  userReview,
+});
+
+const isFromEmpty = computed(
+  () => !userName.value || !userStatus.value || !userReview.value,
+);
+
+const isValid = computed(() => v$.value.$errors);
 
 const submitReview = () => {
   const formData = {
@@ -45,12 +86,16 @@ const submitReview = () => {
   };
 
   console.log(formData);
+  emit("closeModal");
+
+  userName.value = "";
+  userStatus.value = "";
+  userReview.value = "";
 };
 </script>
 
 <style lang="scss" scoped>
 .formReview {
-  // width: 100%;
   max-width: 700px;
   background: $blue-mask-three;
   border-radius: 14px;
@@ -59,11 +104,7 @@ const submitReview = () => {
   padding: 20px;
   animation: back 1.5s cubic-bezier(0.1, 0, 0.1, 1);
 
-  // @media (max-width: 576px) {
-  //   // background: none;
-  //   padding-left: 10px;
-  //   padding-right: 10px;
-  // }
+  height: 500px;
 
   &__one {
     animation: slide 0.8s cubic-bezier(0.1, 0, 0.1, 1);

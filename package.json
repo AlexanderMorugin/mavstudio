@@ -12,6 +12,8 @@
   "dependencies": {
     "@pinia/nuxt": "^1.0.3",
     "@types/pg": "^8.23.1",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
     "dotenv": "^18.0.10",
     "drizzle-kit": "^0.31.11",
     "drizzle-orm": "^0.45.4",
@@ -24,7 +26,7 @@
     "tsx": "^4.23.15",
     "uuid": "^14.0.3",
     "vue": "^3.5.45",
-    "vue-router": "^5.5.0"
+    "vue-router": "^5.5.1"
   },
   "devDependencies": {
     "sass": "^1.108.2"

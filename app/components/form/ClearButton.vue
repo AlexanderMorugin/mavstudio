@@ -11,8 +11,8 @@
   height: 18px;
   cursor: pointer;
   fill: $black-mask-two;
-
   transition: 0.25s ease;
+  z-index: 20;
 
   &:hover {
     fill: $black-one;

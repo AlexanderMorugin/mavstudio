@@ -27,7 +27,7 @@ const emit = defineEmits(["handleClick"]);
 
   @media (max-width: 576px) {
     height: fit-content;
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -37,14 +37,21 @@ const emit = defineEmits(["handleClick"]);
     justify-content: center;
     align-items: center;
     width: fit-content;
+    min-height: 50px;
     border: 1px solid $orange-mask-two;
-    border-radius: 8px;
-    font-family: "Montserrat-SemiBold", sans-serif;
+    // border-radius: 6px;
+    // font-family: "Montserrat-SemiBold", sans-serif;
+    // font-size: 13px;
+    // letter-spacing: 1px;
+    font-family: "Montserrat-Medium", sans-serif;
     font-size: 13px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: $white-mask-one;
     text-transform: uppercase;
-    padding: 14px 26px;
+    // padding: 14px 26px;
+    border-radius: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
     box-shadow: $shadow-button-black-one;
     background-image: linear-gradient(
       to right,
@@ -69,7 +76,9 @@ const emit = defineEmits(["handleClick"]);
 
     &:hover {
       color: $white-one;
-      padding: 12px 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      // padding: 12px 24px;
       animation: none;
       -webkit-animation: none;
       -moz-animation: none;
@@ -77,7 +86,9 @@ const emit = defineEmits(["handleClick"]);
 
     @media (max-width: 576px) {
       box-shadow: none;
-      padding: 12px 24px;
+      // padding: 12px 24px;
+      padding-left: 24px;
+      padding-right: 24px;
     }
   }
 }

@@ -10,6 +10,15 @@
       @input="updateValue"
       class="formInput__input"
     />
+
+    <div v-if="errorBorder" class="formInput__inputError" />
+
+    <TransitionGroup name="error" tag="ul">
+      <span v-for="item in error" :key="item.$uid" class="formInput__error">{{
+        item.$message
+      }}</span>
+    </TransitionGroup>
+
     <FormClearButton v-if="value" @click="$emit('clearInput')" />
   </div>
 </template>
@@ -20,11 +29,16 @@ const props = defineProps<{
   type: string;
   name: string;
   placeholder: string;
-  value: string;
+  value: string | any;
+  error?: any;
 }>();
 
 const emit = defineEmits(["update:value", "clearInput"]);
 const updateValue = (e: any) => emit("update:value", e.target.value);
+
+const errorBorder = computed(() =>
+  props.error[0] ? props.error[0].$params.type === "minLength" : null,
+);
 </script>
 
 <style lang="scss" scoped>
@@ -35,8 +49,6 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
   justify-items: center;
   padding-bottom: 30px;
 
-  // border: 1px solid red;
-
   &__label {
     font-size: 14px;
     color: $white-one;
@@ -44,6 +56,7 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
   }
 
   &__input {
+    position: relative;
     height: 40px;
     font-size: 16px;
     border: 1px solid $blue-three;
@@ -51,6 +64,7 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
     padding-left: 20px;
     padding-right: 40px;
     transition: 0.3s cubic-bezier(0.3, 0, 0.1, 1);
+    z-index: 20;
 
     @media (max-width: 576px) {
       padding-left: 10px;
@@ -62,7 +76,6 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
       color: $black-one;
       outline: 0;
       border: 1px solid $blue-three;
-      // outline: 1px solid $blue-three;
       box-shadow: 0px 0px 15px $white-one;
     }
 
@@ -77,15 +90,23 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
     }
   }
 
-  // .form-input-error {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   font-size: 14px;
-  //   line-height: 14px;
-  //   color: $red-two;
-  //   text-align: right;
-  // }
+  &__error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    font-size: 12px;
+    color: $red-four;
+  }
+
+  &__inputError {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background: $red-three;
+    filter: blur(7px);
+  }
 }
 </style>

@@ -62,6 +62,18 @@ button {
 .list-leave-active {
   position: absolute;
 }
+.error-enter-active,
+.error-leave-active {
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.error-enter-from,
+.error-leave-to {
+  opacity: 0;
+  transform: translateX(300px);
+}
+.error-leave-active {
+  position: absolute;
+}
 // .top-enter-active,
 // .top-leave-active {
 //   transition: all 0.3s ease;
