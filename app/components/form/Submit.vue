@@ -4,7 +4,7 @@
     @click="$emit('handleClick')"
     :class="['formSubmit', { formSubmit_active: !isFromEmpty && !isValid }]"
   >
-    <span class="formSubmit__title">{{ title }}</span>
+    {{ title }}
   </button>
 </template>
 
@@ -24,11 +24,15 @@ const emit = defineEmits(["handleClick"]);
   justify-content: center;
   align-items: center;
   justify-self: end;
-  // width: 100%;
   width: fit-content;
   height: 50px;
   background: $grey-one;
   border-radius: 6px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: $white-mask-three;
+  text-transform: uppercase;
   padding-left: 40px;
   padding-right: 40px;
   transition: 0.2s ease;
@@ -39,20 +43,13 @@ const emit = defineEmits(["handleClick"]);
   }
 
   &_active {
+    color: $white-one;
     background: $red-one;
     cursor: pointer;
 
     &:hover {
       background: $red-two;
     }
-  }
-
-  &__title {
-    font-family: "Montserrat-Medium", sans-serif;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: $white-one;
-    text-transform: uppercase;
   }
 }
 </style>

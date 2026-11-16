@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submitReview" class="formReview">
+  <form v-if="!isFormSend" @submit.prevent="submitReview" class="formReview">
     <FormInput
       label="Имя * "
       type="text"
@@ -20,7 +20,7 @@
       @clearInput="userStatus = ''"
       class="formReview__two"
     />
-    <!-- <FormTextarea
+    <FormTextarea
       label="Отзыв * "
       type="text"
       :name="userReview"
@@ -29,16 +29,22 @@
       :error="v$.userReview.$errors"
       @clearInput="userReview = ''"
       class="formReview__three"
-    /> -->
-    <!-- <FormSubmit
+    />
+    <FormSubmit
       title="Отправить"
       :isFromEmpty="isFromEmpty"
       :isValid="isValid.length"
       class="formReview__four"
-    /> -->
+    />
 
-    <!-- <div class="formReview__mark">* - обязательные для заполнения поля</div> -->
+    <div class="formReview__mark">* - обязательные для заполнения поля</div>
   </form>
+
+  <FormSuccess
+    v-if="isFormSend"
+    @closeModal="$emit('closeModal')"
+    class="formReview"
+  />
 </template>
 
 <script setup lang="ts">
@@ -48,6 +54,7 @@ import { helpers, required, minLength } from "@vuelidate/validators";
 const userName = ref("");
 const userStatus = ref("");
 const userReview = ref("");
+const isFormSend = ref(false);
 
 const emit = defineEmits(["closeModal"]);
 
@@ -85,8 +92,9 @@ const submitReview = () => {
     userReview: userReview.value,
   };
 
-  console.log(formData);
-  emit("closeModal");
+  isFormSend.value = true;
+
+  // console.log(formData);
 
   userName.value = "";
   userStatus.value = "";
@@ -103,8 +111,6 @@ const submitReview = () => {
   overflow: hidden;
   padding: 20px;
   animation: back 1.5s cubic-bezier(0.1, 0, 0.1, 1);
-
-  height: 500px;
 
   &__one {
     animation: slide 0.8s cubic-bezier(0.1, 0, 0.1, 1);

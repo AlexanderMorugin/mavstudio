@@ -8,10 +8,8 @@
       :placeholder="props.placeholder"
       :value="props.value"
       @input="updateValue"
-      class="formInput__input"
+      :class="['formInput__input', { formInput__input_error: errorBorder }]"
     />
-
-    <div v-if="errorBorder" class="formInput__inputError" />
 
     <TransitionGroup name="error" tag="ul">
       <span v-for="item in error" :key="item.$uid" class="formInput__error">{{
@@ -56,7 +54,6 @@ const errorBorder = computed(() =>
   }
 
   &__input {
-    position: relative;
     height: 40px;
     font-size: 16px;
     border: 1px solid $blue-three;
@@ -64,7 +61,6 @@ const errorBorder = computed(() =>
     padding-left: 20px;
     padding-right: 40px;
     transition: 0.3s cubic-bezier(0.3, 0, 0.1, 1);
-    z-index: 20;
 
     @media (max-width: 576px) {
       padding-left: 10px;
@@ -88,6 +84,14 @@ const errorBorder = computed(() =>
     &:focus::placeholder {
       color: transparent;
     }
+
+    &_error {
+      box-shadow: 0px 0px 15px $red-four;
+
+      &:focus {
+        box-shadow: 0px 0px 15px $red-four;
+      }
+    }
   }
 
   &__error {
@@ -96,17 +100,8 @@ const errorBorder = computed(() =>
     right: 0;
     width: fit-content;
     font-size: 12px;
+    line-height: 14px;
     color: $red-four;
-  }
-
-  &__inputError {
-    position: absolute;
-    top: 24px;
-    left: 0;
-    width: 100%;
-    height: 44px;
-    background: $red-three;
-    filter: blur(7px);
   }
 }
 </style>

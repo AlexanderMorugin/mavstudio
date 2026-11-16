@@ -10,7 +10,10 @@
       :placeholder="props.placeholder"
       :value="props.value"
       @input="updateValue"
-      class="formTextarea__input"
+      :class="[
+        'formTextarea__input',
+        { formTextarea__input_error: errorBorder },
+      ]"
     />
 
     <TransitionGroup name="error" tag="ul">
@@ -38,6 +41,10 @@ const props = defineProps<{
 
 const emit = defineEmits(["update:value", "clearInput"]);
 const updateValue = (e: any) => emit("update:value", e.target.value);
+
+const errorBorder = computed(() =>
+  props.error[0] ? props.error[0].$params.type === "minLength" : null,
+);
 </script>
 
 <style lang="scss" scoped>
@@ -80,6 +87,14 @@ const updateValue = (e: any) => emit("update:value", e.target.value);
 
     &:focus::placeholder {
       color: transparent;
+    }
+
+    &_error {
+      box-shadow: 0px 0px 15px $red-four;
+
+      &:focus {
+        box-shadow: 0px 0px 15px $red-four;
+      }
     }
   }
 

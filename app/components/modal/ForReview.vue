@@ -4,9 +4,7 @@
     :title="props.title"
     @closeModal="$emit('closeModal')"
   >
-    <!-- <ClientOnly> -->
     <FormReview @closeModal="$emit('closeModal')" />
-    <!-- </ClientOnly> -->
   </ModalContainerWithTitle>
 </template>
 

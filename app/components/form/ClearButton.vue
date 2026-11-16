@@ -12,7 +12,10 @@
   cursor: pointer;
   fill: $black-mask-two;
   transition: 0.25s ease;
-  z-index: 20;
+
+  @media (max-width: 576px) {
+    top: 40px;
+  }
 
   &:hover {
     fill: $black-one;

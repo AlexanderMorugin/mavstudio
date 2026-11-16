@@ -39,16 +39,11 @@ const emit = defineEmits(["handleClick"]);
     width: fit-content;
     min-height: 50px;
     border: 1px solid $orange-mask-two;
-    // border-radius: 6px;
-    // font-family: "Montserrat-SemiBold", sans-serif;
-    // font-size: 13px;
-    // letter-spacing: 1px;
     font-family: "Montserrat-Medium", sans-serif;
     font-size: 13px;
     letter-spacing: 2px;
-    color: $white-mask-one;
+    color: $white-one;
     text-transform: uppercase;
-    // padding: 14px 26px;
     border-radius: 6px;
     padding-left: 40px;
     padding-right: 40px;
@@ -75,10 +70,8 @@ const emit = defineEmits(["handleClick"]);
     transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-      color: $white-one;
       padding-left: 24px;
       padding-right: 24px;
-      // padding: 12px 24px;
       animation: none;
       -webkit-animation: none;
       -moz-animation: none;
@@ -86,7 +79,6 @@ const emit = defineEmits(["handleClick"]);
 
     @media (max-width: 576px) {
       box-shadow: none;
-      // padding: 12px 24px;
       padding-left: 24px;
       padding-right: 24px;
     }
