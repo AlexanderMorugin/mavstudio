@@ -1,9 +1,11 @@
+import type { IAvatar } from "./avatar";
+
 export interface IReview {
-  id: number;
+  id: number | string;
   userName: string;
   userNameFirstLetter?: string;
   userStatus: string;
-  userImage?: string;
+  userAvatar?: IAvatar;
   text: string;
-  date: string;
+  date: any;
 }

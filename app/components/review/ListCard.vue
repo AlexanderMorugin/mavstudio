@@ -5,32 +5,32 @@
         <div
           :class="[
             'reviewListCard__userIcon',
-            { reviewListCard__userIcon_bg: !props.review.userImage },
+            { reviewListCard__userIcon_bg: !props.review?.userAvatar },
           ]"
         >
           <img
-            v-if="props.review.userImage"
-            :src="props.review.userImage"
-            :alt="props.review.userName"
+            v-if="props.review?.userAvatar"
+            :src="props.review?.userAvatar.image"
+            :alt="props.review?.userName"
             class="reviewListCard__image"
           />
-          <span v-if="!props.review.userImage">{{
-            props.review.userNameFirstLetter
+          <span v-if="!props.review?.userAvatar">{{
+            props.review?.userNameFirstLetter
           }}</span>
         </div>
         <div>
           <span class="reviewListCard__userName">{{
-            props.review.userName
+            props.review?.userName
           }}</span>
-          <ParagraphSmall>{{ props.review.userStatus }}</ParagraphSmall>
+          <ParagraphSmall>{{ props.review?.userStatus }}</ParagraphSmall>
         </div>
       </div>
-      <ParagraphNormal v-if="props.review.text" black>{{
+      <ParagraphNormal v-if="props.review?.text" black>{{
         props.review.text
       }}</ParagraphNormal>
     </div>
 
-    <ParagraphSmall>{{ props.review.date }}</ParagraphSmall>
+    <ParagraphSmall>{{ props.review?.date }}</ParagraphSmall>
   </div>
 </template>
 
@@ -38,7 +38,7 @@
 import type { IReview } from "~/types/review";
 
 const props = defineProps<{
-  review: IReview;
+  review: IReview | undefined;
 }>();
 </script>
 

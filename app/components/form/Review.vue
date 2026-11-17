@@ -1,65 +1,79 @@
 <template>
-  <form v-if="!isFormSend" @submit.prevent="submitReview" class="formReview">
-    <FormInput
-      label="Имя * "
-      type="text"
-      :name="userName"
-      placeholder="Ваше имя"
-      v-model:value="v$.userName.$model"
-      :error="v$.userName.$errors"
-      @clearInput="userName = ''"
-      class="formReview__one"
-    />
-    <FormInput
-      label="Профессия * "
-      type="text"
-      :name="userStatus"
-      placeholder="Ваша профессия"
-      v-model:value="v$.userStatus.$model"
-      :error="v$.userStatus.$errors"
-      @clearInput="userStatus = ''"
-      class="formReview__two"
-    />
-    <FormTextarea
-      label="Отзыв * "
-      type="text"
-      :name="userReview"
-      placeholder="Ваш отзыв"
-      v-model:value="v$.userReview.$model"
-      :error="v$.userReview.$errors"
-      @clearInput="userReview = ''"
-      class="formReview__three"
-    />
-    <FormAvatarChoice
-      :avatars="avatars"
-      @handleAvatarChoice="handleAvatarChoice"
-    />
-    <!-- <FormSubmit
-      title="Отправить"
-      :isFromEmpty="isFromEmpty"
-      :isValid="isValid.length"
-      class="formReview__four"
-    /> -->
+  <div class="formReview">
+    <form v-if="!reviewData" @submit.prevent="submitReview">
+      <FormInput
+        label="Имя * "
+        type="text"
+        :name="userName"
+        placeholder="Ваше имя"
+        v-model:value="v$.userName.$model"
+        :error="v$.userName.$errors"
+        @clearInput="userName = ''"
+        class="formReview__one"
+      />
+      <FormInput
+        label="Профессия * "
+        type="text"
+        :name="userStatus"
+        placeholder="Ваша профессия"
+        v-model:value="v$.userStatus.$model"
+        :error="v$.userStatus.$errors"
+        @clearInput="userStatus = ''"
+        class="formReview__two"
+      />
+      <FormTextarea
+        label="Отзыв * "
+        type="text"
+        :name="userReview"
+        placeholder="Ваш отзыв"
+        v-model:value="v$.userReview.$model"
+        :error="v$.userReview.$errors"
+        @clearInput="userReview = ''"
+        class="formReview__three"
+      />
+      <FormAvatarChoice
+        :avatars="avatars"
+        :selectedAvatar="selectedAvatar"
+        @handleAvatarChoice="handleAvatarChoice"
+      />
+      <FormSubmit
+        title="Отправить"
+        :isFromEmpty="isFromEmpty"
+        :isValid="isValid.length"
+        class="formReview__four"
+      />
 
-    <div class="formReview__mark">* - обязательные для заполнения поля</div>
-  </form>
+      <div class="formReview__mark">* - обязательные для заполнения поля</div>
+    </form>
 
-  <!-- <FormSuccess
-    v-if="isFormSend"
-    @closeModal="$emit('closeModal')"
-    class="formReview"
-  /> -->
+    <CardWithStripe v-if="reviewData" orange class="formReview__listCard">
+      <ReviewListCard :review="reviewData" />
+    </CardWithStripe>
+
+    <FormSuccess
+      v-if="isReviewSend"
+      @closeModal="$emit('closeModal')"
+      class="formReview"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
+import { v4 as uuidv4 } from "uuid";
 import { useVuelidate } from "@vuelidate/core";
 import { helpers, required, minLength } from "@vuelidate/validators";
 import { avatars } from "~/mock/avatar";
+import type { IAvatar } from "~/types/avatar";
+import type { IReview } from "~/types/review";
+
+const { currentDate } = useDate();
 
 const userName = ref("");
 const userStatus = ref("");
 const userReview = ref("");
-const isFormSend = ref(false);
+const reviewData = ref<IReview>();
+const isReviewSend = ref(false);
+const selectedAvatar = ref<IAvatar>();
 
 const emit = defineEmits(["closeModal"]);
 
@@ -85,25 +99,34 @@ const v$ = useVuelidate(rules, {
 });
 
 const isFromEmpty = computed(
-  () => !userName.value || !userStatus.value || !userReview.value,
+  () =>
+    !userName.value ||
+    !userStatus.value ||
+    !userReview.value ||
+    !selectedAvatar.value,
 );
 
 const isValid = computed(() => v$.value.$errors);
 
 const handleAvatarChoice = (id: number) => {
-  console.log("handleAvatarChoice", id);
+  if (id) {
+    selectedAvatar.value = avatars.find((item) => item.id === id);
+  }
 };
 
 const submitReview = () => {
-  const formData = {
+  reviewData.value = {
+    id: uuidv4(),
     userName: userName.value,
     userStatus: userStatus.value,
-    userReview: userReview.value,
+    userAvatar: selectedAvatar.value,
+    text: userReview.value,
+    date: currentDate,
   };
 
-  isFormSend.value = true;
+  // reviewData.value = newReview;
 
-  // console.log(formData);
+  // console.log(newReview);
 
   userName.value = "";
   userStatus.value = "";
@@ -113,7 +136,7 @@ const submitReview = () => {
 
 <style lang="scss" scoped>
 .formReview {
-  max-width: 700px;
+  max-width: 800px;
   background: $blue-mask-three;
   border-radius: 14px;
   margin: 0 auto;
@@ -140,7 +163,14 @@ const submitReview = () => {
     color: $white-mask-one;
     margin-top: 40px;
   }
+
+  // &__listCard {
+  //   display: flex;
+  //   justify-self: center;
+  //   // max-width: 450px;
+  // }
 }
+
 @keyframes back {
   0% {
     opacity: 0;
