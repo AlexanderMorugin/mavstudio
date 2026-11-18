@@ -1,11 +1,12 @@
 <template>
   <div class="formSuccess">
-    <span class="formSuccess__text">Благодарим за отзыв!</span>
-    <span class="formSuccess__text"
-      >В скором времени он будет размещен на сайте.</span
+    <ParagraphNormal center>Благодарим за отзыв!</ParagraphNormal>
+    <ParagraphNormal center
+      >В скором времени он будет размещен на сайте.</ParagraphNormal
     >
 
-    <ButtonWithClick
+    <FormButton
+      type="button"
       title="Закрыть"
       @handleClick="emit('closeModal')"
       class="formSuccess__button"
@@ -21,17 +22,11 @@ const emit = defineEmits(["closeModal"]);
 .formSuccess {
   display: flex;
   flex-direction: column;
-
-  &__text {
-    line-height: 1.5;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+  align-items: center;
+  gap: 20px;
 
   &__button {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 20px;
   }
 }
 </style>

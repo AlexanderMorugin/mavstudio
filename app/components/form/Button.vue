@@ -1,8 +1,12 @@
 <template>
   <button
-    type="submit"
+    :type="props.type"
     @click="$emit('handleClick')"
-    :class="['formSubmit', { formSubmit_active: !isFromEmpty && !isValid }]"
+    :class="[
+      'formButton',
+      { formButton_active: !isFromEmpty && !isValid },
+      { formButton_reset: props.type === 'reset' },
+    ]"
   >
     {{ title }}
   </button>
@@ -10,21 +14,22 @@
 
 <script setup lang="ts">
 const props = defineProps<{
+  type: "button" | "reset" | "submit";
   title: string;
-  isFromEmpty: boolean;
-  isValid: any;
+  isFromEmpty?: boolean;
+  isValid?: any;
 }>();
 
 const emit = defineEmits(["handleClick"]);
 </script>
 
 <style lang="scss" scoped>
-.formSubmit {
+.formButton {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: end;
-  width: fit-content;
+  min-width: 190px;
   height: 50px;
   background: $grey-one;
   border-radius: 6px;
@@ -49,6 +54,14 @@ const emit = defineEmits(["handleClick"]);
 
     &:hover {
       background: $red-two;
+    }
+  }
+
+  &_reset {
+    background: $grey-one;
+
+    &:hover {
+      background: $grey-mask-two;
     }
   }
 }

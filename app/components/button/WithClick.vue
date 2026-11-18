@@ -1,6 +1,11 @@
 <template>
   <button @click="emit('handleClick')" class="buttonWithClick">
-    <div class="buttonWithClick__container">
+    <div
+      :class="[
+        'buttonWithClick__container',
+        { buttonWithClick__container_animation: props.isAnimation },
+      ]"
+    >
       {{ props.title }}
     </div>
   </button>
@@ -8,6 +13,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
+  isAnimation?: boolean;
   title: string;
 }>();
 
@@ -48,39 +54,42 @@ const emit = defineEmits(["handleClick"]);
     padding-left: 40px;
     padding-right: 40px;
     box-shadow: $shadow-button-black-one;
-    background-image: linear-gradient(
-      to right,
-      $orange-one,
-      $orange-one,
-      $white-one,
-      $orange-one,
-      $orange-one,
-      $orange-one,
-      $orange-one,
-      $orange-one,
-      $orange-one,
-      $orange-one,
-      $orange-one,
-      $orange-one
-    );
-    animation: background-fade 8s linear infinite;
-    background-size: 4000%;
-    -webkit-animation: background-fade 8s linear infinite;
-    -moz-animation: background-fade 8s linear infinite;
-    transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover {
-      padding-left: 24px;
-      padding-right: 24px;
-      animation: none;
-      -webkit-animation: none;
-      -moz-animation: none;
-    }
+    &_animation {
+      background-image: linear-gradient(
+        to right,
+        $orange-one,
+        $orange-one,
+        $white-one,
+        $orange-one,
+        $orange-one,
+        $orange-one,
+        $orange-one,
+        $orange-one,
+        $orange-one,
+        $orange-one,
+        $orange-one,
+        $orange-one
+      );
+      animation: background-fade 8s linear infinite;
+      background-size: 4000%;
+      -webkit-animation: background-fade 8s linear infinite;
+      -moz-animation: background-fade 8s linear infinite;
+      transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
-    @media (max-width: 576px) {
-      box-shadow: none;
-      padding-left: 24px;
-      padding-right: 24px;
+      &:hover {
+        padding-left: 24px;
+        padding-right: 24px;
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+      }
+
+      @media (max-width: 576px) {
+        box-shadow: none;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
     }
   }
 }

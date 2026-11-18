@@ -8,6 +8,7 @@
     <EmblaListCardCarousel :reviewData="props.reviewData.card" />
 
     <ButtonWithClick
+      isAnimation
       title="Написать отзыв"
       @handleClick="isReviewModalOpen = true"
     />

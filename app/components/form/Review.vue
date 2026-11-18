@@ -1,6 +1,9 @@
 <template>
   <div class="formReview">
-    <form v-if="!reviewData" @submit.prevent="submitReview">
+    <form
+      v-if="!isSubmitPrepared && !isReviewSend"
+      @submit.prevent="submitReview"
+    >
       <FormInput
         label="Имя * "
         type="text"
@@ -36,25 +39,26 @@
         :selectedAvatar="selectedAvatar"
         @handleAvatarChoice="handleAvatarChoice"
       />
-      <FormSubmit
-        title="Отправить"
+      <FormButton
+        type="button"
+        title="Продолжить"
         :isFromEmpty="isFromEmpty"
         :isValid="isValid.length"
+        @handleClick="prepareSubmition"
         class="formReview__four"
       />
 
       <div class="formReview__mark">* - обязательные для заполнения поля</div>
     </form>
 
-    <CardWithStripe v-if="reviewData" orange class="formReview__listCard">
-      <ReviewListCard :review="reviewData" />
-    </CardWithStripe>
-
-    <FormSuccess
-      v-if="isReviewSend"
-      @closeModal="$emit('closeModal')"
-      class="formReview"
+    <FormSubmitReviewBlock
+      v-if="isSubmitPrepared && reviewData && !isReviewSend"
+      :reviewData="reviewData"
+      @submitReview="submitReview"
+      @cancelReview="isSubmitPrepared = false"
     />
+
+    <FormSuccess v-if="isReviewSend" @closeModal="$emit('closeModal')" />
   </div>
 </template>
 
@@ -72,6 +76,7 @@ const userName = ref("");
 const userStatus = ref("");
 const userReview = ref("");
 const reviewData = ref<IReview>();
+const isSubmitPrepared = ref(false);
 const isReviewSend = ref(false);
 const selectedAvatar = ref<IAvatar>();
 
@@ -114,7 +119,7 @@ const handleAvatarChoice = (id: number) => {
   }
 };
 
-const submitReview = () => {
+const prepareSubmition = () => {
   reviewData.value = {
     id: uuidv4(),
     userName: userName.value,
@@ -123,11 +128,12 @@ const submitReview = () => {
     text: userReview.value,
     date: currentDate,
   };
+  isSubmitPrepared.value = true;
+};
 
-  // reviewData.value = newReview;
-
-  // console.log(newReview);
-
+const submitReview = () => {
+  console.log(reviewData.value);
+  isReviewSend.value = true;
   userName.value = "";
   userStatus.value = "";
   userReview.value = "";
