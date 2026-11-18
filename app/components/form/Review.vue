@@ -1,65 +1,65 @@
 <template>
-  <div class="formReview">
-    <form
-      v-if="!isSubmitPrepared && !isReviewSend"
-      @submit.prevent="submitReview"
-    >
-      <FormInput
-        label="Имя * "
-        type="text"
-        :name="userName"
-        placeholder="Ваше имя"
-        v-model:value="v$.userName.$model"
-        :error="v$.userName.$errors"
-        @clearInput="userName = ''"
-        class="formReview__one"
-      />
-      <FormInput
-        label="Профессия * "
-        type="text"
-        :name="userStatus"
-        placeholder="Ваша профессия"
-        v-model:value="v$.userStatus.$model"
-        :error="v$.userStatus.$errors"
-        @clearInput="userStatus = ''"
-        class="formReview__two"
-      />
-      <FormTextarea
-        label="Отзыв * "
-        type="text"
-        :name="userReview"
-        placeholder="Ваш отзыв"
-        v-model:value="v$.userReview.$model"
-        :error="v$.userReview.$errors"
-        @clearInput="userReview = ''"
-        class="formReview__three"
-      />
-      <FormAvatarChoice
-        :avatars="avatars"
-        :selectedAvatar="selectedAvatar"
-        @handleAvatarChoice="handleAvatarChoice"
-      />
-      <FormButton
-        type="button"
-        title="Продолжить"
-        :isFromEmpty="isFromEmpty"
-        :isValid="isValid.length"
-        @handleClick="prepareSubmition"
-        class="formReview__four"
-      />
-
-      <div class="formReview__mark">* - обязательные для заполнения поля</div>
-    </form>
-
-    <FormSubmitReviewBlock
-      v-if="isSubmitPrepared && reviewData && !isReviewSend"
-      :reviewData="reviewData"
-      @submitReview="submitReview"
-      @cancelReview="isSubmitPrepared = false"
+  <form v-if="isNewReview" @submit.prevent="submitReview" class="formReview">
+    <FormInput
+      label="Имя * "
+      type="text"
+      :name="userName"
+      placeholder="Ваше имя"
+      v-model:value="v$.userName.$model"
+      :error="v$.userName.$errors"
+      @clearInput="userName = ''"
+      class="formReview__one"
+    />
+    <FormInput
+      label="Профессия * "
+      type="text"
+      :name="userStatus"
+      placeholder="Ваша профессия"
+      v-model:value="v$.userStatus.$model"
+      :error="v$.userStatus.$errors"
+      @clearInput="userStatus = ''"
+      class="formReview__two"
+    />
+    <FormTextarea
+      label="Отзыв * "
+      type="text"
+      :name="userReview"
+      placeholder="Ваш отзыв"
+      v-model:value="v$.userReview.$model"
+      :error="v$.userReview.$errors"
+      @clearInput="userReview = ''"
+      class="formReview__three"
+    />
+    <FormAvatarChoice
+      :avatars="avatars"
+      :selectedAvatar="selectedAvatar"
+      @handleAvatarChoice="handleAvatarChoice"
+    />
+    <FormButton
+      type="button"
+      title="Продолжить"
+      :isFromEmpty="isFromEmpty"
+      :isValid="isValid.length"
+      @handleClick="prepareSubmition"
+      class="formReview__four"
     />
 
-    <FormSuccess v-if="isReviewSend" @closeModal="$emit('closeModal')" />
-  </div>
+    <div class="formReview__mark">* - обязательные для заполнения поля</div>
+  </form>
+
+  <FormSubmitReviewBlock
+    v-if="isSubmitPrepared && reviewData && !isReviewSend"
+    :reviewData="reviewData"
+    @submitReview="submitReview"
+    @cancelReview="cancelReview"
+    class="formReview"
+  />
+
+  <FormSuccess
+    v-if="isReviewSend && !isSubmitPrepared"
+    @closeModal="doSuccess"
+    class="formReview"
+  />
 </template>
 
 <script setup lang="ts">
@@ -76,6 +76,7 @@ const userName = ref("");
 const userStatus = ref("");
 const userReview = ref("");
 const reviewData = ref<IReview>();
+const isNewReview = ref(true);
 const isSubmitPrepared = ref(false);
 const isReviewSend = ref(false);
 const selectedAvatar = ref<IAvatar>();
@@ -119,7 +120,24 @@ const handleAvatarChoice = (id: number) => {
   }
 };
 
+const doSuccess = () => {
+  emit("closeModal");
+  setTimeout(
+    () => ((isNewReview.value = true), (isReviewSend.value = false)),
+    1000,
+  );
+};
+
+const cancelReview = () => {
+  isNewReview.value = true;
+  isReviewSend.value = false;
+  isSubmitPrepared.value = false;
+};
+
 const prepareSubmition = () => {
+  isSubmitPrepared.value = false;
+  isNewReview.value = false;
+
   reviewData.value = {
     id: uuidv4(),
     userName: userName.value,
@@ -133,7 +151,10 @@ const prepareSubmition = () => {
 
 const submitReview = () => {
   console.log(reviewData.value);
+
   isReviewSend.value = true;
+  isSubmitPrepared.value = false;
+
   userName.value = "";
   userStatus.value = "";
   userReview.value = "";
@@ -149,6 +170,7 @@ const submitReview = () => {
   overflow: hidden;
   padding: 20px;
   animation: back 1.5s cubic-bezier(0.1, 0, 0.1, 1);
+  // overflow-y: auto;
 
   &__one {
     animation: slide 0.8s cubic-bezier(0.1, 0, 0.1, 1);
@@ -170,10 +192,8 @@ const submitReview = () => {
     margin-top: 40px;
   }
 
-  // &__listCard {
-  //   display: flex;
-  //   justify-self: center;
-  //   // max-width: 450px;
+  // &__container {
+  //   // overflow-y: scroll;
   // }
 }
 
@@ -183,11 +203,11 @@ const submitReview = () => {
   }
   20% {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(2, 1);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1, 1);
   }
 }
 @keyframes slide {

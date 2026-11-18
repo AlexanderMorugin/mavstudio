@@ -41,6 +41,7 @@ const emit = defineEmits(["closeModal"]);
   left: 0;
   backdrop-filter: blur(10px) brightness(0.4) saturate(0.4);
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 10;
 
   &__container {

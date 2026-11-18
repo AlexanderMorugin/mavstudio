@@ -1,8 +1,8 @@
 <template>
   <div class="submitReviewBlock">
     <ParagraphNormal
-      >Ваш отзыв будет выглядеть так. Подтвердите отзыв кнопкой "Отправить" или
-      вернитесь к редактированию кнопкой "Назад".</ParagraphNormal
+      >Отзыв будет выглядеть так. Подтвердите кнопкой "Отправить" или вернитесь
+      к редактированию кнопкой "Назад".</ParagraphNormal
     >
 
     <CardWithStripe v-if="reviewData" orange class="formReview__listCard">
